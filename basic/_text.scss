@@ -37,7 +37,7 @@
     @include link-page-text;
   }
   &__brackets {
-    @include link-page-bracket;
+    @include link-brackets;
   }
 }
 a {
@@ -45,16 +45,17 @@ a {
   @include link-external;
 }
 span [style*="background-color: rgb(235, 241, 245);"] {
-    background-color: #00000000 !important;        
+  background-color: #00000000 !important;
 }
 span [style*="color: rgb(245, 86, 86);"] {
-    color: var(--page-link-color) !important;
+  color: var(--page-link-color) !important;
 }
 span:hover [style*="color: rgb(245, 86, 86);"] {
-    color: var(--alias-hover-color) !important;
+  color: var(--alias-hover-color) !important;
 }
-span [style*="padding: 4px 6px;"] { /* alias padding to match body text */
-    padding: 0px 0px !important;
+span [style*="padding: 4px 6px;"] {
+  /* alias padding to match body text */
+  padding: 0px 0px !important;
 }
 /*--------------------------------------------------------------
 # TODOs
