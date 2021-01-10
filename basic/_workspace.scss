@@ -68,13 +68,24 @@
 }
 
 /*--------------------------------------------------------------
-# Popups
+# Icons
 --------------------------------------------------------------*/
-// all icons
 [class*="bp3-icon"]::before {
   // TODO separate this for left sidebar, main, right sidebar?
+  // all icon color
   color: $palette--white !important;
+  :hover {
+    color: $palette--accent;
+  }
 }
+.button-disabled-strong {
+  // icon in "all pages"
+  opacity: 1; // override Roam Research settings
+}
+/*--------------------------------------------------------------
+# Popups
+--------------------------------------------------------------*/
+
 
 /* search and multiselect menus */
 .bp3-menu {

@@ -168,12 +168,22 @@ span [style*="padding: 4px 6px;"] {
 # Right Sidebar
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Popups
+# Icons
 --------------------------------------------------------------*/
 [class*=bp3-icon]::before {
   color: #ffffff !important;
 }
+[class*=bp3-icon]::before :hover {
+  color: #e76f51;
+}
 
+.button-disabled-strong {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Popups
+--------------------------------------------------------------*/
 /* search and multiselect menus */
 .bp3-menu {
   background-color: #14232a;
