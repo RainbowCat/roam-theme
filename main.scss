@@ -27,3 +27,12 @@
 
 /*-------------------------------------------------- Plugins --------------------------------------------------*/
 @import "plugins/calendar";
+
+.starred-pages-wrapper > div:nth-child(1) {
+  flex: 0 0 10px !important;
+  background-color: white !important;
+}
+.starred-pages-wrapper > div:nth-child(2) {
+  /* div padding */
+  display: none;
+}

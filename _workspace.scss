@@ -35,6 +35,26 @@
   }
 }
 
+.starred-pages-wrapper > div:nth-child(1) {
+  /* horizontal division line */
+  flex: 0 0 10px !important;
+  background-color: white !important;
+}
+
+.starred-pages-wrapper > div:nth-child(2) {
+  /* div padding */
+  display: none;
+}
+
+.log-button {
+  /* general navigations */
+  color: white !important;
+}
+.page {
+  /* left side bar pages */
+  color: white !important;
+}
+
 /*--------------------------------------------------------------
 # Right Sidebar
 --------------------------------------------------------------*/
@@ -59,6 +79,11 @@
   --popup-color--text: yellow;
 }
 
+[class*="bp3-icon"]::before {
+  // TODO separate this for left sidebar, main, right sidebar
+  color: white !important;
+}
+
 .bp3-popover {
   color: $palette--theme; // popup title colors
   &-content {
@@ -71,8 +96,8 @@
     // popover buttons
     color: red !important;
     &:hover {
-  color: blue !important;
-}
+      color: blue !important;
+    }
   }
 }
 
