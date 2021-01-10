@@ -1,28 +1,34 @@
-/*--------------------------------------------------------------
-# Basic Text
---------------------------------------------------------------*/
+/* Title, Heading, Body */
 .rm-title-display {
-  @include font-title;
+  @include font-title($textcolor--title);
 }
 .rm-heading-level-1 {
-  @include font-heading(1);
+  @include font-heading($textcolor--heading3, 1);
 }
 .rm-heading-level-2 {
-  @include font-heading(2);
+  @include font-heading($textcolor--heading2, 2);
 }
 .rm-heading-level-3 {
-  @include font-heading(3);
+  @include font-heading($textcolor--heading3, 3);
 }
 .rm-block {
-  @include font-body;
+  @include font-body($textcolor--body);
 }
-// attributes
+
+/* Attributes */
 .rm-attr-ref {
-  @include font-attribute;
+  @include font-bold($textcolor--attribute);
 }
-/*--------------------------------------------------------------
-# Bullets
---------------------------------------------------------------*/
+
+/* Bullets */
+@mixin bullet-open {
+}
+
+@mixin bullet-closed {
+}
+@mixin nesting-line {
+}
+
 .rm-bullet {
   &__inner {
     /* bullet */
@@ -33,9 +39,16 @@
     @include nesting-line;
   }
 }
-/*--------------------------------------------------------------
-# Links and References
---------------------------------------------------------------*/
+
+/* Links */
+@mixin link-page-text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-brackets {
+}
 .rm-page-ref {
   &--link {
     @include link-page-text;
@@ -44,10 +57,35 @@
     @include link-brackets;
   }
 }
+
+/* Block References */
+@mixin link-block-text {
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-alias {
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-embed {
+}
+
+
+
+
+/* external link */
+@mixin link-external {
+  &:hover,
+  &:focus {
+  }
+}
 a {
-  /* external link */
   @include link-external;
 }
+
+/* alias link */
 span [style*="background-color: rgb(235, 241, 245);"] {
   background-color: #00000000 !important;
 }
@@ -61,9 +99,13 @@ span [style*="padding: 4px 6px;"] {
   /* alias padding to match body text */
   padding: 0px 0px !important;
 }
-/*--------------------------------------------------------------
-# TODOs
---------------------------------------------------------------*/
+
+/* Checkbox */
+@mixin not-done-checkbox {
+}
+@mixin done-checkbox {
+}
+
 // .checkmark {
 //   /* todo */
 //   position: absolute;
