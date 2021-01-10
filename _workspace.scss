@@ -68,14 +68,15 @@
     fill: var(--popup-background-color);
   }
   .bp3-button {
+    // popover buttons
     color: red !important;
+    &:hover {
+  color: blue !important;
+}
   }
 }
 
-.bp3-menu,
-.bp3-popover,
-.bp3-popover-content,
-.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a {
+#{popover-selector()} {
   // TODO fix brute force style popovers
   color: $palette--theme;
   div > div > .flex-h-box div > div > span,

@@ -1,6 +1,6 @@
 // return row
 @function raw($string) {
-  $string: '*/#{$string}/*';
+  @return '#{$string}';
 }
 
 // returns selector of tag with name "tag_name"
