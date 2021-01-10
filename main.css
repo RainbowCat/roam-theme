@@ -138,7 +138,8 @@ span [style*="padding: 4px 6px;"] {
   color: #ffffff !important;
 }
 .roam-sidebar-content .starred-pages-wrapper {
-  background-color: #2a9d8f;
+  background-color: linear-gradient(#14232a 30%, #2a9d8f 90%, #14232a);
+  color: #ffffff !important;
 }
 .roam-sidebar-content .starred-pages-wrapper > div:nth-child(1) {
   /* horizontal division line */

@@ -24,7 +24,11 @@ $background--main: $palette--theme-darker;
 $background--topbar: $palette--theme-darker;
 $background--left: $palette--theme-darker;
 $background--right: $palette--theme;
-$background--shortcuts: $palette--theme-lighter;
+$background--shortcuts: linear-gradient(
+  $background--left 30%,
+  $palette--theme-lighter 90%,
+  $background--left
+);
 $background--checkmark-checked: $palette--grey;
 $background--checkmark-nonchecked: $palette--accent;
 $background--popover: $palette--theme-darker;

@@ -28,7 +28,8 @@
     color: $palette--white !important;
   }
   .starred-pages-wrapper {
-    background-color: $background--shortcuts;
+    background-color: $background--shortcuts; // background of full shotcut section
+    color: $palette--white !important; // "★ SHORTCUTS" title
     // #{division-bar()} {
     // }
     > div:nth-child(1) {
