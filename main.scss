@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # Utils
 --------------------------------------------------------------*/
+@use "sass:meta";
+@use "sass:math";
+
 @import 'utils/vars';
 @import 'utils/functions';
 @import 'utils/mixins';

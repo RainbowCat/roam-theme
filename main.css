@@ -1,14 +1,67 @@
 /*--------------------------------------------------------------
 # Utils
 --------------------------------------------------------------*/
-:root {
-}
+/*** LAYOUT ***/
+/*** APPEARANCE ***/
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* Palette */
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Reset
 --------------------------------------------------------------*/
+/*** LAYOUT ***/
+/*** APPEARANCE ***/
+/*** ANIMATIONS ***/
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
+.rm-title-display,
+.rm-title-textarea,
+.roam-log-page h1.level2 {
+  height: auto !important;
+  line-height: 1.5 !important;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+}
+
+.rm-heading-level-1 > .rm-block-main span {
+  margin-top: -2px !important;
+}
+.rm-heading-level-1 > .rm-block-main div,
+.rm-heading-level-1 > .rm-block-main textarea {
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+.rm-heading-level-2 > .rm-block-main span {
+  margin-top: -2px !important;
+}
+.rm-heading-level-2 > .rm-block-main div,
+.rm-heading-level-2 > .rm-block-main textarea {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+.rm-heading-level-3 > .rm-block-main span {
+  margin-top: -1px !important;
+}
+.rm-heading-level-3 > .rm-block-main div,
+.rm-heading-level-3 > .rm-block-main textarea {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+.level2 {
+  font-weight: inherit !important;
+}
+
+h1 {
+  color: red !important;
+}
+
 /*--------------------------------------------------------------
 # Workspace
 --------------------------------------------------------------*/
