@@ -35,6 +35,7 @@ my take on making a Roam Research theme.
 ├── main.scss
 └── main.css                   // [[roam/css]] will import this file
 ```
+# tips
 
 ## what files to edit?
 
