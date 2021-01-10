@@ -23,7 +23,9 @@
     // graph name
   }
   .log-button {
-    //TODO add customizable icons
+    // TODO add customizable icons
+    /* general navigations */
+    color: $palette--white !important;
   }
   .starred-pages-wrapper {
     background-color: $background--shortcuts;
@@ -39,10 +41,7 @@
       display: none;
     }
   }
-  .log-button {
-    /* general navigations */
-    color: $palette--white !important;
-  }
+
   .page {
     /* left side bar pages */
     color: $palette--white !important;
