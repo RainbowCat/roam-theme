@@ -1,0 +1,151 @@
+/*--------------------------------------------------------------
+# Palette
+--------------------------------------------------------------*/
+$palette--theme: #264653;
+$palette--theme-lighter: #2a9d8f;
+$palette--theme-darker: #14232a;
+$palette--neutral: #e9c772;
+$palette--neutral-lighter: #fdf6ed;
+$palette--neutral-darker: #f4a261;
+$palette--accent: #e76f51;
+$palette--accent-lighter: #e9c772;
+$palette--accent-darker: #e9c772;
+$palette--black: #222222;
+$palette--white: #ffffff;
+$palette--grey: #f5f5f5;
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+$textcolor--pagelinks: $palette--accent-lighter;
+$textcolor--references: $palette--white;
+$textcolor--body: $palette--white;
+$textcolor--title: $palette--white;
+$textcolor--heading1: $palette--white;
+$textcolor--heading2: $palette--white;
+$textcolor--heading3: $palette--white;
+$textcolor--popover: $palette--white;
+$textcolor--bold: $palette--white;
+$textcolor--italics: $palette--white;
+$textcolor--attribute: $palette--accent-lighter;
+
+$hover--pagelinks: $palette--accent-lighter;
+$hover--references: $palette--white;
+$hover--body: $palette--white;
+$hover--title: $palette--white;
+$hover--heading1: $palette--white;
+$hover--heading2: $palette--white;
+$hover--heading3: $palette--white;
+$hover--popover: $palette--white;
+$hover--bold: $palette--white;
+$hover--italics: $palette--white;
+$hover--attribute: $palette--accent-lighter;
+
+$textcolor--highlight: $palette--white;
+$background--highlight: $palette--accent;
+
+$color--icons: $palette--white;
+$color--bullet: $palette--white;
+
+$border--checkmark: $palette--accent;
+$border--bullet: $palette--white;
+$border--nestline: $palette--white;
+
+/*--------------------------------------------------------------
+# Backgrounds
+--------------------------------------------------------------*/
+$background--topbar: $palette--theme-darker;
+$background--left: $palette--theme-darker;
+$background--main: $palette--theme-darker;
+$background--right: $palette--theme;
+
+$background--shortcuts: linear-gradient(
+  $background--left 30%,
+  $palette--theme-lighter 90%,
+  $background--left
+);
+
+$background--checkmark-checked: $palette--grey;
+$background--checkmark-nonchecked: $palette--accent;
+$background--popover: $palette--theme-darker;
+$background--menus: $palette--theme-darker;
+
+/*--------------------------------------------------------------
+# Basic Text
+--------------------------------------------------------------*/
+@mixin text--display {
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+@mixin text--title {
+  font-size: 36px;
+  color: $textcolor--title;
+  @include text-display;
+}
+@mixin text--heading1 {
+  color:$textcolor--heading1;
+  font-size: 30px;
+  @include text-display;
+}
+@mixin text--heading2 {
+  color:$textcolor--heading2;
+  font-size: 25px;
+  @include text-display;
+}
+@mixin text--heading3 {
+  color:$textcolor--heading3;
+  font-size: 20px;
+  @include text-display;
+}
+@mixin text--body {
+  color: $textcolor--body;
+  font-size: 12px;
+  @include text-display;
+}
+@mixin text--italics {
+  font-size: 15px;
+  color: $textcolor--italics;
+  @include text-display;
+}
+@mixin text--bold {
+  font-size: 12px;
+  color: $textcolor--bold;
+  @include text-display;
+}
+
+/*--------------------------------------------------------------
+# Workspace
+--------------------------------------------------------------*/
+/* Left Sidebar */
+/* Right Sidebar */
+/* Main Area */
+/*--------------------------------------------------------------
+# Workspace Tools
+--------------------------------------------------------------*/
+/* Top */
+/* Search Bar */
+/* Page Filter */
+/* "All Pages" */
+/* "Graph Overview */
+
+/*--------------------------------------------------------------
+# Link, Reference, Alias
+--------------------------------------------------------------*/
+/* Linked References */
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Bullets */
+/* Icons */
+/* Checkboxes */
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+/* Kanban */
+/* Table */
+/* Queries */
+/* Mentions */
+/* Code Area */

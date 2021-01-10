@@ -1,0 +1,106 @@
+/* Basic Text */
+.rm-title-display {
+  @include font-title;
+}
+.rm-heading-level-1 {
+  @include font-heading;
+}
+.rm-heading-level-2 {
+  @include font-heading;
+}
+.rm-heading-level-3 {
+  @include font-heading;
+}
+.rm-block {
+  @include font-body;
+}
+
+/* Attributes */
+.rm-attr-ref {
+  @include font-bold;
+}
+
+/* Bullets */
+@mixin bullet-open {
+  @include bullet-open
+}
+
+@mixin bullet-closed {
+}
+@mixin nesting-line {
+}
+
+.rm-bullet {
+  &__inner {
+    /* bullet */
+    @include bullet-open;
+  }
+  .block-border-left {
+    /* nesting line */
+    @include nesting-line;
+  }
+}
+
+/* Links */
+@mixin link-page-text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-brackets {
+}
+.rm-page-ref {
+  &--link {
+    @include link-page-text;
+  }
+  &__brackets {
+    @include link-brackets;
+  }
+}
+
+/* Block References */
+@mixin link-block-text {
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-alias {
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-embed {
+}
+
+
+
+/* external link */
+@mixin link-external {
+  &:hover,
+  &:focus {
+  }
+}
+a {
+  @include link-external;
+}
+
+/* alias link */
+@mixin link-internal {
+  @include link-page-text;
+}
+
+.rm-alias {
+  & &--internal {
+    @include link-internal;
+  }
+  & &--external {
+    @include link-external;
+  }
+}
+
+/* Checkbox */
+@mixin not-done-checkbox {
+}
+@mixin done-checkbox {
+}

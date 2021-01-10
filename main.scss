@@ -4,21 +4,24 @@
 @use "sass:math";
 @use "sass:color";
 
-@import "vars";
-@import "utils/functions";
-@import "utils/global"; 
+@import "libs/utils/functions";
+@import "libs/utils/global";
 
-/*-------------------------------------------------- Basic --------------------------------------------------*/
-@import "basic/workspace";
-@import "basic/text";
-// @import "basic/tags";
-// @import "basic/blocks";
+/*-------------------------------------------------- Preferences --------------------------------------------------*/
+@import "preferences/palette";
+@import "preferences/fonts";
+@import "preferences/preferences";
 
-/*-------------------------------------------------- Features --------------------------------------------------*/
-// @import "features/code-area";
-// @import "features/kanban";
-// @import "features/table";
-// @import "features/queries";
+
+/*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
+@import "libs/basic/workspace";
+@import "libs/basic/text";
+// @import "libs/basic/tags";
+// @import "libs/basic/blocks";
+// @import "libs/features/code-area";
+// @import "libs/features/kanban";
+// @import "libs/features/table";
+// @import "libs/features/queries";
 
 /*-------------------------------------------------- Plugins --------------------------------------------------*/
 // @import "plugins/calendar";

@@ -1,22 +1,25 @@
 /*--------------------------------------------------------------
-# Backgrounds
+# Workspace
 --------------------------------------------------------------*/
+/* Basic */
 .roam-main {
   background: $background--main;
+  color: setContrast($background--main);
 }
 .roam-topbar {
   background: $background--topbar;
+  color: setContrast($background--topbar);
 }
 .roam-sidebar-content {
   background: $background--left;
+  color: setContrast($background--left);
 }
 #roam-right-sidebar-content {
   background: $background--right;
+  color: setContrast($background--right);
 }
 
-/*--------------------------------------------------------------
-# Left Sidebar
---------------------------------------------------------------*/
+/* Left Sidebar */
 // .roam-sidebar-container
 .roam-sidebar-content {
   .top-row {
@@ -42,6 +45,24 @@
       display: none;
     }
   }
+  /* Right Sidebar */
+  /* Main Area */
+  /*--------------------------------------------------------------
+# Workspace Tools
+--------------------------------------------------------------*/
+  /* Top */
+  /* Search Bar */
+  /* Page Filter */
+  /* "All Pages" */
+  /* "Graph Overview */
+
+  /*--------------------------------------------------------------
+# Workspace
+--------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+# Left Sidebar
+--------------------------------------------------------------*/
 
   .page {
     /* left side bar pages */
@@ -66,14 +87,13 @@
 
 .rm-resize-handle {
 }
+
 /*--------------------------------------------------------------
 # All Pages
 --------------------------------------------------------------*/
 .rm-all-pages {
   .rm-pages-title-col {
-    
   }
-
 }
 .button-disabled-strong {
   // trash & export icon in "all pages"
@@ -95,26 +115,25 @@
 # Popups
 --------------------------------------------------------------*/
 
-
 /* search and multiselect menus */
 .bp3-menu {
-    background-color: $background--popover;
-    color: white;
+  background-color: $background--popover;
+  color: white;
 }
 
 /* top-right toolbar popover */
 .bp3-popover {
-   // popup title colors
+  // popup title colors
   color: $palette--theme;
   & > &-content {
     // background
     background-color: $background--popover;
     color: white;
   }
-  & &-arrow{
+  & &-arrow {
     &-fill {
-    // background
-    fill: $background--popover;
+      // background
+      fill: $background--popover;
     }
     &-border {
       //tiny border
