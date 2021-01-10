@@ -70,28 +70,39 @@
 /*--------------------------------------------------------------
 # Popups
 --------------------------------------------------------------*/
-
-.bp3-popover {
-  //TODO move variables
-  --popup-color--background: $palette--black;
-  --popup-color--text: $palette--accent-lighter;
-}
-
+// all icons
 [class*="bp3-icon"]::before {
-  // TODO separate this for left sidebar, main, right sidebar
+  // TODO separate this for left sidebar, main, right sidebar?
   color: $palette--white !important;
 }
 
+/* search and multiselect menus */
+.bp3-menu {
+    background-color: $background--popover;
+    color: white;
+}
+
+/* top-right toolbar popover */
 .bp3-popover {
-  color: $palette--theme; // popup title colors
-&-content {
-  background-color: $background--popover;
-}
-&-arrow-fill {
-  fill: $background--popover;
-}
+   // popup title colors
+  color: $palette--theme;
+  & > &-content {
+    // background
+    background-color: $background--popover;
+    color: white;
+  }
+  & &-arrow{
+    &-fill {
+    // background
+    fill: $background--popover;
+    }
+    &-border {
+      //tiny border
+      fill: $palette--accent; //TODO make this and $background--popover contrast
+    }
+  }
   .bp3-button {
-    // popover buttons
+    // tag selection buttons
     color: red !important;
     &:hover {
       color: blue !important;

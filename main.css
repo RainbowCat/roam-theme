@@ -170,23 +170,29 @@ span [style*="padding: 4px 6px;"] {
 /*--------------------------------------------------------------
 # Popups
 --------------------------------------------------------------*/
-.bp3-popover {
-  --popup-color--background: $palette--black;
-  --popup-color--text: $palette--accent-lighter;
-}
-
 [class*=bp3-icon]::before {
   color: #ffffff !important;
 }
 
+/* search and multiselect menus */
+.bp3-menu {
+  background-color: #14232a;
+  color: white;
+}
+
+/* top-right toolbar popover */
 .bp3-popover {
   color: #264653;
 }
-.bp3-popover-content {
+.bp3-popover > .bp3-popover-content {
   background-color: #14232a;
+  color: white;
 }
-.bp3-popover-arrow-fill {
+.bp3-popover .bp3-popover-arrow-fill {
   fill: #14232a;
+}
+.bp3-popover .bp3-popover-arrow-border {
+  fill: #e76f51;
 }
 .bp3-popover .bp3-button {
   color: red !important;
