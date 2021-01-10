@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Backgrounds
+--------------------------------------------------------------*/
+.roam-main {
+  background: $background--main;
+}
+.roam-topbar {
+  background: $background--topbar;
+}
+.roam-sidebar-content {
+  background: $background--left;
+}
+#roam-right-sidebar-content {
+  background: $background--right;
+}
+
+/*--------------------------------------------------------------
+# Left Sidebar
+--------------------------------------------------------------*/
+// .roam-sidebar-container
+.roam-sidebar-content {
+  .top-row {
+    // graph name
+  }
+  .log-button {
+    //TODO add customizable icons
+  }
+
+  .starred-pages-wrapper {
+    #{division-bar()} {
+    }
+  }
+  .roam-sidebar-logo {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Right Sidebar
+--------------------------------------------------------------*/
+#roam-right-sidebar-content
+// > .sidebar-content
+{
+  .window-headers {
+    // "Block Outline" title
+  }
+}
+
+.rm-resize-handle {
+}
+
+/*--------------------------------------------------------------
+# Popups
+--------------------------------------------------------------*/
+.bp3-popover {
+  color: $palette--theme; // popup title colors
+}

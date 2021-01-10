@@ -16,8 +16,10 @@ $palette--grey: #f5f5f5;
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
-$background--main: $palette--theme;
-$background--topbar: $palette--theme;
+$background--main: $palette--theme-dark;
+$background--topbar: $palette--theme-dark;
+$background--left: $palette--theme-dark;
+$background--right: $palette--theme-dark;
 
 /*--------------------------------------------------------------
 # Text
