@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+$font--fallback: Verdana, sans-serif;
+
+@mixin font-display {
+  line-height: 1.2;
+  // margin-top: 2px;
+}
+@mixin font-title {
+  font-family: "Ubuntu", $font--fallback;
+  font-weight: 700;
+  font-size: 36px;
+  color: $palette--theme;
+  @include font-display;
+}
+@mixin font-heading($num) {
+  font-family: "Ubuntu", $font--fallback;
+  font-weight: 700;
+  font-size: 36px - math.pow($num, 2) * 1.75;
+  color: color.adjust($palette--theme, $alpha: -0.1 * $num * 1.3);
+  @include font-display;
+}
+@mixin font-body {
+  font-family: "Ubuntu", $font--fallback;
+  font-weight: 300;
+  font-size: 15px;
+  color: $palette--accent;
+  @include font-display;
+}
+@mixin font-italics {
+  font-family: "Ubuntu", $font--fallback;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  color: $palette--accent;
+  @include font-display;
+}
+@mixin font-bold {
+  font-family: "Ubuntu", $font--fallback;
+  font-weight: 700;
+  font-size: 15px;
+  color: $palette--accent;
+  @include font-display;
+}
+
+/* Links */
+@mixin link-page-text {
+  color: $palette--accent-lighter;
+}
+@mixin link-block-text {
+}
+@mixin link-alias {
+}
+@mixin link-embed {
+}
+@mixin link-brackets {
+}
+@mixin link-external {
+}
+
+/* Bullets */
+@mixin bullet-open {
+}
+
+@mixin bullet-closed {
+}
+@mixin nesting-line {
+}
+
+/* Checkbox */
+@mixin not-done-checkbox {
+}
+@mixin done-checkbox {
+}

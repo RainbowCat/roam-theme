@@ -27,18 +27,20 @@
   }
 
   .starred-pages-wrapper {
-    #{division-bar()} {
+  }
+  .starred-pages-wrapper {
+    background-color: $background--shortcuts;
+    // #{division-bar()} {
+    // }
+    > div:nth-child(1) {
+      /* horizontal division line */
+      flex: 0 0 10px !important;
+      background-color: $palette--white !important;
     }
   }
   .roam-sidebar-logo {
     display: none;
   }
-}
-
-.starred-pages-wrapper > div:nth-child(1) {
-  /* horizontal division line */
-  flex: 0 0 10px !important;
-  background-color: white !important;
 }
 
 .starred-pages-wrapper > div:nth-child(2) {
@@ -48,11 +50,11 @@
 
 .log-button {
   /* general navigations */
-  color: white !important;
+  color: $palette--white !important;
 }
 .page {
   /* left side bar pages */
-  color: white !important;
+  color: $palette--white !important;
 }
 
 /*--------------------------------------------------------------
@@ -75,13 +77,13 @@
 
 .bp3-popover {
   //TODO move variables
-  --popup-color--background: blue;
-  --popup-color--text: yellow;
+  --popup-color--background: $palette-black;
+  --popup-color--text: $palette--accent-lighter;
 }
 
 [class*="bp3-icon"]::before {
   // TODO separate this for left sidebar, main, right sidebar
-  color: white !important;
+  color: $palette--white !important;
 }
 
 .bp3-popover {
@@ -110,7 +112,7 @@
   > ul > div {
     color: $palette--theme;
     &:hover {
-      colors: $palette--accent;
+      color: $palette--accent;
     }
   }
 }

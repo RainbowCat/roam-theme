@@ -33,10 +33,10 @@
 --------------------------------------------------------------*/
 .rm-page-ref {
   &--link {
-    @include link-text;
+    @include link-page-text;
   }
   &__brackets {
-    @include link-bracket;
+    @include link-page-bracket;
   }
 }
 /*--------------------------------------------------------------
