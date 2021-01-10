@@ -1,3 +1,8 @@
+// return row
+@function raw($string) {
+  $string: '*/#{$string}/*';
+}
+
 // returns selector of tag with name "tag_name"
 @function tag($tag_name) {
   @return #{"."}rm-page-ref#{"["}data-tag#{"="}#{string.quote($tag-name)}#{"]"};
@@ -11,4 +16,9 @@
   //         89
   //       ) #{"]"});
   @return none;
+}
+
+@function popover-selector() {
+  // TODO fix brute force style popovers
+  @return raw('.bp3-menu,.bp3-popover,.bp3-popover-content,.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a')
 }

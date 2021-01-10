@@ -89,11 +89,12 @@
   background: #235d9c;
 }
 
-/*--------------------------------------------------------------
-# Popups
---------------------------------------------------------------*/
-.bp3-popover {
-  color: #4787c3;
+.roam-sidebar-content {
+  background: #235d9c;
+}
+
+#roam-right-sidebar-content {
+  background: #235d9c;
 }
 
 /*--------------------------------------------------------------
@@ -101,6 +102,73 @@
 --------------------------------------------------------------*/
 .roam-sidebar-content .roam-sidebar-logo {
   display: none;
+}
+
+/*--------------------------------------------------------------
+# Right Sidebar
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Popups
+--------------------------------------------------------------*/
+.bp3-popover {
+  --popup-color--background: blue;
+  --popup-color--text: yellow;
+}
+
+.bp3-popover {
+  color: #4787c3;
+}
+.bp3-popover-content {
+  background-color: var(--popup-background-color);
+}
+.bp3-popover-arrow-fill {
+  fill: var(--popup-background-color);
+}
+.bp3-popover .bp3-button {
+  color: red !important;
+}
+
+.bp3-menu,
+.bp3-popover,
+.bp3-popover-content,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a {
+  color: #4787c3;
+}
+.bp3-menu div > div > .flex-h-box div > div > span,
+.bp3-menu div > div > .flex-h-box div > div > strong,
+.bp3-menu div > div > div > button,
+.bp3-menu > ul > div,
+.bp3-popover div > div > .flex-h-box div > div > span,
+.bp3-popover div > div > .flex-h-box div > div > strong,
+.bp3-popover div > div > div > button,
+.bp3-popover > ul > div,
+.bp3-popover-content div > div > .flex-h-box div > div > span,
+.bp3-popover-content div > div > .flex-h-box div > div > strong,
+.bp3-popover-content div > div > div > button,
+.bp3-popover-content > ul > div,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > span,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > strong,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > div > button,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a > ul > div {
+  color: #4787c3;
+}
+.bp3-menu div > div > .flex-h-box div > div > span:hover,
+.bp3-menu div > div > .flex-h-box div > div > strong:hover,
+.bp3-menu div > div > div > button:hover,
+.bp3-menu > ul > div:hover,
+.bp3-popover div > div > .flex-h-box div > div > span:hover,
+.bp3-popover div > div > .flex-h-box div > div > strong:hover,
+.bp3-popover div > div > div > button:hover,
+.bp3-popover > ul > div:hover,
+.bp3-popover-content div > div > .flex-h-box div > div > span:hover,
+.bp3-popover-content div > div > .flex-h-box div > div > strong:hover,
+.bp3-popover-content div > div > div > button:hover,
+.bp3-popover-content > ul > div:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > span:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > strong:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > div > button:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a > ul > div:hover {
+  colors: #f65e89;
 }
 
 /*-------------------------------------------------- Features --------------------------------------------------*/

@@ -14,9 +14,10 @@
 @import "basic/text";
 
 /*-------------------------------------------------- Workspace --------------------------------------------------*/
-@import "workspace/main";
-@import "workspace/sidebar-left";
-@import "workspace/sidebar-right";
+@import "workspace";
+// @import "workspace/main";
+// @import "workspace/sidebar-left";
+// @import "workspace/sidebar-right";
 
 /*-------------------------------------------------- Features --------------------------------------------------*/
 @import "features/code-area";

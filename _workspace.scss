@@ -52,6 +52,39 @@
 /*--------------------------------------------------------------
 # Popups
 --------------------------------------------------------------*/
+
+.bp3-popover {
+  //TODO move variables
+  --popup-color--background: blue;
+  --popup-color--text: yellow;
+}
+
 .bp3-popover {
   color: $palette--theme; // popup title colors
+  &-content {
+    background-color: var(--popup-background-color);
+  }
+  &-arrow-fill {
+    fill: var(--popup-background-color);
+  }
+  .bp3-button {
+    color: red !important;
+  }
+}
+
+.bp3-menu,
+.bp3-popover,
+.bp3-popover-content,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a {
+  // TODO fix brute force style popovers
+  color: $palette--theme;
+  div > div > .flex-h-box div > div > span,
+  div > div > .flex-h-box div > div > strong,
+  div > div > div > button,
+  > ul > div {
+    color: $palette--theme;
+    &:hover {
+      colors: $palette--accent;
+    }
+  }
 }
