@@ -1,5 +1,33 @@
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
+.roam-sidebar-content {
+    background: black;
+    color: white;
+}
+.roam-topbar,
+.roam-body-main {
+    background:white;
+    color: black;
+}
+
+#roam-right-sidebar-content {
+    background: grey;
+    color: white
+}
+.roam-sidebar-content, 
+.roam-body-main,
+#roam-right-sidebar-content, 
+.roam-topbar {
+    * {
+    color: inherit !important;
+    background: inherit !important;
+    }
+}
+
+// [class*="bp3-popover"] {
+//   color: red;
+// }
+
 body {
     background: $background--main;
 }

@@ -14,6 +14,30 @@
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
+.roam-sidebar-content {
+  background: black;
+  color: white;
+}
+
+.roam-topbar,
+.roam-body-main {
+  background: white;
+  color: black;
+}
+
+#roam-right-sidebar-content {
+  background: grey;
+  color: white;
+}
+
+.roam-sidebar-content *,
+.roam-body-main *,
+#roam-right-sidebar-content *,
+.roam-topbar * {
+  color: inherit !important;
+  background: inherit !important;
+}
+
 body {
   background: #14232a;
 }
@@ -168,6 +192,13 @@ span [style*="padding: 4px 6px;"] {
 # Right Sidebar
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# All Pages
+--------------------------------------------------------------*/
+.button-disabled-strong {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
 # Icons
 --------------------------------------------------------------*/
 [class*=bp3-icon]::before {
@@ -175,10 +206,6 @@ span [style*="padding: 4px 6px;"] {
 }
 [class*=bp3-icon]::before :hover {
   color: #e76f51;
-}
-
-.button-disabled-strong {
-  opacity: 1;
 }
 
 /*--------------------------------------------------------------

@@ -66,6 +66,19 @@
 
 .rm-resize-handle {
 }
+/*--------------------------------------------------------------
+# All Pages
+--------------------------------------------------------------*/
+.rm-all-pages {
+  .rm-pages-title-col {
+    
+  }
+
+}
+.button-disabled-strong {
+  // trash & export icon in "all pages"
+  opacity: 1; // override Roam Research settings
+}
 
 /*--------------------------------------------------------------
 # Icons
@@ -77,10 +90,6 @@
   :hover {
     color: $palette--accent;
   }
-}
-.button-disabled-strong {
-  // icon in "all pages"
-  opacity: 1; // override Roam Research settings
 }
 /*--------------------------------------------------------------
 # Popups
