@@ -15,7 +15,7 @@ $font--fallback: Verdana, sans-serif;
   font-family: "Ubuntu", $font--fallback;
   font-weight: 700;
   font-size: 36px;
-  color: $color;
+  color: $color !important;
   @include font-display;
 }
 @mixin font-heading($color, $num) {
@@ -25,7 +25,8 @@ $font--fallback: Verdana, sans-serif;
   color: color.adjust(
     $color,
     $alpha: -0.1 * $num * 1.3
-  ); //TODO make this work with all three headings
+  ); 
+  //TODO make this work with all three headings
   @include font-display;
 }
 @mixin font-body ($color) {

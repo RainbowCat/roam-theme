@@ -3,7 +3,7 @@
   @include font-title($textcolor--title);
 }
 .rm-heading-level-1 {
-  @include font-heading($textcolor--heading3, 1);
+  @include font-heading($textcolor--heading1, 1);
 }
 .rm-heading-level-2 {
   @include font-heading($textcolor--heading2, 2);
