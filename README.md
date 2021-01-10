@@ -2,13 +2,14 @@
 
 my take on making a Roam Research theme.
 
-## edit style
+# edit style
 
 1. run `sass . --watch --no-source-map'
-   <br> or, use VSCode's Live Sass extension
+   <br> or, use VSCode's "[Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)" extension
 2. edit `.scss` files
 
 ## file structure
+
 ```
 .
 ├── README.md
@@ -34,3 +35,13 @@ my take on making a Roam Research theme.
 ├── main.scss
 └── main.css                   // [[roam/css]] will import this file
 ```
+
+## what files to edit?
+
+- styling of built-in Roam components: `_vars.scss`
+- customizations of Roam tags: `_tags.scss`
+- grid-views and other plugins: add `.scss` files under `plugins` (or ignore this and put it whereever you want ¯\_(ツ)\_/¯)
+
+\*\* If you add your own `.scss` files, be sure to import them in `main.scss`
+
+# Other Themes

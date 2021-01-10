@@ -1,93 +1,18 @@
-/*-------------------------------------------------- Utils --------------------------------------------------*/
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
-/* Palette */
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-/* Links */
-/* Bullets */
-/* Checkbox */
-/*** ANIMATIONS ***/
-/*-------------------------------------------------- Reset --------------------------------------------------*/
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
-/*** ANIMATIONS ***/
-/*-------------------------------------------------- Basic --------------------------------------------------*/
-/*--------------------------------------------------------------
-# Basic Text
---------------------------------------------------------------*/
-.rm-title-display {
-  font-family: "Ubuntu", Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  color: #4787c3;
-  line-height: 1.2;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 2 |   background: $background--main;
+ *   |               ^^^^^^^^^^^^^^^^^
+ *   '
+ *   workspace/_main.scss 2:15  @import
+ *   main.scss 17:9             root stylesheet */
 
-.rm-heading-level-1 {
-  font-family: "Ubuntu", Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 34.25px;
-  color: #4787c3;
-  line-height: 1.2;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background: $background--main;\a   \2502                ^^^^^^^^^^^^^^^^^\a   \2575 \a   workspace/_main.scss 2:15  @import\a   main.scss 17:9             root stylesheet";
 }
-
-.rm-heading-level-2 {
-  font-family: "Ubuntu", Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 29px;
-  color: #4787c3;
-  line-height: 1.2;
-}
-
-.rm-heading-level-3 {
-  font-family: "Ubuntu", Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 20.25px;
-  color: #4787c3;
-  line-height: 1.2;
-}
-
-.rm-block {
-  font-family: "Ubuntu", Verdana, sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  color: #f65e89;
-  line-height: 1.2;
-}
-
-/*--------------------------------------------------------------
-# Bullets
---------------------------------------------------------------*/
-.rm-bullet__inner {
-  /* bullet */
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  background-color: var(--bullet-color);
-}
-/*--------------------------------------------------------------
-# Links
---------------------------------------------------------------*/
-.rm-page-ref--link {
-  color: #4787c3;
-}
-/*--------------------------------------------------------------
-# References
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# TODOs
---------------------------------------------------------------*/
-/*-------------------------------------------------- Workspace --------------------------------------------------*/
-/*--------------------------------------------------------------
-# Left Sidebar
---------------------------------------------------------------*/
-.roam-sidebar-content .roam-sidebar-logo {
-  display: none;
-}
-
-/*--------------------------------------------------------------
-# Right Sidebar
---------------------------------------------------------------*/
-/*-------------------------------------------------- Features --------------------------------------------------*/
-/*-------------------------------------------------- Plugins --------------------------------------------------*/
