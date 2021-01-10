@@ -104,12 +104,15 @@
 }
 
 /*-------------------------------------------------- Features --------------------------------------------------*/
-:code-mirror {
+:code {
   --code-bg: #222629;
   --code-font: "Source Code Pro", "Courier New", Courier, monospace;
   --code-font-color: #dcdedd;
   --code-font-size: 1em;
   --code-border: 1px solid #34373b;
+}
+
+:code-mirror {
   --codemirror-bg: #222629;
   --codemirror-border-color: #323438;
   --codemirror-border-radius: 3px;
