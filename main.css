@@ -153,7 +153,7 @@ span [style*="padding: 4px 6px;"] {
   /* left side bar pages */
   color: #ffffff !important;
 }
-.roam-sidebar-content .roam-sidebar-logo {
+.roam-sidebar-content #roam-sidebar-logo {
   /* hide Roam Research logo */
   display: none;
 }
