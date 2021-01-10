@@ -1,0 +1,254 @@
+/*-------------------------------------------------- Utils --------------------------------------------------*/
+/*--------------------------------------------------------------
+# Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
+--------------------------------------------------------------*/
+/**
+ * Precomputed linear color channel values, for use in contrast calculations.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ */
+/**
+ * Calculate the luminance for a color.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ */
+/**
+ * Calculate the contrast ratio between two colors.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ */
+/**
+ * Determine whether to use dark or light text on top of given color.
+ * Returns black for dark text and white for light text.
+ */
+/*** LAYOUT ***/
+/*** APPEARANCE ***/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
+  background: black;
+  color: white;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
+  background: white;
+  color: black;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
+  background: grey;
+  color: white;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+  opacity: 100%;
+}
+
+/*** ANIMATIONS ***/
+/*-------------------------------------------------- Preferences --------------------------------------------------*/
+/* Coolors Exported Palette - https://coolors.co/14232a-264653-2a9d8f-fdf6ed-e9c772-f4a261-e76f51 */
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+/* Fonts */
+/*--------------------------------------------------------------
+# Palette
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Backgrounds
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Basic Text
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Workspace
+--------------------------------------------------------------*/
+/* Left Sidebar */
+/* Right Sidebar */
+/* Main Area */
+/*--------------------------------------------------------------
+# Workspace Tools
+--------------------------------------------------------------*/
+/* Top */
+/* Search Bar */
+/* Page Filter */
+/* "All Pages" */
+/* "Graph Overview */
+/*--------------------------------------------------------------
+# Link, Reference, Alias
+--------------------------------------------------------------*/
+/* Linked References */
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/* Bullets */
+/* Icons */
+/* Checkboxes */
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+/* Kanban */
+/* Table */
+/* Queries */
+/* Mentions */
+/* Code Area */
+/*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
+/*--------------------------------------------------------------
+# Workspace
+--------------------------------------------------------------*/
+/* Basic */
+.roam-main {
+  background: #14232a;
+  color: white;
+}
+
+.roam-topbar {
+  background: #14232a;
+  color: white;
+}
+
+.roam-sidebar-content {
+  background: #14232a;
+  color: white;
+}
+
+#roam-right-sidebar-content {
+  background: #264653;
+  color: white;
+}
+
+/* Left Sidebar */
+.roam-sidebar-content {
+  /* Right Sidebar */
+  /* Main Area */
+  /*--------------------------------------------------------------
+  # Workspace Tools
+  --------------------------------------------------------------*/
+  /* Top */
+  /* Search Bar */
+  /* Page Filter */
+  /* "All Pages" */
+  /* "Graph Overview */
+  /*--------------------------------------------------------------
+  # Left Sidebar
+  --------------------------------------------------------------*/
+}
+.roam-sidebar-content .top-row {
+  color: white;
+}
+.roam-sidebar-content .log-button {
+  /* general navigations */
+  color: white !important;
+}
+.roam-sidebar-content .starred-pages-wrapper {
+  background: linear-gradient(#14232a 30%, #2a9d8f 90%, #14232a);
+  color: white !important;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(1) {
+  /* horizontal division line */
+  flex: 0 0 10px !important;
+  background-color: #ffffff !important;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(2) {
+  /* div padding */
+  display: none;
+}
+.roam-sidebar-content .page {
+  /* left side bar pages */
+  color: #ffffff !important;
+}
+.roam-sidebar-content #roam-sidebar-logo {
+  /* hide Roam Research logo */
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Right Sidebar
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# All Pages
+--------------------------------------------------------------*/
+.button-disabled-strong {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+[class*=bp3-icon]::before {
+  color: #ffffff !important;
+}
+[class*=bp3-icon]::before :hover {
+  color: #e76f51;
+}
+
+/*--------------------------------------------------------------
+# Popups
+--------------------------------------------------------------*/
+/* search and multiselect menus */
+.bp3-menu {
+  background-color: #14232a;
+  color: white;
+}
+
+/* top-right toolbar popover */
+.bp3-popover {
+  color: #264653;
+}
+.bp3-popover > .bp3-popover-content {
+  background-color: #14232a;
+  color: white;
+}
+.bp3-popover .bp3-popover-arrow-fill {
+  fill: #14232a;
+}
+.bp3-popover .bp3-popover-arrow-border {
+  fill: #e76f51;
+}
+.bp3-popover .bp3-button {
+  color: red !important;
+}
+.bp3-popover .bp3-button:hover {
+  color: blue !important;
+}
+
+.bp3-menu, .bp3-popover, .bp3-popover-content, .roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a {
+  color: #264653;
+}
+.bp3-menu div > div > .flex-h-box div > div > span,
+.bp3-menu div > div > .flex-h-box div > div > strong,
+.bp3-menu div > div > div > button,
+.bp3-menu > ul > div, .bp3-popover div > div > .flex-h-box div > div > span,
+.bp3-popover div > div > .flex-h-box div > div > strong,
+.bp3-popover div > div > div > button,
+.bp3-popover > ul > div, .bp3-popover-content div > div > .flex-h-box div > div > span,
+.bp3-popover-content div > div > .flex-h-box div > div > strong,
+.bp3-popover-content div > div > div > button,
+.bp3-popover-content > ul > div, .roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > span,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > strong,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > div > button,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a > ul > div {
+  color: #264653;
+}
+.bp3-menu div > div > .flex-h-box div > div > span:hover,
+.bp3-menu div > div > .flex-h-box div > div > strong:hover,
+.bp3-menu div > div > div > button:hover,
+.bp3-menu > ul > div:hover, .bp3-popover div > div > .flex-h-box div > div > span:hover,
+.bp3-popover div > div > .flex-h-box div > div > strong:hover,
+.bp3-popover div > div > div > button:hover,
+.bp3-popover > ul > div:hover, .bp3-popover-content div > div > .flex-h-box div > div > span:hover,
+.bp3-popover-content div > div > .flex-h-box div > div > strong:hover,
+.bp3-popover-content div > div > div > button:hover,
+.bp3-popover-content > ul > div:hover, .roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > span:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > .flex-h-box div > div > strong:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a div > div > div > button:hover,
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a > ul > div:hover {
+  color: #e76f51;
+}
+
+/*-------------------------------------------------- Plugins --------------------------------------------------*/
+/*-------------------------------------------------- Debug Use --------------------------------------------------*/

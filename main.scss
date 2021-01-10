@@ -12,19 +12,16 @@
 @import "preferences/fonts";
 @import "preferences/preferences";
 
-
 /*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
-@import "libs/basic/workspace";
-@import "libs/basic/text";
-// @import "libs/basic/tags";
-// @import "libs/basic/blocks";
+@import "workspace";
 // @import "libs/features/code-area";
 // @import "libs/features/kanban";
 // @import "libs/features/table";
 // @import "libs/features/queries";
 
-/*-------------------------------------------------- Plugins --------------------------------------------------*/
-// @import "plugins/calendar";
+/*-------------------------------------------------- Extra Customizations --------------------------------------------------*/
+// @import "custom/calendar";
+// @import "custom/custom-tags";
 
 /*-------------------------------------------------- Debug Use --------------------------------------------------*/
 @import "debug";
