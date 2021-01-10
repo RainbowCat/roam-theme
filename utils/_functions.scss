@@ -1,0 +1,14 @@
+// returns selector of tag with name "tag_name"
+@function tag($tag_name) {
+  @return #{"."}rm-page-ref#{"["}data-tag#{"="}#{string.quote($tag-name)}#{"]"};
+}
+
+// returns the class selector of division bar on left sidebar
+@function division-bar() {
+  // @return #{"["}style#{"="} + string.quote(flex#{":"}0 0 1px#{":"} background-color#{":"}rgb(
+  //         57,
+  //         75,
+  //         89
+  //       ) #{"]"});
+  @return none;
+}

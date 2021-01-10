@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+# Basic Text
+--------------------------------------------------------------*/
+.rm-title-display {
+  @include font-title;
+}
+.rm-heading-level-1 {
+  @include font-heading(1);
+}
+.rm-heading-level-2 {
+  @include font-heading(2);
+}
+.rm-heading-level-3 {
+  @include font-heading(3);
+}
+.rm-block {
+  @include font-body;
+}
+/*--------------------------------------------------------------
+# Bullets
+--------------------------------------------------------------*/
+.rm-bullet {
+  &__inner {
+    /* bullet */
+    @include bullet-open;
+  }
+  .block-border-left {
+    @include nesting-line;
+  }
+}
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+.rm-page-ref {
+  &--link {
+    @include link-text;
+  }
+  &__brackets {
+    @include link-bracket;
+  }
+}
+/*--------------------------------------------------------------
+# References
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# TODOs
+--------------------------------------------------------------*/
+// .checkmark {
+//   /* todo */
+//   position: absolute;
+//   top: var(--checkmark-top);
+//   left: var(--checkmark-left);
+//   height: var(--checkmark-height);
+//   border-radius: var(--checkmark-border-radius);
+//   width: var(--checkmark-width);
+//   border: var(--checkmark-border);
+//   background-color: var(--checkmark-bg-color);
+// }
+// input:checked ~ .checkmark {
+//   /* done */
+//   position: absolute;
+//   top: var(--checkmark-top);
+//   left: var(--checkmark-left);
+//   height: var(--checkmark-height);
+//   border-radius: var(--checkmark-border-radius);
+//   width: var(--checkmark-width);
+//   border: var(--checkedmark-border);
+//   background-color: var(--checkedmark-bg-color);
+// }
+// .check-container .checkmark:after {
+//   /* done check symbol */
+//   left: 3.5px;
+//   top: 0.25px;
+//   width: 6px;
+//   height: 10px;
+//   border: var(--checkmark-color);
+//   border-width: 0 2px 2px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(40deg) scale(0.8);
+// }

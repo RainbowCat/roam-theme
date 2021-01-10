@@ -9,6 +9,7 @@ my take on making a Roam Research theme.
 2. edit `.scss` files
 
 ## file structure
+
 ```
 .
 ├── README.md
@@ -34,7 +35,8 @@ my take on making a Roam Research theme.
 ├── main.scss
 └── main.css                   // [[roam/css]] will import this file
 ```
-# Reference
+
+# reference + other styles
 
 - Cal Robert (https://github.com/calrobertlee/roam-css-styles/)
 - Better Roam Research (https://github.com/linuz90/better-roam-research)
