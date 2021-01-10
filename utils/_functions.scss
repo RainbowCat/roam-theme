@@ -1,0 +1,5 @@
+// returns a tag selector as a string
+@function tag($tag_name) {
+  $t: #{"."}rm-page-ref#{"["}data-tag#{'='}#{string.quote($tag-name)}#{"]"};
+  @return $t;
+}

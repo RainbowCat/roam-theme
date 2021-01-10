@@ -1,63 +1,81 @@
-// .rm-title-display,
-// .rm-title-textarea,
-// .roam-log-page h1.level2 {
-//   height: auto ;
-//   line-height: 1.5 ;
-//   font-size: 26px ;
-//   font-weight: 600 ;
-// }
-
-.rm-block-container {
-  .rm-heading-level-1 {
-    @include font-heading(1);
+/*--------------------------------------------------------------
+# Basic Text
+--------------------------------------------------------------*/
+.rm-title-display {
+  @include font-title;
+}
+.rm-heading-level-1 {
+  @include font-heading(1);
+}
+.rm-heading-level-2 {
+  @include font-heading(2);
+}
+.rm-heading-level-3 {
+  @include font-heading(3);
+}
+.rm-block {
+  @include font-body;
+}
+/*--------------------------------------------------------------
+# Bullets
+--------------------------------------------------------------*/
+.rm-bullet {
+  &__inner {
+    /* bullet */
+    @include bullet-open;
   }
-  .rm-heading-level-2 {
-    @include font-heading(2);
-  }
-  .rm-heading-level-1 {
-    @include font-heading(3);
+  .block-border-left {
+    @include nesting-line;
   }
 }
-
-// .rm-heading-level-1 > .rm-block-main {
-//   span {
-//     margin-top: -2px;
-//   }
-//   div,
-//   textarea {
-//     font-size: 22px;
-//     line-height: 1.5;
-//     font-weight: 600;
-//   }
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+.rm-page-ref {
+  &--link {
+    @include link-text;
+  }
+  &__brackets {
+    @include link-bracket;
+  }
+}
+/*--------------------------------------------------------------
+# References
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# TODOs
+--------------------------------------------------------------*/
+// .checkmark {
+//   /* todo */
+//   position: absolute;
+//   top: var(--checkmark-top);
+//   left: var(--checkmark-left);
+//   height: var(--checkmark-height);
+//   border-radius: var(--checkmark-border-radius);
+//   width: var(--checkmark-width);
+//   border: var(--checkmark-border);
+//   background-color: var(--checkmark-bg-color);
 // }
-
-// .rm-heading-level-2 > .rm-block-main {
-//   span {
-//     margin-top: -2px;
-//   }
-//   div,
-//   textarea {
-//     font-size: 20px;
-//     line-height: 1.5;
-//     font-weight: 600;
-//   }
+// input:checked ~ .checkmark {
+//   /* done */
+//   position: absolute;
+//   top: var(--checkmark-top);
+//   left: var(--checkmark-left);
+//   height: var(--checkmark-height);
+//   border-radius: var(--checkmark-border-radius);
+//   width: var(--checkmark-width);
+//   border: var(--checkedmark-border);
+//   background-color: var(--checkedmark-bg-color);
 // }
-
-// .rm-heading-level-3 > .rm-block-main {
-//   span {
-//     margin-top: -1px;
-//   }
-//   div,
-//   textarea {
-//     font-size: 18px;
-//     line-height: 1.5;
-//   }
-// }
-
-// .level2 {
-//   font-weight: inherit;
-// }
-
-// h1 {
-//   color: red;
+// .check-container .checkmark:after {
+//   /* done check symbol */
+//   left: 3.5px;
+//   top: 0.25px;
+//   width: 6px;
+//   height: 10px;
+//   border: var(--checkmark-color);
+//   border-width: 0 2px 2px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(40deg) scale(0.8);
 // }

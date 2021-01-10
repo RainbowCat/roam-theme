@@ -1,49 +1,93 @@
-/*--------------------------------------------------------------
-# Utils
---------------------------------------------------------------*/
+/*-------------------------------------------------- Utils --------------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
+/* Palette */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-/* Palette */
+/* Links */
+/* Bullets */
+/* Checkbox */
 /*** ANIMATIONS ***/
-/*--------------------------------------------------------------
-# Reset
---------------------------------------------------------------*/
+/*-------------------------------------------------- Reset --------------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
 /*** ANIMATIONS ***/
+/*-------------------------------------------------- Basic --------------------------------------------------*/
 /*--------------------------------------------------------------
-# Basic
+# Basic Text
 --------------------------------------------------------------*/
-.rm-block-container .rm-heading-level-1 {
+.rm-title-display {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-weight: 700;
   font-size: 36px;
-  color: #4787c3;
+  color: #4787c3 !important;
   line-height: 1.2;
 }
-.rm-block-container .rm-heading-level-2 {
+
+.rm-heading-level-1 {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-weight: 700;
-  font-size: 34.5px;
-  color: #4787c3;
+  font-size: 34.25px;
+  color: #4787c3 !important;
   line-height: 1.2;
 }
-.rm-block-container .rm-heading-level-1 {
+
+.rm-heading-level-2 {
   font-family: "Ubuntu", Verdana, sans-serif;
   font-weight: 700;
-  font-size: 30px;
-  color: #4787c3;
+  font-size: 29px;
+  color: #4787c3 !important;
+  line-height: 1.2;
+}
+
+.rm-heading-level-3 {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 20.25px;
+  color: #4787c3 !important;
+  line-height: 1.2;
+}
+
+.rm-block {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #f65e89 !important;
   line-height: 1.2;
 }
 
 /*--------------------------------------------------------------
-# Workspace
+# Bullets
+--------------------------------------------------------------*/
+.rm-bullet__inner {
+  /* bullet */
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: var(--bullet-color);
+}
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+.rm-page-ref--link {
+  color: #4787c3;
+}
+/*--------------------------------------------------------------
+# References
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Features
+# TODOs
 --------------------------------------------------------------*/
+/*-------------------------------------------------- Workspace --------------------------------------------------*/
 /*--------------------------------------------------------------
-# Plugins
+# Left Sidebar
 --------------------------------------------------------------*/
+.roam-sidebar-content .roam-sidebar-logo {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Right Sidebar
+--------------------------------------------------------------*/
+/*-------------------------------------------------- Features --------------------------------------------------*/
+/*-------------------------------------------------- Plugins --------------------------------------------------*/
