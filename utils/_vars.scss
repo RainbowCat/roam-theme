@@ -25,12 +25,12 @@ $background--topbar: $palette--theme-darker;
 $background--left: $palette--theme-darker;
 $background--right: $palette--theme;
 $background--shortcuts: $palette--theme-lighter;
-$background--checkmark-checked:$palette--grey;
-$background--checkmark-nonchecked:$palette--accent;
+$background--checkmark-checked: $palette--grey;
+$background--checkmark-nonchecked: $palette--accent;
 $background--popover: $palette--theme-darker;
 
 $text--pagelinks: $palette--accent-lighter;
-$text--references:$palette--white;
+$text--references: $palette--white;
 $text--body: $palette--white;
 $text--title: $palette--white;
 $text--heading1: $palette--white;
@@ -41,10 +41,9 @@ $text--bold: $palette--white;
 $text--italics: $palette--white;
 $text--highlight: $palette--white;
 
-$color--icons
-$color--bullet
+$color--icons: $palette--white;
+$color--bullet: $palette--white;
 
-$border--checkmark
-$border--bullet
-$border--nestline
-
+$border--checkmark: $palette--white;
+$border--bullet: $palette--white;
+$border--nestline: $palette--white;
