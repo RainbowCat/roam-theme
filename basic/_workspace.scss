@@ -28,7 +28,7 @@
     color: $palette--white !important;
   }
   .starred-pages-wrapper {
-    background-color: $background--shortcuts; // background of full shotcut section
+    background: $background--shortcuts; // background of full shotcut section
     color: $palette--white !important; // "★ SHORTCUTS" title
     // #{division-bar()} {
     // }
@@ -73,7 +73,7 @@
 
 .bp3-popover {
   //TODO move variables
-  --popup-color--background: $palette-black;
+  --popup-color--background: $palette--black;
   --popup-color--text: $palette--accent-lighter;
 }
 
@@ -84,12 +84,12 @@
 
 .bp3-popover {
   color: $palette--theme; // popup title colors
-  &-content {
-    background-color: var(--popup-background-color);
-  }
-  &-arrow-fill {
-    fill: var(--popup-background-color);
-  }
+&-content {
+  background-color: $background--popover;
+}
+&-arrow-fill {
+  fill: $background--popover;
+}
   .bp3-button {
     // popover buttons
     color: red !important;
