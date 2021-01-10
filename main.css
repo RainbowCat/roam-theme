@@ -14,32 +14,27 @@
 --------------------------------------------------------------*/
 /*** LAYOUT ***/
 /*** APPEARANCE ***/
-.roam-sidebar-content {
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
   background: black;
   color: white;
 }
-
-.roam-topbar,
-.roam-body-main {
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
   background: white;
   color: black;
 }
-
-#roam-right-sidebar-content {
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
   background: grey;
   color: white;
 }
-
-.roam-sidebar-content *,
-.roam-body-main *,
-#roam-right-sidebar-content *,
-.roam-topbar * {
-  color: inherit !important;
-  background: inherit !important;
-}
-
-body {
-  background: #14232a;
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+  opacity: 100%;
 }
 
 /*** ANIMATIONS ***/
@@ -47,12 +42,3 @@ body {
 /*-------------------------------------------------- Features --------------------------------------------------*/
 /*-------------------------------------------------- Plugins --------------------------------------------------*/
 /*-------------------------------------------------- Debug Use --------------------------------------------------*/
-.starred-pages-wrapper > div:nth-child(1) {
-  flex: 0 0 10px !important;
-  background-color: white !important;
-}
-
-.starred-pages-wrapper > div:nth-child(2) {
-  /* div padding */
-  display: none;
-}
