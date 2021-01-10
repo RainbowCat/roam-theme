@@ -25,9 +25,6 @@
   .log-button {
     //TODO add customizable icons
   }
-
-  .starred-pages-wrapper {
-  }
   .starred-pages-wrapper {
     background-color: $background--shortcuts;
     // #{division-bar()} {
@@ -37,24 +34,23 @@
       flex: 0 0 10px !important;
       background-color: $palette--white !important;
     }
+    > div:nth-child(2) {
+      /* div padding */
+      display: none;
+    }
+  }
+  .log-button {
+    /* general navigations */
+    color: $palette--white !important;
+  }
+  .page {
+    /* left side bar pages */
+    color: $palette--white !important;
   }
   .roam-sidebar-logo {
+    /* hide Roam Research logo */
     display: none;
   }
-}
-
-.starred-pages-wrapper > div:nth-child(2) {
-  /* div padding */
-  display: none;
-}
-
-.log-button {
-  /* general navigations */
-  color: $palette--white !important;
-}
-.page {
-  /* left side bar pages */
-  color: $palette--white !important;
 }
 
 /*--------------------------------------------------------------

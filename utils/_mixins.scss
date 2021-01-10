@@ -1,5 +1,9 @@
 /*--------------------------------------------------------------
-# Text
+# Workspace
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Basic
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
@@ -49,16 +53,28 @@ $font--fallback: Verdana, sans-serif;
 /* Links */
 @mixin link-page-text {
   color: $palette--accent-lighter;
+  &:hover, &:focus {
+    
+  }
 }
 @mixin link-block-text {
+  &:hover, &:focus {
+    
+  }
 }
 @mixin link-alias {
+  &:hover, &:focus {
+    
+  }
 }
 @mixin link-embed {
 }
 @mixin link-brackets {
 }
 @mixin link-external {
+  &:hover, &:focus {
+
+  }
 }
 
 /* Bullets */
@@ -75,3 +91,11 @@ $font--fallback: Verdana, sans-serif;
 }
 @mixin done-checkbox {
 }
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
