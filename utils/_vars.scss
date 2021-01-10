@@ -4,7 +4,7 @@
 
 /* Palette */
 @mixin setColor($color) {
-  color: $color !important;
+  color: $color;
 }
 $palette--theme: #4787c3;
 $palette--theme-dark: #235d9c;
