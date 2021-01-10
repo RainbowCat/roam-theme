@@ -1,7 +1,9 @@
 /*** LAYOUT ***/
 
 /*** APPEARANCE ***/
-/* Palette */
+/*--------------------------------------------------------------
+# Palette
+--------------------------------------------------------------*/
 $palette--theme: #4787c3;
 $palette--theme-dark: #235d9c;
 $patette--theme-light: #d0e0f0;
@@ -11,7 +13,15 @@ $palette--black: #2a324b;
 $palette--white: #ffffff;
 $palette--grey: #f5f5f5;
 
-/* Fonts */
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
+$background--main: $palette--theme;
+$background--topbar: $palette--theme;
+
+/*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 $font--fallback: Verdana, sans-serif;
@@ -46,12 +56,14 @@ $font--fallback: Verdana, sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 15px;
+  color: $palette--accent;
   @include font-display;
 }
 @mixin font-bold {
   font-family: "Ubuntu", $font--fallback;
   font-weight: 700;
   font-size: 15px;
+  color: $palette--accent;
   @include font-display;
 }
 
@@ -74,5 +86,3 @@ $font--fallback: Verdana, sans-serif;
 }
 @mixin done-checkbox {
 }
-
-/*** ANIMATIONS ***/
