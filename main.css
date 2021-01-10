@@ -16,50 +16,26 @@
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
-.rm-title-display,
-.rm-title-textarea,
-.roam-log-page h1.level2 {
-  height: auto !important;
-  line-height: 1.5 !important;
-  font-size: 26px !important;
-  font-weight: 600 !important;
+.rm-block-container .rm-heading-level-1 {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #4787c3;
+  line-height: 1.2;
 }
-
-.rm-heading-level-1 > .rm-block-main span {
-  margin-top: -2px !important;
+.rm-block-container .rm-heading-level-2 {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 34.5px;
+  color: #4787c3;
+  line-height: 1.2;
 }
-.rm-heading-level-1 > .rm-block-main div,
-.rm-heading-level-1 > .rm-block-main textarea {
-  font-size: 22px !important;
-  line-height: 1.5 !important;
-  font-weight: 600 !important;
-}
-
-.rm-heading-level-2 > .rm-block-main span {
-  margin-top: -2px !important;
-}
-.rm-heading-level-2 > .rm-block-main div,
-.rm-heading-level-2 > .rm-block-main textarea {
-  font-size: 20px !important;
-  line-height: 1.5 !important;
-  font-weight: 600 !important;
-}
-
-.rm-heading-level-3 > .rm-block-main span {
-  margin-top: -1px !important;
-}
-.rm-heading-level-3 > .rm-block-main div,
-.rm-heading-level-3 > .rm-block-main textarea {
-  font-size: 18px !important;
-  line-height: 1.5 !important;
-}
-
-.level2 {
-  font-weight: inherit !important;
-}
-
-h1 {
-  color: red !important;
+.rm-block-container .rm-heading-level-1 {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #4787c3;
+  line-height: 1.2;
 }
 
 /*--------------------------------------------------------------
