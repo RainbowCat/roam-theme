@@ -38,23 +38,28 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-sidebar-content {
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-sidebar-content {
   background: black;
   color: white;
 }
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-body-main {
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-topbar,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-body-main {
   background: white;
   color: black;
 }
-body:not([class|=CodeMirror]:not([class~=rm-block])) #roam-right-sidebar-content {
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  #roam-right-sidebar-content {
   background: black;
   color: white;
 }
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-sidebar-content *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-body-main *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) #roam-right-sidebar-content *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar * {
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  .roam-sidebar-content
+  *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-body-main *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  #roam-right-sidebar-content
+  *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-topbar * {
   font: inherit;
   color: inherit;
   background: inherit;
@@ -120,7 +125,9 @@ body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar * {
 }
 
 /* main text */
-.rm-block, .roam-block, [class|=rm-block] {
+.rm-block,
+.roam-block,
+[class|="rm-block"] {
   color: #ffffff;
   font-size: 12px;
   line-height: 1.2;
@@ -145,10 +152,23 @@ strong {
 }
 
 /* simple blocks */
-.rm-block .rm-not-focused, .roam-block .rm-not-focused, [class|=rm-block] .rm-not-focused {
+.rm-block .rm-not-focused,
+.roam-block .rm-not-focused,
+[class|="rm-block"] .rm-not-focused {
   background-color: #14232a;
 }
-.rm-block .rm-focused, .roam-block .rm-focused, [class|=rm-block] .rm-focused {
+.rm-block .rm-focused,
+.rm-block .rm-focused .rm-block,
+.rm-block .rm-focused .roam-block,
+.rm-block .rm-focused [class|="rm-block"],
+.roam-block .rm-focused,
+.roam-block .rm-focused .rm-block,
+.roam-block .rm-focused .roam-block,
+.roam-block .rm-focused [class|="rm-block"],
+[class|="rm-block"] .rm-focused,
+[class|="rm-block"] .rm-focused .rm-block,
+[class|="rm-block"] .rm-focused .roam-block,
+[class|="rm-block"] .rm-focused [class|="rm-block"] {
   background-color: #e9c772;
 }
 
@@ -223,10 +243,14 @@ strong {
 }
 /* aliased links */
 /* external links */
-.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), [class|=rm-block] a:not(.rm-alias--page) {
+.rm-block a:not(.rm-alias--page),
+.roam-block a:not(.rm-alias--page),
+[class|="rm-block"] a:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
-.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, [class|=rm-block] a:not(.rm-alias--page):before {
+.rm-block a:not(.rm-alias--page):before,
+.roam-block a:not(.rm-alias--page):before,
+[class|="rm-block"] a:not(.rm-alias--page):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";
@@ -267,7 +291,7 @@ strong {
   background-color: #14232a !important;
   color: white;
 }
-.bp3-elevation-3 .dont-unfocus-block[style*=background] {
+.bp3-elevation-3 .dont-unfocus-block[style*="background"] {
   background-color: #e9c772 !important;
 }
 .bp3-elevation-3 none {
@@ -299,10 +323,10 @@ strong {
 
 /* tool bar */
 /* icons & buttons */
-[class*=bp3-icon]::before {
+[class*="bp3-icon"]::before {
   color: #ffffff !important;
 }
-[class*=bp3-icon]::before :hover {
+[class*="bp3-icon"]::before :hover {
   color: #e76f51;
 }
 

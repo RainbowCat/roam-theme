@@ -62,7 +62,10 @@
   background-color: $background--block-regular;
 }
 @mixin block--focused {
-  background-color: $background--block-highlight;
+  &,
+  & #{$rm-block-selector} {
+    background-color: $background--block-highlight;
+  }
 }
 
 /*-------------------------
