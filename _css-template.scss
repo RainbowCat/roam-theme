@@ -18,13 +18,13 @@
 }
 
 /* main text */
-.rm-block {
+#{$rm-block-selector} {
   @include text--body;
 }
 strong {
   @include text--bold;
 }
-//TODO add italics
+// TODO add italics
 
 /* bullets */
 .rm-bullet {
@@ -39,17 +39,19 @@ strong {
 }
 
 /* simple blocks */
-//TODO add block highlight
-.rm-not-focused {
-  @include block--regular;
-}
-.rm-focused {
-  @include block--focused;
+// TODO add block highlight
+#{$rm-block-selector} {
+  .rm-not-focused {
+    @include block--regular;
+  }
+  .rm-focused {
+    @include block--focused;
+  }
 }
 
 /* checkboxes */
-//TODO @include not-done-checkbox
-//TODO @include done-checkbox
+// TODO @include not-done-checkbox
+// TODO @include done-checkbox
 
 /*------------------------- 
 # WORKSPACE
@@ -93,15 +95,11 @@ strong {
 }
 
 /* right sidebar */
-#roam-right-sidebar-content {
+#right-sidebar {
   background: $background--right;
   color: setContrast($background--right);
-}
-#roam-right-sidebar-content
-// > .sidebar-content
-{
   .window-headers {
-    // "Block Outline" title
+    // div titles
   }
 }
 
@@ -118,18 +116,6 @@ strong {
   background: $background--topbar;
   color: setContrast($background--topbar);
 }
-
-/* daily pages */
-/* "all pages" page */
-.rm-all-pages {
-  .rm-pages-title-col {
-  }
-}
-.button-disabled-strong {
-  // trash & export icon in "all pages"
-  opacity: 1; // override Roam Research settings
-}
-/* "graph overview" page */
 
 /*------------------------- 
 # BIDIRECTIONAL LINKING
@@ -156,7 +142,7 @@ strong {
 }
 
 .rm-alias {
-  & &--internal {
+  & &--page {
     @include link--alias-internal;
   }
   & &--external {
@@ -167,24 +153,37 @@ strong {
 a {
   @include link--external;
 }
+
+#{$rm-block-selector} {
+  a:not(.rm-alias--page) {
+    /* only include external direct url and external alias */
+    @include glyph(before);
+  }
+}
+
 /* linked references */
-//TODO
+// TODO
 /* unlinked references */
-//TODO
+// TODO
 /* block references */
-//TODO
+// TODO
 /* block embeds */
-//TODO
+// TODO
 /* query & queries */
-//TODO
+// TODO
 /* mentions */
-//TODO
+// TODO
 /*-------------------------
 # NAVIGATION COMPONENTS
 -------------------------*/
-/* dropdown menus (search and multiselect) */
+/* menus */
 .bp3-menu {
+  // code-area language menu
   @include menu;
+}
+.bp3-elevation-3 {
+  // slash menu
+  @include menu(".dont-unfocus-block[style*=background]");
 }
 /* search bar */
 // TODO (add from nox theme?)
@@ -192,7 +191,7 @@ a {
 /* page filter */
 .bp3-popover {
   // popup title colors
-  @include page-filter
+  @include page-filter;
 }
 
 /* tool bar */
@@ -205,6 +204,18 @@ a {
     color: $palette--accent;
   }
 }
+
+/* daily pages */
+/* "all pages" page */
+.rm-all-pages {
+  .rm-pages-title-col {
+  }
+}
+.button-disabled-strong {
+  // trash & export icon in "all pages"
+  opacity: 1; // override Roam Research settings
+}
+/* "graph overview" page */
 /*-------------------------
 # FEATURES
 -------------------------*/

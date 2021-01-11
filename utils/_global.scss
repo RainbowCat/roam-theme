@@ -1,7 +1,7 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-body:not([class|="CodeMirror"]:not([class|="rm-block"])) {
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) {
     .roam-sidebar-content {
         background: black;
         color: white;
@@ -31,5 +31,9 @@ body:not([class|="CodeMirror"]:not([class|="rm-block"])) {
 #app {
   background: $palette--theme;
   color: setContrast($palette--theme);
+  z-index: inherit;
 }
+
+$rm-block-selector: ".rm-block, .roam-block, [class|=rm-block]";
+
 

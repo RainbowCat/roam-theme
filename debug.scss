@@ -1,0 +1,27 @@
+@mixin looklike-better-roam {
+  #right-sidebar {
+    border: none !important;
+    transition: none !important;
+    overflow: hidden !important;
+    h1 {
+      font-size: 18px !important;
+    }
+    #roam-right-sidebar-content {
+      margin-left: -6px !important;
+      > div[style] {
+        border-bottom: 1px solid $palette--grey !important;
+      }
+    }
+    .hoverparent,
+    .react-resizable {
+      max-width: 100% !important;
+      img {
+        max-width: 100% !important;
+      }
+    }
+    .rm-block-text {
+      font-size: 14.5px !important;
+    }
+  }
+}
+// @include looklike-better-roam();

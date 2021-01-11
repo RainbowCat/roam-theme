@@ -27,9 +27,12 @@ $background--shortcuts: linear-gradient(
   $background--left
 );
 
+$background--block-regular: $palette--theme-darker;
+$background--block-highlight: $palette--accent-lighter;
 $background--checkmark-checked: $palette--grey;
 $background--checkmark-nonchecked: $palette--accent;
 $background--popover: $palette--theme-darker;
+$background--popover-hover: $palette--accent-lighter;
 $background--menus: $palette--theme-darker;
 
 // text colors
@@ -66,6 +69,3 @@ $color--bullet: $palette--white;
 $border--checkmark: $palette--accent;
 $border--bullet: $palette--white;
 $border--nestline: $palette--white;
-
-
-
