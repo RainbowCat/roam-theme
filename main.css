@@ -20,6 +20,33 @@
  * Returns black for dark text and white for light text.
  */
 /* reset default settings */
+/*** LAYOUT ***/
+/*** APPEARANCE ***/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
+  background: black;
+  color: white;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
+  background: white;
+  color: black;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
+  background: grey;
+  color: white;
+}
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content *,
+body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+  opacity: 100%;
+}
+
+/*** ANIMATIONS ***/
 /*-------------------------------------------------- Preferences --------------------------------------------------*/
 /* Coolors Exported Palette - https://coolors.co/14232a-264653-2a9d8f-fdf6ed-e9c772-f4a261-e76f51 */
 /* SCSS HEX */
@@ -27,7 +54,6 @@
 /* SCSS RGB */
 /* SCSS Gradient */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 /*--------------------------------------------------------------
 # Palette
 --------------------------------------------------------------*/
@@ -37,6 +63,11 @@
 /*--------------------------------------------------------------
 # Backgrounds
 --------------------------------------------------------------*/
+#app {
+  background: #264653;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -45,6 +76,7 @@
 /* main text */
 /* bullets */
 /* checkboxes */
+/* blocks */
 /*--------------------------------------------------------------
 # BIDIRECTIONAL
 --------------------------------------------------------------*/
@@ -62,12 +94,207 @@
 /*--------------------------------------------------------------
 # NAVIGATION COMPONENTS
 --------------------------------------------------------------*/
+/* dropdown menus (search and multiselect) */
 /* search bar */
 /* page filter */
 /* tool bar */
 /* icons & buttons */
 /*--------------------------------------------------------------
 # Features
+--------------------------------------------------------------*/
+/* code area */
+/* kanban */
+/* table */
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
+/* page title */
+.rm-title-display {
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+/* headings */
+.rm-heading-level-1 {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+.rm-heading-level-2 {
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+.rm-heading-level-3 {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+/* main text */
+.rm-block {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+strong {
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+
+/* bullets */
+.rm-bullet__inner {
+  /* bullet */
+}
+.rm-bullet .block-border-left {
+  /* nesting line */
+}
+
+/* simple blocks */
+/* checkboxes */
+/*-------------------------------------------------------------- 
+# WORKSPACE
+--------------------------------------------------------------*/
+/* left sidebar */
+.roam-sidebar-content {
+  background: #14232a;
+  color: white;
+}
+.roam-sidebar-content .top-row {
+  color: white;
+}
+.roam-sidebar-content .log-button {
+  /* general navigations */
+  color: white !important;
+}
+.roam-sidebar-content .starred-pages-wrapper {
+  background: linear-gradient(#14232a 30%, #2a9d8f 90%, #14232a);
+  color: white !important;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(1) {
+  /* horizontal division line */
+  flex: 0 0 10px !important;
+  background-color: #ffffff !important;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(2) {
+  /* div padding */
+  display: none;
+}
+.roam-sidebar-content .page {
+  /* left sidebar pages */
+  color: #ffffff !important;
+}
+.roam-sidebar-content #roam-sidebar-logo {
+  /* hide Roam Research logo */
+  display: none;
+}
+
+/* right sidebar */
+#roam-right-sidebar-content {
+  background: #264653;
+  color: white;
+}
+
+/* roam main body */
+.roam-main {
+  background: #14232a;
+  color: white;
+}
+
+/* topbar */
+.roam-topbar {
+  background: #14232a;
+  color: white;
+}
+
+/* daily pages */
+/* "all pages" page */
+.button-disabled-strong {
+  opacity: 1;
+}
+
+/* "graph overview" page */
+/*-------------------------------------------------------------- 
+# BIDIRECTIONAL
+--------------------------------------------------------------*/
+/* tags */
+/* attributes */
+.rm-attr-ref {
+  font-family: "Ubuntu", Verdana, sans-serif;
+  font-weight: 700;
+}
+
+/* page links */
+.rm-page-ref--link {
+  color: #e9c772;
+}
+/* aliased links */
+/* external links */
+/* linked references */
+/* unlinked references */
+/* block references */
+/* block embeds */
+/* query & queries */
+/* mentions */
+/*--------------------------------------------------------------
+# NAVIGATION COMPONENTS
+--------------------------------------------------------------*/
+/* dropdown menus (search and multiselect) */
+.bp3-menu {
+  background-color: #14232a;
+  color: white;
+}
+
+/* search bar */
+/* page filter */
+.bp3-popover {
+  color: #264653;
+}
+.bp3-popover > .bp3-popover-content {
+  background-color: #14232a;
+  color: white;
+}
+.bp3-popover .bp3-popover-arrow-fill {
+  fill: #14232a;
+}
+.bp3-popover .bp3-popover-arrow-border {
+  fill: #e76f51;
+}
+.bp3-popover .bp3-button {
+  color: red !important;
+}
+.bp3-popover .bp3-button:hover {
+  color: blue !important;
+}
+
+/* tool bar */
+/* icons & buttons */
+[class*=bp3-icon]::before {
+  color: #ffffff !important;
+}
+[class*=bp3-icon]::before :hover {
+  color: #e76f51;
+}
+
+/*--------------------------------------------------------------
+# FEATURES
 --------------------------------------------------------------*/
 /* code area */
 /* kanban */

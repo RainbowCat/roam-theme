@@ -1,4 +1,3 @@
-/*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
 /*--------------------------------------------------------------
 # Basic
 --------------------------------------------------------------*/
@@ -6,6 +5,7 @@
 .rm-title-display {
   @include text--title;
 }
+
 /* headings */
 .rm-heading-level-1 {
   @include text--heading1;
@@ -16,11 +16,12 @@
 .rm-heading-level-3 {
   @include text--heading3;
 }
+
 /* main text */
 .rm-block {
   @include text--body;
 }
-.strong {
+strong {
   @include text--bold;
 }
 //TODO add italics
@@ -29,13 +30,14 @@
 .rm-bullet {
   &__inner {
     /* bullet */
-    @include bullet-open;
+    @include bullet--open;
   }
   .block-border-left {
     /* nesting line */
-    @include nesting-line;
+    @include nestingline;
   }
 }
+
 /* simple blocks */
 //TODO add block highlight
 .rm-not-focused {
@@ -142,83 +144,57 @@
 /* page links */
 .rm-page-ref {
   &--link {
-    @include link-page-text;
+    @include link--page-text;
   }
   &__brackets {
-    @include link-brackets;
+    @include link--page-brackets;
   }
 }
 /* aliased links */
-@mixin link-internal {
-  @include link-page-text;
+@mixin link--internal {
+  @include link--page-text;
 }
 
 .rm-alias {
   & &--internal {
-    @include link-internal;
+    @include link--alias-internal;
   }
   & &--external {
-    @include link-external;
+    @include link--alias-external;
   }
 }
 /* external links */
-/* linked referencs */
-/* unlinked references */
-/* block references */
 a {
-  @include link-external;
+  @include link--external;
 }
+/* linked references */
+//TODO
+/* unlinked references */
+//TODO
+/* block references */
+//TODO
 /* block embeds */
+//TODO
 /* query & queries */
+//TODO
 /* mentions */
+//TODO
 /*--------------------------------------------------------------
 # NAVIGATION COMPONENTS
 --------------------------------------------------------------*/
 /* dropdown menus (search and multiselect) */
 .bp3-menu {
-  background-color: $background--popover;
-  color: white;
+  @include menu;
 }
+/* search bar */
+// TODO (add from nox theme?)
+
 /* page filter */
 .bp3-popover {
   // popup title colors
-  color: $palette--theme;
-  & > &-content {
-    // background
-    background-color: $background--popover;
-    color: white;
-  }
-  & &-arrow {
-    &-fill {
-      // background
-      fill: $background--popover;
-    }
-    &-border {
-      //tiny border
-      fill: $palette--accent; //TODO make this and $background--popover contrast
-    }
-  }
-  .bp3-button {
-    // tag selection buttons
-    color: red !important;
-    &:hover {
-      color: blue !important;
-    }
-  }
+  @include page-filter
 }
-// #{popover-selector()} {
-//   // TODO fix brute force style popovers
-//   color: $palette--theme;
-//   div > div > .flex-h-box div > div > span,
-//   div > div > .flex-h-box div > div > strong,
-//   div > div > div > button,
-//   > ul > div {
-//     color: $palette--theme;
-//     &:hover {
-//       color: $palette--accent;
-//     }
-//   }
-// }
+
 /* tool bar */
 /* icons & buttons */
 [class*="bp3-icon"]::before {

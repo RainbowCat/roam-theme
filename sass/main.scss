@@ -7,13 +7,14 @@
 /* helper functions */
 @import "libs/utils/functions";
 /* reset default settings */
-@import "libs/utils/global";
+@import "libs/utils/reset";
 
 /*-------------------------------------------------- Preferences --------------------------------------------------*/
 @import "libs/utils/palette";
 @import "libs/utils/fonts";
 
 @import "libs/utils/vars";
+@import "libs/utils/global";
 @import "libs/utils/settings";
 
 @debug "all setup files successfully imported";
