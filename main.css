@@ -218,12 +218,25 @@ strong {
 -------------------------*/
 /* dropdown menus (search and multiselect) */
 .bp3-menu {
-  background-color: #14232a;
+  background-color: #14232a !important;
   color: white;
 }
-.bp3-menu ::hover {
-  background-color: pink;
+.bp3-menu none {
+  background-color: #e9c772 !important;
+}
+.bp3-menu none {
+  background-color: #e9c772;
+}
+
+.bp3-elevation-3 {
+  background-color: #14232a !important;
   color: white;
+}
+.bp3-elevation-3 .dont-unfocus-block[style*=background] {
+  background-color: #e9c772 !important;
+}
+.bp3-elevation-3 none {
+  background-color: #e9c772;
 }
 
 /* search bar */

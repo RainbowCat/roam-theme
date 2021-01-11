@@ -185,12 +185,18 @@
 // NAVIGATION COMPONENTS
 //-------------------------
 // dropdown menus (search and multiselect)
-@mixin menu {
-  background-color: $background--popover;
+@mixin menu($focus: none, $hover: none) {
+  background-color: $background--popover !important;
   color: setContrast($background--popover);
-  ::hover {
-    background-color: pink;
-    color: setContrast($background--popover);
+  @if $focus is not none {
+    #{$focus} {
+      background-color: $background--popover-hover !important;
+    }
+  }
+  @if $hover is not none {
+    #{$hover} {
+      background-color: $background--popover-hover;
+    }
   }
 }
 // search bar

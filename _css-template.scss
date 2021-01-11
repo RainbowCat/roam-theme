@@ -180,7 +180,12 @@ a {
 -------------------------*/
 /* dropdown menus (search and multiselect) */
 .bp3-menu {
+  // code-area language menu
   @include menu;
+}
+.bp3-elevation-3 {
+  // "forward slash" menu
+  @include menu(".dont-unfocus-block[style*=background]");
 }
 /* search bar */
 // TODO (add from nox theme?)
