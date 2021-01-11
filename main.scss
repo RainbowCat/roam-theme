@@ -4,16 +4,18 @@
 @use "sass:math";
 @use "sass:color";
 
+/* helper functions */
 @import "libs/utils/functions";
+/* reset default settings */
 @import "libs/utils/global";
 
-/*-------------------------------------------------- Preferences --------------------------------------------------*/
-@import "preferences/palette";
-@import "preferences/fonts";
-@import "preferences/preferences";
+/* preferences */
+@import "libs/utils/palette";
+@import "libs/utils/fonts";
+@import "libs/utils/mixins";
 
 /*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
-@import "workspace";
+// @import "libs/workspace";
 // @import "libs/features/code-area";
 // @import "libs/features/kanban";
 // @import "libs/features/table";

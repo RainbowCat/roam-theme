@@ -1,3 +1,10 @@
+/*
+ * Use this to apply mixins to Roam Research's class selectors
+ */
+
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
 /* Basic Text */
 .rm-title-display {
   @include font-title;
@@ -14,22 +21,11 @@
 .rm-block {
   @include font-body;
 }
-
-/* Attributes */
-.rm-attr-ref {
+.strong {
   @include font-bold;
 }
 
 /* Bullets */
-@mixin bullet-open {
-  @include bullet-open;
-}
-
-@mixin bullet-closed {
-}
-@mixin nesting-line {
-}
-
 .rm-bullet {
   &__inner {
     /* bullet */
@@ -41,15 +37,16 @@
   }
 }
 
-/* Links */
-@mixin link-page-text {
-  color: $palette--accent-lighter;
-  &:hover,
-  &:focus {
-  }
+
+/*--------------------------------------------------------------
+# Second Brain Features?
+--------------------------------------------------------------*/
+/* Attributes */
+.rm-attr-ref {
+  @include font-bold;
 }
-@mixin link-brackets {
-}
+
+/* Page Links */
 .rm-page-ref {
   &--link {
     @include link-page-text;
@@ -60,25 +57,6 @@
 }
 
 /* Block References */
-@mixin link-block-text {
-  &:hover,
-  &:focus {
-  }
-}
-@mixin link-alias {
-  &:hover,
-  &:focus {
-  }
-}
-@mixin link-embed {
-}
-
-/* external link */
-@mixin link-external {
-  &:hover,
-  &:focus {
-  }
-}
 a {
   @include link-external;
 }

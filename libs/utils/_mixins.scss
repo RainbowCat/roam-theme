@@ -131,18 +131,63 @@ $background--menus: $palette--theme-darker;
 /*--------------------------------------------------------------
 # Link, Reference, Alias
 --------------------------------------------------------------*/
+/* Page Links */
+@mixin link-page-text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-page-brackets {
+}
+
+@mixin link-block-ref {
+  &:hover,
+  &:focus {
+  }
+}
+// @mixin link-block-ref-paren {
+//   &:hover,
+//   &:focus {
+//   }
+// }
+/* Alias */
+@mixin link-alias {
+  &:hover,
+  &:focus {
+  }
+}
+
+/* external link */
+@mixin link-external {
+  &:hover,
+  &:focus {
+  }
+}
 /* Linked References */
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Bullets */
+@mixin bullet-open {
+  @include bullet-open;
+}
+
+@mixin bullet-closed {
+}
+@mixin nesting-line {
+}
 /* Icons */
 /* Checkboxes */
 
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+/* Block Embed */
+@mixin link-embed {
+}
+
 /* Kanban */
 /* Table */
 /* Queries */
