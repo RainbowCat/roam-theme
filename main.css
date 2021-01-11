@@ -72,7 +72,7 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
 /* page title */
 .rm-title-display {
   font-size: 36px;
-  color: #ffffff;
+  color: #ffffff !important;
   line-height: 1.2;
   margin: 0px;
   margin-top: 2px;
