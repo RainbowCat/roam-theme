@@ -2,9 +2,9 @@
 # BASIC
 -------------------------*/
 @mixin TextDisplay {
-  line-height: 1.2;
+  // line-height: 1;
   margin: 0px;
-  margin-top: 2px;
+  // margin-top: 2px;
 }
 // page title
 @mixin text--title {
@@ -62,10 +62,26 @@
   background-color: $background--block-regular;
 }
 @mixin block--focused {
-  &,
-  & #{$rm-block-selector} {
-    background-color: $background--block-highlight;
+  & {
+    // background: linear-gradient(
+    //   to right,
+    //   opacify($palette--theme-darker, 0.2) 5%,
+    //   opacify($palette--accent-darker, 0.6) 30%,
+    //   opacify($background--block-highlight, 0.5)
+    // );
+    @include setBorder(opacify($palette--accent-darker, 0.6), 5);
   }
+  & #{$rm-block-selector} {
+    // background: linear-gradient(
+    //   to left,
+    //   $palette--theme-darker 5%,
+    //   $palette--accent-darker 30%,
+    //   $background--block-highlight
+    // );
+  }
+}
+@mixin block--selected {
+  background-color: $palette--accent-darker;
 }
 
 /*-------------------------
@@ -127,6 +143,8 @@
 
 // linked referencs
 @mixin linked-ref {
+  background: $palette--accent-darker;
+  color: setContrast($palette--accent-darker);
 }
 // unlinked references
 @mixin unlinked-ref {

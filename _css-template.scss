@@ -39,7 +39,6 @@ strong {
 }
 
 /* simple blocks */
-// TODO add block highlight
 #{$rm-block-selector} {
   .rm-not-focused {
     @include block--regular;
@@ -47,6 +46,9 @@ strong {
   .rm-focused {
     @include block--focused;
   }
+}
+.block-highlight-blue {
+  @include block--selected;
 }
 
 /* checkboxes */
@@ -160,9 +162,14 @@ a {
     @include glyph(before);
   }
 }
-
+/* reference menu */
+.rm-reference-main {
+  @include setBorder(setContrast($background--main), 5);
+}
 /* linked references */
-// TODO
+.rm-reference-item {
+  @include linked-ref;
+}
 /* unlinked references */
 // TODO
 /* block references */
