@@ -34,5 +34,6 @@ body:not([class|="CodeMirror"]:not([class~="rm-block"])) {
   z-index: inherit;
 }
 
+$rm-block-selector: ".rm-block, .roam-block, [class|=rm-block]";
 
 

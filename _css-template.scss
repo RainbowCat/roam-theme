@@ -18,7 +18,7 @@
 }
 
 /* main text */
-.rm-block {
+#{$rm-block-selector} {
   @include text--body;
 }
 strong {
@@ -40,7 +40,7 @@ strong {
 
 /* simple blocks */
 // TODO add block highlight
-.rm-block {
+#{$rm-block-selector} {
   .rm-not-focused {
     @include block--regular;
   }
@@ -154,7 +154,7 @@ a {
   @include link--external;
 }
 
-.rm-block {
+#{$rm-block-selector} {
   a:not(.rm-alias--page) {
     /* only include external direct url and external alias */
     @include glyph(before);

@@ -120,7 +120,7 @@ body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar * {
 }
 
 /* main text */
-.rm-block {
+.rm-block, .roam-block, [class|=rm-block] {
   color: #ffffff;
   font-size: 12px;
   line-height: 1.2;
@@ -145,10 +145,10 @@ strong {
 }
 
 /* simple blocks */
-.rm-block .rm-not-focused {
+.rm-block .rm-not-focused, .roam-block .rm-not-focused, [class|=rm-block] .rm-not-focused {
   background-color: #14232a;
 }
-.rm-block .rm-focused {
+.rm-block .rm-focused, .roam-block .rm-focused, [class|=rm-block] .rm-focused {
   background-color: #e9c772;
 }
 
@@ -223,10 +223,10 @@ strong {
 }
 /* aliased links */
 /* external links */
-.rm-block a:not(.rm-alias--page) {
+.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), [class|=rm-block] a:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
-.rm-block a:not(.rm-alias--page):before {
+.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, [class|=rm-block] a:not(.rm-alias--page):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";
