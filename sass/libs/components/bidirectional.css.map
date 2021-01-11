@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE;AAChE;;gEAEgE",
-    "sources": [
-        "bidirectional.scss"
-    ],
-    "names": [],
-    "file": "bidirectional.css"
-}

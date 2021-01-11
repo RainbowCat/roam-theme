@@ -1,3 +1,6 @@
+/*-------------------------
+# FUNCTIONS
+-------------------------*/
 // return raw string
 @function raw($string) {
   @return "#{$string}";
@@ -26,9 +29,8 @@
 
 // @debug sine-gradient($palette--accent, $palette--theme);
 
-/*--------------------------------------------------------------
-# Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
---------------------------------------------------------------*/
+
+/* Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796 */
 /**
  * Precomputed linear color channel values, for use in contrast calculations.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests

@@ -1,8 +1,8 @@
-/*-------------------------------------------------- Utils --------------------------------------------------*/
-/* helper functions */
-/*--------------------------------------------------------------
-# Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
---------------------------------------------------------------*/
+/*-------------------------------------------------------- Utils --------------------------------------------------------*/
+/*-------------------------
+# FUNCTIONS
+-------------------------*/
+/* Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796 */
 /**
  * Precomputed linear color channel values, for use in contrast calculations.
  * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
@@ -19,10 +19,25 @@
  * Determine whether to use dark or light text on top of given color.
  * Returns black for dark text and white for light text.
  */
-/* reset default settings */
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
+/*-------------------------
+# PALETTE
+-------------------------*/
+/* Coolors Exported Palette - https://coolors.co/14232a-264653-2a9d8f-fdf6ed-e9c772-f4a261-e76f51 */
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+/*-------------------------
+# FONTS
+-------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*-------------------------
+# VARIABLES
+-------------------------*/
+/*-------------------------------------------------------- Preferences --------------------------------------------------------*/
+/*-------------------------
+# GLOBAL SETUP
+-------------------------*/
 body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
   background: black;
   color: white;
@@ -33,7 +48,7 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
   color: black;
 }
 body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
-  background: grey;
+  background: black;
   color: white;
 }
 body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
@@ -46,68 +61,14 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
   opacity: 100%;
 }
 
-/*** ANIMATIONS ***/
-/*-------------------------------------------------- Preferences --------------------------------------------------*/
-/* Coolors Exported Palette - https://coolors.co/14232a-264653-2a9d8f-fdf6ed-e9c772-f4a261-e76f51 */
-/* SCSS HEX */
-/* SCSS HSL */
-/* SCSS RGB */
-/* SCSS Gradient */
-/* Fonts */
-/*--------------------------------------------------------------
-# Palette
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Colors
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Backgrounds
---------------------------------------------------------------*/
 #app {
   background: #264653;
   color: white;
 }
 
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
-/* page title */
-/* headings */
-/* main text */
-/* bullets */
-/* checkboxes */
-/* blocks */
-/*--------------------------------------------------------------
-# BIDIRECTIONAL
---------------------------------------------------------------*/
-/* tags */
-/* attributes */
-/* page links */
-/* aliased links */
-/* external link */
-/* linked referencs */
-/* unlinked references */
-/* block references */
-/* block embeds */
-/* query & queries */
-/* mentions */
-/*--------------------------------------------------------------
-# NAVIGATION COMPONENTS
---------------------------------------------------------------*/
-/* dropdown menus (search and multiselect) */
-/* search bar */
-/* page filter */
-/* tool bar */
-/* icons & buttons */
-/*--------------------------------------------------------------
-# Features
---------------------------------------------------------------*/
-/* code area */
-/* kanban */
-/* table */
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
+/*-------------------------
+# BASIC
+-------------------------*/
 /* page title */
 .rm-title-display {
   font-size: 36px;
@@ -169,9 +130,9 @@ strong {
 
 /* simple blocks */
 /* checkboxes */
-/*-------------------------------------------------------------- 
+/*------------------------- 
 # WORKSPACE
---------------------------------------------------------------*/
+-------------------------*/
 /* left sidebar */
 .roam-sidebar-content {
   background: #14232a;
@@ -231,9 +192,9 @@ strong {
 }
 
 /* "graph overview" page */
-/*-------------------------------------------------------------- 
-# BIDIRECTIONAL
---------------------------------------------------------------*/
+/*------------------------- 
+# BIDIRECTIONAL LINKING
+-------------------------*/
 /* tags */
 /* attributes */
 .rm-attr-ref {
@@ -253,12 +214,16 @@ strong {
 /* block embeds */
 /* query & queries */
 /* mentions */
-/*--------------------------------------------------------------
+/*-------------------------
 # NAVIGATION COMPONENTS
---------------------------------------------------------------*/
+-------------------------*/
 /* dropdown menus (search and multiselect) */
 .bp3-menu {
   background-color: #14232a;
+  color: white;
+}
+.bp3-menu ::hover {
+  background-color: pink;
   color: white;
 }
 
@@ -293,11 +258,11 @@ strong {
   color: #e76f51;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------
 # FEATURES
---------------------------------------------------------------*/
+-------------------------*/
 /* code area */
 /* kanban */
 /* table */
-/*-------------------------------------------------- Extra Customizations --------------------------------------------------*/
-/*-------------------------------------------------- Debug Use --------------------------------------------------*/
+/*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
+/*-------------------------------------------------------- Debug Use --------------------------------------------------------*/

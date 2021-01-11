@@ -1,5 +1,6 @@
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
+/*-------------------------
+# GLOBAL SETUP
+-------------------------*/
 body:not([class|="CodeMirror"]:not([class|="rm-block"])) {
     .roam-sidebar-content {
         background: black;
@@ -11,7 +12,7 @@ body:not([class|="CodeMirror"]:not([class|="rm-block"])) {
         color: black;
     }
     #roam-right-sidebar-content {
-        background: grey;
+        background: black;
         color: white
     }
     .roam-sidebar-content, 
@@ -27,12 +28,8 @@ body:not([class|="CodeMirror"]:not([class|="rm-block"])) {
     }
 }
 
-// body {
-//     background: $background--main;
-// }
+#app {
+  background: $palette--theme;
+  color: setContrast($palette--theme);
+}
 
-// [class*="bp3-popover"] {
-//   color: red;
-// }
-
-/*** ANIMATIONS ***/

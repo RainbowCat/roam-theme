@@ -1,18 +1,18 @@
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
+//-------------------------
+// BASIC
+//-------------------------
 @mixin TextDisplay {
   line-height: 1.2;
   margin: 0px;
   margin-top: 2px;
 }
-/* page title */
+// page title
 @mixin text--title {
   font-size: 36px;
   color: $textcolor--title;
   @include TextDisplay;
 }
-/* headings */
+// headings
 @mixin text--heading1 {
   color:$textcolor--heading1;
   font-size: 30px;
@@ -28,7 +28,7 @@
   font-size: 20px;
   @include TextDisplay;
 }
-/* main text */
+// main text
 @mixin text--body {
   color: $textcolor--body;
   font-size: 12px;
@@ -44,7 +44,7 @@
   color: $textcolor--bold;
   @include TextDisplay;
 }
-/* bullets */
+// bullets
 @mixin bullet--open {
 }
 @mixin bullet--closed {
@@ -52,27 +52,27 @@
 @mixin nestingline {
 }
 
-/* checkboxes */
+// checkboxes
 @mixin not-done-checkbox {
 }
 @mixin done-checkbox {
 }
-/* blocks */
+// blocks
 @mixin block--regular {
 
 }
 @mixin block--focused {
 
 }
-/*--------------------------------------------------------------
-# BIDIRECTIONAL
---------------------------------------------------------------*/
-/* tags */
+//-------------------------
+// BIDIRECTIONAL LINKING
+//-------------------------
+// tags
 //TODO
-/* attributes */
+// attributes
 //TODO
 
-/* page links */
+// page links
 @mixin link--page-text {
   color: $palette--accent-lighter;
   &:hover,
@@ -82,7 +82,7 @@
 @mixin link--page-brackets {
 }
 
-/* aliased links */
+// aliased links
 @mixin link--alias-internal {
   &:hover,
   &:focus {
@@ -93,48 +93,52 @@
   &:focus {
   }
 }
-/* external link */
+// external link
 @mixin link--external {
   &:hover,
   &:focus {
   }
 }
 
-/* linked referencs */
+// linked referencs
 @mixin linked-ref {
 
 }
-/* unlinked references */
+// unlinked references
 @mixin unlinked-ref {
 
 }
-/* block references */
+// block references
 @mixin block-ref--text {
 }
 @mixin block-ref--parens {
 }
-/* block embeds */
+// block embeds
 @mixin block--embed {
 }
-/* query & queries */
+// query & queries
 @mixin queries {
 
 }
-/* mentions */
+// mentions
 @mixin mentions {
 
 }
 
-/*--------------------------------------------------------------
-# NAVIGATION COMPONENTS
---------------------------------------------------------------*/
-/* dropdown menus (search and multiselect) */
+//-------------------------
+// NAVIGATION COMPONENTS
+//-------------------------
+// dropdown menus (search and multiselect)
 @mixin menu {
-    background-color: $background--popover;
-  color: white;
+  background-color: $background--popover;
+  color: setContrast($background--popover);
+  ::hover {
+    background-color: pink;
+    color: setContrast($background--popover);
+  }
 }
-/* search bar */
-/* page filter */
+// search bar
+// page filter
 @mixin page-filter {
   color: $palette--theme;
   & > &-content {
@@ -160,12 +164,12 @@
     }
   }
 }
-/* tool bar */
-/* icons & buttons */
+// tool bar
+// icons & buttons
 
-/*--------------------------------------------------------------
-# Features
---------------------------------------------------------------*/
-/* code area */
-/* kanban */
-/* table */
+//-------------------------
+// FEATURES
+//-------------------------
+// code area
+// kanban
+// table
