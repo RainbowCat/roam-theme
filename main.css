@@ -38,23 +38,28 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-sidebar-content {
   background: black;
   color: white;
 }
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-topbar,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-body-main {
   background: white;
   color: black;
 }
-body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  #roam-right-sidebar-content {
   background: black;
   color: white;
 }
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  .roam-sidebar-content
+  *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-body-main *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"]))
+  #roam-right-sidebar-content
+  *,
+body:not([class|="CodeMirror"]:not([class~="rm-block"])) .roam-topbar * {
   font: inherit;
   color: inherit;
   background: inherit;
@@ -64,6 +69,7 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
 #app {
   background: #264653;
   color: white;
+  z-index: inherit;
 }
 
 /*-------------------------
@@ -129,6 +135,13 @@ strong {
 }
 
 /* simple blocks */
+.rm-block .rm-not-focused {
+  background-color: #14232a;
+}
+.rm-block .rm-focused {
+  background-color: #e9c772;
+}
+
 /* checkboxes */
 /*------------------------- 
 # WORKSPACE
@@ -216,7 +229,7 @@ strong {
 /*-------------------------
 # NAVIGATION COMPONENTS
 -------------------------*/
-/* dropdown menus (search and multiselect) */
+/* menus */
 .bp3-menu {
   background-color: #14232a !important;
   color: white;
@@ -232,7 +245,7 @@ strong {
   background-color: #14232a !important;
   color: white;
 }
-.bp3-elevation-3 .dont-unfocus-block[style*=background] {
+.bp3-elevation-3 .dont-unfocus-block[style*="background"] {
   background-color: #e9c772 !important;
 }
 .bp3-elevation-3 none {
@@ -255,18 +268,19 @@ strong {
   fill: white;
 }
 .bp3-popover .bp3-button {
-  color: red !important;
+  background: radial-gradient(#14232a, #24404d);
+  color: white !important;
 }
 .bp3-popover .bp3-button:hover {
-  color: blue !important;
+  color: #e76f51 !important;
 }
 
 /* tool bar */
 /* icons & buttons */
-[class*=bp3-icon]::before {
+[class*="bp3-icon"]::before {
   color: #ffffff !important;
 }
-[class*=bp3-icon]::before :hover {
+[class*="bp3-icon"]::before :hover {
   color: #e76f51;
 }
 

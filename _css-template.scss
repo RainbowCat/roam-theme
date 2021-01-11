@@ -40,11 +40,13 @@ strong {
 
 /* simple blocks */
 // TODO add block highlight
-.rm-not-focused {
-  @include block--regular;
-}
-.rm-focused {
-  @include block--focused;
+.rm-block {
+  .rm-not-focused {
+    @include block--regular;
+  }
+  .rm-focused {
+    @include block--focused;
+  }
 }
 
 /* checkboxes */
@@ -178,13 +180,13 @@ a {
 /*-------------------------
 # NAVIGATION COMPONENTS
 -------------------------*/
-/* dropdown menus (search and multiselect) */
+/* menus */
 .bp3-menu {
   // code-area language menu
   @include menu;
 }
 .bp3-elevation-3 {
-  // "forward slash" menu
+  // slash menu
   @include menu(".dont-unfocus-block[style*=background]");
 }
 /* search bar */

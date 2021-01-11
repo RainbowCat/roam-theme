@@ -59,8 +59,10 @@
 }
 // blocks
 @mixin block--regular {
+  background-color: $background--block-regular;
 }
 @mixin block--focused {
+  background-color: $background--block-highlight;
 }
 //-------------------------
 // WORKSPACE
@@ -184,7 +186,7 @@
 //-------------------------
 // NAVIGATION COMPONENTS
 //-------------------------
-// dropdown menus (search and multiselect)
+// menus
 @mixin menu($focus: none, $hover: none) {
   background-color: $background--popover !important;
   color: setContrast($background--popover);
@@ -206,7 +208,7 @@
   & > &-content {
     // background
     background-color: $background--popover;
-    color: white;
+    color: setContrast($background--popover);
   }
   & &-arrow {
     &-fill {
@@ -220,9 +222,13 @@
   }
   .bp3-button {
     // tag selection buttons
-    color: red !important;
+    background: radial-gradient(
+      $background--popover,
+      lighten($background--popover, 10%)
+    );
+    color: setContrast($background--popover) !important;
     &:hover {
-      color: blue !important;
+      color: $palette--accent !important;
     }
   }
 }
