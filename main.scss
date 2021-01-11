@@ -9,17 +9,14 @@
 /* reset default settings */
 @import "libs/utils/global";
 
-/* preferences */
+/*-------------------------------------------------- Preferences --------------------------------------------------*/
 @import "libs/utils/palette";
 @import "libs/utils/fonts";
-@import "libs/utils/mixins";
 
-/*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
-// @import "libs/workspace";
-// @import "libs/features/code-area";
-// @import "libs/features/kanban";
-// @import "libs/features/table";
-// @import "libs/features/queries";
+@import "libs/utils/vars";
+@import "libs/utils/settings";
+
+@import "libs/css-template";
 
 /*-------------------------------------------------- Extra Customizations --------------------------------------------------*/
 // @import "custom/calendar";

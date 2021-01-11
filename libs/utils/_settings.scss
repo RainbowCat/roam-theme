@@ -1,0 +1,114 @@
+/*--------------------------------------------------------------
+# Basic
+--------------------------------------------------------------*/
+@mixin TextDisplay {
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+/* page title */
+@mixin text--title {
+  font-size: 36px;
+  color: $textcolor--title;
+  @include TextDisplay;
+}
+/* headings */
+@mixin text--heading1 {
+  color:$textcolor--heading1;
+  font-size: 30px;
+  @include TextDisplay;
+}
+@mixin text--heading2 {
+  color:$textcolor--heading2;
+  font-size: 25px;
+  @include TextDisplay;
+}
+@mixin text--heading3 {
+  color:$textcolor--heading3;
+  font-size: 20px;
+  @include TextDisplay;
+}
+/* main text */
+@mixin text--body {
+  color: $textcolor--body;
+  font-size: 12px;
+  @include TextDisplay;
+}
+@mixin text--italics {
+  font-size: 15px;
+  color: $textcolor--italics;
+  @include TextDisplay;
+}
+@mixin text--bold {
+  font-size: 12px;
+  color: $textcolor--bold;
+  @include TextDisplay;
+}
+/* bullets */
+@mixin bullet-open {
+  @include bullet-open;
+}
+
+@mixin bullet-closed {
+}
+@mixin nesting-line {
+}
+
+/* checkboxes */
+@mixin not-done-checkbox {
+}
+@mixin done-checkbox {
+}
+
+/*--------------------------------------------------------------
+# BIDIRECTIONAL
+--------------------------------------------------------------*/
+/* tags */
+//TODO
+/* attributes */
+//TODO
+
+/* page links */
+@mixin link-page-text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link-page-brackets {
+}
+
+/* aliased links */
+@mixin link-alias {
+  &:hover,
+  &:focus {
+  }
+}
+/* external link */
+@mixin link-external {
+  &:hover,
+  &:focus {
+  }
+}
+
+/* linked referencs */
+/* unlinked references */
+/* block references */
+/* block embeds */
+/* query & queries */
+/* mentions */
+
+/*--------------------------------------------------------------
+# NAVIGATION COMPONENTS
+--------------------------------------------------------------*/
+/* search bar */
+/* page filter */
+/* tool bar */
+/* icons & buttons */
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+/* code area */
+/* kanban */
+/* table */

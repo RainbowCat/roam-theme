@@ -1,4 +1,5 @@
 /*-------------------------------------------------- Utils --------------------------------------------------*/
+/* helper functions */
 /*--------------------------------------------------------------
 # Reference: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
 --------------------------------------------------------------*/
@@ -18,33 +19,7 @@
  * Determine whether to use dark or light text on top of given color.
  * Returns black for dark text and white for light text.
  */
-/*** LAYOUT ***/
-/*** APPEARANCE ***/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content {
-  background: black;
-  color: white;
-}
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main {
-  background: white;
-  color: black;
-}
-body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content {
-  background: grey;
-  color: white;
-}
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-sidebar-content *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-body-main *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) #roam-right-sidebar-content *,
-body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
-  font: inherit;
-  color: inherit;
-  background: inherit;
-  opacity: 100%;
-}
-
-/*** ANIMATIONS ***/
+/* reset default settings */
 /*-------------------------------------------------- Preferences --------------------------------------------------*/
 /* Coolors Exported Palette - https://coolors.co/14232a-264653-2a9d8f-fdf6ed-e9c772-f4a261-e76f51 */
 /* SCSS HEX */
@@ -52,6 +27,7 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
 /* SCSS RGB */
 /* SCSS Gradient */
 /* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 /*--------------------------------------------------------------
 # Palette
 --------------------------------------------------------------*/
@@ -62,40 +38,39 @@ body:not([class|=CodeMirror]:not([class|=rm-block])) .roam-topbar * {
 # Backgrounds
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Basic Text
+# Basic
 --------------------------------------------------------------*/
+/* page title */
+/* headings */
+/* main text */
+/* bullets */
+/* checkboxes */
 /*--------------------------------------------------------------
-# Workspace
+# BIDIRECTIONAL
 --------------------------------------------------------------*/
-/* Left Sidebar */
-/* Right Sidebar */
-/* Main Area */
+/* tags */
+/* attributes */
+/* page links */
+/* aliased links */
+/* external link */
+/* linked referencs */
+/* unlinked references */
+/* block references */
+/* block embeds */
+/* query & queries */
+/* mentions */
 /*--------------------------------------------------------------
-# Workspace Tools
+# NAVIGATION COMPONENTS
 --------------------------------------------------------------*/
-/* Top */
-/* Search Bar */
-/* Page Filter */
-/* "All Pages" */
-/* "Graph Overview */
-/*--------------------------------------------------------------
-# Link, Reference, Alias
---------------------------------------------------------------*/
-/* Linked References */
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-/* Bullets */
-/* Icons */
-/* Checkboxes */
+/* search bar */
+/* page filter */
+/* tool bar */
+/* icons & buttons */
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-/* Kanban */
-/* Table */
-/* Queries */
-/* Mentions */
-/* Code Area */
-/*-------------------------------------------------- Apply Preferences --------------------------------------------------*/
+/* code area */
+/* kanban */
+/* table */
 /*-------------------------------------------------- Extra Customizations --------------------------------------------------*/
 /*-------------------------------------------------- Debug Use --------------------------------------------------*/

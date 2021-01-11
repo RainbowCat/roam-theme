@@ -1,30 +1,30 @@
 // return row
-@function raw($string) {
-  @return "#{$string}";
-}
+// @function raw($string) {
+//   @return "#{$string}";
+// }
 
 // returns selector of tag with name "tag_name"
-@function tag($tag_name) {
-  @return #{"."}rm-page-ref#{"["}data-tag#{"="}#{string.quote($tag-name)}#{"]"};
-}
+// @function tag($tag_name) {
+//   @return #{"."}rm-page-ref#{"["}data-tag#{"="}#{string.quote($tag-name)}#{"]"};
+// }
 
 // returns the class selector of division bar on left sidebar
-@function division-bar() {
-  // TODO
-  // @return #{"["}style#{"="} + string.quote(flex#{":"}0 0 1px#{":"} background-color#{":"}rgb(
-  //         57,
-  //         75,
-  //         89
-  //       ) #{"]"});
-  @return none;
-}
+// @function division-bar() {
+//   // TODO
+//   // @return #{"["}style#{"="} + string.quote(flex#{":"}0 0 1px#{":"} background-color#{":"}rgb(
+//   //         57,
+//   //         75,
+//   //         89
+//   //       ) #{"]"});
+//   @return none;
+// }
 
-@function popover-selector() {
-  // TODO fix brute force style popovers
-  @return raw(
-    ".bp3-menu,.bp3-popover,.bp3-popover-content,.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a"
-  );
-}
+// @function popover-selector() {
+//   // TODO fix brute force style popovers
+//   @return raw(
+//     ".bp3-menu,.bp3-popover,.bp3-popover-content,.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown a"
+//   );
+// }
 
 // TODO add ease-in-out-gradient
 // @function f($n, $m) {
