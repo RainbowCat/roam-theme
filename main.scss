@@ -1,39 +1,27 @@
-/*-------------------------------------------------- Utils --------------------------------------------------*/
+/*-------------------------------------------------------- Utils --------------------------------------------------------*/
 @use "sass:meta";
 @use "sass:string";
 @use "sass:math";
 @use "sass:color";
 
-@import "utils/vars";
+// helper functions
 @import "utils/functions";
-@import "utils/mixins";
 
-/*-------------------------------------------------- Reset --------------------------------------------------*/
-@import "reset";
+// variables
+@import "utils/palette";
+@import "utils/fonts";
+@import "utils/vars";
 
-/*-------------------------------------------------- Basic --------------------------------------------------*/
-@import "basic/text";
+/*-------------------------------------------------------- Preferences --------------------------------------------------------*/
+@import "utils/global";
+@import "utils/settings";
 
-/*-------------------------------------------------- Workspace --------------------------------------------------*/
-@import "workspace";
-// @import "workspace/main";
-// @import "workspace/sidebar-left";
-// @import "workspace/sidebar-right";
+@import "css-template";
 
-/*-------------------------------------------------- Features --------------------------------------------------*/
-@import "features/code-area";
-@import "features/kanban";
-@import "features/table";
-@import "features/queries";
+/*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
+// @import "custom/calendar";
+// @import "custom/custom-tags";
 
-/*-------------------------------------------------- Plugins --------------------------------------------------*/
-@import "plugins/calendar";
 
-.starred-pages-wrapper > div:nth-child(1) {
-  flex: 0 0 10px !important;
-  background-color: white !important;
-}
-.starred-pages-wrapper > div:nth-child(2) {
-  /* div padding */
-  display: none;
-}
+/*-------------------------------------------------------- Debug Use --------------------------------------------------------*/
+@import "debug";

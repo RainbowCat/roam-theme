@@ -1,0 +1,213 @@
+/*-------------------------
+# BASIC
+-------------------------*/
+/* page title */
+.rm-title-display {
+  @include text--title;
+}
+
+/* headings */
+.rm-heading-level-1 {
+  @include text--heading1;
+}
+.rm-heading-level-2 {
+  @include text--heading2;
+}
+.rm-heading-level-3 {
+  @include text--heading3;
+}
+
+/* main text */
+.rm-block {
+  @include text--body;
+}
+strong {
+  @include text--bold;
+}
+//TODO add italics
+
+/* bullets */
+.rm-bullet {
+  &__inner {
+    /* bullet */
+    @include bullet--open;
+  }
+  .block-border-left {
+    /* nesting line */
+    @include nestingline;
+  }
+}
+
+/* simple blocks */
+//TODO add block highlight
+.rm-not-focused {
+  @include block--regular;
+}
+.rm-focused {
+  @include block--focused;
+}
+
+/* checkboxes */
+//TODO @include not-done-checkbox
+//TODO @include done-checkbox
+
+/*------------------------- 
+# WORKSPACE
+-------------------------*/
+/* left sidebar */
+.roam-sidebar-content {
+  background: $background--left;
+  color: setContrast($background--left);
+  .top-row {
+    // graph name
+    color: setContrast($background--left);
+  }
+  .log-button {
+    // TODO add customizable icons
+    /* general navigations */
+    color: setContrast($background--left) !important;
+  }
+  .starred-pages-wrapper {
+    background: $background--shortcuts; // background of full shotcut section
+    color: setContrast($background--left) !important; // "★ SHORTCUTS" title
+    > div:nth-child(1) {
+      /* horizontal division line */
+      // TODO add abstraction for class selector
+      flex: 0 0 10px !important;
+      background-color: $palette--white !important;
+    }
+    > div:nth-child(2) {
+      // TODO add abstraction for class selector
+      /* div padding */
+      display: none;
+    }
+  }
+  .page {
+    /* left sidebar pages */
+    color: $palette--white !important;
+  }
+  #roam-sidebar-logo {
+    /* hide Roam Research logo */
+    display: none;
+  }
+}
+
+/* right sidebar */
+#roam-right-sidebar-content {
+  background: $background--right;
+  color: setContrast($background--right);
+}
+#roam-right-sidebar-content
+// > .sidebar-content
+{
+  .window-headers {
+    // "Block Outline" title
+  }
+}
+
+.rm-resize-handle {
+}
+
+/* roam main body */
+.roam-main {
+  background: $background--main;
+  color: setContrast($background--main);
+}
+/* topbar */
+.roam-topbar {
+  background: $background--topbar;
+  color: setContrast($background--topbar);
+}
+
+/* daily pages */
+/* "all pages" page */
+.rm-all-pages {
+  .rm-pages-title-col {
+  }
+}
+.button-disabled-strong {
+  // trash & export icon in "all pages"
+  opacity: 1; // override Roam Research settings
+}
+/* "graph overview" page */
+
+/*------------------------- 
+# BIDIRECTIONAL LINKING
+-------------------------*/
+/* tags */
+
+/* attributes */
+.rm-attr-ref {
+  @include font-bold;
+}
+
+/* page links */
+.rm-page-ref {
+  &--link {
+    @include link--page-text;
+  }
+  &__brackets {
+    @include link--page-brackets;
+  }
+}
+/* aliased links */
+@mixin link--internal {
+  @include link--page-text;
+}
+
+.rm-alias {
+  & &--internal {
+    @include link--alias-internal;
+  }
+  & &--external {
+    @include link--alias-external;
+  }
+}
+/* external links */
+a {
+  @include link--external;
+}
+/* linked references */
+//TODO
+/* unlinked references */
+//TODO
+/* block references */
+//TODO
+/* block embeds */
+//TODO
+/* query & queries */
+//TODO
+/* mentions */
+//TODO
+/*-------------------------
+# NAVIGATION COMPONENTS
+-------------------------*/
+/* dropdown menus (search and multiselect) */
+.bp3-menu {
+  @include menu;
+}
+/* search bar */
+// TODO (add from nox theme?)
+
+/* page filter */
+.bp3-popover {
+  // popup title colors
+  @include page-filter
+}
+
+/* tool bar */
+/* icons & buttons */
+[class*="bp3-icon"]::before {
+  // TODO separate this for left sidebar, main, right sidebar?
+  // all icon color
+  color: $palette--white !important;
+  :hover {
+    color: $palette--accent;
+  }
+}
+/*-------------------------
+# FEATURES
+-------------------------*/
+/* code area */
+/* kanban */
+/* table */

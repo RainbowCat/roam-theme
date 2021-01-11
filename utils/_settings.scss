@@ -1,0 +1,175 @@
+//-------------------------
+// BASIC
+//-------------------------
+@mixin TextDisplay {
+  line-height: 1.2;
+  margin: 0px;
+  margin-top: 2px;
+}
+// page title
+@mixin text--title {
+  font-size: 36px;
+  color: $textcolor--title;
+  @include TextDisplay;
+}
+// headings
+@mixin text--heading1 {
+  color:$textcolor--heading1;
+  font-size: 30px;
+  @include TextDisplay;
+}
+@mixin text--heading2 {
+  color:$textcolor--heading2;
+  font-size: 25px;
+  @include TextDisplay;
+}
+@mixin text--heading3 {
+  color:$textcolor--heading3;
+  font-size: 20px;
+  @include TextDisplay;
+}
+// main text
+@mixin text--body {
+  color: $textcolor--body;
+  font-size: 12px;
+  @include TextDisplay;
+}
+@mixin text--italics {
+  font-size: 15px;
+  color: $textcolor--italics;
+  @include TextDisplay;
+}
+@mixin text--bold {
+  font-size: 12px;
+  color: $textcolor--bold;
+  @include TextDisplay;
+}
+// bullets
+@mixin bullet--open {
+}
+@mixin bullet--closed {
+}
+@mixin nestingline {
+}
+
+// checkboxes
+@mixin not-done-checkbox {
+}
+@mixin done-checkbox {
+}
+// blocks
+@mixin block--regular {
+
+}
+@mixin block--focused {
+
+}
+//-------------------------
+// BIDIRECTIONAL LINKING
+//-------------------------
+// tags
+//TODO
+// attributes
+//TODO
+
+// page links
+@mixin link--page-text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link--page-brackets {
+}
+
+// aliased links
+@mixin link--alias-internal {
+  &:hover,
+  &:focus {
+  }
+}
+@mixin link--alias-external {
+  &:hover,
+  &:focus {
+  }
+}
+// external link
+@mixin link--external {
+  &:hover,
+  &:focus {
+  }
+}
+
+// linked referencs
+@mixin linked-ref {
+
+}
+// unlinked references
+@mixin unlinked-ref {
+
+}
+// block references
+@mixin block-ref--text {
+}
+@mixin block-ref--parens {
+}
+// block embeds
+@mixin block--embed {
+}
+// query & queries
+@mixin queries {
+
+}
+// mentions
+@mixin mentions {
+
+}
+
+//-------------------------
+// NAVIGATION COMPONENTS
+//-------------------------
+// dropdown menus (search and multiselect)
+@mixin menu {
+  background-color: $background--popover;
+  color: setContrast($background--popover);
+  ::hover {
+    background-color: pink;
+    color: setContrast($background--popover);
+  }
+}
+// search bar
+// page filter
+@mixin page-filter {
+  color: $palette--theme;
+  & > &-content {
+    // background
+    background-color: $background--popover;
+    color: white;
+  }
+  & &-arrow {
+    &-fill {
+      // background
+      fill: $background--popover;
+    }
+    &-border {
+      //tiny border
+      fill: $palette--accent; //TODO make this and $background--popover contrast
+    }
+  }
+  .bp3-button {
+    // tag selection buttons
+    color: red !important;
+    &:hover {
+      color: blue !important;
+    }
+  }
+}
+// tool bar
+// icons & buttons
+
+//-------------------------
+// FEATURES
+//-------------------------
+// code area
+// kanban
+// table

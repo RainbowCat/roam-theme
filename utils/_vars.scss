@@ -1,9 +1,7 @@
-/*** LAYOUT ***/
-
-/*** APPEARANCE ***/
-/*--------------------------------------------------------------
-# Palette
---------------------------------------------------------------*/
+/*-------------------------
+# VARIABLES
+-------------------------*/
+// palette setup
 $palette--theme: #264653;
 $palette--theme-lighter: #2a9d8f;
 $palette--theme-darker: #14232a;
@@ -17,33 +15,57 @@ $palette--black: #222222;
 $palette--white: #ffffff;
 $palette--grey: #f5f5f5;
 
-/*--------------------------------------------------------------
-# Basic
---------------------------------------------------------------*/
-$background--main: $palette--theme-darker;
+// background colors
 $background--topbar: $palette--theme-darker;
 $background--left: $palette--theme-darker;
+$background--main: $palette--theme-darker;
 $background--right: $palette--theme;
-$background--shortcuts: $palette--theme-lighter;
+
+$background--shortcuts: linear-gradient(
+  $background--left 30%,
+  $palette--theme-lighter 90%,
+  $background--left
+);
+
 $background--checkmark-checked: $palette--grey;
 $background--checkmark-nonchecked: $palette--accent;
 $background--popover: $palette--theme-darker;
+$background--menus: $palette--theme-darker;
 
-$text--pagelinks: $palette--accent-lighter;
-$text--references: $palette--white;
-$text--body: $palette--white;
-$text--title: $palette--white;
-$text--heading1: $palette--white;
-$text--heading2: $palette--white;
-$text--heading3: $palette--white;
-$text--popover: $palette--white;
-$text--bold: $palette--white;
-$text--italics: $palette--white;
-$text--highlight: $palette--white;
+// text colors
+$textcolor--pagelinks: $palette--accent-lighter;
+$textcolor--references: $palette--white;
+$textcolor--body: $palette--white;
+$textcolor--title: $palette--white;
+$textcolor--heading1: $palette--white;
+$textcolor--heading2: $palette--white;
+$textcolor--heading3: $palette--white;
+$textcolor--popover: $palette--white;
+$textcolor--bold: $palette--white;
+$textcolor--italics: $palette--white;
+$textcolor--attribute: $palette--accent-lighter;
+
+$hover--pagelinks: $palette--accent-lighter;
+$hover--references: $palette--white;
+$hover--body: $palette--white;
+$hover--title: $palette--white;
+$hover--heading1: $palette--white;
+$hover--heading2: $palette--white;
+$hover--heading3: $palette--white;
+$hover--popover: $palette--white;
+$hover--bold: $palette--white;
+$hover--italics: $palette--white;
+$hover--attribute: $palette--accent-lighter;
+
+$textcolor--highlight: $palette--white;
+$background--highlight: $palette--accent;
 
 $color--icons: $palette--white;
 $color--bullet: $palette--white;
 
-$border--checkmark: $palette--white;
+$border--checkmark: $palette--accent;
 $border--bullet: $palette--white;
 $border--nestline: $palette--white;
+
+
+
