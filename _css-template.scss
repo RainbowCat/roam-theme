@@ -117,18 +117,6 @@ strong {
   color: setContrast($background--topbar);
 }
 
-/* daily pages */
-/* "all pages" page */
-.rm-all-pages {
-  .rm-pages-title-col {
-  }
-}
-.button-disabled-strong {
-  // trash & export icon in "all pages"
-  opacity: 1; // override Roam Research settings
-}
-/* "graph overview" page */
-
 /*------------------------- 
 # BIDIRECTIONAL LINKING
 -------------------------*/
@@ -154,7 +142,7 @@ strong {
 }
 
 .rm-alias {
-  & &--internal {
+  & &--page {
     @include link--alias-internal;
   }
   & &--external {
@@ -165,6 +153,14 @@ strong {
 a {
   @include link--external;
 }
+
+.rm-block {
+  a:not(.rm-alias--page) {
+    /* only include external direct url and external alias */
+    @include glyph(before);
+  }
+}
+
 /* linked references */
 // TODO
 /* unlinked references */
@@ -208,6 +204,18 @@ a {
     color: $palette--accent;
   }
 }
+
+/* daily pages */
+/* "all pages" page */
+.rm-all-pages {
+  .rm-pages-title-col {
+  }
+}
+.button-disabled-strong {
+  // trash & export icon in "all pages"
+  opacity: 1; // override Roam Research settings
+}
+/* "graph overview" page */
 /*-------------------------
 # FEATURES
 -------------------------*/
