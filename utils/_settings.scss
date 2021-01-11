@@ -14,17 +14,17 @@
 }
 // headings
 @mixin text--heading1 {
-  color:$textcolor--heading1;
+  color: $textcolor--heading1;
   font-size: 30px;
   @include TextDisplay;
 }
 @mixin text--heading2 {
-  color:$textcolor--heading2;
+  color: $textcolor--heading2;
   font-size: 25px;
   @include TextDisplay;
 }
 @mixin text--heading3 {
-  color:$textcolor--heading3;
+  color: $textcolor--heading3;
   font-size: 20px;
   @include TextDisplay;
 }
@@ -59,18 +59,45 @@
 }
 // blocks
 @mixin block--regular {
-
 }
 @mixin block--focused {
-
+}
+//-------------------------
+// WORKSPACE
+//-------------------------
+@mixin looklike-better-roam {
+  #right-sidebar {
+    border: none !important;
+    transition: none !important;
+    overflow: hidden !important;
+    h1 {
+      font-size: 18px !important;
+    }
+    #roam-right-sidebar-content {
+      margin-left: -6px !important;
+      > div[style] {
+        border-bottom: 1px solid $palette--grey !important;
+      }
+    }
+    .hoverparent,
+    .react-resizable {
+      max-width: 100% !important;
+      img {
+        max-width: 100% !important;
+      }
+    }
+    .rm-block-text {
+      font-size: 14.5px !important;
+    }
+  }
 }
 //-------------------------
 // BIDIRECTIONAL LINKING
 //-------------------------
 // tags
-//TODO
+// TODO
 // attributes
-//TODO
+// TODO
 
 // page links
 @mixin link--page-text {
@@ -102,11 +129,9 @@
 
 // linked referencs
 @mixin linked-ref {
-
 }
 // unlinked references
 @mixin unlinked-ref {
-
 }
 // block references
 @mixin block-ref--text {
@@ -118,11 +143,9 @@
 }
 // query & queries
 @mixin queries {
-
 }
 // mentions
 @mixin mentions {
-
 }
 
 //-------------------------
@@ -153,7 +176,7 @@
     }
     &-border {
       //tiny border
-      fill: $palette--accent; //TODO make this and $background--popover contrast
+      fill: setContrast($background--popover);
     }
   }
   .bp3-button {

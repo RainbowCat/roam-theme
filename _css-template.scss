@@ -24,7 +24,7 @@
 strong {
   @include text--bold;
 }
-//TODO add italics
+// TODO add italics
 
 /* bullets */
 .rm-bullet {
@@ -39,7 +39,7 @@ strong {
 }
 
 /* simple blocks */
-//TODO add block highlight
+// TODO add block highlight
 .rm-not-focused {
   @include block--regular;
 }
@@ -48,8 +48,8 @@ strong {
 }
 
 /* checkboxes */
-//TODO @include not-done-checkbox
-//TODO @include done-checkbox
+// TODO @include not-done-checkbox
+// TODO @include done-checkbox
 
 /*------------------------- 
 # WORKSPACE
@@ -93,15 +93,11 @@ strong {
 }
 
 /* right sidebar */
-#roam-right-sidebar-content {
+#right-sidebar {
   background: $background--right;
   color: setContrast($background--right);
-}
-#roam-right-sidebar-content
-// > .sidebar-content
-{
   .window-headers {
-    // "Block Outline" title
+    // div titles
   }
 }
 
@@ -168,17 +164,17 @@ a {
   @include link--external;
 }
 /* linked references */
-//TODO
+// TODO
 /* unlinked references */
-//TODO
+// TODO
 /* block references */
-//TODO
+// TODO
 /* block embeds */
-//TODO
+// TODO
 /* query & queries */
-//TODO
+// TODO
 /* mentions */
-//TODO
+// TODO
 /*-------------------------
 # NAVIGATION COMPONENTS
 -------------------------*/
@@ -192,7 +188,7 @@ a {
 /* page filter */
 .bp3-popover {
   // popup title colors
-  @include page-filter
+  @include page-filter;
 }
 
 /* tool bar */

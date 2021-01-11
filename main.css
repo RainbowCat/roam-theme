@@ -168,11 +168,10 @@ strong {
 }
 
 /* right sidebar */
-#roam-right-sidebar-content {
+#right-sidebar {
   background: #264653;
   color: white;
 }
-
 /* roam main body */
 .roam-main {
   background: #14232a;
@@ -240,7 +239,7 @@ strong {
   fill: #14232a;
 }
 .bp3-popover .bp3-popover-arrow-border {
-  fill: #e76f51;
+  fill: white;
 }
 .bp3-popover .bp3-button {
   color: red !important;
