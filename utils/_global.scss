@@ -1,51 +1,53 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-body:not([class|="CodeMirror"]:not([class~="rm-block"])) {
-  .roam-sidebar-content {
-    background: black;
-    color: white;
-  }
-  .roam-topbar,
-  .roam-body-main {
-    background: white;
-    color: black;
-  }
-  #roam-right-sidebar-content {
-    background: black;
-    color: white;
-  }
-  .roam-sidebar-content,
-  .roam-body-main,
-  #roam-right-sidebar-content,
-  .roam-topbar {
-    * {
-      font: inherit;
-      color: inherit;
-      background: inherit;
-      opacity: 100%;
-    }
-  }
-}
+// body:not([class|="CodeMirror"]:not([class~="rm-block"])) {
+//   .roam-sidebar-content {
+//     background: black;
+//     color: white;
+//   }
+//   .roam-topbar,
+//   .roam-body-main {
+//     background: white;
+//     color: black;
+//   }
+//   #roam-right-sidebar-content {
+//     background: black;
+//     color: white;
+//   }
+//   .roam-sidebar-content,
+//   .roam-body-main,
+//   #roam-right-sidebar-content,
+//   .roam-topbar {
+//     * {
+//       font: inherit;
+//       color: inherit;
+//       background: inherit;
+//       opacity: 100%;
+//     }
+//   }
+// }
 
 #app {
   background: $palette--theme;
   color: setContrast($palette--theme);
-  z-index: inherit;
+  min-height: minmax(10px, min-content);
+  min-width: minmax(10px, min-content);
+  overflow: scroll;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-$rm-block-selector: ".rm-block, .roam-block, [class|=rm-block]";
+$rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 
-#{$rm-block-selector} {
-  min-height: min-content !important;
-  .rm-focused[style~="padding"] {
-    padding: 0px !important;
-  }
-}
+/*------------------------------------------
+# workspace
+------------------------------------------*/
 
-.rm-title-display,
-.rm-title-textarea {
-  // make blocks not shift around when selected
-  height: auto !important;
-  line-height: 1.5 !important;
-}
+/*------------------------------------------
+# clickables
+------------------------------------------*/
+
+/*------------------------------------------
+# blocks
+------------------------------------------*/

@@ -41,48 +41,25 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-sidebar-content {
-  background: black;
-  color: white;
-}
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-body-main {
-  background: white;
-  color: black;
-}
-body:not([class|=CodeMirror]:not([class~=rm-block])) #roam-right-sidebar-content {
-  background: black;
-  color: white;
-}
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-sidebar-content *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-body-main *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) #roam-right-sidebar-content *,
-body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar * {
-  font: inherit;
-  color: inherit;
-  background: inherit;
-  opacity: 100%;
-}
-
 #app {
   background: #264653;
   color: white;
-  z-index: inherit;
+  min-height: minmax(10px, min-content);
+  min-width: minmax(10px, min-content);
+  overflow: scroll;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-.rm-block, .roam-block, [class|=rm-block] {
-  min-height: min-content !important;
-}
-.rm-block .rm-focused[style~=padding], .roam-block .rm-focused[style~=padding], [class|=rm-block] .rm-focused[style~=padding] {
-  padding: 0px !important;
-}
-
-.rm-title-display,
-.rm-title-textarea {
-  height: auto !important;
-  line-height: 1.5 !important;
-}
-
+/*------------------------------------------
+# workspace
+------------------------------------------*/
+/*------------------------------------------
+# clickables
+------------------------------------------*/
+/*------------------------------------------
+# blocks
+------------------------------------------*/
 /*-------------------------
 # BASIC
 -------------------------*/
@@ -128,7 +105,7 @@ body:not([class|=CodeMirror]:not([class~=rm-block])) .roam-topbar * {
 }
 
 /* main text */
-.rm-block, .roam-block, [class|=rm-block] {
+.rm-block, .roam-block, .roam-block-container {
   color: #ffffff;
   font-size: 12px;
   margin: 0px;
@@ -149,10 +126,11 @@ strong {
 }
 
 /* simple blocks */
-.rm-block .rm-not-focused, .roam-block .rm-not-focused, [class|=rm-block] .rm-not-focused {
+.rm-block .rm-not-focused, .roam-block .rm-not-focused, .roam-block-container .rm-not-focused {
   background-color: #14232a;
 }
-.rm-block .rm-focused, .roam-block .rm-focused, [class|=rm-block] .rm-focused {
+.rm-block .rm-focused, .roam-block .rm-focused, .roam-block-container .rm-focused {
+  padding: 0px;
   padding: 5%;
   border: 1px solid #e9c772 !important;
   border-radius: 5;
@@ -232,10 +210,10 @@ strong {
 }
 /* aliased links */
 /* external links */
-.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), [class|=rm-block] a:not(.rm-alias--page) {
+.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), .roam-block-container a:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
-.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, [class|=rm-block] a:not(.rm-alias--page):before {
+.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, .roam-block-container a:not(.rm-alias--page):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";

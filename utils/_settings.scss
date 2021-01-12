@@ -62,16 +62,17 @@
   background-color: $background--block-regular;
 }
 @mixin block--focused {
-  & {
-    // background: linear-gradient(
-    //   to right,
-    //   opacify($palette--theme-darker, 0.2) 5%,
-    //   opacify($palette--accent-darker, 0.6) 30%,
-    //   opacify($background--block-highlight, 0.5)
-    // );
-    @include setBorder(opacify($palette--accent-darker, 0.6), 5);
-  }
+  padding: 0px;
+  // background: linear-gradient(
+  //   to right,
+  //   opacify($palette--theme-darker, 0.2) 5%,
+  //   opacify($palette--accent-darker, 0.6) 30%,
+  //   opacify($background--block-highlight, 0.5)
+  // );
+  @include setBorder(opacify($palette--accent-darker, 0.6), 5);
   & #{$rm-block-selector} {
+    // child blocks
+
     // background: linear-gradient(
     //   to left,
     //   $palette--theme-darker 5%,
