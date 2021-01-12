@@ -29,8 +29,6 @@
 // }
 
 #app {
-  background: $palette--theme;
-  color: setContrast($palette--theme);
   min-height: minmax(10px, min-content);
   min-width: minmax(10px, min-content);
   overflow: scroll;
@@ -43,7 +41,9 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 /*------------------------------------------
 # workspace
 ------------------------------------------*/
-
+.roam-sidebar {
+  
+}
 /*------------------------------------------
 # clickables
 ------------------------------------------*/

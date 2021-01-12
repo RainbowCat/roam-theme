@@ -7,61 +7,85 @@
   // margin-top: 2px;
 }
 // page title
-@mixin text--title {
+@mixin text_title {
   font-size: 36px;
   color: $textcolor--title !important;
   @include TextDisplay;
 }
 // headings
-@mixin text--heading1 {
+@mixin text_heading1 {
   color: $textcolor--heading1;
   font-size: 30px;
   @include TextDisplay;
 }
-@mixin text--heading2 {
+@mixin text_heading2 {
   color: $textcolor--heading2;
   font-size: 25px;
   @include TextDisplay;
 }
-@mixin text--heading3 {
+@mixin text_heading3 {
   color: $textcolor--heading3;
   font-size: 20px;
   @include TextDisplay;
 }
 // main text
-@mixin text--body {
+@mixin text_body {
   color: $textcolor--body;
   font-size: 12px;
   @include TextDisplay;
 }
-@mixin text--italics {
+@mixin text_italics {
   font-size: 15px;
   color: $textcolor--italics;
   @include TextDisplay;
 }
-@mixin text--bold {
+@mixin text_bold {
   font-size: 12px;
   color: $textcolor--bold;
   @include TextDisplay;
 }
-// bullets
-@mixin bullet--open {
-}
-@mixin bullet--closed {
-}
-@mixin nestingline {
+
+:root {
+  --bg-quote: black;
+  --fg-quote: white;
+  --fnt-size-quote: 15px;
+  --fnt-style-quote: normal;
 }
 
+@mixin blockquote {
+  background-color: var(--bg-quote);
+  color: var(--fg-quote);
+  border-left: 5px solid var(--br-quote);
+  font-size: var(--fnt-size-quote);
+  font-style: var(--fnt-style-quote);
+}
 // checkboxes
 @mixin not-done-checkbox {
 }
 @mixin done-checkbox {
 }
-// blocks
-@mixin block--regular {
+
+/*------------------------------------------
+# BLOCKS
+------------------------------------------*/
+/* bullets */
+@mixin bullet_open {
+}
+@mixin bullet_closed {
+}
+@mixin bullet_nestingline {
+}
+
+/* caret */
+@mixin block_caret {
+  color: #b2b5ba;
+}
+
+/* block highlights */
+@mixin block_regular {
   background-color: $background--block-regular;
 }
-@mixin block--focused {
+@mixin block_focused {
   padding: 0px;
   // background: linear-gradient(
   //   to right,
@@ -81,13 +105,45 @@
     // );
   }
 }
-@mixin block--selected {
+
+@mixin block_selected {
   background-color: $palette--accent-darker;
 }
 
 /*-------------------------
 # WORKSPACE
 -------------------------*/
+/* left sidebar */
+@mixin left_division-line {
+  flex: 0 0 10px !important;
+  background-color: $palette--white !important;
+}
+@mixin left_division-padding-div {
+  display: none;
+}
+@mixin left_pages {
+  color: $palette--white !important;
+}
+@mixin left_logo {
+  /* hide Roam Research logo */
+  display: none;
+}
+/* right sidebar */
+@mixin right_header {
+  color: $palette--white;
+}
+@mixin right_resize-handle {
+}
+/* main body */
+@mixin main_body {
+  background: $background--main;
+  color: setContrast($background--main);
+}
+/* top bar */
+@mixin topbar {
+  background: $background--topbar;
+  color: setContrast($background--topbar);
+}
 /*-------------------------
 # BIDIRECTIONAL LINKING
 -------------------------*/
@@ -223,3 +279,9 @@
 // code area
 // kanban
 // table
+// datepicker
+:root {
+  --datepicker-bg: pink;
+  --datepicker-day-wrapper: #36393c;
+  --datepicker-altfont-color: #545d63;
+}
