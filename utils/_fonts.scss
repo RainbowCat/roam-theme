@@ -5,6 +5,10 @@
 
 $font--fallback: Verdana, sans-serif;
 
+@mixin font-family {
+  font-family: "Ubuntu", $font--fallback;
+}
+
 @mixin font-title {
   font-family: "Ubuntu", $font--fallback;
   font-weight: 700;
@@ -15,7 +19,7 @@ $font--fallback: Verdana, sans-serif;
   font-weight: 700;
 }
 
-@mixin font-body  {
+@mixin font-body {
   font-family: "Ubuntu", $font--fallback;
   font-weight: 300;
 }

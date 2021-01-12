@@ -310,12 +310,15 @@
 /*-------------------------
 # GLOBAL SETUP
 -------------------------*/
-#app {
-  min-height: minmax(10px, min-content);
-  min-width: minmax(10px, min-content);
-  overflow: scroll;
-  max-height: 100%;
-  max-width: 100%;
+.roam-sidebar-content *,
+.roam-body-main *,
+#roam-right-sidebar-content *,
+.roam-topbar * {
+  font: inherit;
+  font-family: "Ubuntu", Verdana, sans-serif;
+  color: unset;
+  background: transparent;
+  opacity: 100%;
 }
 
 /*------------------------------------------
@@ -353,8 +356,9 @@
 }
 .roam-sidebar-content .starred-pages-wrapper > div:nth-child(1) {
   /* horizontal division line */
-  flex: 0 0 10px !important;
-  background-color: #ffffff !important;
+  width: 80%;
+  flex: 0 0 0.1em;
+  background-color: inear-gradient(transparent, white, transparent);
 }
 .roam-sidebar-content .starred-pages-wrapper > div:nth-child(2) {
   /* div padding */
@@ -630,10 +634,6 @@ blockquote small {
   background-size: 15px 15px;
   width: 15px;
   height: 15px;
-  margin: 0 2px 0 3px;
-  position: relative;
-  bottom: -2px;
-  left: -1px;
 }
 
 /* reference menu */

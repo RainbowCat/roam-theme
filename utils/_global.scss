@@ -28,13 +28,26 @@
 //   }
 // }
 
-#app {
-  min-height: minmax(10px, min-content);
-  min-width: minmax(10px, min-content);
-  overflow: scroll;
-  max-height: 100%;
-  max-width: 100%;
+.roam-sidebar-content,
+.roam-body-main,
+#roam-right-sidebar-content,
+.roam-topbar {
+  * {
+    font: inherit;
+    @include font-family;
+    color: unset;
+    background: transparent;
+    opacity: 100%;
+  }
 }
+
+// #app {
+//   min-height: minmax(10px, min-content);
+//   min-width: minmax(10px, min-content);
+//   overflow: scroll;
+//   max-height: 100%;
+//   max-width: 100%;
+// }
 
 $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 
@@ -43,6 +56,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 ------------------------------------------*/
 .roam-sidebar {
 }
+
 /*------------------------------------
 # popups
 ------------------------------------*/

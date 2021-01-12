@@ -50,6 +50,7 @@
   background-color: $textcolor--highlight;
   padding: $text_highlight-padding;
 }
+
 :root {
   --bg-quote: black;
   --fg-quote: white;
@@ -120,11 +121,23 @@
 -------------------------*/
 /* left sidebar */
 @mixin left_division-line {
-  flex: 0 0 10px !important;
-  background-color: $palette--white !important;
+  // display: none;
+  width: 80%;
+  flex: 0 0 0.1em;
+  background-color: inear-gradient(
+    transparent,
+    opacify($palette--white, 0.5),
+    transparent
+  );
 }
+// .starred-pages-wrapper {
+//   border-top: 0.1em solid
+//     linear-gradient(transparent, opacify($palette--white, 0.5), transparent);
+// }
+
 @mixin left_division-padding-div {
   display: none;
+  // flex: 0 0 1em; // default
 }
 @mixin left_pages {
   color: $palette--white !important;
@@ -196,10 +209,10 @@
     background-size: 15px 15px;
     width: 15px;
     height: 15px;
-    margin: 0 2px 0 3px;
-    position: relative;
-    bottom: -2px;
-    left: -1px;
+    // margin: 0 2px 0 3px;
+    // position: relative;
+    // bottom: -2px;
+    // left: -1px;
   }
 }
 

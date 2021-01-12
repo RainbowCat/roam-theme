@@ -1,0 +1,43 @@
+/*------------------------------------
+# Top bar element placement
+------------------------------------*/
+.roam-topbar > .flex-h-box > div[style^="flex"]:not([class]) {
+  // remove useless divs
+  display: none;
+}
+
+.roam-topbar .flex-h-box {
+  @include topbar_element-placement;
+  /*    justify-content: flex-start;  /* place things on the left */
+  justify-content: flex-end; /* place things on the right */
+  justify-content: center; /* place things at center */
+}
+/*------------------------------------
+# Make search menu popup
+------------------------------------*/
+.rm-find-or-create-wrapper {
+  flex: unset !important;
+}
+.rm-find-or-create-wrapper input#find-or-create-input:focus,
+.rm-find-or-create-wrapper .bp3-overlay {
+  /* match size */
+  width: 500px;
+  /* match position */
+  position: fixed !important;
+  top: 27vh;
+  height: 5vh;
+  left: 55vw;
+  z-index: 1000; /* place at front of page */
+  transform: translate(-50%, 0);
+}
+.rm-find-or-create-wrapper .bp3-overlay .bp3-transition-container {
+  transform: none !important;
+}
+
+/* shift dropdown */
+.rm-find-or-create-wrapper input#find-or-create-input:focus {
+  height: 5vh;
+}
+.rm-find-or-create-wrapper .bp3-overlay {
+  top: 32vh;
+}
