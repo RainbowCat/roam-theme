@@ -1,6 +1,4 @@
-/*------------------------- 
-# WORKSPACE
--------------------------*/
+/*-------------------------------------  WORKSPACE -------------------------------------*/
 /* left sidebar */
 .roam-sidebar-content {
   background: $background--left;
@@ -89,9 +87,46 @@ strong {
 }
 // TODO add italics
 
-/* checkboxes */
+/*------------------------------------
+# CHECKBOX
+------------------------------------*/
 // TODO @include not-done-checkbox
 // TODO @include done-checkbox
+
+.checkmark {
+  /* todo */
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkmark-border);
+  background-color: var(--checkmark-bg-color);
+}
+.check-container input:checked ~ .checkmark {
+  /* done */
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkedmark-border);
+  background-color: var(--checkedmark-bg-color);
+}
+.check-container .checkmark:after {
+  /* done check symbol */
+  left: 3.5px;
+  top: 0.25px;
+  width: 6px;
+  height: 10px;
+  border: var(--checkmark-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg) scale(0.8);
+}
 
 /* Fix textareas */
 .roam-block,
@@ -146,11 +181,6 @@ blockquote small {
   @include blockquote;
 }
 
-/* Hide query */
-.rm-query .rm-query-title {
-  display: none;
-}
-
 /*------------------------------------------
 # BLOCKS
 ------------------------------------------*/
@@ -183,6 +213,29 @@ blockquote small {
   @include block_selected;
 }
 
+.rm-highlight {
+  /* text highlighting */
+  background-color: var(--highlight-background-color);
+  color: var(--highlight-font-color);
+  border-radius: 0px;
+  padding: var(--highlight-padding);
+}
+.rm-highlight .rm-page-ref-link-color {
+  /* highlighted link color */
+  color: var(--highlight-link-color);
+}
+.block-highlight-blue {
+  /* block selection */
+  background-color: var(--block-highlight);
+}
+.block-highlight-yellow {
+  /* block highlight */
+  background-color: var(--block-highlight-bg);
+}
+.rm-embed-container {
+  /* embed block highlight */
+  background-color: var(--embed-container-bg);
+}
 /*------------------------- 
 # BIDIRECTIONAL LINKING
 -------------------------*/
@@ -234,6 +287,31 @@ a {
 .rm-reference-item {
   @include linked-ref;
 }
+/*---------------------------------- 
+    #REFERENCES   
+------------------------------------*/
+.rm-reference-container .flex-h-box > div:nth-child(3) strong {
+  /* "Linked/Unlinked References" reference block header */
+  color: var(--reference-header-color);
+  border-bottom: 1px solid var(--reference-header-underline-color);
+}
+.flex-h-box strong[style*="color: rgb(206, 217, 224);"] {
+  /* "Linked/Unlinked References" reference block header */
+  color: var(--reference-header-color) !important;
+  border-bottom: 1px solid var(--reference-header-underline-color);
+}
+#right-sidebar .flex-h-box > div:nth-child(2) strong {
+  /* Right sidebar bold links color */
+  color: var(--main-font-color);
+}
+.rm-reference-item {
+  /* footer reference box apperance */
+
+  background-color: var(--reference-item-bg);
+  border-radius: var(--reference-item-border-radius);
+  border: var(--reference-item-border);
+}
+
 /* unlinked references */
 // TODO
 /* block references */
@@ -241,7 +319,10 @@ a {
 /* block embeds */
 // TODO
 /* query & queries */
-// TODO
+/* Hide query */
+.rm-query .rm-query-title {
+  display: none;
+}
 /* mentions */
 // TODO
 /*------------------------- NAVIGATION COMPONENTS -------------------------*/
