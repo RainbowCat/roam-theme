@@ -12,6 +12,7 @@
   justify-content: flex-end; /* place things on the right */
   justify-content: center; /* place things at center */
 }
+
 /*------------------------------------
 # Make search menu popup
 ------------------------------------*/
@@ -40,4 +41,64 @@
 }
 .rm-find-or-create-wrapper .bp3-overlay {
   top: 32vh;
+}
+
+/*------------------------------------
+# Make search input look like an icon
+------------------------------------*/
+.rm-find-or-create-wrapper > .bp3-popover-wrapper {
+  height: 24px;
+  width: 24px;
+}
+
+.bp3-icon-search,
+.bp3-icon-search:hover {
+  pointer-events: none;
+}
+
+input#find-or-create-input,
+input#find-or-create-input:focus {
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*------------------------------------
+# Make all icons look the same
+------------------------------------*/
+
+.roam-topbar [class*="bp3-icon"] {
+  /* style icon to look like the others */
+  background-color: red;
+  color: white;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 0px;
+}
+
+.roam-topbar [class*="bp3-icon"] {
+  /* style icon to look like the others */
+  background-color: red;
+  color: white;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 0px;
+}
+
+.rm-saving-icon {
+  background-color: red;
+  color: white;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 0px;
+}
+.rm-saving-inner-icon {
+  place-self: center;
+  margin: 0px !important;
 }
