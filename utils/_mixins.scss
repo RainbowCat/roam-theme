@@ -39,12 +39,17 @@
   color: $textcolor--italics;
   @include TextDisplay;
 }
+
 @mixin text_bold {
   font-size: 12px;
   color: $textcolor--bold;
   @include TextDisplay;
 }
 
+@mixin text_highlight {
+  background-color: $textcolor--highlight;
+  padding: $text_highlight-padding;
+}
 :root {
   --bg-quote: black;
   --fg-quote: white;

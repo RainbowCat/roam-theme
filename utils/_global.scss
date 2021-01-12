@@ -20,9 +20,9 @@
 //   #roam-right-sidebar-content,
 //   .roam-topbar {
 //     * {
-//       font: inherit;
-//       color: inherit;
-//       background: inherit;
+//       font: unset;
+//       color: unset;
+//       background: unset;
 //       opacity: 100%;
 //     }
 //   }
@@ -42,7 +42,12 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 # workspace
 ------------------------------------------*/
 .roam-sidebar {
-  
+}
+/*------------------------------------
+# popups
+------------------------------------*/
+.bp3-menu-item {
+  color: initial;
 }
 /*------------------------------------------
 # clickables

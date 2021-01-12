@@ -60,7 +60,7 @@
 }
 
 /*-------------------------
-# BASIC
+# BASIC TEXT
 -------------------------*/
 /* page title */
 .rm-title-display {
@@ -79,14 +79,19 @@
 }
 
 /* main text */
-#{$rm-block-selector} {
+*, #{$rm-block-selector} {
   @include text_body;
 }
-strong {
+.rm-bold {
   @include text_bold;
 }
-// TODO add italics
 
+.rm-italics {
+  @include text_italics;
+}
+.rm_highlight {
+  @include text_highlight;
+}
 /*------------------------------------
 # CHECKBOX
 ------------------------------------*/

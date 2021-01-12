@@ -321,6 +321,13 @@
 /*------------------------------------------
 # workspace
 ------------------------------------------*/
+/*------------------------------------
+# popups
+------------------------------------*/
+.bp3-menu-item {
+  color: initial;
+}
+
 /*------------------------------------------
 # clickables
 ------------------------------------------*/
@@ -384,7 +391,7 @@
 }
 
 /*-------------------------
-# BASIC
+# BASIC TEXT
 -------------------------*/
 /* page title */
 .rm-title-display {
@@ -413,16 +420,27 @@
 }
 
 /* main text */
-.rm-block, .roam-block, .roam-block-container {
+*, .rm-block, .roam-block, .roam-block-container {
   color: #ffffff;
   font-size: 12px;
   margin: 0px;
 }
 
-strong {
+.rm-bold {
   font-size: 12px;
   color: #ffffff;
   margin: 0px;
+}
+
+.rm-italics {
+  font-size: 15px;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.rm_highlight {
+  background-color: #ffffff;
+  padding: 3px 2px;
 }
 
 /*------------------------------------
