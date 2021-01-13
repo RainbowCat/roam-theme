@@ -4,7 +4,9 @@
 #
 ------------------------------------*/
 .roam-topbar {
-  /*** LAYOUT ***/
+  background: $background--topbar;
+  color: setContrast($background--topbar);
+
   /*--  remove useless divs --*/
   > .flex-h-box > div[style^="flex"]:not([class]) {
     display: none;
@@ -90,6 +92,4 @@
     place-self: center;
     margin: 0px !important;
   }
-
-  /*** ANIMATIONS ***/
 }

@@ -4,8 +4,6 @@
 #
 ------------------------------------*/
 #right-sidebar {
-  /*** LAYOUT ***/
-
   background: $background--right;
   color: setContrast($background--right);
   .window-headers {
@@ -14,9 +12,6 @@
   }
 
   .rm-resize-handle {
-    
+    // draggable handle for resizing
   }
-  /*** TEXT ***/
-  /*** APPEARANCE ***/
-  /*** ANIMATIONS ***/
 }

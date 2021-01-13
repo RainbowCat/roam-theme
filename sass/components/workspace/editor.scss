@@ -1,0 +1,18 @@
+/*------------------------------------
+#
+# MAIN TYPING AREA / EDITOR
+#
+------------------------------------*/
+.roam-main {
+  background: $background--main;
+  color: setContrast($background--main);
+}
+/*** LAYOUT ***/
+/*** TEXT ***/
+/*** APPEARANCE ***/
+/*** ANIMATIONS ***/
+
+#buffer {
+  /* HIDES BOTTOM RIGHT HELP ICON */
+  visibility: hidden;
+}

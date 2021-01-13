@@ -3,6 +3,60 @@
 # BLOCKS
 #
 ------------------------------------*/
+
+/* block highlights */
+#{$rm-block-selector} {
+  /* regular block */
+  .rm-not-focused {
+    background-color: $background--block-regular;
+  }
+  /* focused block */
+  .rm-focused {
+    padding: 0px;
+    // background: linear-gradient(
+    //   to right,
+    //   opacify($palette--theme-darker, 0.2) 5%,
+    //   opacify($palette--accent-darker, 0.6) 30%,
+    //   opacify($background--block-highlight, 0.5)
+    // );
+    @include setBorder(opacify($palette--accent-darker, 0.6), 5);
+    // maybe style highlight child blocks too?
+    // & #{$rm-block-selector} {
+    // child blocks
+
+    // background: linear-gradient(
+    //   to left,
+    //   $palette--theme-darker 5%,
+    //   $palette--accent-darker 30%,
+    //   $background--block-highlight
+    // );
+  }
+
+  /* selected block in main edit area */
+  .block-highlight-blue {
+    background-color: $palette--accent-darker;
+  }
+  .block-highlight-blue {
+    /* block selection */
+    background-color: var(--block-highlight);
+  }
+  /* selected block in linked referenced */
+  .block-highlight-yellow {
+    /* block highlight */
+    background-color: var(--block-highlight-bg);
+  }
+  .rm-embed-container {
+    /* embed block highlight */
+    background-color: var(--embed-container-bg);
+  }
+}
+
+/*------------------------------------
+# Block Reference
+------------------------------------*/
+/*------------------------------------
+# Block Embed
+------------------------------------*/
 /*** LAYOUT ***/
 /*** TEXT ***/
 /*** APPEARANCE ***/

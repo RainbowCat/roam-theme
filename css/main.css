@@ -1,10 +1,9 @@
-/* Error: unmatched "}".
- *     ,
- * 123 | }
- *     | ^
- *     '
- *   sass/utils/mixins.scss 123:1  @import
- *   sass/main.scss 13:9           root stylesheet */
+/* Error: Can't find stylesheet to import.
+ *    ,
+ * 17 | @import "components/workspace/main";
+ *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass/main.scss 17:9  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a     \2577 \a 123 \2502  }\a     \2502  ^\a     \2575 \a   sass/utils/mixins.scss 123:1  @import\a   sass/main.scss 13:9           root stylesheet';
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 17 \2502  @import \"components/workspace/main\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/main.scss 17:9  root stylesheet";
 }

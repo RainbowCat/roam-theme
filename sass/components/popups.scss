@@ -1,0 +1,159 @@
+/*------------------------------------
+# POPUPs
+------------------------------------*/
+// menus
+@mixin menu($focus: none, $hover: none) {
+  background-color: $background--popover !important;
+  color: setContrast($background--popover);
+  @if $focus is not none {
+    #{$focus} {
+      background-color: $background--popover-hover !important;
+    }
+  }
+  @if $hover is not none {
+    #{$hover} {
+      background-color: $background--popover-hover;
+    }
+  }
+}
+// search bar
+// page filter
+@mixin page-filter {
+  color: $palette--theme;
+  & > &-content {
+    // background
+    background-color: $background--popover;
+    color: setContrast($background--popover);
+  }
+  & &-arrow {
+    &-fill {
+      // background
+      fill: $background--popover;
+    }
+    &-border {
+      //tiny border
+      fill: setContrast($background--popover);
+    }
+  }
+  .bp3-button {
+    // tag selection buttons
+    background: radial-gradient(
+      $background--popover,
+      lighten($background--popover, 10%)
+    );
+    color: setContrast($background--popover) !important;
+    &:hover {
+      color: $palette--accent !important;
+    }
+  }
+}
+
+.bp3-menu {
+  // code-area language menu
+  @include menu;
+  .bp3-menu-item {
+    color: white;
+  }
+}
+.bp3-elevation-3 {
+  // slash menu
+  @include menu(".dont-unfocus-block[style*=background]");
+}
+
+/*--- Block References ---*/
+.rm-block-ref {
+  /* linked refs */
+  cursor: alias;
+  border-bottom: 1px solid var(--block-ref-border-bottom);
+}
+.rm-block-ref:hover {
+  background-color: var(--block-ref-hover-bg);
+}
+
+/* page filter */
+.bp3-popover {
+  // popup title colors
+  @include page-filter;
+}
+
+/* tool bar */
+/* icons & buttons */
+[class*="bp3-icon"]::before {
+  // TODO separate this for left sidebar, main, right sidebar?
+  // all icon color
+  color: $palette--white !important;
+  :hover {
+    color: $palette--accent;
+  }
+}
+
+/*------------------------------------
+# Datepicker
+------------------------------------*/
+:root {
+  --datepicker-bg: pink;
+  --datepicker-day-wrapper: #36393c;
+  --datepicker-altfont-color: #545d63;
+}
+
+.bp3-icon-calendar {
+  border: none;
+}
+.bp3-datepicker {
+  /* modal padding */
+  background: var(--datepicker-bg);
+  padding: 6px;
+}
+.bp3-html-select .bp3-icon {
+  /* month and year double carrots */
+  color: var(--datepicker-bg);
+}
+/* month back and forth bg color */
+button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
+button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
+  background: var(--datepicker-bg) !important;
+}
+/* month back and forth carrot color / outside month date color */
+span.bp3-icon.bp3-icon-chevron-left,
+span.bp3-icon.bp3-icon-chevron-right,
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
+  color: var(--datepicker-altfont-color);
+}
+/* month and year hover state */
+.bp3-html-select.bp3-minimal select:hover,
+.bp3-select.bp3-minimal select:hover {
+  background: #0073f9;
+  color: white;
+}
+.bp3-datepicker .DayPicker-Weekday abbr[title] {
+  /* abbreviated day titles */
+  border-bottom: none;
+  font-size: 13px;
+  color: var(--datepicker-altfont-color);
+  cursor: default;
+}
+.bp3-datepicker-caption + .bp3-divider {
+  /* divider */
+  border-bottom: none;
+}
+.bp3-datepicker .DayPicker-Day > div:first-child {
+  /* date appearances */
+  line-height: 1.15em;
+  font-size: 14px;
+  font-weight: 600;
+}
+.bp3-datepicker .DayPicker-Day:hover {
+  /* hover background color */
+  background: #0073f9;
+  color: white;
+}
+/* today bg color */
+.bp3-datepicker
+  .DayPicker-Day.DayPicker-Day--isToday
+  .bp3-datepicker-day-wrapper {
+  background: var(--datepicker-day-wrapper);
+}
+.bp3-html-select select,
+.bp3-select select {
+  color: var(--main-font-color);
+}

@@ -1,0 +1,117 @@
+/*---------------------------------- 
+# CODE
+------------------------------------*/
+code {
+  /* inline code */
+  background: var(--code-bg);
+  color: var(--code-font-color);
+  border: var(--code-border);
+  border-radius: var(--codemirror-border-radius);
+}
+
+.CodeMirror {
+  /* code block */
+  border: 1px solid var(--codemirror-border-color);
+  border-radius: var(--codemirror-border-radius);
+  background: var(--codemirror-bg) !important;
+  color: var(--main-font-color) !important;
+}
+
+.Codemirror-code {
+  padding-left: 12px !important;
+}
+
+div.CodeMirror-selected {
+  /* selected color */
+  background: var(--block-highlight) !important;
+}
+
+.CodeMirror-gutters {
+  background: var(--bg-color);
+  padding-right: 12px;
+  border-right: 1px solid var(--bg-color);
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid var(--bullet-color) !important;
+}
+
+/*_TOGGLE--  Matching bracket like Atom  --*/
+.CodeMirror-matchingbracket {
+  color: var(--main-font-color) !important;
+  border-bottom: 1px solid var(--code-matchingbracket-color);
+}
+
+/*_TOGGLE--  Matching bracket like Visual Studio Code  --*/
+/*
+  .CodeMirror-matchingbracket {
+  color: var(--main-font-color) !important;
+  border: 1px solid var(--icon-color-hover);
+  background: #3c3c3c;
+  }
+  */
+.CodeMirror-linenumber {
+  color: var(--codemirror-linenumber) !important;
+  font-family: monospace !important;
+  left: 0px !important;
+}
+
+span.cm-comment {
+  color: var(--cm-comment) !important;
+}
+
+span.cm-def {
+  color: var(--cm-def) !important;
+}
+
+span.cm-keyword {
+  color: var(--cm-keyword) !important;
+}
+
+span.cm-variable.cm-callee {
+  color: var(--cm-callee) !important;
+}
+
+span.cm-operator {
+  color: var(--cm-operator) !important;
+}
+
+span.cm-builtin {
+  color: var(--cm-builtin) !important;
+}
+
+span.cm-string {
+  color: var(--cm-string) !important;
+}
+
+span.cm-variable-3 {
+  color: var(--cm-variable-3) !important;
+}
+
+span.cm-variable-2 {
+  color: var(--cm-variable-2) !important;
+}
+
+span.cm-variable {
+  color: var(--cm-variable) !important;
+}
+
+span.cm-tag {
+  color: var(--cm-tag) !important;
+}
+
+span.cm-property {
+  color: var(--cm-property) !important;
+}
+
+span.cm-number {
+  color: var(--cm-number) !important;
+}
+
+span.cm-atom {
+  color: var(--cm-atom) !important;
+}
+
+span.cm-qualifier {
+  color: var(--cm-qualifier) !important;
+}
