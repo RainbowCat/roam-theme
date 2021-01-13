@@ -3,7 +3,20 @@
 # RIGHT SIDEBAR
 #
 ------------------------------------*/
-/*** LAYOUT ***/
-/*** TEXT ***/
-/*** APPEARANCE ***/
-/*** ANIMATIONS ***/
+#right-sidebar {
+  /*** LAYOUT ***/
+
+  background: $background--right;
+  color: setContrast($background--right);
+  .window-headers {
+    // div titles
+    color: $palette--white;
+  }
+
+  .rm-resize-handle {
+    
+  }
+  /*** TEXT ***/
+  /*** APPEARANCE ***/
+  /*** ANIMATIONS ***/
+}

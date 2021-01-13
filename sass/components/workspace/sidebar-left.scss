@@ -1,42 +1,49 @@
 /*------------------------------------
 # LEFT SIDEBAR
 ------------------------------------*/
-/*** LAYOUT ***/
-/*** TEXT ***/
-/*** APPEARANCE ***/
-/*** ANIMATIONS ***/
-
 .roam-sidebar-content {
+  /*** LAYOUT ***/
+  #roam-sidebar-logo {
+    display: none; /* hide logo */
+  }
+  .starred-pages-wrapper {
+    /* use border and padding instead of useless divs */
+    border-top: 0.1em solid opacify($palette--white, 0.5);
+    > div:nth-child(1) {
+      // maybe use better class selector
+      /* hide horizontal line div */
+      display: none;
+    }
+    > div:nth-child(2) {
+      // maybe use better class selector
+      /* hide padding div */
+      display: none;
+    }
+  }
+
+  /*** APPEARANCE ***/
   background: $background--left;
   color: setContrast($background--left);
+
   .top-row {
     // graph name
     color: setContrast($background--left);
   }
   .log-button {
-    // TODO add customizable icons
     /* general navigations */
-    color: setContrast($background--left) !important;
+    color: setContrast($background--left);
+    .bp3-icon {
+      color: setContrast($background--left);
+    }
   }
   .starred-pages-wrapper {
     background: $background--shortcuts; // background of full shotcut section
-    color: setContrast($background--left) !important; // "★ SHORTCUTS" title
-    > div:nth-child(1) {
-      /* horizontal division line */
-      // TODO add abstraction for class selector
-      @include left_division-line;
-    }
-    > div:nth-child(2) {
-      // TODO add abstraction for class selector
-      /* div padding */
-      @include left_division-padding-div;
-    }
+    color: setContrast($background--left); // "★ SHORTCUTS" title
   }
   .page {
     /* left sidebar pages */
-    @include left_pages;
+    color: setContrast($background--left);
   }
-  #roam-sidebar-logo {
-    @include left_logo;
-  }
+
+  /*** ANIMATIONS ***/
 }

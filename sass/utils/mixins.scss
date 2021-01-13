@@ -119,36 +119,11 @@
 /*-------------------------
 # WORKSPACE
 -------------------------*/
-/* left sidebar */
-@mixin left_division-line {
-  // display: none;
-  width: 80%;
-  flex: 0 0 0.1em;
-  background-color: inear-gradient(
-    transparent,
-    opacify($palette--white, 0.5),
-    transparent
-  );
-}
-// .starred-pages-wrapper {
-//   border-top: 0.1em solid
-//     linear-gradient(transparent, opacify($palette--white, 0.5), transparent);
-// }
 
-@mixin left_division-padding-div {
-  display: none;
-  // flex: 0 0 1em; // default
-}
-@mixin left_pages {
-  color: $palette--white !important;
-}
-@mixin left_logo {
-  /* hide Roam Research logo */
-  display: none;
 }
 /* right sidebar */
 @mixin right_header {
-  color: $palette--white;
+
 }
 @mixin right_resize-handle {
 }

@@ -1,19 +1,6 @@
 /*-------------------------------------  WORKSPACE -------------------------------------*/
 
 
-/* right sidebar */
-#right-sidebar {
-  background: $background--right;
-  color: setContrast($background--right);
-  .window-headers {
-    // div titles
-    @include right_header;
-  }
-}
-
-.rm-resize-handle {
-  @include right_resize-handle;
-}
 
 /* roam main body */
 .roam-main {
