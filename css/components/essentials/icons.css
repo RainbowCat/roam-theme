@@ -13,57 +13,56 @@
   opacity: 1;
 }
 
-/* icons & buttons */
+/* caret */
 /*------------------------------------
 # TOPBAR
 ------------------------------------*/
-/*--  make all look like buttons --*/
-.roam-topbar > .flex-h-box {
-  align-items: center;
-  align-content: center;
+.roam-topbar {
+  /*** LAYOUT ***/
+  /*** APPEARANCE ***/
 }
-
-.roam-topbar > .flex-h-box .bp3-popover-wrapper,
-.roam-topbar > .flex-h-box > .rm-find-or-create-wrapper {
-  height: 24px;
-  width: 24px;
+.roam-topbar [class*=bp3-icon]:not(.bp3-icon-search):not(.bp3-icon-filter) {
+  padding: 0px !important;
+  margin: 0px !important;
 }
-
-.roam-topbar [class*=bp3-icon],
-input#find-or-create-input {
-  height: 24px;
-  width: 24px;
-  padding: 4px;
+.roam-topbar .rm-find-or-create-wrapper {
+  flex: 0 0 24px !important;
+}
+.roam-topbar .rm-find-or-create-wrapper input {
+  border-radius: 3px !important;
+  padding: 0px !important;
+  width: 24px !important;
+  height: 24px !important;
+  cursor: pointer;
+}
+.roam-topbar .rm-find-or-create-wrapper .bp3-icon-search {
+  padding: 4px !important;
   border-radius: 3px;
-}
-
-.rm-find-or-create-wrapper {
-  flex: 0 1 24px !important;
-}
-
-.rm-find-or-create-wrapper .bp3-icon-search {
-  margin: 0px;
-  top: 0px;
-  left: 0px;
-  padding: 4px;
+  margin: 0 !important;
+  cursor: pointer;
   pointer-events: none;
 }
-
-.roam-topbar .bp3-icon-filter:before {
-  padding: 4px;
-}
-
-.bp3-button {
-  height: 24px;
+.roam-topbar .bp3-icon-filter {
   width: 24px;
-}
-
-input#find-or-create-input {
   height: 24px;
-  width: 24px;
-  margin: 0px;
-  padding: 0px;
   border-radius: 3px;
-  background: transparent;
-  cursor: pointer;
+}
+.roam-topbar .bp3-icon-filter:before {
+  position: absolute !important;
+  margin: 5px;
+  margin-top: 6px;
+}
+.roam-topbar > .flex-h-box > div,
+.roam-topbar > .flex-h-box > span {
+  margin: 5px;
+}
+.roam-topbar .bp3-button {
+  height: 24px;
+  width: 24px;
+}
+.roam-topbar [class*=bp3-icon] {
+  background: red;
+}
+.roam-topbar [class*=bp3-icon]:before {
+  color: white;
 }

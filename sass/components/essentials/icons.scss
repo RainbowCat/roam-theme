@@ -8,31 +8,12 @@
 
 @mixin icons {
   // todo make dynamic for topbar / left side
-  &,
-  & > * {
-    height: var(--icon-size-outer);
-    width: var(--icon-size-outer);
-    margin: 0px;
-    padding: 0px;
-    border-radius: 3px;
-    place-self: center;
-  }
-  [class*="bp3-icon"] {
-    // margin: 0px;
-    // padding: 0px;
-    margin: calc((var(--icon-size-outer) - (var(--icon-size-inner))) / 2);
-    height: var(--icon-size-inner);
-    width: var(--icon-size-inner);
-    place-self: center;
-  }
-
-  // // all icon color
-  // background-color: red;
-  // color: $palette--white !important;
-  // :hover {
-  //   color: $palette--accent;
-  // }
-  //todo test if this only work on topbar
+  height: var(--icon-size-outer);
+  width: var(--icon-size-outer);
+  margin: 0px !important;
+  padding: 0px !important;
+  border-radius: 3px;
+  place-self: center;
 }
 
 /*------------------------------------
@@ -43,69 +24,66 @@
     opacity: 1;
   }
 }
-// /* caret */
-// .rm-caret {
-//   @include bullet_toggle;
-// }
 
-// override blueprint
-// .bp3-button:not([class*="bp3-intent-"]) {
-//   @include icons;
-//   // @include style-icons;
-// }
-
-/* icons & buttons */
-// [class*="bp3-icon"]:before {
-//   // TODO separate this for left sidebar, main, right sidebar?
-//   // all icon color
-//   @include icons;
-// }
+/* caret */
+.rm-caret {
+}
 
 /*------------------------------------
 # TOPBAR
 ------------------------------------*/
-/*--  make all look like buttons --*/
-.roam-topbar > .flex-h-box {
-  align-items: center;
-  align-content: center;
-}
-.roam-topbar > .flex-h-box .bp3-popover-wrapper,
-.roam-topbar > .flex-h-box > .rm-find-or-create-wrapper {
-  height: 24px;
-  width: 24px;
-}
-.roam-topbar [class*="bp3-icon"],
-input#find-or-create-input {
-  height: 24px;
-  width: 24px;
-  padding: 4px;
-  border-radius: 3px;
-}
-.rm-find-or-create-wrapper {
-  flex: 0 1 24px !important;
-}
-.rm-find-or-create-wrapper .bp3-icon-search {
-  margin: 0px;
-  top: 0px;
-  left: 0px;
-  padding: 4px;
-  pointer-events: none;
-}
+.roam-topbar {
+  /*** LAYOUT ***/
+  [class*="bp3-icon"]:not(.bp3-icon-search):not(.bp3-icon-filter) {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .rm-find-or-create-wrapper {
+    flex: 0 0 24px !important;
+    input {
+      border-radius: 3px !important;
+      padding: 0px !important;
+      width: 24px !important;
+      height: 24px !important;
+      cursor: pointer;
+    }
+    .bp3-icon-search {
+      padding: 4px !important;
+      border-radius: 3px;
+      margin: 0 !important;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+  .bp3-icon-filter {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    &:before {
+      position: absolute !important;
+      margin: 5px;
+      margin-top: 6px;
+    }
+  }
 
-//TODO fix filter icon
-.roam-topbar .bp3-icon-filter:before {
-  padding: 4px;
-}
-.bp3-button {
-  height: 24px;
-  width: 24px;
-}
-input#find-or-create-input {
-  height: 24px;
-  width: 24px;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 3px;
-  background: transparent;
-  cursor: pointer;
+  /*** APPEARANCE ***/
+  // .bp3-button .bp3-icon:first-child:last-child {
+  //   margin: 0px !important;
+  // }
+  > .flex-h-box > div,
+  > .flex-h-box > span {
+    margin: 5px;
+  }
+  // > .flex-h-box div,
+  // > .flex-h-box span {
+  .bp3-button {
+    height: 24px;
+    width: 24px;
+  }
+  [class*="bp3-icon"] {
+    background: red;
+    &:before {
+      color: white;
+    }
+  }
 }
