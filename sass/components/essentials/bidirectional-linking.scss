@@ -67,7 +67,8 @@
 }
 
 /* external links */
-:not(.starred-pages) > a:not([class]) {
+a[href*="//"]
+{
   @include glyph(before);
 }
 

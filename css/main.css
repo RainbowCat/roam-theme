@@ -746,7 +746,7 @@ blockquote small {
   height: 15px;
 }
 /* external links */
-:not(.starred-pages) > a:not([class]):before {
+a[href*="//"]:before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";
@@ -993,11 +993,18 @@ blockquote small {
 
 /* tool bar */
 /* icons & buttons */
-[class*=bp3-icon]::before {
+[class*=bp3-icon]:before {
   color: #ffffff !important;
 }
-[class*=bp3-icon]::before :hover {
+[class*=bp3-icon]:before :hover {
   color: #e76f51;
+}
+
+/*------------------------------------
+# Icons
+------------------------------------*/
+.bp3-button:not([class*=bp3-intent-]) {
+  background: blue;
 }
 
 /*------------------------------------

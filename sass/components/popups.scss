@@ -78,7 +78,7 @@
 
 /* tool bar */
 /* icons & buttons */
-[class*="bp3-icon"]::before {
+[class*="bp3-icon"]:before {
   // TODO separate this for left sidebar, main, right sidebar?
   // all icon color
   color: $palette--white !important;
@@ -87,6 +87,14 @@
   }
 }
 
+/*------------------------------------
+# Icons
+------------------------------------*/
+// override blueprint
+.bp3-button:not([class*="bp3-intent-"]) {
+  background: blue;
+  // @include style-icons;
+}
 /*------------------------------------
 # Datepicker
 ------------------------------------*/
