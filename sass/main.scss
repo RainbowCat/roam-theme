@@ -13,8 +13,12 @@
 @import "utils/mixins";
 @import "utils/functions";
 
+// global reset
+@import "global";
+
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
-@import "components/workspace/main";
+@import "components/workspace/topbar";
+@import "components/workspace/editor";
 @import "components/workspace/sidebar-left";
 @import "components/workspace/sidebar-right";
 
@@ -22,8 +26,11 @@
 @import "components/essentials/blocks";
 @import "components/essentials/bidirectional-linking";
 
-@import "global";
-@import "css-template";
+@import "components/anchored-pages";
+@import "components/popups";
+
+@import "components/features/code";
+@import "components/features/features";
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
 // @import "custom/calendar";
