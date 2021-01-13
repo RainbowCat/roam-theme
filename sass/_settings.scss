@@ -38,9 +38,8 @@
 # TYPOGRAPHY
 -------------------------*/
 @mixin TextDisplay {
-  // line-height: 1;
+  @include font-family;
   margin: 0px;
-  // margin-top: 2px;
 }
 
 // page title

@@ -17,7 +17,7 @@
 @import "settings";
 
 // global setup
-// @import "global";
+@import "global";
 
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
 @import "components/workspace/topbar";
@@ -36,6 +36,7 @@
 // @import "components/features/features";
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
+@include better-roam-layout();
 // @import "custom/calendar";
 // @import "custom/custom-tags";
 

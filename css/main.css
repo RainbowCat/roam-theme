@@ -325,6 +325,93 @@
 /*-------------------------
 # FEATURES
 -------------------------*/
+/*------------------------------------ # GLOBAL # ------------------------------------*/
+/*------------------------------------
+#
+# RESET SITE SETTINGS
+#
+------------------------------------*/
+/*------------------------------------
+# All Elements
+------------------------------------*/
+*:not(html):not([class*=bp3]):not([class*=CodeMirro]) {
+  min-height: 10px;
+  min-width: 10px;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  font: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  opacity: inherit;
+  box-sizing: border-box;
+}
+
+/*------------------------------------
+# Workspace Layout
+------------------------------------*/
+:root {
+  --leftbar_width: 195px;
+  --topbar_height: 45px;
+}
+
+html,
+body,
+#app,
+.roam-body,
+.roam-app {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden scroll;
+  opacity: 1;
+}
+
+.roam-app > .roam-sidebar-container,
+.roam-app > .roam-sidebar-container > .roam-sidebar-content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  width: var(--leftbar_width) !important;
+  z-index: 999;
+}
+.roam-app > div.flex-h-box > .roam-main > .roam-topbar {
+  height: var(--topbar_height);
+}
+.roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
+  padding: 0px !important;
+}
+.roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-article {
+  padding: 20px;
+}
+.roam-app > div.flex-h-box > .roam-main > .roam-body-main > #buffer {
+  visibility: hidden;
+}
+.rm-block__children.rm-level-0 {
+  margin-left: 0px;
+}
+
+/*------------------------------------
+# REMOVE USELESS DIVS
+------------------------------------*/
+/*-------------------------
+# GLOBAL SETUP
+-------------------------*/
+/*------------------------------------------
+# workspace
+------------------------------------------*/
+/*------------------------------------
+# popups
+------------------------------------*/
+.bp3-menu-item {
+  color: initial;
+}
+
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
 /*------------------------------------
 #
@@ -342,14 +429,8 @@
   --searchbar-top: 27vh;
 }
 
-.roam-topbar {
-  /*** APPEARANCE ***/
-  background: #14232a;
-  color: white;
-}
-
+/*** LAYOUT ***/
 .roam-topbar .flex-h-box {
-  /*** LAYOUT ***/
   justify-content: center;
 }
 
@@ -358,11 +439,6 @@
   height: 24px;
   width: 24px;
   margin: 3px;
-}
-
-.roam-topbar .flex-h-box > div[style^=flex]:not([class]) {
-  /* remove useless divs */
-  display: none;
 }
 
 /* make search look like button */
@@ -406,11 +482,6 @@
 .roam-topbar .flex-h-box > div,
 .roam-topbar .flex-h-box > span {
   margin: 3px;
-}
-
-.roam-topbar .flex-h-box > div[style^=flex]:not([class]) {
-  /* remove useless divs */
-  display: none;
 }
 
 /* make search look like button */
@@ -472,6 +543,12 @@
 
 .roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
   top: calc(var(--searchbar-top) + var(--searchbar-height));
+}
+
+/*** APPEARANCE ***/
+.roam-topbar {
+  background: #14232a;
+  color: white;
 }
 
 /*------------------------------------
@@ -573,6 +650,7 @@
 .rm-title-display {
   font-size: 36px;
   color: #222222 !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
@@ -580,18 +658,21 @@
 .rm-heading-level-1 {
   color: #222222;
   font-size: 30px;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
 .rm-heading-level-2 {
   color: #222222;
   font-size: 25px;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
 .rm-heading-level-3 {
   color: #222222;
   font-size: 20px;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
@@ -599,6 +680,7 @@
 #app {
   color: #222222;
   font-size: 12px;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
@@ -606,6 +688,7 @@
 .rm-bold {
   font-size: 12px;
   color: #222222;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
@@ -613,6 +696,7 @@
 .rm-italics {
   font-size: 15px;
   color: #222222;
+  font-family: "Ubuntu", Verdana, sans-serif;
   margin: 0px;
 }
 
@@ -697,5 +781,32 @@
 }
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
+.roam-body {
+  background: blue;
+}
+
+.roam-topbar {
+  background: none;
+}
+
+.roam-sidebar-container {
+  background: none !important;
+}
+
+#right-sidebar {
+  background: green;
+}
+
+.roam-body-main {
+  border: 1px solid red;
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  margin: 0px 5px;
+  /* add space to show shadow */
+  box-shadow: 0px 0px 8px 1px #312323;
+  background: linear-gradient(red, blue);
+}
+
 /*-------------------------------------------------------- Debug Use --------------------------------------------------------*/
 /*-------------------------------------  # DEBUG #-------------------------------------*/
