@@ -1,17 +1,104 @@
-/* Error: Expected identifier.
- *    ,
- * 72 | .roam-topbar.rm-find-or-create-wrapperinput: hover{
- *    |                                             ^
- *    '
- *   sass/components/essentials/icons.scss 72:45  root stylesheet */
+/*------------------------------------
+# ICONS
+------------------------------------*/
+:root {
+  --icon-size-outer: 24px;
+  --icon-size-inner: 16px;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected identifier.\a    \2577 \a 72 \2502  .roam-topbar.rm-find-or-create-wrapperinput: hover{\a    \2502                                              ^\a    \2575 \a   sass/components/essentials/icons.scss 72:45  root stylesheet";
+/*------------------------------------
+# Left Bar
+------------------------------------*/
+.roam-sidebar-container .roam-sidebar-container:hover .bp3-icon-menu-close {
+  opacity: 1;
+}
+
+/* caret */
+/*------------------------------------
+# TOPBAR
+------------------------------------*/
+/*------------------------------------
+# ICONS
+------------------------------------*/
+:root {
+  --icon-size-outer: 24px;
+  --icon-size-inner: 16px;
+}
+
+/*------------------------------------
+# Left Bar
+------------------------------------*/
+.roam-sidebar-container .roam-sidebar-container:hover .bp3-icon-menu-close {
+  opacity: 1;
+}
+
+/* caret */
+/*------------------------------------
+# TOPBAR
+------------------------------------*/
+.roam-topbar [class*=bp3-icon]:not(.bp3-icon-search):not(.bp3-icon-filter) {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.roam-topbar .rm-find-or-create-wrapper {
+  flex: 0 0 24px !important;
+}
+
+.roam-topbar .rm-find-or-create-wrapper input::placeholder {
+  color: transparent;
+}
+
+.roam-topbar .rm-find-or-create-wrapper input {
+  background: red;
+  border-radius: 3px !important;
+  padding: 3px !important;
+  width: 24px !important;
+  height: 24px !important;
+  cursor: pointer;
+}
+
+.roam-topbar .rm-find-or-create-wrapper input:hover {
+  background: blue;
+}
+
+.roam-topbar .rm-find-or-create-wrapper .bp3-icon-search {
+  padding: 4px !important;
+  border-radius: 3px;
+  margin: 0 !important;
+  pointer-events: none;
+}
+
+.roam-topbar .bp3-icon-filter {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.roam-topbar .bp3-icon-filter:before {
+  position: absolute !important;
+  margin: 5px;
+  margin-top: 6px;
+}
+
+.roam-topbar > .flex-h-box > div,
+.roam-topbar > .flex-h-box > span {
+  margin: 5px;
+}
+
+.roam-topbar .bp3-button {
+  height: 24px;
+  width: 24px;
+}
+
+.roam-topbar [class*=bp3-icon]:not(.bp3-icon-search) {
+  background: red;
+}
+
+.roam-topbar [class*=bp3-icon]:before {
+  color: white;
+}
+
+.roam-topbar [class*=bp3-icon]:hover {
+  background: blue;
 }
