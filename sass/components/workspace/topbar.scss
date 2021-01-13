@@ -1,5 +1,12 @@
 /*------------------------------------
-# Top bar element placement
+#
+# TOPBAR
+#
+------------------------------------*/
+/*** LAYOUT ***/
+
+/*------------------------------------
+# element placement
 ------------------------------------*/
 .roam-topbar > .flex-h-box > div[style^="flex"]:not([class]) {
   // remove useless divs
@@ -14,7 +21,7 @@
 }
 
 /*------------------------------------
-# Make search menu popup
+# create search menu popup
 ------------------------------------*/
 .rm-find-or-create-wrapper {
   flex: unset !important;
@@ -42,6 +49,10 @@
 .rm-find-or-create-wrapper .bp3-overlay {
   top: 32vh;
 }
+
+/*** TEXT ***/
+/*** APPEARANCE ***/
+/*** ANIMATIONS ***/
 
 /*------------------------------------
 # Make search input look like an icon

@@ -1,0 +1,42 @@
+/*------------------------------------
+# LEFT SIDEBAR
+------------------------------------*/
+/*** LAYOUT ***/
+/*** TEXT ***/
+/*** APPEARANCE ***/
+/*** ANIMATIONS ***/
+
+.roam-sidebar-content {
+  background: $background--left;
+  color: setContrast($background--left);
+  .top-row {
+    // graph name
+    color: setContrast($background--left);
+  }
+  .log-button {
+    // TODO add customizable icons
+    /* general navigations */
+    color: setContrast($background--left) !important;
+  }
+  .starred-pages-wrapper {
+    background: $background--shortcuts; // background of full shotcut section
+    color: setContrast($background--left) !important; // "★ SHORTCUTS" title
+    > div:nth-child(1) {
+      /* horizontal division line */
+      // TODO add abstraction for class selector
+      @include left_division-line;
+    }
+    > div:nth-child(2) {
+      // TODO add abstraction for class selector
+      /* div padding */
+      @include left_division-padding-div;
+    }
+  }
+  .page {
+    /* left sidebar pages */
+    @include left_pages;
+  }
+  #roam-sidebar-logo {
+    @include left_logo;
+  }
+}

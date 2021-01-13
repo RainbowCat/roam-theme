@@ -4,16 +4,23 @@
 @use "sass:math";
 @use "sass:color";
 
-// helper functions
-@import "utils/functions";
-
 // variables
 @import "utils/palette";
 @import "utils/fonts";
 @import "utils/vars";
 
-/*-------------------------------------------------------- Preferences --------------------------------------------------------*/
+// helper functions
 @import "utils/mixins";
+@import "utils/functions";
+
+/*-------------------------------------------------------- Preferences --------------------------------------------------------*/
+@import "components/workspace/main";
+@import "components/workspace/sidebar-left";
+@import "components/workspace/sidebar-right";
+
+@import "components/essentials/typography";
+@import "components/essentials/blocks";
+@import "components/essentials/bidirectional-linking";
 
 @import "global";
 @import "css-template";
