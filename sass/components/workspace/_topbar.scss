@@ -117,7 +117,7 @@
   position: fixed !important;
   top: var(--searchbar-top);
   left: var(--searchbar-left);
-  z-index: 1000;
+  z-index: 999999;
   /* place at front of page */
   transform: translate(-50%, 0);
 }
