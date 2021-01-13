@@ -1,8 +1,33 @@
-
 /*---------------------------------- 
 # CODE
 ------------------------------------*/
 code {
+  --code-bg: #222629;
+  --code-font: "Source Code Pro", "Courier New", Courier, monospace;
+  --code-font-color: #dcdedd;
+  --code-font-size: 1em;
+  --code-border: 1px solid #34373b;
+  --codemirror-bg: #222629;
+  --codemirror-border-color: #323438;
+  --codemirror-border-radius: 3px;
+  --codemirror-linenumber: #515355;
+  --code-matchingbracket-color: #ead64c;
+  --cm-comment: #7f848e;
+  --cm-def: #d19a66;
+  --cm-keyword: #c678dd;
+  --cm-callee: #56b6c2;
+  --cm-operator: #56b6c2;
+  --cm-builtin: #56b6c2;
+  --cm-string: #98c379;
+  --cm-variable-3: #56b6c2;
+  --cm-variable-2: #e06c75;
+  --cm-variable: #e5c07b;
+  --cm-tag: #e06c75;
+  --cm-property: #61afef;
+  --cm-number: #d19a66;
+  --cm-atom: #d19a66;
+  --cm-qualifier: #d19a66;
+
   /* inline code */
   background: var(--code-bg);
   color: var(--code-font-color);

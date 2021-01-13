@@ -3,48 +3,70 @@
 # OTHER FEATURES
 #
 ------------------------------------*/
+
 /*------------------------------------
 # Kanban
 ------------------------------------*/
+:root {
+  --c1: hsl(205, 0%, 98%);
+  --c2: hsl(0, 0%, 50%);
+  --c3: hsl(206, 15%, 40%);
+  --c4: hsl(0, 0%, 36%);
+  --selection-color: hsl(203, 56%, 36%);
+  --reference-item-background: hsl(0, 0%, 8%);
+  --ref-hover-bg-color: hsl(204, 20%, 17%);
+  --border-color: rgba(255, 255, 255, 0.25);
+  --subtle-border-color: rgba(255, 255, 255, 0.07);
+  --search-border-color: rgba(255, 255, 255, 0.06);
+  --page-background-color: hsl(0, 0%, 8%);
+  --main-area-background-color: hsl(0, 0%, 12%);
+  --cards-background-color: hsl(0, 0%, 20%);
+  --secondary-background-color: hsl(0, 0%, 18%);
+  --popup-background-color: hsl(0, 0%, 16%);
+  --brackets-color: rgba(255, 255, 255, 0.3);
+  --empty-text-color: hsl(203, 5%, 70%);
+}
 
 .kanban-board {
-  max-width: 100% !important;
-  padding: 0 !important;
-  background: none !important;
-  .kanban-column {
-    border-radius: 6px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    &:not([style*="background"]) {
-      background: transparent !important;
-    }
-    &[style*="background"] {
-      background: var(--secondary-background-color) !important;
-    }
-    .kanban-title {
-      text-align: left !important;
-      border-bottom: 1px solid var(--subtle-border-color) !important;
-      padding: 2px 8px !important;
-      min-height: 31px;
-      max-height: 31px;
-      font-size: 14px !important;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .kanban-card {
-      background: var(--cards-background-color) !important;
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7),
-        0px 4px 7px -1px rgba(0, 0, 0, 0.07) !important;
-      border-radius: 4px !important;
-      padding: 6px 10px !important;
-      margin: 0px 6px 12px !important;
-      font-size: 14px !important;
-      .check-container {
-        margin-bottom: 8px !important;
-      }
-    }
-  }
+  max-width: 100%;
+  padding: 0;
+  background: pink;
+}
+
+.kanban-board .kanban-column {
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+}
+.kanban-board .kanban-column:not([style*="background"]) {
+  background: red;
+  margin: 5px;
+}
+.kanban-board .kanban-column[style*="background"] {
+  /* when select a card to drag */
+  background: yellow;
+  margin: 5px;
+}
+.kanban-board .kanban-column .kanban-title {
+  text-align: left;
+  border: 1px solid blue;
+  padding: 2px 8px;
+  min-height: 31px;
+  max-height: 31px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.kanban-board .kanban-column .kanban-card {
+  /* cards */
+  background: green;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7),
+    0px 4px 7px -1px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin: 0px 6px 12px;
+  font-size: 14px;
 }
 /*** LAYOUT ***/
 /*** TEXT ***/
