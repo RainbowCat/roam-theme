@@ -8,30 +8,32 @@
 @import "utils/palette";
 @import "utils/fonts";
 @import "utils/vars";
+@import "utils/hacks";
 
 // helper functions
 @import "utils/functions";
 
-// global setup
-@import "global";
-@import "hacks";
+// mixin settings
 @import "settings";
 
+// global setup
+@import "global";
+
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
-@import "components/workspace/topbar";
-@import "components/workspace/editor";
-@import "components/workspace/sidebar-left";
-@import "components/workspace/sidebar-right";
+// @import "components/workspace/topbar";
+// @import "components/workspace/editor";
+// @import "components/workspace/sidebar-left";
+// @import "components/workspace/sidebar-right";
 
-@import "components/essentials/typography";
-@import "components/essentials/blocks";
-@import "components/essentials/bidirectional-linking";
+// @import "components/essentials/typography";
+// @import "components/essentials/blocks";
+// @import "components/essentials/bidirectional-linking";
 
-@import "components/anchored-pages";
-@import "components/popups";
+// @import "components/anchored-pages";
+// @import "components/popups";
 
-@import "components/features/code";
-@import "components/features/features";
+// @import "components/features/code";
+// @import "components/features/features";
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
 // @import "custom/calendar";

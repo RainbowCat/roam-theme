@@ -1,7 +1,13 @@
-/*-------------------------
+/*------------------------------------
+#
 # VARIABLES
--------------------------*/
-
+#
+------------------------------------*/
+/*------------------------------------
+# Workspace
+------------------------------------*/
+/*** LAYOUT ***/
+$leftbar_width: 200px;
 
 // background colors
 $background--topbar: $palette--theme-darker;
@@ -305,4 +311,3 @@ $border--nestline: $palette--white;
 }
 
 /* from better roam */
-

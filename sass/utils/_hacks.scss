@@ -4,52 +4,67 @@
 #
 ------------------------------------*/
 /*------------------------------------
+# Class Selectors
+------------------------------------*/
+$rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
+/*------------------------------------
 # POPUP SEARCH MENU
 ------------------------------------*/
+.roam-topbar {
+  --icon-size: 24px;
+  --searchbar-height: minmax(45px, 5vh);
+  --searchbar-width: 500px; // aesthetics
+  --searchbar-left: 55vw; // aesthetics
+  --searchbar-top: 27vh; // aesthetics
+}
+
 @mixin topbar_search-hack {
+  > .flex-h-box {
+    /*--  remove useless divs --*/
+    > div[style^="flex"]:not([class]) {
+      display: none;
+    }
+    /*--  make all look like buttons --*/
+    > div,
+    > span,
+    input#find-or-create-input {
+      @include icons;
+    }
+    input#find-or-create-input {
+      // padding: 0px;
+      cursor: pointer; // make cursor look like hovering a button
+    }
+    .bp3-icon-search:before {
+      @include icons;
+      place-self: center;
+      margin: 0px !important;
+      pointer-events: none; // so that when you click on the search button is the same as clicking on the input area
+    }
+  }
+
   .rm-find-or-create-wrapper {
     flex: unset !important;
     // TODO make a variable for the height of input area, and then use "calc"
-    --input-height: 5vh;
     input#find-or-create-input:focus,
     .bp3-overlay {
       /* match size */
-      width: 500px; //TODO make a variable
+      width: var(--searchbar-width);
+
       /* match position */
       position: fixed !important;
-      top: 27vh;
-      left: 55vw;
+      top: var(--searchbar-top);
+      left: var(--searchbar-left);
       z-index: 1000; /* place at front of page */
       transform: translate(-50%, 0);
-
-      height: var(--input-height);
+    }
+    input#find-or-create-input:focus {
+      height: var(--searchbar-height);
     }
     .bp3-overlay .bp3-transition-container {
       transform: none !important;
     }
-    input#find-or-create-input:focus {
-      height: 5vh;
-    }
     .bp3-overlay {
-      top: 32vh;
-    }
-
-    /*-- make search input look like an icon --*/
-    .rm-find-or-create-wrapper > .bp3-popover-wrapper {
-      height: 24px; //TODO make variable, -> same as tobbar icon size
-      width: 24px;
-    }
-
-    .bp3-icon-search,
-    .bp3-icon-search:hover {
-      pointer-events: none; // so that when you click on the search button is the same as clicking on the input area
-    }
-
-    input#find-or-create-input,
-    input#find-or-create-input:focus {
-      border-radius: 3px;
-      padding: 10px;
-      cursor: pointer; // make cursor look like hovering a button
+      top: calc(var(--searchbar-top) + var(--searchbar-height));
     }
   }
 }

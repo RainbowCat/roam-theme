@@ -1,0 +1,135 @@
+/*------------------------------------ # GLOBAL # ------------------------------------*/
+/*------------------------------------
+#
+# RESET SITE SETTINGS
+#
+------------------------------------*/
+
+/*------------------------------------
+# All Elements
+------------------------------------*/
+*:not(html):not([class*="bp3"]):not([class*="CodeMirro"]) {
+  min-height: 10px;
+  min-width: 10px;
+  max-height: 100%;
+  max-width: 100%;
+
+  // XXX do not set height and width XXX //
+  height: auto;
+  width: auto;
+
+  // XXX do not set color and background XXX //
+
+  font: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  opacity: inherit; //TODO check
+
+  box-sizing: border-box;
+}
+
+/*------------------------------------
+# Workspace Layout
+------------------------------------*/
+:root {
+  --leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
+  --topbar_height: 45px; // default
+}
+
+// level 1
+html,
+body,
+#app,
+.roam-body,
+.roam-app {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden scroll;
+
+  opacity: 1;
+}
+
+.roam-app {
+  // level 2: leftbar, right-area
+  > .roam-sidebar-container,
+  > .roam-sidebar-container > .roam-sidebar-content {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: var(--leftbar_width) !important; // override element.style
+    z-index: 999;
+  }
+  > div.flex-h-box {
+    width: 100vw;
+    margin-left: var(--leftbar_width) !important; // override element.style
+
+    // level 3: editor & topbar, rightbar
+    > .roam-main {
+      // level 4: topbar, roam-body-main
+      > .roam-topbar {
+        height: var(--topbar_height);
+      }
+      // level 5
+      > .roam-body-main {
+        > div:first-child {
+          // element.style
+          // padding-right: calc((100% - 568px) / 2);
+          //   padding-left: calc((100% - 1032px) / 2);
+          //   height: 100%;
+          //   overflow: hidden;
+
+          padding: 0px !important;
+
+          // level 6
+          > .roam-article {
+            padding: 20px;
+          }
+        }
+        > #buffer {
+          visibility: hidden;
+        }
+      }
+    }
+    > #right-sidebar {
+    }
+  }
+}
+.rm-block__children.rm-level-0 {
+  margin-left: 0px;
+}
+/*------------------------------------
+# REMOVE USELESS DIVS
+------------------------------------*/
+// .roam-body-main > div:first-child {
+//   // all: unset !important;
+// }
+// /* Topbar */
+// .roam-topbar {
+//   /*--  remove useless divs --*/
+//   > .flex-h-box > div[style^="flex"]:not([class]) {
+//     display: none;
+//   }
+// }
+
+/*-------------------------
+# GLOBAL SETUP
+-------------------------*/
+
+/*------------------------------------------
+# workspace
+------------------------------------------*/
+.roam-sidebar {
+}
+
+/*------------------------------------
+# popups
+------------------------------------*/
+.bp3-menu-item {
+  color: initial;
+}

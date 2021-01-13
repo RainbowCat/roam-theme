@@ -272,22 +272,24 @@
 }
 @mixin icons {
   // todo make dynamic for topbar / left side
+  &,
+  & > * {
+    height: 24px;
+    width: 24px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 3px;
+  }
+
   // all icon color
+  background-color: red;
   color: $palette--white !important;
   :hover {
     color: $palette--accent;
   }
   //todo test if this only woskt on topbar
-  background-color: red;
-  color: white;
-  height: 24px;
-  width: 24px;
-  padding: 4px;
-  border-radius: 3px;
-  margin: 0px;
 }
 @mixin datepicker {
-  
 }
 /*-------------------------
 # FEATURES
