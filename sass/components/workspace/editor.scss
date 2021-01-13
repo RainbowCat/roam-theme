@@ -17,6 +17,17 @@
   visibility: hidden;
 }
 
+#buffer {
+  background-color: #dfe1e5 !important;
+}
+
+#buffer .help-title,
+#buffer .help-sub-title,
+#buffer .help-item-label,
+#buffer .help-item-text {
+  color: #252729;
+}
+
 .roam-body .roam-app .roam-main .roam-article {
   padding: 0px;
 }
