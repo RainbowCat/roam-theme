@@ -96,7 +96,7 @@ body,
 
           // level 6
           > .roam-article {
-            padding: 20px;
+            padding: 20px; //TODO make this a variable
           }
         }
         > #buffer {
@@ -108,9 +108,7 @@ body,
     }
   }
 }
-.rm-block__children.rm-level-0 {
-  margin-left: 0px;
-}
+
 /*------------------------------------
 # REMOVE USELESS DIVS
 ------------------------------------*/
@@ -125,6 +123,13 @@ body,
 //   }
 // }
 /*------------------------------------
+# TYPOGRAPHY
+------------------------------------*/
+.rm-highlight {
+  margin: 0px;
+}
+
+/*------------------------------------
 # BLOCKS
 ------------------------------------*/
 .rm-block-children {
@@ -133,6 +138,13 @@ body,
 .roam-block-container {
   margin: 0px;
   max-width: 100% !important;
+}
+.rm-block__children.rm-level-0 {
+  margin-left: 0px;
+}
+.rm-inline-img {
+  max-width: 60%;
+  max-height: 50vh;
 }
 /*------------------------------------
 # popups

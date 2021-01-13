@@ -51,7 +51,7 @@ h1.rm-title-editing-display {
 }
 
 /*------------------------------------
-# BULLETS & TOGGLES
+# BULLETS
 ------------------------------------*/
 .rm-bullet {
   &__inner {
@@ -83,11 +83,6 @@ h1.rm-title-editing-display {
 // .block-border-left {
 //   border-left: var(--tree-vertline);
 // }
-
-/* caret */
-.rm-caret {
-  @include bullet_toggle;
-}
 
 /*------------------------------------
 # CHECKBOX

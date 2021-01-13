@@ -16,10 +16,6 @@
   justify-content: center; /* place things at center */
 }
 
-@mixin topbar_icons-style {
-  @include icons;
-}
-
 /*------------------------------------
 # MAIN EDITOR
 ------------------------------------*/
@@ -271,26 +267,7 @@
     }
   }
 }
-@mixin icons {
-  // todo make dynamic for topbar / left side
-  &,
-  & > * {
-    height: 24px;
-    width: 24px;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 3px;
-    place-self: center;
-  }
 
-  // all icon color
-  background-color: red;
-  color: $palette--white !important;
-  :hover {
-    color: $palette--accent;
-  }
-  //todo test if this only work on topbar
-}
 @mixin datepicker {
 }
 /*-------------------------

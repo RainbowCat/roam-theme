@@ -26,14 +26,14 @@
 @import "components/workspace/sidebar-right";
 
 @import "components/essentials/typography";
-// @import "components/essentials/blocks";
-// @import "components/essentials/bidirectional-linking";
+@import "components/essentials/blocks";
+@import "components/essentials/bidirectional-linking";
 
-// @import "components/anchored-pages";
-// @import "components/popups";
+@import "components/anchored-pages";
+@import "components/popups";
 
-// @import "components/features/code";
-// @import "components/features/features";
+@import "components/features/code";
+@import "components/features/features";
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
 @include better-roam-layout();

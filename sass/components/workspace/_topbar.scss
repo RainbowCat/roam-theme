@@ -7,7 +7,6 @@
 # POPUP SEARCH MENU
 ------------------------------------*/
 .roam-topbar {
-  --icon-size: 24px;
   --searchbar-height: minmax(45px, 5vh);
   --searchbar-width: 500px; // aesthetics
   --searchbar-left: 55vw; // aesthetics
@@ -15,10 +14,10 @@
 }
 
 // HACK
-// .roam-topbar .flex-h-box > div[style^="flex"]:not([class]) {
-//   /* remove useless divs */
-//   display: none;
-// }
+.roam-topbar .flex-h-box > div[style^="flex"]:not([class]) {
+  /* remove useless divs */
+  display: none;
+}
 
 /*** LAYOUT ***/
 .roam-topbar .flex-h-box {
