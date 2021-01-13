@@ -394,6 +394,9 @@ body,
 .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
   height: var(--topbar_height);
 }
+.roam-app > div.flex-h-box > .roam-main > .roam-body-main {
+  margin: 0px;
+}
 .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
   padding: 0px !important;
 }
@@ -410,6 +413,18 @@ body,
 /*------------------------------------
 # REMOVE USELESS DIVS
 ------------------------------------*/
+/*------------------------------------
+# BLOCKS
+------------------------------------*/
+.rm-block-children {
+  margin: 0px;
+}
+
+.roam-block-container {
+  margin: 0px;
+  max-width: 100% !important;
+}
+
 /*------------------------------------
 # popups
 ------------------------------------*/

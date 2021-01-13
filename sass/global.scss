@@ -84,6 +84,7 @@ body,
       }
       // level 5
       > .roam-body-main {
+        margin: 0px;
         > div:first-child {
           // element.style
           // padding-right: calc((100% - 568px) / 2);
@@ -123,7 +124,16 @@ body,
 //     display: none;
 //   }
 // }
-
+/*------------------------------------
+# BLOCKS
+------------------------------------*/
+.rm-block-children {
+  margin: 0px;
+}
+.roam-block-container {
+  margin: 0px;
+  max-width: 100% !important;
+}
 /*------------------------------------
 # popups
 ------------------------------------*/
