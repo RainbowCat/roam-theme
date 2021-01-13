@@ -239,17 +239,6 @@
 # Class Selectors
 ------------------------------------*/
 /*------------------------------------
-# POPUP SEARCH MENU
-------------------------------------*/
-.roam-topbar {
-  --icon-size: 24px;
-  --searchbar-height: minmax(45px, 5vh);
-  --searchbar-width: 500px;
-  --searchbar-left: 55vw;
-  --searchbar-top: 27vh;
-}
-
-/*------------------------------------
 # BETTER ROAM RESEARCH LAYOUT
 ------------------------------------*/
 /*------------------------------------
@@ -428,6 +417,140 @@ body,
 }
 
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
+/*------------------------------------
+#
+# TOPBAR
+#
+------------------------------------*/
+/*------------------------------------
+# POPUP SEARCH MENU
+------------------------------------*/
+.roam-topbar {
+  --icon-size: 24px;
+  --searchbar-height: minmax(45px, 5vh);
+  --searchbar-width: 500px;
+  --searchbar-left: 55vw;
+  --searchbar-top: 27vh;
+}
+
+.roam-topbar {
+  background: #14232a;
+  color: white;
+  /*--  topbar element placement --*/
+  /*--  create search menu popup --*/
+  /*-- Make all icons look the same --*/
+}
+.roam-topbar .flex-h-box {
+  /*    justify-content: flex-start;  /* place things on the left */
+  justify-content: flex-end;
+  /* place things on the right */
+  justify-content: center;
+  /* place things at center */
+}
+.roam-topbar > .flex-h-box {
+  /*--  remove useless divs --*/
+  /*--  make all look like buttons --*/
+}
+.roam-topbar > .flex-h-box > div[style^=flex]:not([class]) {
+  display: none;
+}
+.roam-topbar > .flex-h-box > div,
+.roam-topbar > .flex-h-box > span,
+.roam-topbar > .flex-h-box .rm-find-or-create-wrapper,
+.roam-topbar > .flex-h-box input#find-or-create-input {
+  background-color: red;
+  color: #ffffff !important;
+}
+.roam-topbar > .flex-h-box > div, .roam-topbar > .flex-h-box > div > *,
+.roam-topbar > .flex-h-box > span,
+.roam-topbar > .flex-h-box > span > *,
+.roam-topbar > .flex-h-box .rm-find-or-create-wrapper,
+.roam-topbar > .flex-h-box .rm-find-or-create-wrapper > *,
+.roam-topbar > .flex-h-box input#find-or-create-input,
+.roam-topbar > .flex-h-box input#find-or-create-input > * {
+  height: 24px;
+  width: 24px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 3px;
+  place-self: center;
+}
+.roam-topbar > .flex-h-box > div :hover,
+.roam-topbar > .flex-h-box > span :hover,
+.roam-topbar > .flex-h-box .rm-find-or-create-wrapper :hover,
+.roam-topbar > .flex-h-box input#find-or-create-input :hover {
+  color: #e76f51;
+}
+.roam-topbar > .flex-h-box input#find-or-create-input {
+  cursor: pointer;
+}
+.roam-topbar > .flex-h-box .bp3-icon-search:before {
+  background-color: red;
+  color: #ffffff !important;
+  place-self: center;
+  margin: 0px !important;
+  pointer-events: none;
+}
+.roam-topbar > .flex-h-box .bp3-icon-search:before, .roam-topbar > .flex-h-box .bp3-icon-search:before > * {
+  height: 24px;
+  width: 24px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 3px;
+  place-self: center;
+}
+.roam-topbar > .flex-h-box .bp3-icon-search:before :hover {
+  color: #e76f51;
+}
+.roam-topbar .rm-find-or-create-wrapper {
+  flex: unset !important;
+}
+.roam-topbar .rm-find-or-create-wrapper input#find-or-create-input:focus,
+.roam-topbar .rm-find-or-create-wrapper .bp3-overlay {
+  /* match size */
+  width: var(--searchbar-width);
+  /* match position */
+  position: fixed !important;
+  top: var(--searchbar-top);
+  left: var(--searchbar-left);
+  z-index: 1000;
+  /* place at front of page */
+  transform: translate(-50%, 0);
+}
+.roam-topbar .rm-find-or-create-wrapper input#find-or-create-input:focus {
+  height: var(--searchbar-height);
+}
+.roam-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-transition-container {
+  transform: none !important;
+}
+.roam-topbar .rm-find-or-create-wrapper .bp3-overlay {
+  top: calc(var(--searchbar-top) + var(--searchbar-height));
+}
+.roam-topbar [class*=bp3-icon],
+.roam-topbar .rm-saving-icon {
+  /* style icon to look like the others */
+  background-color: red;
+  color: #ffffff !important;
+}
+.roam-topbar [class*=bp3-icon], .roam-topbar [class*=bp3-icon] > *,
+.roam-topbar .rm-saving-icon,
+.roam-topbar .rm-saving-icon > * {
+  height: 24px;
+  width: 24px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 3px;
+  place-self: center;
+}
+.roam-topbar [class*=bp3-icon] :hover,
+.roam-topbar .rm-saving-icon :hover {
+  color: #e76f51;
+}
+.roam-topbar .rm-saving-inner-icon {
+  place-self: center;
+  margin: 0px !important;
+}
+
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
 /*-------------------------------------------------------- Debug Use --------------------------------------------------------*/
 /*-------------------------------------  # DEBUG #-------------------------------------*/
