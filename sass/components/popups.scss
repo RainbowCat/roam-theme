@@ -1,65 +1,22 @@
 /*------------------------------------
 # POPUPs
 ------------------------------------*/
-// menus
-@mixin menu($focus: none, $hover: none) {
-  background-color: $background--popover !important;
-  color: setContrast($background--popover);
-  @if $focus is not none {
-    #{$focus} {
-      background-color: $background--popover-hover !important;
-    }
-  }
-  @if $hover is not none {
-    #{$hover} {
-      background-color: $background--popover-hover;
-    }
-  }
-}
+//menus
 // search bar
 // page filter
-@mixin page-filter {
-  color: $palette--theme;
-  & > &-content {
-    // background
-    background-color: $background--popover;
-    color: setContrast($background--popover);
-  }
-  & &-arrow {
-    &-fill {
-      // background
-      fill: $background--popover;
-    }
-    &-border {
-      //tiny border
-      fill: setContrast($background--popover);
-    }
-  }
-  .bp3-button {
-    // tag selection buttons
-    background: radial-gradient(
-      $background--popover,
-      lighten($background--popover, 10%)
-    );
-    color: setContrast($background--popover) !important;
-    &:hover {
-      color: $palette--accent !important;
-    }
-  }
-}
 
 .bp3-menu {
   // code-area language menu
-  @include menu;
+  @include popup_menu;
   .bp3-menu-item {
-    color: white;
+    color: white; //TODO add mixin?
   }
 }
 .bp3-elevation-3 {
   // slash menu
-  @include menu(".dont-unfocus-block[style*=background]");
+  @include popup_menu(".dont-unfocus-block[style*=background]");
 }
-
+//TODO
 /*--- Block References ---*/
 .rm-block-ref {
   /* linked refs */
@@ -73,7 +30,7 @@
 /* page filter */
 .bp3-popover {
   // popup title colors
-  @include page-filter;
+  @include popup_page-filter;
 }
 
 /* tool bar */
@@ -81,10 +38,7 @@
 [class*="bp3-icon"]:before {
   // TODO separate this for left sidebar, main, right sidebar?
   // all icon color
-  color: $palette--white !important;
-  :hover {
-    color: $palette--accent;
-  }
+  @include icons;
 }
 
 /*------------------------------------
@@ -92,9 +46,10 @@
 ------------------------------------*/
 // override blueprint
 .bp3-button:not([class*="bp3-intent-"]) {
-  background: blue;
+  @include icons;
   // @include style-icons;
 }
+
 /*------------------------------------
 # Datepicker
 ------------------------------------*/
@@ -103,7 +58,7 @@
   --datepicker-day-wrapper: #36393c;
   --datepicker-altfont-color: #545d63;
 }
-
+//TODO
 .bp3-icon-calendar {
   border: none;
 }

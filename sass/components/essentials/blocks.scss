@@ -8,18 +8,11 @@
 #{$rm-block-selector} {
   /* regular block */
   .rm-not-focused {
-    background-color: $background--block-regular;
+    @include block_regular;
   }
   /* focused block */
   .rm-focused {
-    padding: 0px;
-    // background: linear-gradient(
-    //   to right,
-    //   opacify($palette--theme-darker, 0.2) 5%,
-    //   opacify($palette--accent-darker, 0.6) 30%,
-    //   opacify($background--block-highlight, 0.5)
-    // );
-    @include setBorder(opacify($palette--accent-darker, 0.6), 5);
+    @include block_focused; /* i.e. when tyging inside */
     // maybe style highlight child blocks too?
     // & #{$rm-block-selector} {
     // child blocks
@@ -34,7 +27,7 @@
 
   /* selected block in main edit area */
   .block-highlight-blue {
-    background-color: $palette--accent-darker;
+    @include block_selected-main;
   }
   .block-highlight-blue {
     /* block selection */
@@ -43,20 +36,22 @@
   /* selected block in linked referenced */
   .block-highlight-yellow {
     /* block highlight */
-    background-color: var(--block-highlight-bg);
+    @include block_selected-linked;
   }
   .rm-embed-container {
     /* embed block highlight */
-    background-color: var(--embed-container-bg);
+    @include block_selected-embed;
   }
 }
 
 /*------------------------------------
 # Block Reference
 ------------------------------------*/
+//todo
 /*------------------------------------
 # Block Embed
 ------------------------------------*/
+//todo
 /*** LAYOUT ***/
 /*** TEXT ***/
 /*** APPEARANCE ***/

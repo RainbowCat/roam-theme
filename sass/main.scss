@@ -10,11 +10,12 @@
 @import "utils/vars";
 
 // helper functions
-// @import "utils/mixins";
 @import "utils/functions";
 
-// global reset
+// global setup
 @import "global";
+@import "hacks";
+@import "settings";
 
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
 @import "components/workspace/topbar";

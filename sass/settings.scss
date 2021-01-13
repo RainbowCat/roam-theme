@@ -1,0 +1,298 @@
+/*------------------------------------ GENERAL WORKSPACE ------------------------------------*/
+/*------------------------------------
+# LEFT SIDEBAR
+------------------------------------*/
+/*------------------------------------
+# TOPBAR
+------------------------------------*/
+@mixin topbar_appearance {
+  background: $background--topbar;
+  color: setContrast($background--topbar);
+}
+@mixin topbar_icons-placement {
+  //TODO make variable
+  /*    justify-content: flex-start;  /* place things on the left */
+  justify-content: flex-end; /* place things on the right */
+  justify-content: center; /* place things at center */
+}
+
+@mixin topbar_icons-style {
+  @include icons;
+}
+
+/*------------------------------------
+# MAIN EDITOR
+------------------------------------*/
+/*------------------------------------
+# RIGHT SIDEBAR
+------------------------------------*/
+/*------------------------------------
+# OTHER
+------------------------------------*/
+@mixin help-menu {
+  //later
+}
+
+/*------------------------------------ COMPONENTS ------------------------------------*/
+/*-------------------------
+# TYPOGRAPHY
+-------------------------*/
+@mixin TextDisplay {
+  // line-height: 1;
+  margin: 0px;
+  // margin-top: 2px;
+}
+
+// page title
+@mixin text_title {
+  font-size: 36px;
+  color: $palette--black !important;
+  @include TextDisplay;
+}
+// headings
+@mixin text_heading1 {
+  color: $palette--black;
+  font-size: 30px;
+  @include TextDisplay;
+}
+
+@mixin text_heading2 {
+  color: $palette--black;
+  font-size: 25px;
+  @include TextDisplay;
+}
+@mixin text_heading3 {
+  color: $palette--black;
+  font-size: 20px;
+  @include TextDisplay;
+}
+// main text
+@mixin text_body {
+  color: $palette--black;
+  font-size: 12px;
+  @include TextDisplay;
+}
+
+@mixin text_bold {
+  font-size: 12px;
+  color: $palette--black;
+  @include TextDisplay;
+}
+
+@mixin text_italics {
+  font-size: 15px;
+  color: $palette--black;
+  @include TextDisplay;
+}
+
+@mixin text_highlight {
+  background-color: $palette--accent;
+  color: setContrast($palette--accent);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+/* blockquote */
+:root {
+  --bg-quote: black;
+  --fg-quote: white;
+  --fnt-size-quote: 15px;
+  --fnt-style-quote: normal;
+}
+
+@mixin blockquote {
+  background-color: var(--bg-quote);
+  color: var(--fg-quote);
+  border-left: 5px solid var(--br-quote);
+  font-size: var(--fnt-size-quote);
+  font-style: var(--fnt-style-quote);
+}
+
+/* bullets */
+@mixin bullet_open {
+  //todo
+}
+@mixin bullet_closed {
+  //todo
+}
+@mixin bullet_nestingline {
+  //todo
+}
+@mixin bullet_toggle {
+  //todo
+  color: $palette--accent;
+}
+
+// checkboxes
+@mixin checkbox_not-done {
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkmark-border);
+  background-color: var(--checkmark-bg-color);
+}
+@mixin checkbox_done {
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkedmark-border);
+  background-color: var(--checkedmark-bg-color);
+}
+@mixin checkbox_symbol {
+  //debug
+  left: 3.5px;
+  top: 0.25px;
+  width: 6px;
+  height: 10px;
+  border: var(--checkmark-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg) scale(0.8);
+}
+/*------------------------------------
+# BLOCKS
+------------------------------------*/
+/* block highlights */
+@mixin block_regular {
+  //todo
+  background-color: $background--block-regular;
+}
+@mixin block_focused {
+  //todo
+  padding: 0px;
+  // background: linear-gradient(
+  //   to right,
+  //   opacify($palette--theme-darker, 0.2) 5%,
+  //   opacify($palette--accent-darker, 0.6) 30%,
+  //   opacify($background--block-highlight, 0.5)
+  // );
+  @include setBorder(opacify($palette--accent-darker, 0.6), 5);
+}
+
+@mixin block_selected-main {
+  /* selected block in main edit area */
+  background-color: $palette--accent-darker;
+}
+@mixin block_selected-linked {
+  /* selected block in linked referenced */
+  background-color: var(--block-highlight-bg);
+}
+@mixin block_selected-embed {
+  /* embed block highlight */
+  background-color: var(--embed-container-bg);
+}
+/*------------------------------------
+# BIDIRECTIONAL LINKING
+------------------------------------*/
+@mixin attributes {
+  @include font-bold;
+}
+@mixin tags {
+  :hover {
+  }
+}
+@mixin page-links_text {
+  color: $palette--accent-lighter;
+  &:hover,
+  &:focus {
+  }
+}
+@mixin page-links_brackets {
+}
+
+@mixin alias_internal {
+}
+
+@mixin alias_external {
+}
+
+@mixin hyperlink {
+  //TODO
+}
+
+/* linked/unlinked references */
+@mixin linked-ref_menu {
+  @include setBorder(setContrast($background--main), 5);
+}
+
+/*------------------------------------
+# POPUPS
+------------------------------------*/
+// menus
+@mixin popup_menu($focus: none, $hover: none) {
+  background-color: $background--popover !important;
+  color: setContrast($background--popover);
+  @if $focus is not none {
+    #{$focus} {
+      background-color: $background--popover-hover !important;
+    }
+  }
+  @if $hover is not none {
+    #{$hover} {
+      background-color: $background--popover-hover;
+    }
+  }
+}
+// page filter
+@mixin popup_page-filter {
+  color: $palette--theme;
+  & > &-content {
+    // background
+    background-color: $background--popover;
+    color: setContrast($background--popover);
+  }
+  & &-arrow {
+    &-fill {
+      // background
+      fill: $background--popover;
+    }
+    &-border {
+      //tiny border
+      fill: setContrast($background--popover);
+    }
+  }
+  .bp3-button {
+    // tag selection buttons
+    background: radial-gradient(
+      $background--popover,
+      lighten($background--popover, 10%)
+    );
+    color: setContrast($background--popover) !important;
+    &:hover {
+      color: $palette--accent !important;
+    }
+  }
+}
+@mixin icons {
+  // todo make dynamic for topbar / left side
+  // all icon color
+  color: $palette--white !important;
+  :hover {
+    color: $palette--accent;
+  }
+  //todo test if this only woskt on topbar
+  background-color: red;
+  color: white;
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 0px;
+}
+@mixin datepicker {
+  
+}
+/*-------------------------
+# FEATURES
+-------------------------*/
+// code area
+// kanban
+// table
+// datepicker

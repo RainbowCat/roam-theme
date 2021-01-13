@@ -4,91 +4,23 @@
 #
 ------------------------------------*/
 .roam-topbar {
-  background: $background--topbar;
-  color: setContrast($background--topbar);
-
-  /*--  remove useless divs --*/
-  > .flex-h-box > div[style^="flex"]:not([class]) {
-    display: none;
-  }
-
+  @include topbar_appearance;
   /*--  topbar element placement --*/
   .flex-h-box {
-    //TODO make variable
-    /*    justify-content: flex-start;  /* place things on the left */
-    justify-content: flex-end; /* place things on the right */
-    justify-content: center; /* place things at center */
+    @include topbar_icons-placement;
   }
 
   /*--  create search menu popup --*/
-  .rm-find-or-create-wrapper {
-    flex: unset !important;
-    // TODO make a variable for the height of input area, and then use "calc"
-    --input-height: 5vh;
-    input#find-or-create-input:focus,
-    .bp3-overlay {
-      /* match size */
-      width: 500px; //TODO make a variable
-      /* match position */
-      position: fixed !important;
-      top: 27vh;
-      left: 55vw;
-      z-index: 1000; /* place at front of page */
-      transform: translate(-50%, 0);
-
-      height: var(--input-height);
-    }
-    .bp3-overlay .bp3-transition-container {
-      transform: none !important;
-    }
-    input#find-or-create-input:focus {
-      height: 5vh;
-    }
-    .bp3-overlay {
-      top: 32vh;
-    }
-
-    /*-- make search input look like an icon --*/
-    .rm-find-or-create-wrapper > .bp3-popover-wrapper {
-      height: 24px; //TODO make variable, -> same as tobbar icon size
-      width: 24px;
-    }
-
-    .bp3-icon-search,
-    .bp3-icon-search:hover {
-      pointer-events: none; // so that when you click on the search button is the same as clicking on the input area
-    }
-
-    input#find-or-create-input,
-    input#find-or-create-input:focus {
-      border-radius: 3px;
-      padding: 10px;
-      cursor: pointer; // make cursor look like hovering a button
-    }
-  }
+  @include topbar_search-hack;
 
   /*-- Make all icons look the same --*/
-  [class*="bp3-icon"] {
-    /* style icon to look like the others */
-    background-color: red;
-    color: white;
-    height: 24px;
-    width: 24px;
-    padding: 4px;
-    border-radius: 3px;
-    margin: 0px;
-  }
-
+  [class*="bp3-icon"], //todo test if this still works with regular search input
   .rm-saving-icon {
-    background-color: red;
-    color: white;
-    height: 24px;
-    width: 24px;
-    padding: 4px;
-    border-radius: 3px;
-    margin: 0px;
+    /* style icon to look like the others */
+    @include topbar_icons-style;
   }
   .rm-saving-inner-icon {
+    //review
     place-self: center;
     margin: 0px !important;
   }
