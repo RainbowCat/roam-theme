@@ -37,8 +37,13 @@
     }
   }
   .starred-pages-wrapper {
+    margin-top: 10px; // add space from .log-buttons
+    > .flex-h-box {
+      // "★ SHORTCUTS" title
+      display: none;
+    }
     background: $background--shortcuts; // background of full shotcut section
-    color: setContrast($background--left); // "★ SHORTCUTS" title
+    color: setContrast($background--left);
   }
   .page {
     /* left sidebar pages */

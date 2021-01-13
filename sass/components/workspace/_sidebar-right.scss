@@ -15,3 +15,8 @@
     // draggable handle for resizing
   }
 }
+
+#right-sidebar > .flex-h-box > div {
+  // todo fix this when right side bar is not present
+  display: none;
+}

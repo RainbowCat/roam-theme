@@ -361,6 +361,8 @@ body,
 #app,
 .roam-body,
 .roam-app {
+  display: flex;
+  flex-direction: row;
   box-sizing: border-box;
   position: fixed;
   top: 0px;
@@ -382,7 +384,7 @@ body,
 }
 .roam-app > div.flex-h-box {
   width: 100vw;
-  margin-left: var(--leftbar_width) !important;
+  margin: 0px !important;
 }
 .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
   height: var(--topbar_height);
@@ -434,40 +436,85 @@ body,
 }
 
 .roam-topbar {
+  /*** APPEARANCE ***/
+  background: #14232a;
+  color: white;
+}
+
+.roam-topbar .flex-h-box {
+  /*** LAYOUT ***/
+  justify-content: center;
+}
+
+.roam-topbar .flex-h-box > div,
+.roam-topbar .flex-h-box > span {
+  height: 24px;
+  width: 24px;
+  margin: 3px;
+}
+
+.roam-topbar .flex-h-box > div[style^=flex]:not([class]) {
+  /* remove useless divs */
+  display: none;
+}
+
+/* make search look like button */
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper {
+  flex: unset !important;
+  width: 24px;
+}
+
+.roam-topbar .flex-h-box [class|=bp3-icon],
+.roam-topbar .flex-h-box [class|=bp3-icon] > *,
+.roam-topbar .flex-h-box .rm-saving-icon {
+  height: 24px;
+  width: 24px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 3px;
+  place-self: center;
+}
+
+.rm-saving-inner-icon {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.search-icon {
+  padding: 4px;
+  margin: 0px 0px 0px 0px !important;
+  pointer-events: none;
+}
+
+.roam-topbar {
   background: #14232a;
   color: white;
   /*--  topbar element placement --*/
-  /*--  create search menu popup --*/
-  /*-- Make all icons look the same --*/
 }
+
 .roam-topbar .flex-h-box {
-  /*    justify-content: flex-start;  /* place things on the left */
-  justify-content: flex-end;
-  /* place things on the right */
   justify-content: center;
-  /* place things at center */
 }
-.roam-topbar > .flex-h-box {
-  /*--  remove useless divs --*/
-  /*--  make all look like buttons --*/
+
+.roam-topbar .flex-h-box > div,
+.roam-topbar .flex-h-box > span {
+  margin: 3px;
 }
-.roam-topbar > .flex-h-box > div[style^=flex]:not([class]) {
+
+.roam-topbar .flex-h-box > div[style^=flex]:not([class]) {
+  /* remove useless divs */
   display: none;
 }
-.roam-topbar > .flex-h-box > div,
-.roam-topbar > .flex-h-box > span,
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper,
-.roam-topbar > .flex-h-box input#find-or-create-input {
-  background-color: red;
-  color: #ffffff !important;
+
+/* make search look like button */
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper {
+  flex: unset !important;
+  width: 24px;
 }
-.roam-topbar > .flex-h-box > div, .roam-topbar > .flex-h-box > div > *,
-.roam-topbar > .flex-h-box > span,
-.roam-topbar > .flex-h-box > span > *,
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper,
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper > *,
-.roam-topbar > .flex-h-box input#find-or-create-input,
-.roam-topbar > .flex-h-box input#find-or-create-input > * {
+
+.roam-topbar .flex-h-box [class|=bp3-icon],
+.roam-topbar .flex-h-box [class|=bp3-icon] > *,
+.roam-topbar .flex-h-box .rm-saving-icon {
   height: 24px;
   width: 24px;
   margin: 0px;
@@ -475,38 +522,28 @@ body,
   border-radius: 3px;
   place-self: center;
 }
-.roam-topbar > .flex-h-box > div :hover,
-.roam-topbar > .flex-h-box > span :hover,
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper :hover,
-.roam-topbar > .flex-h-box input#find-or-create-input :hover {
-  color: #e76f51;
-}
-.roam-topbar > .flex-h-box input#find-or-create-input {
-  cursor: pointer;
-}
-.roam-topbar > .flex-h-box .bp3-icon-search:before {
-  background-color: red;
-  color: #ffffff !important;
-  place-self: center;
-  margin: 0px !important;
+
+.search-icon {
+  padding: 4px;
+  margin: 2px 0px 0px 0px !important;
   pointer-events: none;
 }
-.roam-topbar > .flex-h-box .bp3-icon-search:before, .roam-topbar > .flex-h-box .bp3-icon-search:before > * {
-  height: 24px;
-  width: 24px;
-  margin: 0px;
+
+.roam-topbar .flex-h-box input#find-or-create-input:focus {
+  padding: 15px;
+}
+
+.roam-topbar .flex-h-box input#find-or-create-input {
   padding: 0px;
-  border-radius: 3px;
-  place-self: center;
+  cursor: pointer;
 }
-.roam-topbar > .flex-h-box .bp3-icon-search:before :hover {
-  color: #e76f51;
+
+.roam-topbar .flex-h-box .bp3-icon-search:before {
+  pointer-events: none;
 }
-.roam-topbar .rm-find-or-create-wrapper {
-  flex: unset !important;
-}
-.roam-topbar .rm-find-or-create-wrapper input#find-or-create-input:focus,
-.roam-topbar .rm-find-or-create-wrapper .bp3-overlay {
+
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper input#find-or-create-input:focus,
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
   /* match size */
   width: var(--searchbar-width);
   /* match position */
@@ -517,38 +554,239 @@ body,
   /* place at front of page */
   transform: translate(-50%, 0);
 }
-.roam-topbar .rm-find-or-create-wrapper input#find-or-create-input:focus {
+
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper input#find-or-create-input:focus {
   height: var(--searchbar-height);
 }
-.roam-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-transition-container {
+
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-transition-container {
   transform: none !important;
 }
-.roam-topbar .rm-find-or-create-wrapper .bp3-overlay {
+
+.roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
   top: calc(var(--searchbar-top) + var(--searchbar-height));
 }
-.roam-topbar [class*=bp3-icon],
-.roam-topbar .rm-saving-icon {
-  /* style icon to look like the others */
-  background-color: red;
-  color: #ffffff !important;
+
+/*------------------------------------
+#
+# MAIN TYPING AREA / EDITOR
+#
+------------------------------------*/
+#buffer {
+  /* HIDES BOTTOM RIGHT HELP ICON */
+  visibility: hidden;
 }
-.roam-topbar [class*=bp3-icon], .roam-topbar [class*=bp3-icon] > *,
-.roam-topbar .rm-saving-icon,
-.roam-topbar .rm-saving-icon > * {
-  height: 24px;
-  width: 24px;
-  margin: 0px;
+
+#buffer {
+  background-color: #dfe1e5 !important;
+}
+
+#buffer .help-title,
+#buffer .help-sub-title,
+#buffer .help-item-label,
+#buffer .help-item-text {
+  color: #252729;
+}
+
+.roam-body .roam-app .roam-main .roam-article {
   padding: 0px;
-  border-radius: 3px;
-  place-self: center;
 }
-.roam-topbar [class*=bp3-icon] :hover,
-.roam-topbar .rm-saving-icon :hover {
+
+/*------------------------------------
+# LEFT SIDEBAR
+------------------------------------*/
+.roam-sidebar-content {
+  /*** LAYOUT ***/
+  /*** APPEARANCE ***/
+  background: #14232a;
+  color: white;
+  /*** ANIMATIONS ***/
+}
+.roam-sidebar-content #roam-sidebar-logo {
+  display: none;
+  /* hide logo */
+}
+.roam-sidebar-content .starred-pages-wrapper {
+  /* use border and padding instead of useless divs */
+  border-top: 0.1em solid white;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(1) {
+  /* hide horizontal line div */
+  display: none;
+}
+.roam-sidebar-content .starred-pages-wrapper > div:nth-child(2) {
+  /* hide padding div */
+  display: none;
+}
+.roam-sidebar-content .top-row {
+  color: white;
+}
+.roam-sidebar-content .log-button {
+  /* general navigations */
+  color: white;
+}
+.roam-sidebar-content .log-button .bp3-icon {
+  color: white;
+}
+.roam-sidebar-content .starred-pages-wrapper {
+  margin-top: 10px;
+  background: linear-gradient(#14232a 30%, #2a9d8f 90%, #14232a);
+  color: white;
+}
+.roam-sidebar-content .starred-pages-wrapper > .flex-h-box {
+  display: none;
+}
+.roam-sidebar-content .page {
+  /* left sidebar pages */
+  color: white;
+}
+
+/*------------------------------------
+#
+# RIGHT SIDEBAR
+#
+------------------------------------*/
+#right-sidebar {
+  background: #264653;
+  color: white;
+}
+#right-sidebar .window-headers {
+  color: #ffffff;
+}
+#right-sidebar > .flex-h-box > div {
+  display: none;
+}
+
+/*------------------------------------
+#
+# BASIC TYPOGRAPHY
+#
+------------------------------------*/
+/* page title */
+.rm-title-display {
+  font-size: 36px;
+  color: #222222 !important;
+  margin: 0px;
+}
+
+/* headings */
+.rm-heading-level-1 {
+  color: #222222;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.rm-heading-level-2 {
+  color: #222222;
+  font-size: 25px;
+  margin: 0px;
+}
+
+.rm-heading-level-3 {
+  color: #222222;
+  font-size: 20px;
+  margin: 0px;
+}
+
+/* main text */
+#app {
+  color: #222222;
+  font-size: 12px;
+  margin: 0px;
+}
+
+/* bold text */
+.rm-bold {
+  font-size: 12px;
+  color: #222222;
+  margin: 0px;
+}
+
+/* italics text */
+.rm-italics {
+  font-size: 15px;
+  color: #222222;
+  margin: 0px;
+}
+
+/* highlighted text */
+.rm_highlight {
+  background-color: #e76f51;
+  color: black;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.rm-highlight .rm-page-ref-link-color {
+  /* highlighted link color */
+  color: var(--highlight-link-color);
+}
+
+/*------------------------------------
+# BULLETS & TOGGLES
+------------------------------------*/
+.rm-bullet__inner {
+  /* bullet */
+}
+.rm-bullet .block-border-left {
+  /* nesting line */
+}
+
+/* caret */
+.rm-caret {
   color: #e76f51;
 }
-.roam-topbar .rm-saving-inner-icon {
-  place-self: center;
-  margin: 0px !important;
+
+/*------------------------------------
+# CHECKBOX
+------------------------------------*/
+.checkmark {
+  /* todo */
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkmark-border);
+  background-color: var(--checkmark-bg-color);
+}
+
+.check-container input:checked ~ .checkmark {
+  /* done */
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkedmark-border);
+  background-color: var(--checkedmark-bg-color);
+}
+
+.check-container .checkmark:after {
+  /* done check symbol */
+  left: 3.5px;
+  top: 0.25px;
+  width: 6px;
+  height: 10px;
+  border: var(--checkmark-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg) scale(0.8);
+}
+
+/* Fix textareas */
+/*------------------------------------
+# Blockquotes
+------------------------------------*/
+.rm-bq {
+  background-color: var(--bg-quote);
+  color: var(--fg-quote);
+  border-left: 5px solid var(--br-quote);
+  font-size: var(--fnt-size-quote);
+  font-style: var(--fnt-style-quote);
 }
 
 /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/

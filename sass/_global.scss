@@ -42,6 +42,9 @@ body,
 #app,
 .roam-body,
 .roam-app {
+  display: flex;
+  flex-direction: row;
+  
   box-sizing: border-box;
   position: fixed;
   top: 0px;
@@ -67,7 +70,8 @@ body,
   }
   > div.flex-h-box {
     width: 100vw;
-    margin-left: var(--leftbar_width) !important; // override element.style
+    margin: 0px !important; // override element.style
+    // margin-left: var(--leftbar_width) !important; // override element.style
 
     // level 3: editor & topbar, rightbar
     > .roam-main {
