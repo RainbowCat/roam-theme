@@ -8,24 +8,21 @@
 /*------------------------------------
 # All Elements
 ------------------------------------*/
-*:not(html):not([class*="bp3"]):not([class*="CodeMirro"]) {
+// XXX do not set color and background XXX //
+// XXX do not set height and width XXX //
+* {
+  height: auto;
+  width: auto;
+  font: inherit;
+  box-sizing: border-box;
+}
+*:not(html):not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
   min-height: 10px;
   min-width: 10px;
   max-height: 100%;
   max-width: 100%;
-
-  // XXX do not set height and width XXX //
-  height: auto;
-  width: auto;
-
-  // XXX do not set color and background XXX //
-
-  font: inherit;
   text-align: inherit;
   vertical-align: inherit;
-  opacity: inherit; //TODO check
-
-  box-sizing: border-box;
 }
 
 /*------------------------------------
