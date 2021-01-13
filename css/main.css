@@ -337,8 +337,11 @@
 * {
   height: auto;
   width: auto;
-  font: inherit;
   box-sizing: border-box;
+}
+
+*:not([class*=bp3-icon]) {
+  font-family: "Ubuntu", Verdana, sans-serif !important;
 }
 
 *:not(html):not(.roam-topbar[class*=bp3]):not([class*=CodeMirror]) {
@@ -652,7 +655,7 @@ body,
 .rm-title-display {
   font-size: 36px;
   color: #222222 !important;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
@@ -660,21 +663,21 @@ body,
 .rm-heading-level-1 {
   color: #222222;
   font-size: 30px;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
 .rm-heading-level-2 {
   color: #222222;
   font-size: 25px;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
 .rm-heading-level-3 {
   color: #222222;
   font-size: 20px;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
@@ -682,7 +685,7 @@ body,
 #app {
   color: #222222;
   font-size: 12px;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
@@ -690,7 +693,7 @@ body,
 .rm-bold {
   font-size: 12px;
   color: #222222;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 
@@ -698,7 +701,7 @@ body,
 .rm-italics {
   font-size: 15px;
   color: #222222;
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Ubuntu", Verdana, sans-serif !important;
   margin: 0px;
 }
 

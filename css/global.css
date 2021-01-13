@@ -1,88 +1,17 @@
-/*------------------------------------ # GLOBAL # ------------------------------------*/
-/*------------------------------------
-#
-# RESET SITE SETTINGS
-#
-------------------------------------*/
-/*------------------------------------
-# All Elements
-------------------------------------*/
-* {
-  height: auto;
-  width: auto;
-  font: inherit;
-  box-sizing: border-box;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 19 |   @include font-family;
+ *    |   ^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   sass/global.scss 19:3  root stylesheet */
 
-*:not(html):not(.roam-topbar[class*=bp3]):not([class*=CodeMirror]) {
-  min-height: 10px;
-  min-width: 10px;
-  max-height: 100%;
-  max-width: 100%;
-  text-align: inherit;
-  vertical-align: inherit;
-}
-
-/*------------------------------------
-# Workspace Layout
-------------------------------------*/
-:root {
-  --leftbar_width: 195px;
-  --topbar_height: 45px;
-}
-
-html,
-body,
-#app,
-.roam-body,
-.roam-app {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden scroll;
-  opacity: 1;
-}
-
-.roam-app > .roam-sidebar-container,
-.roam-app > .roam-sidebar-container > .roam-sidebar-content {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 100vh;
-  width: var(--leftbar_width) !important;
-  z-index: 999;
-}
-.roam-app > div.flex-h-box > .roam-main > .roam-topbar {
-  height: var(--topbar_height);
-}
-.roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
-  padding: 0px !important;
-}
-.roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-article {
-  padding: 20px;
-}
-.roam-app > div.flex-h-box > .roam-main > .roam-body-main > #buffer {
-  visibility: hidden;
-}
-.rm-block__children.rm-level-0 {
-  margin-left: 0px;
-}
-
-/*------------------------------------
-# REMOVE USELESS DIVS
-------------------------------------*/
-/*-------------------------
-# GLOBAL SETUP
--------------------------*/
-/*------------------------------------------
-# workspace
-------------------------------------------*/
-/*------------------------------------
-# popups
-------------------------------------*/
-.bp3-menu-item {
-  color: initial;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 19 \2502    @include font-family;\a    \2502    ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/global.scss 19:3  root stylesheet";
 }

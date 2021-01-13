@@ -6,31 +6,31 @@
 $font--fallback: Verdana, sans-serif;
 
 @mixin font-family {
-  font-family: "Ubuntu", $font--fallback;
+  font-family: "Ubuntu", $font--fallback !important;
 }
 
 @mixin font-title {
-  font-family: "Ubuntu", $font--fallback;
+  @include font-family;
   font-weight: 700;
 }
 
 @mixin font-heading {
-  font-family: "Ubuntu", $font--fallback;
+  @include font-family;
   font-weight: 700;
 }
 
 @mixin font-body {
-  font-family: "Ubuntu", $font--fallback;
+  @include font-family;
   font-weight: 300;
 }
 
 @mixin font-italics {
-  font-family: "Ubuntu", $font--fallback;
+  @include font-family;
   font-weight: 400;
   font-style: italic;
 }
 
 @mixin font-bold {
-  font-family: "Ubuntu", $font--fallback;
+  @include font-family;
   font-weight: 700;
 }

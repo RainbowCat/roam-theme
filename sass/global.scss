@@ -13,9 +13,12 @@
 * {
   height: auto;
   width: auto;
-  font: inherit;
   box-sizing: border-box;
 }
+*:not([class*="bp3-icon"]) {
+  @include font-family;
+}
+
 *:not(html):not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
   min-height: 10px;
   min-width: 10px;
