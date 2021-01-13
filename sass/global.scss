@@ -14,7 +14,10 @@
   height: auto;
   width: auto;
   box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1.2em;
 }
+
 *:not([class*="bp3-icon"]) {
   @include font-family;
 }
@@ -28,6 +31,9 @@
   vertical-align: inherit;
 }
 
+textarea {
+  height: auto !important;
+}
 /*------------------------------------
 # Workspace Layout
 ------------------------------------*/

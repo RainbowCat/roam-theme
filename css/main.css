@@ -338,6 +338,8 @@
   height: auto;
   width: auto;
   box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1.2em;
 }
 
 *:not([class*=bp3-icon]) {
@@ -351,6 +353,10 @@
   max-width: 100%;
   text-align: inherit;
   vertical-align: inherit;
+}
+
+textarea {
+  height: auto !important;
 }
 
 /*------------------------------------
@@ -650,11 +656,25 @@ button[type=button] {
 #
 ------------------------------------*/
 /* page title */
-.rm-title-display {
+.rm-title-display,
+.rm-title-editing-diplay,
+h1.rm-title-editing-display {
   font-size: 36px;
   color: #222222 !important;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
+}
+
+.rm-title-textarea {
+  outline: none;
+  font-size: 36px;
+  color: #222222 !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 /* headings */
@@ -662,21 +682,27 @@ button[type=button] {
   color: #222222;
   font-size: 30px;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 .rm-heading-level-2 {
   color: #222222;
   font-size: 25px;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 .rm-heading-level-3 {
   color: #222222;
   font-size: 20px;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 /* main text */
@@ -684,7 +710,9 @@ button[type=button] {
   color: #222222;
   font-size: 12px;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 /* bold text */
@@ -692,7 +720,9 @@ button[type=button] {
   font-size: 12px;
   color: #222222;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 /* italics text */
@@ -700,7 +730,9 @@ button[type=button] {
   font-size: 15px;
   color: #222222;
   font-family: "Ubuntu", Verdana, sans-serif;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 /* highlighted text */

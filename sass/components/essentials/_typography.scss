@@ -4,7 +4,13 @@
 #
 ------------------------------------*/
 /* page title */
-.rm-title-display {
+.rm-title-display,
+.rm-title-editing-diplay,
+h1.rm-title-editing-display {
+  @include text_title;
+}
+.rm-title-textarea {
+  outline: none;
   @include text_title;
 }
 

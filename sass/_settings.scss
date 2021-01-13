@@ -39,7 +39,9 @@
 -------------------------*/
 @mixin TextDisplay {
   @include font-family;
-  margin: 0px;
+  vertical-align: middle;
+  line-height: 1.2em;
+  margin: 0px !important;
 }
 
 // page title
