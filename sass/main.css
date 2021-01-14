@@ -184,8 +184,20 @@ textarea {
   visibility: hidden;
 }
 /*------------------------------------
-# REMOVE USELESS DIVS
+# IGNORE USELESS DIVS
 ------------------------------------*/
+.roam-body-main > div:first-child {
+  padding: 0px !important;
+}
+
+/* Topbar */
+.roam-topbar {
+  /*--  remove useless divs --*/
+}
+.roam-topbar > .flex-h-box > div[style^=flex]:not([class]) {
+  display: none;
+}
+
 /*------------------------------------
 # TYPOGRAPHY
 ------------------------------------*/

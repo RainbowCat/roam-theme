@@ -61,12 +61,7 @@ textarea {
   // level 2: leftbar, right-area
   > .roam-sidebar-container,
   > .roam-sidebar-container > .roam-sidebar-content {
-    // position: absolute;
-    // left: 0px;
-    // top: 0px;
-    // height: 100vh;
-    // width: var(--leftbar_width) !important; // override element.style
-    // z-index: 999;
+    //XXX don't edit display settings
   }
   > div.flex-h-box {
     // XXX don't edit this flex-box
@@ -80,11 +75,6 @@ textarea {
       > .roam-body-main {
         margin: 0px;
         > div:first-child {
-          // element.style
-          // padding-right: calc((100% - 568px) / 2);
-          //   padding-left: calc((100% - 1032px) / 2);
-          //   height: 100%;
-          //   overflow: hidden;
           margin: 0px !important;
           padding: 0px !important;
 
@@ -104,18 +94,19 @@ textarea {
 }
 
 /*------------------------------------
-# REMOVE USELESS DIVS
+# IGNORE USELESS DIVS
 ------------------------------------*/
-// .roam-body-main > div:first-child {
-//   // all: unset !important;
-// }
-// /* Topbar */
-// .roam-topbar {
-//   /*--  remove useless divs --*/
-//   > .flex-h-box > div[style^="flex"]:not([class]) {
-//     display: none;
-//   }
-// }
+.roam-body-main > div:first-child {
+  padding: 0px !important;
+}
+/* Topbar */
+.roam-topbar {
+  /*--  remove useless divs --*/
+  > .flex-h-box > div[style^="flex"]:not([class]) {
+    display: none;
+  }
+}
+
 /*------------------------------------
 # TYPOGRAPHY
 ------------------------------------*/
