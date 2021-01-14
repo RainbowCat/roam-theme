@@ -8,9 +8,11 @@
 /*------------------------------------
 # All Elements
 ------------------------------------*/
-// XXX do not set color and background XXX //
-// XXX do not set height and width XXX //
+// XXX do not set color and background
+// XXX do not set height and width
 *:not(html):not(body) {
+  min-height: 10px;
+  min-width: 10px;
   height: auto;
   width: auto;
   box-sizing: border-box;
@@ -21,8 +23,6 @@
     font-family: "Ubuntu", monospace; //debug
   }
   &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
-    min-height: 10px;
-    min-width: 10px;
     max-height: 100%;
     max-width: 100%;
     text-align: inherit;
@@ -89,7 +89,7 @@ textarea {
           //   padding-left: calc((100% - 1032px) / 2);
           //   height: 100%;
           //   overflow: hidden;
-
+          margin: 0px !important;
           padding: 0px !important;
 
           // level 6
@@ -130,20 +130,54 @@ textarea {
 /*------------------------------------
 # BLOCKS
 ------------------------------------*/
-.rm-block-children {
-  margin: 0px;
-}
-.roam-block-container {
-  margin: 0px;
-  max-width: 100% !important;
-}
-.rm-block__children.rm-level-0 {
-  margin-left: 0px;
-}
-.rm-inline-img {
-  max-width: 60%;
-  max-height: 50vh;
-}
+// .roam-block {
+//   min-height: unset;
+//   margin: 0px;
+//   padding: 0px;
+// }
+// .roam-block-container {
+//   margin: 0px;
+//   max-width: 100%;
+//   height: min-content;
+// }
+
+// .rm-block-text,
+// .roam-block-text {
+//   max-width: 100%;
+// }
+
+// .rm-block__children:empty {
+//   display: none;
+// }
+// .rm-block__children,
+// .rm-block__children.rm-level-0 {
+//   margin-left: 0px;
+// }
+// .rm-inline-img {
+//   max-width: 60%;
+//   max-height: 50vh;
+// }
+// .rm-block-separator {
+//   display: none;
+// }
+
+// .rm-bullet:after {
+
+// }
+/*------------------------------------
+# BULLETS
+------------------------------------*/
+// .controls,
+// .rm-block__controls {
+//   padding: 0px;
+// }
+// .rm-bullet {
+//   margin: 0px;
+//   box-sizing: border-box;
+// }
+// .rm-bullet__inner {
+//   box-sizing: content-box;
+// }
 /*------------------------------------
 # popups
 ------------------------------------*/

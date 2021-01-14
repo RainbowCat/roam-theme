@@ -91,58 +91,9 @@ textarea {
 /*------------------------------------
 # BLOCKS
 ------------------------------------*/
-.roam-block {
-  min-height: unset;
-  margin: 0px;
-  padding: 0px;
-}
-
-.roam-block-container {
-  margin: 0px;
-  max-width: 100%;
-  height: min-content;
-}
-
-.rm-block-text,
-.roam-block-text {
-  max-width: 100%;
-}
-
-.rm-block__children:empty {
-  display: none;
-}
-
-.rm-block__children,
-.rm-block__children.rm-level-0 {
-  margin-left: 0px;
-}
-
-.rm-inline-img {
-  max-width: 60%;
-  max-height: 50vh;
-}
-
-.rm-block-separator {
-  display: none;
-}
-
 /*------------------------------------
 # BULLETS
 ------------------------------------*/
-.controls,
-.rm-block__controls {
-  padding: 0px;
-}
-
-.rm-bullet {
-  margin: 0px;
-  box-sizing: border-box;
-}
-
-.rm-bullet__inner {
-  box-sizing: content-box;
-}
-
 /*------------------------------------
 # popups
 ------------------------------------*/

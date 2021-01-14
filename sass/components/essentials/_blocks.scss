@@ -42,6 +42,12 @@
     @include block_selected-embed;
   }
 }
+:root {
+  --block_indent-size: 25px;
+}
+.roam-block-container > .rm-block-children {
+  margin: var(--block_indent-size);
+}
 
 /*------------------------------------
 # Block Reference
