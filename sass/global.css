@@ -8,10 +8,6 @@
 # All Elements
 ------------------------------------*/
 *:not(html):not(body) {
-  min-height: 10px;
-  min-width: 10px;
-  height: auto;
-  width: auto;
   box-sizing: border-box;
   vertical-align: middle;
   line-height: 1.2em;
@@ -53,15 +49,6 @@ textarea {
   opacity: 1;
 }
 
-.roam-app > .roam-sidebar-container,
-.roam-app > .roam-sidebar-container > .roam-sidebar-content {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 100vh;
-  width: var(--leftbar_width) !important;
-  z-index: 999;
-}
 .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
   height: var(--topbar_height);
 }
@@ -88,9 +75,6 @@ textarea {
   margin: 0px;
 }
 
-/*------------------------------------
-# BLOCKS
-------------------------------------*/
 /*------------------------------------
 # BULLETS
 ------------------------------------*/

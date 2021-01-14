@@ -61,12 +61,15 @@
 .roam-topbar {
   background: #14232a;
   color: white;
-  /*--  topbar element placement --*/
 }
 .roam-topbar .flex-h-box {
+  /*--  topbar element placement --*/
   justify-content: center;
 }
 
+/*------------------------------------
+# make all icons look the same
+------------------------------------*/
 .roam-topbar .flex-h-box > div,
 .roam-topbar .flex-h-box > span {
   margin: 3px;
@@ -105,6 +108,10 @@
 .roam-topbar .flex-h-box .bp3-icon-search:before {
   pointer-events: none;
 }
+
+/*------------------------------------
+# make search popover
+------------------------------------*/
 .roam-topbar
   .flex-h-box
   .rm-find-or-create-wrapper
@@ -116,8 +123,11 @@
   position: fixed !important;
   top: var(--searchbar-top);
   left: var(--searchbar-left);
-  z-index: 999999;
+
   /* place at front of page */
+  z-index: 999999;
+
+  /* center */
   transform: translate(-50%, 0);
 }
 .roam-topbar

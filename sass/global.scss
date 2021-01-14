@@ -11,10 +11,6 @@
 // XXX do not set color and background
 // XXX do not set height and width
 *:not(html):not(body) {
-  min-height: 10px;
-  min-width: 10px;
-  height: auto;
-  width: auto;
   box-sizing: border-box;
   vertical-align: middle;
   line-height: 1.2em;
@@ -65,12 +61,12 @@ textarea {
   // level 2: leftbar, right-area
   > .roam-sidebar-container,
   > .roam-sidebar-container > .roam-sidebar-content {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100vh;
-    width: var(--leftbar_width) !important; // override element.style
-    z-index: 999;
+    // position: absolute;
+    // left: 0px;
+    // top: 0px;
+    // height: 100vh;
+    // width: var(--leftbar_width) !important; // override element.style
+    // z-index: 999;
   }
   > div.flex-h-box {
     // XXX don't edit this flex-box
@@ -127,43 +123,6 @@ textarea {
   margin: 0px;
 }
 
-/*------------------------------------
-# BLOCKS
-------------------------------------*/
-// .roam-block {
-//   min-height: unset;
-//   margin: 0px;
-//   padding: 0px;
-// }
-// .roam-block-container {
-//   margin: 0px;
-//   max-width: 100%;
-//   height: min-content;
-// }
-
-// .rm-block-text,
-// .roam-block-text {
-//   max-width: 100%;
-// }
-
-// .rm-block__children:empty {
-//   display: none;
-// }
-// .rm-block__children,
-// .rm-block__children.rm-level-0 {
-//   margin-left: 0px;
-// }
-// .rm-inline-img {
-//   max-width: 60%;
-//   max-height: 50vh;
-// }
-// .rm-block-separator {
-//   display: none;
-// }
-
-// .rm-bullet:after {
-
-// }
 /*------------------------------------
 # BULLETS
 ------------------------------------*/
