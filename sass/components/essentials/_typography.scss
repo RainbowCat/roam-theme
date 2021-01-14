@@ -54,6 +54,18 @@ h1.rm-title-editing-display {
 /*------------------------------------
 # BULLETS
 ------------------------------------*/
+// .controls,
+// .rm-block__controls {
+//   padding: 0px;
+// }
+// .rm-bullet {
+//   margin: 0px;
+//   box-sizing: border-box;
+// }
+// .rm-bullet__inner {
+//   box-sizing: content-box;
+// }
+
 .rm-bullet {
   &__inner {
     /* bullet */
