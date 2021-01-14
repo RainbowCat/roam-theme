@@ -42,6 +42,7 @@ h1.rm-title-editing-display {
 
 /* highlighted text */
 .rm_highlight {
+  margin: 0px;
   @include text_highlight;
 }
 

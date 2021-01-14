@@ -16,12 +16,9 @@
 // mixin settings
 @import "settings";
 
-// global setup
-@import "global"; //TODO fix topbar
-@import "hacks";
-
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
-// @import "components/workspace/topbar"; 
+@import "components/workspace/global";
+@import "components/workspace/topbar";
 // @import "components/workspace/editor";
 // @import "components/workspace/sidebar-left";
 // @import "components/workspace/sidebar-right";
@@ -38,6 +35,7 @@
 // @import "components/features/features";
 
 // /*-------------------------------------------------------- Extra Customizations --------------------------------------------------------*/
+@import "hacks";
 // @include better-roam-layout();
 // @import "custom/calendar";
 // @import "custom/custom-tags";

@@ -15,8 +15,7 @@
   vertical-align: middle;
   line-height: 1.2em;
   &:not([class*="bp3-icon"]) {
-    // @include font-family;
-    font-family: "Ubuntu", monospace; //debug
+    @include font-family;
   }
   &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
     max-height: 100%;
@@ -41,6 +40,7 @@ textarea {
 #app,
 .roam-body,
 .roam-app {
+  // XXX do not uncomment
   // display: flex;
   // flex-direction: row;
 
@@ -91,27 +91,6 @@ textarea {
     > #right-sidebar {
     }
   }
-}
-
-/*------------------------------------
-# IGNORE USELESS DIVS
-------------------------------------*/
-.roam-body-main > div:first-child {
-  padding: 0px !important;
-}
-/* Topbar */
-.roam-topbar {
-  /*--  remove useless divs --*/
-  > .flex-h-box > div[style^="flex"]:not([class]) {
-    display: none;
-  }
-}
-
-/*------------------------------------
-# TYPOGRAPHY
-------------------------------------*/
-.rm-highlight {
-  margin: 0px;
 }
 
 /*------------------------------------
