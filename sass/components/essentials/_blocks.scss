@@ -24,10 +24,17 @@
 .rm-block__children:empty {
   display: none;
 }
+:root {
+  --block_indent-size: 25px;
+}
+.roam-block-container > .rm-block-children {
+  margin-left: var(--block_indent-size);
+}
 .rm-block__children,
 .rm-block__children.rm-level-0 {
   margin-left: 0px; /* indent relative to page title */
 }
+
 .rm-inline-img {
   max-width: 60%;
   max-height: 50vh;
@@ -35,18 +42,6 @@
 
 .rm-block-separator {
   display: none;
-}
-
-/*------------------------------------
-# CENTER BULLET TO BLOCK TEXT
-------------------------------------*/
-
-.roam-block-container .rm-block-main {
-  align-items: center !important;
-}
-.controls {
-  margin: 0px;
-  padding: 0px;
 }
 
 /*------------------------------------
@@ -90,12 +85,6 @@
     /* embed block highlight */
     @include block_selected-embed;
   }
-}
-:root {
-  --block_indent-size: 25px;
-}
-.roam-block-container > .rm-block-children {
-  margin: var(--block_indent-size);
 }
 
 /*** from Better Roam Research ***/

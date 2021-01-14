@@ -9,6 +9,7 @@
 @import "utils/fonts";
 @import "utils/vars";
 @import "utils/hacks";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 // helper functions
 @import "utils/functions";
@@ -17,15 +18,15 @@
 @import "settings";
 
 /*-------------------------------------------------------- Preferences --------------------------------------------------------*/
-@import "components/workspace/global";
-@import "components/workspace/topbar";
+// @import "components/workspace/global";
+// @import "components/workspace/topbar";
 // @import "components/workspace/editor";
 // @import "components/workspace/sidebar-left";
 // @import "components/workspace/sidebar-right";
 
-// @import "components/essentials/typography";
-@import "components/essentials/icons";
-@import "components/essentials/blocks";
+@import "components/essentials/typography";
+// @import "components/essentials/icons";
+// @import "components/essentials/blocks";
 // @import "components/essentials/bidirectional-linking";
 
 // @import "components/anchored-pages";

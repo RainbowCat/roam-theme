@@ -3,15 +3,31 @@
 # TOPBAR
 #
 ------------------------------------*/
+
+// vars & mixins
+@mixin topbar_appearance {
+  background: $background--topbar;
+  color: setContrast($background--topbar);
+}
+@mixin topbar_icons-placement {
+  //TODO make variable
+  /*    justify-content: flex-start;  /* place things on the left */
+  justify-content: flex-end; /* place things on the right */
+  justify-content: center; /* place things at center */
+}
+
+.roam-topbar {
+  /*** LAYOUT ***/
+  --searchbar-height: minmax(45px, 5vh);
+  /*** AESTHETICS ***/
+  --searchbar-width: 500px;
+  --searchbar-left: 55vw;
+  --searchbar-top: 27vh;
+}
+
 /*------------------------------------
 # POPUP SEARCH MENU
 ------------------------------------*/
-.roam-topbar {
-  --searchbar-height: minmax(45px, 5vh);
-  --searchbar-width: 500px; // aesthetics
-  --searchbar-left: 55vw; // aesthetics
-  --searchbar-top: 27vh; // aesthetics
-}
 
 // HACK
 // TODO keep the one between left sidebar icon and other icons
@@ -23,133 +39,82 @@
 /*** LAYOUT ***/
 .roam-topbar .flex-h-box {
   justify-content: center; // icons placement
-}
 
-.roam-topbar .flex-h-box > div,
-.roam-topbar .flex-h-box > span {
-  height: 24px;
-  width: 24px;
-  margin: 3px;
-}
+  // make all elements look like a button
+  > div,
+  > span {
+    height: 24px;
+    width: 24px;
+    margin: 3px;
+  }
+  .rm-find-or-create-wrapper {
+    flex: unset !important;
+    width: 24px;
+  }
+  [class|="bp3-icon"],
+  [class|="bp3-icon"] > *,
+  .rm-saving-icon {
+    height: 24px;
+    width: 24px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 3px;
+    place-self: center;
+  }
+  .rm-saving-inner-icon {
+    height: 10px !important;
+    width: 10px !important;
+  }
 
-/* make search look like button */
-.roam-topbar .flex-h-box .rm-find-or-create-wrapper {
-  flex: unset !important;
-  width: 24px;
-}
+  input#find-or-create-input {
+    padding: 0px;
+    cursor: pointer;
+  }
+  .search-icon,
+  .bp3-icon-search {
+    padding: 4px;
+    margin: 0px !important;
+    pointer-events: none;
+    &:before {
+      pointer-events: none;
+    }
+  }
 
-.roam-topbar .flex-h-box [class|="bp3-icon"],
-.roam-topbar .flex-h-box [class|="bp3-icon"] > *,
-.roam-topbar .flex-h-box .rm-saving-icon {
-  height: 24px;
-  width: 24px;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 3px;
-  place-self: center;
-}
-.rm-saving-inner-icon {
-  height: 10px !important;
-  width: 10px !important;
-}
+  // make search popover
+  .rm-find-or-create-wrapper {
+    input#find-or-create-input:focus,
+    .bp3-overlay {
+      /* match size */
+      width: var(--searchbar-width);
+      /* match position */
+      position: fixed !important;
+      top: var(--searchbar-top);
+      left: var(--searchbar-left);
 
-.search-icon {
-  padding: 4px;
-  margin: 0px 0px 0px 0px !important;
-  pointer-events: none;
-}
+      /* place at front of page */
+      z-index: 999999;
 
-.roam-topbar {
-  background: #14232a;
-  color: white;
-}
-.roam-topbar .flex-h-box {
-  /*--  topbar element placement --*/
-  justify-content: center;
-}
-
-/*------------------------------------
-# make all icons look the same
-------------------------------------*/
-.roam-topbar .flex-h-box > div,
-.roam-topbar .flex-h-box > span {
-  margin: 3px;
-}
-
-/* make search look like button */
-.roam-topbar .flex-h-box .rm-find-or-create-wrapper {
-  flex: unset !important;
-  width: 24px;
-}
-
-.roam-topbar .flex-h-box [class|="bp3-icon"],
-.roam-topbar .flex-h-box [class|="bp3-icon"] > *,
-.roam-topbar .flex-h-box .rm-saving-icon {
-  height: 24px;
-  width: 24px;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 3px;
-  place-self: center;
-}
-
-.search-icon {
-  padding: 4px;
-  margin: 2px 0px 0px 0px !important;
-  pointer-events: none;
-}
-
-.roam-topbar .flex-h-box input#find-or-create-input:focus {
-  padding: 15px;
-}
-.roam-topbar .flex-h-box input#find-or-create-input {
-  padding: 0px;
-  cursor: pointer;
-}
-.roam-topbar .flex-h-box .bp3-icon-search:before {
-  pointer-events: none;
-}
-
-/*------------------------------------
-# make search popover
-------------------------------------*/
-.roam-topbar
-  .flex-h-box
-  .rm-find-or-create-wrapper
-  input#find-or-create-input:focus,
-.roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
-  /* match size */
-  width: var(--searchbar-width);
-  /* match position */
-  position: fixed !important;
-  top: var(--searchbar-top);
-  left: var(--searchbar-left);
-
-  /* place at front of page */
-  z-index: 999999;
-
-  /* center */
-  transform: translate(-50%, 0);
-}
-.roam-topbar
-  .flex-h-box
-  .rm-find-or-create-wrapper
-  input#find-or-create-input:focus {
-  height: var(--searchbar-height);
-}
-.roam-topbar
-  .flex-h-box
-  .rm-find-or-create-wrapper
-  .bp3-overlay
-  .bp3-transition-container {
-  transform: none !important;
-}
-.roam-topbar .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
-  top: calc(var(--searchbar-top) + var(--searchbar-height));
+      /* center */
+      transform: translate(-50%, 0);
+    }
+    input#find-or-create-input:focus {
+      height: var(--searchbar-height);
+    }
+    .bp3-overlay {
+      top: calc(var(--searchbar-top) + var(--searchbar-height));
+      .bp3-transition-container {
+        transform: none !important; // turn off animation
+      }
+    }
+  }
 }
 
 /*** APPEARANCE ***/
 .roam-topbar {
   background: #14232a;
   color: white;
+}
+
+.roam-topbar .flex-h-box input#find-or-create-input:focus {
+  padding: 15px; // padding around flace holder text
 }

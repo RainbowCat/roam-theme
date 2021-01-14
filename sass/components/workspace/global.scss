@@ -8,6 +8,10 @@
 /*------------------------------------
 # All Elements
 ------------------------------------*/
+* {
+  box-sizing: border-box; // bullets are not
+}
+
 // XXX do not set color and background
 // XXX do not set height and width
 *:not(html):not(body) {
@@ -23,10 +27,6 @@
     text-align: inherit;
     vertical-align: inherit;
   }
-}
-
-textarea {
-  height: auto !important;
 }
 
 /*------------------------------------
@@ -141,3 +141,10 @@ textarea {
 //     padding: 10px 20px 120px !important;
 //   }
 // }
+
+/*------------------------------------
+# OTHER
+------------------------------------*/
+@mixin help-menu {
+  //later
+}
