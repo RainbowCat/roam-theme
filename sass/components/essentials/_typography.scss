@@ -8,25 +8,18 @@
 -------------------------*/
 $font--fallback: Verdana, sans-serif;
 
-@mixin TextDisplay {
-  vertical-align: middle;
-  line-height: 1.2em;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
 @mixin text_title($size) {
   font-family: "Ubuntu", $font--fallback !important;
   font-weight: 700 !important;
   font-size: $size !important;
-  @include TextDisplay;
+  line-height: 1.2em;
 }
 
 @mixin text_heading($size) {
   font-family: "Ubuntu", $font--fallback !important;
   font-weight: 700 !important;
   font-size: $size !important;
-  @include TextDisplay;
+  line-height: 1.2em;
 }
 
 @mixin text_body {
@@ -34,14 +27,14 @@ $font--fallback: Verdana, sans-serif;
   font-weight: 300 !important;
   color: $palette--black;
   font-size: 12px !important;
-  @include TextDisplay;
+  line-height: 1.2em;
 }
 
 @mixin text_italics {
   font-family: "Ubuntu", $font--fallback !important;
   font-weight: 400 !important;
   font-style: italic !important;
-  @include TextDisplay();
+  line-height: 1.2em;
   font-size: 15px;
   color: $palette--black;
 }
@@ -49,7 +42,7 @@ $font--fallback: Verdana, sans-serif;
 @mixin text_bold {
   font-family: "Ubuntu", $font--fallback !important;
   font-weight: 700 !important;
-  @include TextDisplay();
+  line-height: 1.2em;
   font-size: 12px;
   color: $palette--black;
 }
@@ -63,57 +56,9 @@ $font--fallback: Verdana, sans-serif;
   font-size: 12px;
 }
 
-/* blockquote */
-:root {
-  --bg-quote: black;
-  --fg-quote: white;
-  --fnt-size-quote: 15px;
-  --fnt-style-quote: normal;
-}
-
-@mixin blockquote {
-  background-color: var(--bg-quote);
-  color: var(--fg-quote);
-  border-left: 5px solid var(--br-quote);
-  font-size: var(--fnt-size-quote);
-  font-style: var(--fnt-style-quote);
-}
-
-// checkboxes
-@mixin checkbox_not-done {
-  position: absolute;
-  top: var(--checkmark-top);
-  left: var(--checkmark-left);
-  height: var(--checkmark-height);
-  border-radius: var(--checkmark-border-radius);
-  width: var(--checkmark-width);
-  border: var(--checkmark-border);
-  background-color: var(--checkmark-bg-color);
-}
-@mixin checkbox_done {
-  position: absolute;
-  top: var(--checkmark-top);
-  left: var(--checkmark-left);
-  height: var(--checkmark-height);
-  border-radius: var(--checkmark-border-radius);
-  width: var(--checkmark-width);
-  border: var(--checkedmark-border);
-  background-color: var(--checkedmark-bg-color);
-}
-@mixin checkbox_symbol {
-  //debug
-  left: 3.5px;
-  top: 0.25px;
-  width: 6px;
-  height: 10px;
-  border: var(--checkmark-color);
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(40deg) scale(0.8);
-}
-
-/* page title */
+/*------------------------------------
+# TITLES
+------------------------------------*/
 
 .rm-title-display,
 .rm-title-editing-diplay,
@@ -131,6 +76,9 @@ h1.rm-title-editing-display {
   color: $palette--black;
   @include text_heading(30px);
 }
+.rm-heading-level-1 > .rm-block-main span {
+  margin-top: -2px !important;
+}
 
 .rm-heading-level-2,
 .rm-heading-level-2 > .rm-block-main div,
@@ -138,17 +86,23 @@ h1.rm-title-editing-display {
   color: $palette--black;
   @include text_heading(25px);
 }
+.rm-heading-level-2 > .rm-block-main span {
+  margin-top: -2px !important;
+}
 .rm-heading-level-3,
 .rm-heading-level-3 > .rm-block-main div,
 .rm-heading-level-3 > .rm-block-main textarea {
   color: $palette--black;
   @include text_heading(20px);
 }
+.rm-heading-level-3 > .rm-block-main span {
+  margin-top: -2px !important;
+}
 
 /* main text */
-#app {
-  @include text_body;
-}
+// #app {
+//   @include text_body;
+// }
 
 /* bold text */
 .rm-bold {
@@ -169,6 +123,22 @@ h1.rm-title-editing-display {
 .rm-highlight .rm-page-ref-link-color {
   /* highlighted link color */
   color: var(--highlight-link-color); //TODO test this
+}
+
+/* blockquote */
+:root {
+  --bg-quote: black;
+  --fg-quote: white;
+  --fnt-size-quote: 15px;
+  --fnt-style-quote: normal;
+}
+
+@mixin blockquote {
+  background-color: var(--bg-quote);
+  color: var(--fg-quote);
+  border-left: 5px solid var(--br-quote);
+  font-size: var(--fnt-size-quote);
+  font-style: var(--fnt-style-quote);
 }
 
 /*------------------------------------
@@ -202,13 +172,13 @@ h1.rm-title-editing-display {
 // }
 
 // CENTER BULLET TO BLOCK TEXT
-.roam-block-container .rm-block-main {
-  align-items: center !important;
-}
-.controls {
-  margin: 0px;
-  padding: 0px;
-}
+// .roam-block-container .rm-block-main {
+//   align-items: center !important;
+// }
+// .controls {
+//   margin: 0px;
+//   padding: 0px;
+// }
 
 .rm-bullet {
   &__inner {
@@ -244,6 +214,41 @@ h1.rm-title-editing-display {
 /*------------------------------------
 # CHECKBOX
 ------------------------------------*/
+
+// checkboxes
+@mixin checkbox_not-done {
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkmark-border);
+  background-color: var(--checkmark-bg-color);
+}
+@mixin checkbox_done {
+  position: absolute;
+  top: var(--checkmark-top);
+  left: var(--checkmark-left);
+  height: var(--checkmark-height);
+  border-radius: var(--checkmark-border-radius);
+  width: var(--checkmark-width);
+  border: var(--checkedmark-border);
+  background-color: var(--checkedmark-bg-color);
+}
+@mixin checkbox_symbol {
+  //debug
+  left: 3.5px;
+  top: 0.25px;
+  width: 6px;
+  height: 10px;
+  border: var(--checkmark-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg) scale(0.8);
+}
+
 .checkmark {
   /* todo */
   @include checkbox_not-done;
