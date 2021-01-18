@@ -6,8 +6,8 @@ body,
 .roam-body .roam-app {
   &:not([class|="bp3"]):not(.CodeMirror):not([class|="cm"]):not([class|="CodeMirror"]) {
     line-height: 1.2em;
-    max-height: 100%;
-    max-width: 100%;
+    // max-height: 100%;
+    // max-width: 100%;
     color: inherit;
     font-family: inhert;
   }
@@ -24,7 +24,9 @@ body,
   }
 }
 
-.CodeMirror {
+.CodeMirror,
+[class|="CodeMirror"],
+[class|="cm"] {
   font-family: monospace !important;
   * {
     font-family: monospace !important;
@@ -106,7 +108,7 @@ body,
     }
   }
 }
-.roam-block-container {
+.roam-block-container:not(.kanban-board) {
   max-width: 100%;
 }
 

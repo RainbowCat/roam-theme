@@ -29,19 +29,29 @@ h1.rm-title-display,
 }
 
 .rm-heading-level-1 > .rm-block-main,
-.rm-heading-level-1 > .rm-block__self .rm-block__input {
+.rm-heading-level-1 > .rm-block__self .rm-block__input,
+#right-sidebar .rm-heading-level-1 .rm-block-text {
   @include font_heading(1);
   color: $main_text-color;
 }
 .rm-heading-level-2 > .rm-block-main,
-.rm-heading-level-2 > .rm-block__self .rm-block__input {
+.rm-heading-level-2 > .rm-block__self .rm-block__input,
+#right-sidebar .rm-heading-level-2 .rm-block-text {
   @include font_heading(2);
   color: $main_text-color;
 }
 .rm-heading-level-3 > .rm-block-main,
-.rm-heading-level-3 > .rm-block__self .rm-block__input {
+.rm-heading-level-3 > .rm-block__self .rm-block__input,
+#right-sidebar .rm-heading-level-3 .rm-block-text {
   @include font_heading(3);
   color: $main_text-color;
+}
+
+// blockquotes
+blockquote.rm-bq {
+  background: $palette_accent;
+  color: setContrast($palette_accent);
+  border-left: 5px solid setContrast($main_bg);
 }
 
 /*---------------------------------- 
@@ -315,6 +325,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   .rm-embed-container {
     /* embed block highlight */
     background-color: $block_highlight-embed;
+    color: setContrast($block_highlight-embed);
   }
 }
 
@@ -436,7 +447,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 ------------------------------------*/
 .kanban-board {
   // max-width: 100%;
-  overflow: scroll;
+  // overflow: scroll;
   padding: 2px;
   border: 1px solid $kanban_board-border;
   border-radius: $roundness;
