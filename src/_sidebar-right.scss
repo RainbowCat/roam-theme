@@ -20,11 +20,11 @@
   #roam-right-sidebar-content {
     margin-left: -6px !important;
     > div[style] {
-      border-bottom: 1px solid $color-subtle !important;
+      border-bottom: 1px solid $main_subtle-color !important;
     }
     .sidebar-content {
       > div > div[style*="border-bottom"] {
-        border-bottom: 1px solid $color-subtle !important;
+        border-bottom: 1px solid $main_subtle-color !important;
       }
     }
   }

@@ -35,7 +35,7 @@
     > div:nth-child(1) {
       // maybe use better class selector
       flex: 0 0 1px;
-      background-color: $color-divline !important;
+      background-color: $leftbar_divline-color !important;
       margin: 10px 20px; // maybe make variable
     }
     > div:nth-child(2) {
@@ -69,10 +69,10 @@
   .log-button,
   .starred-pages-wrapper .starred-pages .page {
     background: transparent;
-    color: $color-text !important;
+    color: $leftbar_text-color !important;
     &:hover {
       background: transparent !important;
-      color: $color-text-hover !important;
+      color: $leftbar_text-color-hover !important;
     }
   }
 }

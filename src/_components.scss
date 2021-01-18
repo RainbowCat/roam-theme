@@ -6,16 +6,19 @@
   .rm-block-main,
   .rm-ref-page-view,
   .rm-caret:before {
-    color: $text_main-color;
+    @include font_body;
+    color: $main_text-color;
   }
 }
 
 /* bold text */
 .rm-bold {
+  @include font_bold;
 }
 
 /* italics text */
 .rm-italics {
+  @include font_italics;
 }
 
 /* highlighted text */
@@ -26,63 +29,57 @@
   padding: 2px 3px;
 }
 
-
 // HACK - so titles won't shift //TODO
-:root {
-  --title-size: 26px;
+$title-size: 26px;
 
-  --heading1-size: 22px;
-  --heading1-margin: -2px;
+$heading1-size: 22px;
+$heading1-margin: -2px;
 
-  --heading2-size: 20px;
-  --heading2-margin: -2px;
+$heading2-size: 20px;
+$heading2-margin: -2px;
 
-  --heading3-size: 18px;
-  --heading3-margin: -1px;
-}
+$heading3-size: 18px;
+$heading3-margin: -1px;
 
 // headings
 .rm-title-display,
 .rm-title-textarea,
 .roam-log-page h1.level2 {
+  @include font_title;
   height: auto !important;
-  line-height: 1.5 !important;
   font-size: 26px !important;
-  font-weight: 600 !important;
 }
 
 .rm-heading-level-1 > .rm-block-main {
   span {
-    margin-top: -2px !important;
+    margin-top: $heading1-margin !important;
   }
   div,
   textarea {
-    font-size: 22px !important;
-    line-height: 1.5 !important;
-    font-weight: 600 !important;
+    @include font_heading;
+    font-size: $heading1-size !important;
   }
 }
 
 .rm-heading-level-2 > .rm-block-main {
   span {
-    margin-top: -2px !important;
+    margin-top: $heading2-margin !important;
   }
   div,
   textarea {
-    font-size: 20px !important;
-    line-height: 1.5 !important;
-    font-weight: 600 !important;
+    @include font_heading;
+    font-size: $heading2-size !important;
   }
 }
 
 .rm-heading-level-3 > .rm-block-main {
   span {
-    margin-top: -1px !important;
+    margin-top: $heading3-margin !important;
   }
   div,
   textarea {
-    font-size: 18px !important;
-    line-height: 1.5 !important;
+    @include font_heading;
+    font-size: $heading3-size !important;
   }
 }
 
@@ -102,7 +99,7 @@
   background-color: $bullet_color;
 }
 .rm-bullet.rm-bullet--closed .rm-bullet__inner,
-.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner /* collapsed bullet's in right sidebar */ {
+#right-sidebar .rm-bullet.rm-bullet--closed .rm-bullet__inner {
   /* collapsed bullet */
   border: $bullet_border-closed;
 }
@@ -112,7 +109,7 @@
   border-left: $treeline;
 }
 
-// center bullets
+// vertically center bullets
 .roam-block-container .rm-block-main {
   align-items: center !important;
 }
@@ -120,7 +117,6 @@
   margin: 0px;
   padding: 0px;
 }
-
 
 /*---------------------------------- 
   #TODO 
@@ -131,11 +127,14 @@
     position: absolute;
     top: $checkbox_top;
     left: $checkbox_left;
+
     height: $checkbox_height;
-    border-radius: $checkbox_border-radius;
     width: $checkbox_width;
-    border: $checkbox_border;
-    background-color: $checkbox_bg-color;
+
+    border-radius: $checkbox_border-radius;
+
+    border: $checkbox_border-notdone;
+    background-color: $checkbox_bg-notdone;
   }
   input:checked ~ .checkmark {
     /* done */
@@ -145,28 +144,18 @@
     // height: $checkbox_height;
     // border-radius: $checkbox_border-radius;
     // width: $checkbox_width;
-    border: $border-done;
-    background-color: $bg-done;
+    background-color: $checkbox_bg-done;
+    border: $checkbox_border-done;
   }
   .checkmark:after {
     /* done check symbol */
-    content: $symbol;
-    color: $symbol-color;
+    content: $checkbox_symbol;
+    color: $checkbox_symbol-color;
     left: 0px;
     top: -1px;
     border: none;
     transform: rotate(-10deg) scale(0.5);
   }
-}
-:root {
-  --tag-font-color: #515355;
-  --tag-bg-color: #24272a;
-  --tag-border-radius: 10px;
-  --tag-border: 1px solid #35373996;
-  --tag-padding: 1px 5px 2px;
-  --tagHover-font-color: #484a4c;
-  --tagHover-bg-color: #2d3033;
-  --tagHover-border: 1px solid #44464887;
 }
 
 /*------------------------------------
@@ -190,22 +179,24 @@
   padding: $tag-padding;
   text-decoration: none;
 }
+
 /*------------------------------------
 # ATTRIBUTE
 ------------------------------------*/
 .rm-attr-ref {
 }
+
 /*------------------------------------
 # Page Links
 ------------------------------------*/
 .rm-page-ref {
   &--link {
     /* linked page name text */
-    color: setContrast($palette_theme;
+    color: setContrast($palette_theme);
   }
   &__brackets {
     /* linked page brackes */
-    color: opacify(setContrast($palette_theme), 0.3;
+    color: opacify(setContrast($palette_theme), 0.3);
   }
 }
 
@@ -218,7 +209,7 @@
   border-bottom: 1px solid $palette_accent;
 }
 .rm-block-ref:hover {
-  background-color: $palette_theme
+  background-color: $palette_theme;
 }
 
 /*------------------------------------
@@ -227,9 +218,9 @@
 .rm-alias {
   & &--page {
     /* internally linked alias */
-    color: setContrast($palette_theme;
+    color: setContrast($palette_theme);
     &:hover {
-      color: $palette_theme
+      color: $palette_theme;
     }
   }
   & &--external {
@@ -267,24 +258,13 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 #{$rm-block-selector} {
   a:not(.rm-alias--page) {
     /* only include external direct url and external alias */
-    @include glyph(before;
+    @include glyph(before);
   }
 }
-
 
 /*------------------------------------
 # Linked/Unlinked References
 ------------------------------------*/
-.rm-reference-main {
-  --ref-header-color: $palette_white;
-  --ref-header-underline-color: $palette_accent;
-
-  --ref-item-page-color: $palette_white;
-  --ref-item-parent-color: $palette_white;
-  --ref-item-bg: $palette_theme
-  --ref-item-border-radius: $roundness;
-  --ref-item-border: 1px solid $palette_white;
-}
 
 .rm-reference-main {
   padding: 5px 10px 5px 18px;
@@ -298,7 +278,9 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   > div {
     margin-top: 10px;
 
-    > .flex-h-box > div[style*="color: rgb(206, 217, 224;"]:nth-child(3) strong {
+    > .flex-h-box
+      > div[style*="color: rgb(206, 217, 224;"]:nth-child(3)
+      strong {
       /* "Linked/Unlinked References" reference block header */
       color: $ref-header-color;
       border-bottom: 1px solid $ref-header-underline-color;
@@ -318,7 +300,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 
     .rm-reference-item {
       background: $palette_accent-darker;
-      color: setContrast($palette_accent-darker;
+      color: setContrast($palette_accent-darker);
       /* footer reference box apperance */
 
       background-color: $ref-item-bg;
@@ -348,18 +330,18 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   }
   .block-highlight-blue {
     /* selected block in main edit area */
-    background-color: $block-highlight-main;
+    background-color: $block_highlight-main;
   }
   .block-highlight-yellow {
     /* selected block in linked referenced */
-    background-color: $block-highlight-linked;
+    background-color: $block_highlight-linked;
     span {
-      color: $block-highlight-linked-text !important;
+      color: $block_highlight-linked-text !important;
     }
   }
   .rm-embed-container {
     /* embed block highlight */
-    background-color: $block-highlight-embed;
+    background-color: $block_highlight-embed;
   }
 }
 
@@ -368,24 +350,23 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   border-left: none !important;
 }
 
-
 /*------------------------------------
 # POPUPS
 ------------------------------------*/
 // all popoevers
 .bp3-popover {
-  color: $popover-contrast;
-  background: $bg--popover;
+  color: $popover_text;
+  background: $popover_bg;
   & > &-content {
-    background-color: $bg--popover;
-    color: $popover-contrast;
+    background-color: $popover_bg;
+    color: $popover_text;
   }
   & &-arrow {
     &-fill {
-      fill: $bg--popover; // background
+      fill: $popover_bg; // background
     }
     &-border {
-      fill: $popover-contrast; //tiny border
+      fill: $popover_text; //tiny border
     }
   }
   .bp3-button {
@@ -404,7 +385,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 .roam-body .roam-app {
   .bp3-menu,
   .roam-sidebar-container .bp3-menu {
-    background: $bg--popover;
+    background: $popover_bg;
     &.rm-graph-dropdown {
       // graph menu
       .menu-title {
@@ -426,8 +407,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
       }
     }
     // code-area language menu
-    background-color: $bg--popover !important;
-    color: $popover-contrast;
+    background-color: $popover_bg !important;
+    color: $popover_text;
     .bp3-menu-item {
       color: $palette_white;
     }
@@ -435,10 +416,10 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 }
 .bp3-elevation-3 {
   // slash menu
-  background-color: $bg--popover !important;
-  color: $popover-contrast;
+  background-color: $popover_bg !important;
+  color: $popover_text;
   .dont-unfocus-block[style*="background"] {
-    background-color: $bg--popover-hover !important;
+    background-color: $popover_bg-hover !important;
   }
 }
 
@@ -470,24 +451,25 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 # KANBAN
 ------------------------------------*/
 .kanban-board {
-  max-width: 100%;
+  // max-width: 100%;
+  overflow: scroll;
   padding: 2px;
-  border: 1px solid $kanban-border;
+  border: 1px solid $kanban_board-border;
   border-radius: $roundness;
-  background: $bg-kanban;
+  background: $kanban_board-bg;
   .kanban-column {
     border-radius: $roundness;
     padding: 2px;
     margin: 2px;
     &:not([style*="background"]) {
-      background: transparent;
+      background: $kanban_col-bg;
     }
     &[style*="background"] {
-      background: $bg-kanban-col-drag;
+      background: $kanban_col-drag-bg;
     }
     .kanban-title {
       text-align: center;
-      border-bottom: 1px solid $kanban-div;
+      border-bottom: $kanban_title-div;
       padding: 2px 8px;
 
       // hack
@@ -500,10 +482,10 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
       text-overflow: ellipsis;
     }
     .kanban-card {
-      background: $bg-kanban-card;
-      box-shadow: 0px 4px 7px -1px $bg-kanban-card-shadow;
+      background: $kanban_card-bg;
+      box-shadow: 0px 4px 7px -1px $kanban_card-shadow;
       border-radius: $roundness;
-      border: 1px solid $kanban-div;
+      border: $kanban_card-border;
       padding: 6px 10px;
       margin: 0px 6px 12px;
       font-size: 14px;
@@ -520,9 +502,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 .roam-table th,
 .roam-table td,
 .roam-table tr {
-  border: 1px solid setContrast($palette_theme;
+  border: $table_border;
 }
-
 
 /*------------------------------------
 # Datepicker
@@ -534,35 +515,35 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 }
 .bp3-datepicker {
   /* modal padding */
-  background: $datepicker-bg;
+  background: $datepicker_bg;
   padding: 6px;
 }
 .bp3-html-select .bp3-icon {
   /* month and year double carrots */
-  color: $datepicker-bg;
+  color: $datepicker_bg;
 }
 /* month back and forth bg color */
 button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
 button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
-  background: $datepicker-bg !important;
+  background: $datepicker_bg !important;
 }
 /* month back and forth carrot color / outside month date color */
 span.bp3-icon.bp3-icon-chevron-left,
 span.bp3-icon.bp3-icon-chevron-right,
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
-  color: $datepicker-altfont-color;
+  color: $datepicker_altfont-color;
 }
 /* month and year hover state */
 .bp3-html-select.bp3-minimal select:hover,
 .bp3-select.bp3-minimal select:hover {
-  background: #0073f9;
-  color: $palette_white;
+  background: $datepicker_hover-bg;
+  color: $datepicker_hover-text;
 }
 .bp3-datepicker .DayPicker-Weekday abbr[title] {
   /* abbreviated day titles */
   border-bottom: none;
   font-size: 13px;
-  color: $datepicker-altfont-color;
+  color: $datepicker_altfont-color;
   cursor: default;
 }
 .bp3-datepicker-caption + .bp3-divider {
@@ -570,6 +551,7 @@ span.bp3-icon.bp3-icon-chevron-right,
   border-bottom: none;
 }
 .bp3-datepicker .DayPicker-Day > div:first-child {
+  //todo
   /* date appearances */
   line-height: 1.15em;
   font-size: 14px;
@@ -577,143 +559,114 @@ span.bp3-icon.bp3-icon-chevron-right,
 }
 .bp3-datepicker .DayPicker-Day:hover {
   /* hover background color */
-  background: $datepicker-hover-bg;
-  color: $datepicker-hover-text;
+  background: $datepicker_hover-bg;
+  color: $datepicker_hover-text;
 }
 /* today bg color */
-.bp3-datepicker .DayPicker-Day.DayPicker-Day--isToday .bp3-datepicker-day-wrapper {
-  background: $datepicker-day-wrapper;
+.bp3-datepicker
+  .DayPicker-Day.DayPicker-Day--isToday
+  .bp3-datepicker-day-wrapper {
+  background: $datepicker_day-wrapper;
 }
 .bp3-html-select select,
 .bp3-select select {
-  color: $text_main-color;
+  color: $main_text-color;
 }
-
 
 /*---------------------------------- 
     #CODE
 ------------------------------------*/
-:root {
-  --code-bg: #222629;
-  --code-font: "Source Code Pro", "Courier New", Courier, monospace;
-  --code-font-color: #dcdedd;
-  --code-font-size: 1em;
-  --code-border: 1px solid #34373b;
-
-  --codemirror-bg: #222629;
-  --codemirror-border-color: #323438;
-  --codemirror-border-radius: 3px;
-  --codemirror-linenumber: #515355;
-  --code-matchingbracket-color: #ead64c;
-
-  --cm-comment: #7f848e;
-  --cm-def: #d19a66;
-  --cm-keyword: #c678dd;
-  --cm-callee: #56b6c2;
-  --cm-operator: #56b6c2;
-  --cm-builtin: #56b6c2;
-  --cm-string: #98c379;
-  --cm-variable-3: #56b6c2;
-  --cm-variable-2: #e06c75;
-  --cm-variable: #e5c07b;
-  --cm-tag: #e06c75;
-  --cm-property: #61afef;
-  --cm-number: #d19a66;
-  --cm-atom: #d19a66;
-  --cm-qualifier: #d19a66;
-}
-
 code {
   /* inline code */
-  background: $code-bg;
-  color: $code-font-color;
-  border: $code-border;
-  border-radius: $codemirror-border-radius;
+  background: $code-inline_bg;
+  color: $code-inline_font-color;
+  border: $code-inline_border;
+  border-radius: $codemirror_border-radius;
 }
 .CodeMirror {
   /* code block */
-  border: 1px solid $codemirror-border-color;
-  border-radius: $codemirror-border-radius;
-  background: $codemirror-bg !important;
-  color: $text_main-color !important;
+  border: 1px solid $codemirror_border-color;
+  border-radius: $codemirror_border-radius;
+  background: $codemirror_bg !important;
+  color: $main_text-color !important;
 }
 .Codemirror-code {
   padding-left: 12px !important;
 }
 div.CodeMirror-selected {
   /* selected color */
-  background: $block-highlight !important;
+  background: $block_highlight-main !important;
 }
 .CodeMirror-gutters {
-  background: $bg-color;
+  background: $main_bg;
   padding-right: 12px;
-  border-right: 1px solid $bg-color;
+  border-right: 1px solid $main_bg;
 }
 .CodeMirror-cursor {
   border-left: 2px solid $bullet_color !important;
 }
-/*_TOGGLE--  Matching bracket like Atom  --*/
+/*_TOGGLE--  Matching bracket like Atom$*/
 .CodeMirror-matchingbracket {
-  color: $text_main-color !important;
-  border-bottom: 1px solid $code-matchingbracket-color;
+  color: $main_text-color !important;
+  border-bottom: 1px solid $code-inline_matchingbracket-color;
 }
-/*_TOGGLE--  Matching bracket like Visual Studio Code  --*/
+/*_TOGGLE--  Matching bracket like Visual Studio Code$*/
 /*
   .CodeMirror-matchingbracket {
-  color: $text_main-color !important;
+  color: $main_text-color !important;
   border: 1px solid $icon-color-hover;
   background: #3c3c3c;
   }
   */
 .CodeMirror-linenumber {
-  color: $codemirror-linenumber !important;
+  color: $codemirror_linenumber !important;
   font-family: monospace !important;
   left: 0px !important;
 }
 span.cm-comment {
-  color: $cm-comment !important;
+  color: $codemirror_comment !important;
 }
 span.cm-def {
-  color: $cm-def !important;
+  color: $codemirror_def !important;
 }
 span.cm-keyword {
-  color: $cm-keyword !important;
+  color: $codemirror_keyword !important;
 }
 span.cm-variable.cm-callee {
-  color: $cm-callee !important;
+  color: $codemirror_callee !important;
 }
 span.cm-operator {
-  color: $cm-operator !important;
+  color: $codemirror_operator !important;
 }
 span.cm-builtin {
-  color: $cm-builtin !important;
+  color: $codemirror_builtin !important;
 }
 span.cm-string {
-  color: $cm-string !important;
+  color: $codemirror_string !important;
 }
 span.cm-variable-3 {
-  color: $cm-variable-3 !important;
+  color: $codemirror_variable-3 !important;
 }
 span.cm-variable-2 {
-  color: $cm-variable-2 !important;
+  color: $codemirror_variable-2 !important;
 }
 span.cm-variable {
-  color: $cm-variable !important;
+  color: $codemirror_variable !important;
 }
 span.cm-tag {
-  color: $cm-tag !important;
+  color: $codemirror_tag !important;
 }
 span.cm-property {
-  color: $cm-property !important;
+  color: $codemirror_property !important;
 }
 span.cm-number {
-  color: $cm-number !important;
+  color: $codemirror_number !important;
 }
 span.cm-atom {
-  color: $cm-atom !important;
+  color: $codemirror_atom !important;
 }
 span.cm-qualifier {
-  color: $cm-qualifier !important;
+  color: $codemirror_qualifier !important;
 }
 
 /*------------------------------------
@@ -721,13 +674,16 @@ span.cm-qualifier {
 ------------------------------------*/
 .roam-topbar > div > div:last-child ul.bp3-menu:after {
   content: "theme by @RainbowCat";
-  border: 1px solid $palette_white;
+
+  color: $popover_text;
+  border: 1px solid $popover_text;
   border-radius: 10px;
-  display: inline-block;
+
+  text-align: right;
   font-size: 13px;
   line-height: 1.4;
+
+  display: inline-block;
   padding: 7px;
   margin-top: 5px;
-  color: $palette_white;
-  text-align: right;
 }

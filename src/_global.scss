@@ -3,8 +3,9 @@
 ------------------------------------*/
 *:not(html):not(body) {
   box-sizing: border-box;
-  vertical-align: middle;
-  line-height: 1.2em;
+  vertical-align: text-top;
+  line-height: 1.2em !important;
+
   &:not([class*="bp3-icon"]) {
     // @include font-family;
     font-family: "Ubuntu", monospace; //debug
@@ -15,6 +16,7 @@
     // text-align: inherit;
     // vertical-align: inherit;
   }
+
   span {
     color: inherit !important;
   }
@@ -44,7 +46,7 @@
   // level 2: leftbar, right-area
   > .roam-sidebar-container,
   > .roam-sidebar-container > .roam-sidebar-content {
-    width: var(--leftbar_width);
+    width: $leftbar_width;
   }
   > div.flex-h-box {
     & {
@@ -52,18 +54,18 @@
     }
     &[style*="margin-left"] {
       // when left sidebar is hidden
-      margin-left: var(--leftbar_width) !important;
+      margin-left: $leftbar_width !important;
     }
     // level 3: editor & topbar, rightbar
     > .roam-main {
       // level 4: topbar, roam-body-main
       > .roam-topbar {
-        height: var(--topbar_height);
+        height: $topbar_height;
       }
       // level 5
       > .roam-body-main {
         overflow: hidden scroll;
-        padding: var(--editor-margin); // add space surrounding editor
+        padding: $editor-margin; // add space surrounding editor
 
         > div:first-child {
           // useless div
@@ -96,33 +98,33 @@
 ------------------------------------*/
 @mixin better-roam-layout {
   #app .roam-body .roam-app {
-    background: var(--bg-main-color);
+    background: $main_bg;
 
     // level 2: leftbar, right-area
     > .roam-sidebar-container,
     > .roam-sidebar-container > .roam-sidebar-content {
-      background: var(--bg--left) !important;
+      background: $leftbar_bg !important;
     }
     > div.flex-h-box {
       // level 3: editor & topbar, rightbar
       > .roam-main {
         // level 4: topbar, roam-body-main
         > .roam-topbar {
-          background: var(--bg--topbar);
+          background: $topbar_bg;
         }
         // level 5
         > .roam-body-main {
-          border: 1px solid var(--color-subtle);
+          border: 1px solid $main_subtle-color;
           border-bottom: none;
           border-radius: 12px 12px 0 0; /* round off corners */
           /* offset-x | offset-y | blur-radius | spread-radius | color */
           margin: 0px 8px; /* add space to show shadow */
           box-shadow: 0px 0px 20px 3px grey;
-          background: var(--bg-main-color);
+          background: $main_bg;
         }
       }
       > #right-sidebar {
-        background: var(--bg-right);
+        background: $rightbar_bg;
       }
     }
   }
@@ -130,27 +132,27 @@
 
 @mixin regular-layout {
   #app .roam-body .roam-app {
-    background: var(--bg-main-color);
+    background: $main_bg;
 
     // level 2: leftbar, right-area
     > .roam-sidebar-container,
     > .roam-sidebar-container > .roam-sidebar-content {
-      background: var(--bg--left) !important;
+      background: $leftbar_bg !important;
     }
     > div.flex-h-box {
       // level 3: editor & topbar, rightbar
       > .roam-main {
         // level 4: topbar, roam-body-main
         > .roam-topbar {
-          background: var(--bg-main-color);
+          background: $main_bg;
         }
         // level 5
         > .roam-body-main {
-          background: var(--bg-main-color);
+          background: $main_bg;
         }
       }
       > #right-sidebar {
-        background: var(--bg--right);
+        background: $rightbar_bg;
       }
     }
   }

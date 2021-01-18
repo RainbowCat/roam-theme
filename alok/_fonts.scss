@@ -1,0 +1,32 @@
+/*-------------------------
+# FONTS
+-------------------------*/
+// @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+$font-fallback: Verdana, sans-serif;
+
+@mixin font_title {
+  font_family: "Ubuntu", $font-fallback;
+  font_weight: 700;
+}
+
+@mixin font_heading {
+  font_family: "Ubuntu", $font-fallback;
+  font_weight: 700;
+}
+
+@mixin font_body {
+  font_family: "Ubuntu", $font-fallback;
+  font_weight: 300;
+}
+
+@mixin font_italics {
+  font_family: "Ubuntu", $font-fallback;
+  font_weight: 400;
+  font_style: italic;
+}
+
+@mixin font_bold {
+  font_family: "Ubuntu", $font-fallback;
+  font_weight: 700;
+}

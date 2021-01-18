@@ -1,66 +1,29 @@
 /*------------------------------------
-# THEME
+# general
 ------------------------------------*/
-
-$color-subtle: #{color.change($palette_theme, $alpha: 0.5)};
-$bg-main-color: #{$palette_theme-darker};
-$bg-secondary-color: #{$palette_theme_lighter};
-$text_main-color: #{setContrast($palette_theme)};
-
-/*------------------------------------
-# general layout
-------------------------------------*/
-
-$leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
-$topbar_height: 45px; // default
-$editor-margin: 20px 30px;
 $roundness: 5px;
 
-/*------------------------------------
-# general appearance
-------------------------------------*/
-
-$left_bg: #{$palette_theme-darker};
-$topbar_bg: #{$palette_theme-darker};
-$bg--right: #{$palette_theme};
-$rightbar_title-color: #{setContrast($palette_theme-lighter)};
+$main_subtle-color: color.change($palette_theme, $alpha: 0.5);
+$main_bg-color: $palette_theme-darker;
+$main_text-color: setContrast($palette_theme);
 
 /*------------------------------------
-# text
+# left sidebar
 ------------------------------------*/
-
-$highlight-bg: $palette_accent;
-$highlight-text: #{setContrast($palette_accent)};
-
-$bullet_color: #{$palette_accent};
-$bullet_border-closed: 4px solid #{$palette_accent-darker};
-$treeline: 1px solid #{setContrast($palette_theme)};
-
-$checkbox_top: -1px;
-$checkbox_left: -2px;
-$checkbox_height: 14px;
-$checkbox_width: 14px;
-$checkbox_border-radius: 4px;
-
-$checkbox_border-notdone: 1px solid #{$palette_black};
-$bg-notdone: #{opacify($palette_white, 0.5)};
-
-$border-done: 1px solid #{$palette_white};
-$bg-done: #{$palette_accent};
-
-$symbol-color: #{setContrast($palette_theme)};
-$symbol: "✔";
-
-/*------------------------------------
-# components
-------------------------------------*/
-
+$leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
+$leftbar_bg: $palette_theme-darker;
 // $bg--shortcuts: linear-gradient(green, black);
-$color-divline: #{setContrast($palette_theme)};
-$color-text: #{$palette_accent-darker};
-$color-text-hover: #{$palette_accent-lighter};
+$leftbar_divline-color: setContrast($palette_theme);
+$leftbar_text-color: $palette_accent-darker;
+$leftbar_text-color-hover: $palette_accent-lighter;
 
-$icons-placement: flex-end;
+/*------------------------------------
+# topbar
+------------------------------------*/
+$topbar_height: 45px; // default
+$topbar_bg: $palette_theme-darker;
+$topbar_icons-placement: flex-end;
+
 $searchbar-height: 45px;
 $searchbar-width: 500px;
 $searchbar-left: 55vw;
@@ -70,51 +33,158 @@ $searchbar-padding-lr: 20px;
 $searchbar-font: 20px;
 
 /*------------------------------------
-# sections
+# main editor
 ------------------------------------*/
+$editor_margin: 20px 30px;
 
-$allpage-bottom-border-color: #2d3133;
-$pages-header-row: $palette_white;
-$allpages_mentions-level-bg: #3c96ff;
-$allpages_mentions-level1-bg: #3d71ff;
-$allpages_mentions-level2-bg: #3c50ff;
-$allpages_mentions-font-color: grey;
+/*------------------------------------
+# right sidebar
+------------------------------------*/
+$rightbar_bg: $palette_theme;
+$rightbar_title-color: setContrast($palette_theme-lighter);
+
+/*------------------------------------
+# text
+------------------------------------*/
+$highlight-bg: $palette_accent;
+$highlight-text: setContrast($palette_accent);
+
+/*------------------------------------
+# bullets
+------------------------------------*/
+$bullet_color: $palette_accent;
+$bullet_border-closed: 4px solid $palette_accent-darker;
+$treeline: 1px solid setContrast($palette_theme);
+
+/*------------------------------------
+# checkboxes
+------------------------------------*/
+$checkbox_top: -1px;
+$checkbox_left: -2px;
+$checkbox_height: 14px;
+$checkbox_width: 14px;
+$checkbox_border-radius: 4px;
+
+$checkbox_border-notdone: 1px solid $palette_black;
+$checkbox_bg-notdone: opacify($palette_white, 0.5);
+
+$checkbox_border-done: 1px solid $palette_white;
+$checkbox_bg-done: $palette_accent;
+
+$checkbox_symbol-color: setContrast($palette_theme);
+$checkbox_symbol: "✔";
+
+/*------------------------------------
+# tags
+------------------------------------*/
+$tag-font-color: #515355;
+$tag-bg-color: #24272a;
+$tag-border-radius: 10px;
+$tag-border: 1px solid #35373996;
+$tag-padding: 1px 5px 2px;
+$tagHover-font-color: #484a4c;
+$tagHover-bg-color: #2d3033;
+$tagHover-border: 1px solid #44464887;
 
 /*------------------------------------
 # components
 ------------------------------------*/
 
-$icons-bg-regular: #{$palette_accent};
-$icons-bg-hover: #{$palette_accent-lighter};
-$icon-color: #{setContrast($palette_accent)};
+/* icons */
+$icons-bg-regular: $palette_accent;
+$icons-bg-hover: $palette_accent-lighter;
+$icon-color: setContrast($palette_accent);
 $icons-size: 24px;
 
-$checkbox_notdone-color: #{$palette_accent};
-$checkbox_done-color: #{$palette_accent-darker};
+/* todos */
+$checkbox_color-notdone: $palette_accent;
+$checkbox_color-done: $palette_accent-darker;
+$checkbox_border-notdone: $palette_accent;
+$checkbox_border-done: $palette_accent-darker;
+$checkbox_bg-notdone: $palette_accent;
+$checkbox_bg-done: $palette_accent-darker;
 
+/* block highlights */
+$block_highlight-main: $palette_accent;
+$block_highlight-linked: $palette_accent;
+$block_highlight-linked-text: setContrast($palette_accent);
+$block_highlight-embed: $palette_accent-lighter;
+
+/*------------------------------------
+# features
+------------------------------------*/
+/* general popups */
+$popover_bg: $palette_accent;
+$popover_bg-hover: $palette_accent-lighter;
+$popover_text: setContrast($palette_accent);
+
+/* page filter popup */
+$page-filter-btns-text: $popover_text;
+$page-filter-btns-bg: radial-gradient($popover_bg), white;
+$page-filter-btns-text-hover: $palette_theme;
+$page-filter-btns-bg-hover: radial-gradient($popover_bg, black);
+
+/* datepicker */
 $datepicker-bg: pink;
 $datepicker-day-wrapper: #36393c;
 $datepicker-altfont-color: #545d63;
 $datepicker-hover-bg: #0073f9;
 $datepicker-hover-text: white;
 
-$block-highlight-main: #{$palette_accent};
-$block-highlight-linked: #{$palette_accent};
-$block-highlight-linked-text: #{setContrast($palette_accent)};
-$block-highlight-embed: #{$palette_accent-lighter};
-
-$bg--popover: #{$palette_accent};
-$bg--popover-hover: #{$palette_accent-lighter};
-$popover-contrast: #{setContrast($palette_accent)};
-
-$page-filter-btns-text: $popover-contrast;
-$page-filter-btns-bg: radial-gradient($bg--popover), white;
-$page-filter-btns-text-hover: $palette_theme;
-$page-filter-btns-bg-hover: radial-gradient($bg--popover, black);
-
-$bg-kanban-card: #{$palette_theme};
-$bg-kanban-card-shadow: #{$palette_theme-darker};
-$bg-kanban-col-drag: #{$palette_theme-lighter};
+/* kanban */
+$bg-kanban-card: $palette_theme;
+$bg-kanban-card-shadow: $palette_theme-darker;
+$bg-kanban-col-drag: $palette_theme-lighter;
 $bg-kanban: transparent;
-$kanban-div: #{setContrast($palette_theme)};
-$kanban-border: #{setContrast($palette_theme)};
+$kanban-div: setContrast($palette_theme);
+$kanban-border: setContrast($palette_theme);
+
+/* code */
+$code-bg: #222629;
+$code-font: "Source Code Pro", "Courier New", Courier, monospace;
+$code-font-color: #dcdedd;
+$code-font-size: 1em;
+$code-border: 1px solid #34373b;
+
+$codemirror-bg: #222629;
+$codemirror-border-color: #323438;
+$codemirror-border-radius: 3px;
+$codemirror-linenumber: #515355;
+$code-matchingbracket-color: #ead64c;
+
+$cm-comment: #7f848e;
+$cm-def: #d19a66;
+$cm-keyword: #c678dd;
+$cm-callee: #56b6c2;
+$cm-operator: #56b6c2;
+$cm-builtin: #56b6c2;
+$cm-string: #98c379;
+$cm-variable-3: #56b6c2;
+$cm-variable-2: #e06c75;
+$cm-variable: #e5c07b;
+$cm-tag: #e06c75;
+$cm-property: #61afef;
+$cm-number: #d19a66;
+$cm-atom: #d19a66;
+$cm-qualifier: #d19a66;
+
+/*------------------------------------
+# sections
+------------------------------------*/
+/* linked/unlinked references */
+$ref-header-color: $palette_white;
+$ref-header-underline-color: $palette_accent;
+
+$ref-item-page-color: $palette_white;
+$ref-item-parent-color: $palette_white;
+$ref-item-bg: $palette_theme;
+$ref-item-border-radius: $roundness;
+$ref-item-border: 1px solid $palette_white;
+
+/* all pages */
+$allpage-bottom-border-color: #2d3133;
+$pages-header-row: $palette_white;
+$allpages_mentions-level-bg: #3c96ff;
+$allpages_mentions-level1-bg: #3d71ff;
+$allpages_mentions-level2-bg: #3c50ff;
+$allpages_mentions-font-color: grey;
