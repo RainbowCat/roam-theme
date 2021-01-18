@@ -1,0 +1,120 @@
+/*------------------------------------
+# layout
+------------------------------------*/
+
+$leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
+$topbar_height: 45px; // default
+$editor_margin: 20px 30px;
+
+/*------------------------------------
+# appearance
+------------------------------------*/
+$roundness: 5px;
+
+/*------------------------------------
+# colors
+------------------------------------*/
+
+$color-subtle: color.change($palette_theme, $alpha: 0.5);
+$bg-main-color: $palette_theme-darker;
+$bg-secondary-color: $palette_theme_lighter;
+$text_main-color: setContrast($palette_theme);
+
+$leftbar_bg: $palette_theme-darker;
+$topbar_bg: $palette_theme-darker;
+$rightbar_bg: $palette_theme;
+$rightbar_title-color: setContrast($palette_theme-lighter);
+
+/*------------------------------------
+# text
+------------------------------------*/
+
+$highlight-bg: $palette_accent;
+$highlight-text: setContrast($palette_accent);
+
+$bullet_color: $palette_accent;
+$bullet_border-closed: 4px solid $palette_accent-darker;
+$treeline: 1px solid setContrast($palette_theme);
+
+$checkbox_top: -1px;
+$checkbox_left: -2px;
+$checkbox_height: 14px;
+$checkbox_width: 14px;
+$checkbox_border-radius: 4px;
+
+$checkbox_border-notdone: 1px solid $palette_black;
+$bg-notdone: opacify($palette_white, 0.5);
+
+$border-done: 1px solid $palette_white;
+$bg-done: $palette_accent;
+
+$symbol-color: setContrast($palette_theme);
+$symbol: "✔";
+
+/*------------------------------------
+# components
+------------------------------------*/
+
+// $bg--shortcuts: linear-gradient(green, black);
+$color-divline: setContrast($palette_theme);
+$color-text: $palette_accent-darker;
+$color-text-hover: $palette_accent-lighter;
+
+$icons-placement: flex-end;
+$searchbar-height: 45px;
+$searchbar-width: 500px;
+$searchbar-left: 55vw;
+$searchbar-top: 27vh;
+$searchbar-padding-tb: 10px;
+$searchbar-padding-lr: 20px;
+$searchbar-font: 20px;
+
+/*------------------------------------
+# sections
+------------------------------------*/
+
+$allpage-bottom-border-color: #2d3133;
+$pages-header-row: $palette_white;
+$allpages_mentions-level-bg: #3c96ff;
+$allpages_mentions-level1-bg: #3d71ff;
+$allpages_mentions-level2-bg: #3c50ff;
+$allpages_mentions-font-color: grey;
+
+/*------------------------------------
+# components
+------------------------------------*/
+
+$icons-bg-regular: $palette_accent;
+$icons-bg-hover: $palette_accent-lighter;
+$icon-color: setContrast($palette_accent);
+$icons-size: 24px;
+
+$checkbox_notdone-color: $palette_accent;
+$checkbox_done-color: $palette_accent-darker;
+
+$datepicker-bg: pink;
+$datepicker-day-wrapper: #36393c;
+$datepicker-altfont-color: #545d63;
+$datepicker-hover-bg: #0073f9;
+$datepicker-hover-text: white;
+
+$block-highlight-main: $palette_accent;
+$block-highlight-linked: $palette_accent;
+$block-highlight-linked-text: setContrast($palette_accent);
+$block-highlight-embed: $palette_accent-lighter;
+
+$bg--popover: $palette_accent;
+$bg--popover-hover: $palette_accent-lighter;
+$popover-contrast: setContrast($palette_accent);
+
+$page-filter-btns-text: $popover-contrast;
+$page-filter-btns-bg: radial-gradient($bg--popover), white;
+$page-filter-btns-text-hover: $palette_theme;
+$page-filter-btns-bg-hover: radial-gradient($bg--popover, black);
+
+$bg-kanban-card: $palette_theme;
+$bg-kanban-card-shadow: $palette_theme-darker;
+$bg-kanban-col-drag: $palette_theme-lighter;
+$bg-kanban: transparent;
+$kanban-div: setContrast($palette_theme);
+$kanban-border: setContrast($palette_theme);

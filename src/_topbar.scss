@@ -1,0 +1,148 @@
+/*------------------------------------
+# TOPBAR
+------------------------------------*/
+// style topbar
+.roam-topbar {
+  background: $topbar_bg;
+  // color: $palette_white;
+}
+
+// HACK
+// remove useless divs
+// TODO keep the one between left sidebar icon and other icons
+.roam-topbar .flex-h-box > div[style^="flex"]:not([class]) {
+  display: none;
+}
+
+/* make search popover */
+//TODO add border / shadow to make search popup standout
+.roam-topbar > .flex-h-box {
+  .rm-find-or-create-wrapper {
+    // match size and positions
+    input#find-or-create-input:focus,
+    .bp3-overlay {
+      opacity: 1 !important;
+      position: fixed !important;
+      left: $searchbar-left;
+
+      /* place at front of page */
+      z-index: 999999;
+
+      /* center */
+      transform: translate(-50%, 0);
+    }
+    input#find-or-create-input:focus {
+      box-sizing: content-box;
+      top: $searchbar-top;
+      height: $searchbar-height !important;
+      width: $searchbar-width !important;
+      font-size: $searchbar-font;
+      padding: $searchbar-padding-tb $searchbar-padding-lr; // padding around placeholder text
+    }
+    .bp3-overlay {
+      top: calc($searchbar-top + $searchbar-height + 2 * $searchbar-padding-tb);
+      width: calc($searchbar-width + 2 * $searchbar-padding-lr + 2px); // 2px for border
+      > .bp3-transition-container {
+        transform: none !important; // turn off animation
+      }
+    }
+    // style
+    input#find-or-create-input:focus {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
+
+      // if input is empty (no menu), then make all corners rounded
+      // &[value=""] {
+      //   border-radius: 10px;
+      // }
+      // if there is input, only round top corners to account for dropdown
+      border-radius: 10px 10px 0px 0px;
+    }
+    .bp3-overlay .bp3-popover {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
+
+      // box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2),
+      //   0 8px 24px rgba(16, 22, 26, 0.2;
+      box-shadow: none;
+      &,
+      & > .bp3-popover-content,
+      & > .bp3-popover-content > .bp3-menu,
+      & > .bp3-popover-content > .bp3-menu > .rm-menu-item:last-child {
+        border-radius: 0px 0px 10px 10px !important;
+      }
+    }
+  }
+}
+
+/* make all elements look like a button */
+.roam-topbar .flex-h-box {
+  justify-content: $icons-placement;
+
+  > div,
+  > span {
+    height: $icons-size;
+    width: $icons-size;
+    margin: 5px; //icons margin
+  }
+  .rm-saving-icon {
+    height: $icons-size;
+    width: $icons-size;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 3px;
+  }
+  .rm-saving-inner-icon {
+    height: 10px !important;
+    width: 10px !important;
+  }
+  // search
+  .rm-find-or-create-wrapper {
+    flex: unset !important;
+    input#find-or-create-input {
+      opacity: 0;
+      z-index: 10000; /* bring in front of icon to keep clickable */
+      width: $icons-size !important;
+      height: $icons-size !important;
+      padding: 0px;
+      margin: 0px;
+      cursor: pointer;
+    }
+    .bp3-icon-search.search-icon {
+      padding: 4px;
+      margin: 0px !important;
+    }
+  }
+
+  // other buttons
+  .bp3-button.bp3-minimal {
+    height: $icons-size;
+    width: $icons-size;
+    margin: 0px !important;
+  }
+
+  //icon color
+  [class~="bp3-icon"],
+  .bp3-button.bp3-minimal {
+    &:before {
+      color: $icon-color;
+      background: transparent;
+    }
+  }
+  .bp3-icon-filter,
+  .bp3-icon-search {
+    color: $icon-color !important;
+  }
+  .rm-find-or-create-wrapper,
+  [class~="bp3-icon"]:not(.bp3-icon-filter):not(.bp3-icon-search),
+  .bp3-button.bp3-minimal {
+    border-radius: 3px;
+    transition: none;
+    background: $icons-bg-regular !important;
+    &:hover {
+      background: $icons-bg-hover !important;
+    }
+  }
+}

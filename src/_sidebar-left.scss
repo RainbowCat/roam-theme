@@ -1,0 +1,80 @@
+/*------------------------------------
+# LEFT SIDEBAR
+------------------------------------*/
+/*** LAYOUT ***/
+.roam-body .roam-app .roam-sidebar-content {
+  // hide logo
+  #roam-sidebar-logo {
+    display: none;
+  }
+  // paddings
+  padding: 0 !important;
+  > div:not(.log-button):not(:first-child) {
+    padding: 0 !important;
+  }
+  > div:first-child {
+    padding-bottom: 18px !important;
+  }
+  div {
+    line-height: 1.2 !important;
+  }
+
+  .starred-pages-wrapper {
+    // style division bar
+
+    // maybe if use border and padding instead of useless divs
+    // margin-top: 10px; // add space from .log-buttons
+    // padding-top: 10px; // add space before pages
+
+    // border-top: 0.1em solid opacify($white, 0.5; //TODO
+    // border-top: 0.1em solid $white;
+    // > div:nth-child(1) {
+    // horizontal line div
+    // display: none;
+    // }
+    > div:nth-child(1) {
+      // maybe use better class selector
+      flex: 0 0 1px;
+      background-color: $color-divline !important;
+      margin: 10px 20px; // maybe make variable
+    }
+    > div:nth-child(2) {
+      // maybe use better class selector
+      // hide padding div
+      display: none;
+    }
+    > .flex-h-box {
+      // hide "★ SHORTCUTS" title
+      display: none;
+    }
+  }
+
+  // paddings
+  .log-button,
+  .starred-pages-wrapper .starred-pages .page {
+    padding: 6px 24px 6px !important;
+  }
+  .shortcut {
+    padding: 14px 24px 0;
+  }
+  .top-row {
+    padding: 12px 0 0 20px;
+  }
+}
+
+/*** APPEARANCE ***/
+.roam-body .roam-app .roam-sidebar-content {
+  .top-row,
+  .top-row .rm-db-title,
+  .log-button,
+  .starred-pages-wrapper .starred-pages .page {
+    background: transparent;
+    color: $color-text !important;
+    &:hover {
+      background: transparent !important;
+      color: $color-text-hover !important;
+    }
+  }
+}
+
+/*** ANIMATIONS ***/

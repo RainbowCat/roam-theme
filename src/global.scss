@@ -1,0 +1,21 @@
+/*------------------------------------
+# RESET SITE SETTINGS
+------------------------------------*/
+*:not(html):not(body) {
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: 1.2em;
+  &:not([class*="bp3-icon"]) {
+    // @include font-family;
+    font-family: "Ubuntu", monospace; //debug
+  }
+  &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
+    max-height: 100%;
+    max-width: 100%;
+    text-align: inherit;
+    vertical-align: inherit;
+  }
+  span {
+    color: inherit !important;
+  }
+}
