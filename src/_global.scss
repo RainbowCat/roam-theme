@@ -1,27 +1,44 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
-*:not([class|="bp3"]):not([class|="codemirror"]) {
-  // box-sizing: border-box;
-  // vertical-align: text-top;
-  line-height: 1.2em;
-  // &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
-  max-height: 100%;
-  max-width: 100%;
-  // text-align: inherit;
-  // vertical-align: inherit;
-  // }
-  // div,
-  // span {
-  color: inherit;
-  font: inhert;
-  // }
+html,
+body,
+.roam-body .roam-app {
+  &:not([class|="bp3"]):not(.CodeMirror):not([class|="cm"]):not([class|="CodeMirror"]) {
+    line-height: 1.2em;
+    max-height: 100%;
+    max-width: 100%;
+    color: inherit;
+    font-family: inhert;
+  }
+  &:not([class|="CodeMirror"]) {
+    .rm-block__self .rm-block__input,
+    input,
+    textarea,
+    div,
+    span {
+      &:not([class*="bp3-icon"]):not([class*="bp3-button"]):not([class*="bp3-minimal"]) {
+        @include font-family;
+      }
+    }
+  }
+}
+
+.CodeMirror {
+  font-family: monospace !important;
+  * {
+    font-family: monospace !important;
+  }
 }
 
 .roam-body .roam-app h1 {
   color: unset;
 }
 
+.bp3-popover-wrapper button[type="button"] {
+  //code button
+  z-index: 1 !important;
+}
 /*------------------------------------
 # Workspace Layout
 ------------------------------------*/

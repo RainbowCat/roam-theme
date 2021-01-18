@@ -10,32 +10,32 @@ $font-fallback: Verdana, sans-serif;
 }
 
 @mixin font_title {
-  font-family: "Ubuntu", $font-fallback;
-  font-weight: 700;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
   font-size: 30px !important;
 }
 
 @mixin font_heading($num) {
-  font-family: "Ubuntu", $font-fallback;
-  font-weight: 700;
-  font-size: 20px + $num * 1.5;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+  font-size: 20px + (3-$num) * 1.5 !important;
 }
 
 @mixin font_body {
-  font-family: "Ubuntu", $font-fallback;
-  font-weight: 300;
-  font-size: 15px;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
 }
 
 @mixin font_italics {
-  font-family: "Ubuntu", $font-fallback;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 15px;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-size: 15px !important;
 }
 
 @mixin font_bold {
-  font-family: "Ubuntu", $font-fallback;
-  font-weight: 700;
-  font-size: 15px;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
 }

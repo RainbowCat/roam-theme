@@ -1,19 +1,6 @@
 /*------------------------------------
 # TEXT
 ------------------------------------*/
-html,
-body,
-.roam-body .roam-app {
-  .rm-block__self .rm-block__input,
-  input,
-  textarea,
-  div,
-  span {
-    &:not([class*="bp3-icon"]):not([class*="bp3-button"]):not([class*="bp3-minimal"]) {
-      @include font-family;
-    }
-  }
-}
 
 /* bold text */
 .rm-bold {
@@ -33,18 +20,6 @@ body,
   padding: 2px 3px;
 }
 
-// HACK - so titles won't shift //TODO
-// $title-size: 26px;
-
-$heading1-size: 22px;
-$heading1-margin: -2px;
-
-$heading2-size: 20px;
-$heading2-margin: -2px;
-
-$heading3-size: 18px;
-$heading3-margin: -1px;
-
 // headings
 h1.rm-title-display,
 .rm-title-textarea,
@@ -53,26 +28,20 @@ h1.rm-title-display,
   @include font_title;
 }
 
-.rm-heading-level-1 > .rm-block-main {
-  @include font_heading(2);
+.rm-heading-level-1 > .rm-block-main,
+.rm-heading-level-1 > .rm-block__self .rm-block__input {
+  @include font_heading(1);
   color: $main_text-color;
-  span {
-    margin-top: $heading1-margin !important;
-  }
 }
-.rm-heading-level-2 > .rm-block-main {
+.rm-heading-level-2 > .rm-block-main,
+.rm-heading-level-2 > .rm-block__self .rm-block__input {
   @include font_heading(2);
   color: $main_text-color;
-  span {
-    margin-top: $heading2-margin !important;
-  }
 }
-.rm-heading-level-3 > .rm-block-main {
-  @include font_heading(2);
+.rm-heading-level-3 > .rm-block-main,
+.rm-heading-level-3 > .rm-block__self .rm-block__input {
+  @include font_heading(3);
   color: $main_text-color;
-  span {
-    margin-top: $heading3-margin !important;
-  }
 }
 
 /*---------------------------------- 
