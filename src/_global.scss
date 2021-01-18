@@ -1,45 +1,18 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
-html,
-body,
-.roam-body .roam-app {
-  &:not([class|="bp3"]):not(.CodeMirror):not([class|="cm"]):not([class|="CodeMirror"]) {
-    line-height: 1.2em;
-    // max-height: 100%;
-    // max-width: 100%;
-    color: inherit;
-    font-family: inhert;
-  }
-  &:not([class|="CodeMirror"]) {
-    .rm-block__self .rm-block__input,
-    input,
-    textarea,
-    div,
-    span {
-      &:not([class*="bp3-icon"]):not([class*="bp3-button"]):not([class*="bp3-minimal"]) {
-        @include font-family;
-      }
-    }
-  }
-}
-
-.CodeMirror,
-[class|="CodeMirror"],
-[class|="cm"] {
-  font-family: monospace !important;
-  * {
-    font-family: monospace !important;
-  }
+[id^="block-input-"],
+[class|="bp3"]:not(.bp3-icon),
+.roam-sidebar-container div {
+  @include font-family;
 }
 
 .roam-body .roam-app h1 {
   color: unset;
 }
-
-.bp3-popover-wrapper button[type="button"] {
-  //code button
-  z-index: 1 !important;
+div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
+  //code block button
+  z-index: 10 !important;
 }
 /*------------------------------------
 # Workspace Layout

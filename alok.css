@@ -54,48 +54,18 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
-html:not([class|=bp3]):not(.CodeMirror):not([class|=cm]):not([class|=CodeMirror]),
-body:not([class|=bp3]):not(.CodeMirror):not([class|=cm]):not([class|=CodeMirror]),
-.roam-body .roam-app:not([class|=bp3]):not(.CodeMirror):not([class|=cm]):not([class|=CodeMirror]) {
-  line-height: 1.2em;
-  color: inherit;
-  font-family: inhert;
-}
-html:not([class|=CodeMirror]) .rm-block__self .rm-block__input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-html:not([class|=CodeMirror]) input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-html:not([class|=CodeMirror]) textarea:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-html:not([class|=CodeMirror]) div:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-html:not([class|=CodeMirror]) span:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-body:not([class|=CodeMirror]) .rm-block__self .rm-block__input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-body:not([class|=CodeMirror]) input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-body:not([class|=CodeMirror]) textarea:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-body:not([class|=CodeMirror]) div:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-body:not([class|=CodeMirror]) span:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-.roam-body .roam-app:not([class|=CodeMirror]) .rm-block__self .rm-block__input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-.roam-body .roam-app:not([class|=CodeMirror]) input:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-.roam-body .roam-app:not([class|=CodeMirror]) textarea:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-.roam-body .roam-app:not([class|=CodeMirror]) div:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]),
-.roam-body .roam-app:not([class|=CodeMirror]) span:not([class*=bp3-icon]):not([class*=bp3-button]):not([class*=bp3-minimal]) {
+[id^=block-input-],
+[class|=bp3]:not(.bp3-icon),
+.roam-sidebar-container div {
   font-family: "Ubuntu", Verdana, sans-serif !important;
-}
-
-.CodeMirror,
-[class|=CodeMirror],
-[class|=cm] {
-  font-family: monospace !important;
-}
-.CodeMirror *,
-[class|=CodeMirror] *,
-[class|=cm] * {
-  font-family: monospace !important;
 }
 
 .roam-body .roam-app h1 {
   color: unset;
 }
 
-.bp3-popover-wrapper button[type=button] {
-  z-index: 1 !important;
+div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
+  z-index: 10 !important;
 }
 
 /*------------------------------------
