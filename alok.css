@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*------------------------------------ UTILS & VARIABLES ------------------------------------*/
 /*------------------------------------
 # layout
 ------------------------------------*/
@@ -20,6 +21,7 @@
 /*------------------------------------
 # components
 ------------------------------------*/
+/*------------------------------------ STYLE ------------------------------------*/
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
@@ -34,11 +36,77 @@
 *:not(html):not(body):not(.roam-topbar[class*=bp3]):not([class*=CodeMirror]) {
   max-height: 100%;
   max-width: 100%;
-  text-align: inherit;
-  vertical-align: inherit;
 }
 *:not(html):not(body) span {
   color: inherit !important;
+}
+
+/*------------------------------------
+# Workspace Layout
+------------------------------------*/
+#app .roam-body .roam-app {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  opacity: 1;
+}
+#app .roam-body .roam-app > div:only-child:not(.roam-sidebar-container) {
+  margin-left: 0 !important;
+}
+#app .roam-body .roam-app > .roam-sidebar-container,
+#app .roam-body .roam-app > .roam-sidebar-container > .roam-sidebar-content {
+  width: var(--leftbar_width);
+}
+#app .roam-body .roam-app > div.flex-h-box[style*=margin-left] {
+  margin-left: var(--leftbar_width) !important;
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
+  height: var(--topbar_height);
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
+  overflow: hidden scroll;
+  padding: var(--editor-margin);
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
+  padding: 0px !important;
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-log-container,
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-article {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 20px;
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > #buffer {
+  visibility: hidden;
+}
+.roam-block-container {
+  max-width: 100%;
+}
+
+/*------------------------------------
+# Workspace Appearance
+------------------------------------*/
+#app .roam-body .roam-app {
+  background: var(--bg-main-color);
+}
+#app .roam-body .roam-app > .roam-sidebar-container,
+#app .roam-body .roam-app > .roam-sidebar-container > .roam-sidebar-content {
+  background: var(--bg--left) !important;
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
+  background: var(--bg-main-color);
+}
+#app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
+  background: var(--bg-main-color);
+}
+#app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
+  background: var(--bg--right);
 }
 
 /*------------------------------------
@@ -72,8 +140,8 @@
   padding: 10px 20px;
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay {
-  top: calc($searchbar-top + $searchbar-height + 2 * $searchbar-padding-tb);
-  width: calc($searchbar-width + 2 * $searchbar-padding-lr + 2px);
+  top: calc(27vh + 45px + 2 * 10px);
+  width: calc(500px + 2 * 20px + 2px);
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay > .bp3-transition-container {
   transform: none !important;

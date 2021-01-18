@@ -12,10 +12,149 @@
   &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
     max-height: 100%;
     max-width: 100%;
-    text-align: inherit;
-    vertical-align: inherit;
+    // text-align: inherit;
+    // vertical-align: inherit;
   }
   span {
     color: inherit !important;
   }
 }
+
+/*------------------------------------
+# Workspace Layout
+------------------------------------*/
+// level 1
+#app .roam-body .roam-app {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  opacity: 1;
+
+  // Remove main area left margin when there's no sidebar (public pages)
+  > div:only-child:not(.roam-sidebar-container) {
+    margin-left: 0 !important;
+  }
+
+  // level 2: leftbar, right-area
+  > .roam-sidebar-container,
+  > .roam-sidebar-container > .roam-sidebar-content {
+    width: var(--leftbar_width);
+  }
+  > div.flex-h-box {
+    & {
+      // when left sidebar is showing
+    }
+    &[style*="margin-left"] {
+      // when left sidebar is hidden
+      margin-left: var(--leftbar_width) !important;
+    }
+    // level 3: editor & topbar, rightbar
+    > .roam-main {
+      // level 4: topbar, roam-body-main
+      > .roam-topbar {
+        height: var(--topbar_height);
+      }
+      // level 5
+      > .roam-body-main {
+        overflow: hidden scroll;
+        padding: var(--editor-margin); // add space surrounding editor
+
+        > div:first-child {
+          // useless div
+          padding: 0px !important;
+
+          // level 6
+          > .roam-log-container,
+          > .roam-article {
+            margin: 0px;
+            padding: 0px;
+            padding-left: 20px;
+          }
+        }
+
+        > #buffer {
+          visibility: hidden;
+        }
+      }
+    }
+    > #right-sidebar {
+    }
+  }
+}
+.roam-block-container {
+  max-width: 100%;
+}
+
+/*------------------------------------
+# Workspace Appearance
+------------------------------------*/
+@mixin better-roam-layout {
+  #app .roam-body .roam-app {
+    background: var(--bg-main-color);
+
+    // level 2: leftbar, right-area
+    > .roam-sidebar-container,
+    > .roam-sidebar-container > .roam-sidebar-content {
+      background: var(--bg--left) !important;
+    }
+    > div.flex-h-box {
+      // level 3: editor & topbar, rightbar
+      > .roam-main {
+        // level 4: topbar, roam-body-main
+        > .roam-topbar {
+          background: var(--bg--topbar);
+        }
+        // level 5
+        > .roam-body-main {
+          border: 1px solid var(--color-subtle);
+          border-bottom: none;
+          border-radius: 12px 12px 0 0; /* round off corners */
+          /* offset-x | offset-y | blur-radius | spread-radius | color */
+          margin: 0px 8px; /* add space to show shadow */
+          box-shadow: 0px 0px 20px 3px grey;
+          background: var(--bg-main-color);
+        }
+      }
+      > #right-sidebar {
+        background: var(--bg-right);
+      }
+    }
+  }
+}
+
+@mixin regular-layout {
+  #app .roam-body .roam-app {
+    background: var(--bg-main-color);
+
+    // level 2: leftbar, right-area
+    > .roam-sidebar-container,
+    > .roam-sidebar-container > .roam-sidebar-content {
+      background: var(--bg--left) !important;
+    }
+    > div.flex-h-box {
+      // level 3: editor & topbar, rightbar
+      > .roam-main {
+        // level 4: topbar, roam-body-main
+        > .roam-topbar {
+          background: var(--bg-main-color);
+        }
+        // level 5
+        > .roam-body-main {
+          background: var(--bg-main-color);
+        }
+      }
+      > #right-sidebar {
+        background: var(--bg--right);
+      }
+    }
+  }
+}
+
+// @include better-roam-layout();
+@include regular-layout();

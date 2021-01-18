@@ -107,7 +107,7 @@ $bg--popover: #{$palette_accent};
 $bg--popover-hover: #{$palette_accent-lighter};
 $popover-contrast: #{setContrast($palette_accent)};
 
-$page-filter-btns-text: $bg--popover-contrast;
+$page-filter-btns-text: $popover-contrast;
 $page-filter-btns-bg: radial-gradient($bg--popover), white;
 $page-filter-btns-text-hover: $palette_theme;
 $page-filter-btns-bg-hover: radial-gradient($bg--popover, black);

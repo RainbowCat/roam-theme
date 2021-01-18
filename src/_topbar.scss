@@ -40,8 +40,8 @@
       padding: $searchbar-padding-tb $searchbar-padding-lr; // padding around placeholder text
     }
     .bp3-overlay {
-      top: calc($searchbar-top + $searchbar-height + 2 * $searchbar-padding-tb);
-      width: calc($searchbar-width + 2 * $searchbar-padding-lr + 2px); // 2px for border
+      top: calc(#{$searchbar-top} + #{$searchbar-height} + 2 * #{$searchbar-padding-tb});
+      width: calc(#{$searchbar-width} + 2 * #{$searchbar-padding-lr} + 2px); // 2px for border
       > .bp3-transition-container {
         transform: none !important; // turn off animation
       }
