@@ -1,19 +1,35 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
+.roam-sidebar-container div,
 [id^="block-input-"],
-[class|="bp3"]:not(.bp3-icon),
-.roam-sidebar-container div {
+[class|="bp3"] {
   @include font-family;
+}
+[class|="bp3-icon"] {
+  font-family: "Icons16", sans-serif;
 }
 
 .roam-body .roam-app h1 {
   color: unset;
 }
+
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
   //code block button
   z-index: 10 !important;
 }
+
+// .roam-block-container:not(.kanban-board) {
+.roam-block-container,
+.rm-block-text {
+  max-width: 100%;
+}
+
+.kanban-board {
+  max-width: none;
+  overflow: scroll;
+}
+
 /*------------------------------------
 # Workspace Layout
 ------------------------------------*/
@@ -80,9 +96,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
     > #right-sidebar {
     }
   }
-}
-.roam-block-container:not(.kanban-board) {
-  max-width: 100%;
 }
 
 /*------------------------------------

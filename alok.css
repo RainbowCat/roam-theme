@@ -54,10 +54,14 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
+.roam-sidebar-container div,
 [id^=block-input-],
-[class|=bp3]:not(.bp3-icon),
-.roam-sidebar-container div {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+[class|=bp3] {
+  font-family: "Ubuntu", Verdana, sans-serif;
+}
+
+[class|=bp3-icon] {
+  font-family: "Icons16", sans-serif;
 }
 
 .roam-body .roam-app h1 {
@@ -66,6 +70,16 @@
 
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
   z-index: 10 !important;
+}
+
+.roam-block-container,
+.rm-block-text {
+  max-width: 100%;
+}
+
+.kanban-board {
+  max-width: none;
+  overflow: scroll;
 }
 
 /*------------------------------------
@@ -111,36 +125,32 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > #buffer {
   visibility: hidden;
 }
-.roam-block-container:not(.kanban-board) {
-  max-width: 100%;
-}
-
 /*------------------------------------
 # Workspace Text
 ------------------------------------*/
 #app .roam-body .roam-app {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 #app .roam-body .roam-app > .roam-sidebar-container,
 #app .roam-body .roam-app > .roam-sidebar-container > .roam-sidebar-content {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-topbar {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
-  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-family: "Ubuntu", Verdana, sans-serif;
   color: #eaeef0;
 }
 

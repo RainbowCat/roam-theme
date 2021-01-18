@@ -6,7 +6,7 @@
 $font-fallback: Verdana, sans-serif;
 
 @mixin font_family {
-  font-family: "Ubuntu", $font-fallback !important;
+  font-family: "Ubuntu", $font-fallback;
 }
 
 @mixin font_title {
