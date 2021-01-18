@@ -1,13 +1,17 @@
 /*------------------------------------
 # TEXT
 ------------------------------------*/
+html,
+body,
 .roam-body .roam-app {
-  h1,
-  .rm-block-main,
-  .rm-ref-page-view,
-  .rm-caret:before {
-    @include font_body;
-    color: $main_text-color;
+  .rm-block__self .rm-block__input,
+  input,
+  textarea,
+  div,
+  span {
+    &:not([class*="bp3-icon"]):not([class*="bp3-button"]):not([class*="bp3-minimal"]) {
+      @include font-family;
+    }
   }
 }
 
@@ -30,7 +34,7 @@
 }
 
 // HACK - so titles won't shift //TODO
-$title-size: 26px;
+// $title-size: 26px;
 
 $heading1-size: 22px;
 $heading1-margin: -2px;
@@ -42,54 +46,50 @@ $heading3-size: 18px;
 $heading3-margin: -1px;
 
 // headings
-.rm-title-display,
+h1.rm-title-display,
 .rm-title-textarea,
 .roam-log-page h1.level2 {
+  color: $main_text-color !important;
   @include font_title;
-  height: auto !important;
-  font-size: 26px !important;
 }
 
 .rm-heading-level-1 > .rm-block-main {
+  @include font_heading(2);
+  color: $main_text-color;
   span {
     margin-top: $heading1-margin !important;
   }
-  div,
-  textarea {
-    @include font_heading;
-    font-size: $heading1-size !important;
-  }
 }
-
 .rm-heading-level-2 > .rm-block-main {
+  @include font_heading(2);
+  color: $main_text-color;
   span {
     margin-top: $heading2-margin !important;
   }
-  div,
-  textarea {
-    @include font_heading;
-    font-size: $heading2-size !important;
-  }
 }
-
 .rm-heading-level-3 > .rm-block-main {
+  @include font_heading(2);
+  color: $main_text-color;
   span {
     margin-top: $heading3-margin !important;
-  }
-  div,
-  textarea {
-    @include font_heading;
-    font-size: $heading3-size !important;
   }
 }
 
 /*---------------------------------- 
     #BULLETS & NEST LINE
 ------------------------------------*/
+.rm-caret:before {
+  color: $main_text-color;
+}
+
 .controls .opacity-none,
 .rm-block__controls .opacity-none {
   opacity: 0.3;
 }
+
+// .rm-bullet .bp3-popover-wrapper .bp3-popover-target {
+//   place-self: center;
+// }
 
 .rm-bullet__inner {
   /* bullet */
@@ -271,7 +271,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   border: 1px solid $palette_white;
 
   button.bp3-button.bp3-minimal {
-    color: white !important;
+    color: white !important; //TODO
   }
 
   > .rm-reference-container,
@@ -313,6 +313,10 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 /*------------------------------------
 # BLOCKS
 ------------------------------------*/
+.rm-block-children.rm-level-0 {
+  margin-left: 0px;
+}
+
 .rm-block,
 .roam-block,
 .rm-block-children,
@@ -357,6 +361,11 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 .bp3-popover {
   color: $popover_text;
   background: $popover_bg;
+
+  div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
+    color: $popover_text !important;
+  }
+
   & > &-content {
     background-color: $popover_bg;
     color: $popover_text;
@@ -372,8 +381,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   .bp3-button {
     // tag selection buttons in page filter
     // add dimension to buttons
-    background: $page-filter-btns-text;
-    color: $page-filter-btns-bg;
+    color: $page-filter-btns-text;
+    background: $page-filter-btns-bg;
     &:hover {
       color: $page-filter-btns-text-hover !important;
       background: $page-filter-btns-bg-hover;
@@ -386,34 +395,40 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   .bp3-menu,
   .roam-sidebar-container .bp3-menu {
     background: $popover_bg;
-    &.rm-graph-dropdown {
-      // graph menu
-      .menu-title {
-        color: $palette_theme;
+    color: $popover_text;
+  }
+  .bp3-menu .bp3-menu-item {
+    color: $popover_text;
+  }
+  .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
+    // graph menu
+    .menu-title {
+      color: setContrast($popover_bg);
+    }
+    .menu-item {
+      color: setContrast($popover_bg);
+      margin-top: 2px;
+    }
+    .setting {
+      a {
+        color: setContrast($popover_bg);
       }
-      .menu-item {
-        color: $palette_accent;
-      }
-      .setting {
-        a {
-          color: $palette_theme;
-        }
-        &:hover {
-          color: $palette_accent;
-        }
-      }
-      .signout {
-        color: $palette_theme;
+      &:hover {
+        color: lighten(setContrast($popover_bg), 0.2);
       }
     }
-    // code-area language menu
-    background-color: $popover_bg !important;
-    color: $popover_text;
-    .bp3-menu-item {
-      color: $palette_white;
+    .signout {
+      color: setContrast($popover_bg);
     }
   }
+  // code-area language menu
+  background-color: $popover_bg !important;
+  color: $popover_text;
+  .bp3-menu-item {
+    color: $palette_white;
+  }
 }
+
 .bp3-elevation-3 {
   // slash menu
   background-color: $popover_bg !important;

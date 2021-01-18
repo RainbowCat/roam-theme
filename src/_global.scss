@@ -1,25 +1,25 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
-*:not(html):not(body) {
-  box-sizing: border-box;
-  vertical-align: text-top;
-  line-height: 1.2em !important;
+*:not([class|="bp3"]):not([class|="codemirror"]) {
+  // box-sizing: border-box;
+  // vertical-align: text-top;
+  line-height: 1.2em;
+  // &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
+  max-height: 100%;
+  max-width: 100%;
+  // text-align: inherit;
+  // vertical-align: inherit;
+  // }
+  // div,
+  // span {
+  color: inherit;
+  font: inhert;
+  // }
+}
 
-  &:not([class*="bp3-icon"]) {
-    // @include font-family;
-    font-family: "Ubuntu", monospace; //debug
-  }
-  &:not(.roam-topbar[class*="bp3"]):not([class*="CodeMirror"]) {
-    max-height: 100%;
-    max-width: 100%;
-    // text-align: inherit;
-    // vertical-align: inherit;
-  }
-
-  span {
-    color: inherit !important;
-  }
+.roam-body .roam-app h1 {
+  color: unset;
 }
 
 /*------------------------------------
@@ -76,7 +76,7 @@
           > .roam-article {
             margin: 0px;
             padding: 0px;
-            padding-left: 20px;
+            // padding-left: 20px;
           }
         }
 
@@ -91,6 +91,42 @@
 }
 .roam-block-container {
   max-width: 100%;
+}
+
+/*------------------------------------
+# Workspace Text
+------------------------------------*/
+#app .roam-body .roam-app {
+  @include font-family;
+  color: $main_text-color;
+
+  // level 2: leftbar, right-area
+  > .roam-sidebar-container,
+  > .roam-sidebar-container > .roam-sidebar-content {
+    @include font-family;
+    color: $main_text-color;
+  }
+  > div.flex-h-box {
+    // level 3: editor & topbar, rightbar
+    > .roam-main {
+      @include font-family;
+      color: $main_text-color;
+      // level 4: topbar, roam-body-main
+      > .roam-topbar {
+        @include font-family;
+        color: $main_text-color;
+      }
+      // level 5
+      > .roam-body-main {
+        @include font-family;
+        color: $main_text-color;
+      }
+    }
+    > #right-sidebar {
+      @include font-family;
+      color: $main_text-color;
+    }
+  }
 }
 
 /*------------------------------------
