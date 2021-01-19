@@ -140,11 +140,11 @@ $page-filter-btns-text-hover: $palette_theme;
 $page-filter-btns-bg-hover: radial-gradient($popover_bg, black);
 
 /* datepicker */
-$datepicker_bg: pink;
-$datepicker_day-wrapper: #36393c;
-$datepicker_altfont-color: #545d63;
-$datepicker_hover-bg: #0073f9;
-$datepicker_hover-text: white;
+$datepicker_bg: $palette_theme;
+$datepicker_text-day: $palette_theme-lighter;
+$datepicker_bg-today: $palette_accent;
+$datepicker_altfont-color: $palette_theme-darker;
+$datepicker_hover-bg: $palette_accent;
 
 /* code */
 $code-inline_bg: #222629;

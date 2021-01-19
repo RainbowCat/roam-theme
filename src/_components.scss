@@ -138,6 +138,25 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
+# Icons & Buttons
+------------------------------------*/
+.rm-block-main .bp3-button {
+  background: linear-gradient(
+    $palette_theme-lighter,
+    $palette_theme-darker
+  ) !important;
+  &:hover {
+    background: linear-gradient(
+      $palette_theme-darker,
+      $palette_theme-lighter
+    ) !important;
+  }
+  &:before {
+    color: setContrast($palette_theme);
+  }
+}
+
+/*------------------------------------
 # TAGS
 ------------------------------------*/
 .rm-page-ref-tag {
@@ -517,16 +536,32 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   background: $datepicker_bg;
   padding: 6px;
 }
-.bp3-html-select .bp3-icon {
-  /* month and year double carrots */
-  color: $datepicker_bg;
+.bp3-html-select select,
+.bp3-select select {
+  /* month, year text */
+  color: setContrast($datepicker_bg);
 }
-/* month back and forth bg color */
+
+// .bp3-datepicker-month-select select {
+//   // use margin instead of padding
+//   padding-right: 0px !important;
+//   margin-right: 16px;
+// }
+
+.bp3-html-select .bp3-icon {
+  /* month and year select */
+  color: opacify(setContrast($datepicker_bg), 0.3);
+}
+
+/* month back and forth carret bg color */
 button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
 button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
-  background: $datepicker_bg !important;
+  background: transparent !important;
+  svg {
+    color: setContrast($datepicker_bg) !important;
+  }
 }
-/* month back and forth carrot color / outside month date color */
+/* month back and forth carret color / outside month date color */
 span.bp3-icon.bp3-icon-chevron-left,
 span.bp3-icon.bp3-icon-chevron-right,
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
@@ -536,21 +571,24 @@ span.bp3-icon.bp3-icon-chevron-right,
 .bp3-html-select.bp3-minimal select:hover,
 .bp3-select.bp3-minimal select:hover {
   background: $datepicker_hover-bg;
-  color: $datepicker_hover-text;
+  color: setContrast($datepicker_hover-bg);
 }
 .bp3-datepicker .DayPicker-Weekday abbr[title] {
   /* abbreviated day titles */
   border-bottom: none;
   font-size: 13px;
-  color: $datepicker_altfont-color;
+  color: $datepicker_bg-today; //todo
   cursor: default;
 }
 .bp3-datepicker-caption + .bp3-divider {
   /* divider */
   border-bottom: none;
 }
+.bp3-datepicker .DayPicker-Day {
+  background: transparent;
+  color: $datepicker_text-day;
+}
 .bp3-datepicker .DayPicker-Day > div:first-child {
-  //todo
   /* date appearances */
   line-height: 1.15em;
   font-size: 14px;
@@ -559,17 +597,14 @@ span.bp3-icon.bp3-icon-chevron-right,
 .bp3-datepicker .DayPicker-Day:hover {
   /* hover background color */
   background: $datepicker_hover-bg;
-  color: $datepicker_hover-text;
+  color: setContrast($datepicker_hover-bg);
 }
 /* today bg color */
 .bp3-datepicker
   .DayPicker-Day.DayPicker-Day--isToday
   .bp3-datepicker-day-wrapper {
-  background: $datepicker_day-wrapper;
-}
-.bp3-html-select select,
-.bp3-select select {
-  color: $main_text-color;
+  background: $datepicker_bg-today;
+  color: setContrast($datepicker_bg-today);
 }
 
 /*---------------------------------- 
