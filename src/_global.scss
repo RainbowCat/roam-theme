@@ -43,6 +43,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-right: 0%;
 }
 
+[style^="margin-left"] {
+  margin-left: 0px !important;
+}
+
 /*------------------------------------
 # Workspace Layout
 ------------------------------------*/
