@@ -1,25 +1,34 @@
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
+html,
+body,
 .roam-sidebar-container div,
 [id^="block-input-"],
 [class|="bp3"] {
   @include font-family;
+  // color: $main_text-color;
 }
 [class|="bp3-icon"] {
   font-family: "Icons16", sans-serif;
+  // color: $main_text-color;
 }
 
 .roam-body .roam-app h1 {
   color: unset;
 }
 
+// div,
+// span {
+//   color: inherit;
+//   background: inherit;
+// }
+
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
   //code block button
   z-index: 10 !important;
 }
 
-// .roam-block-container:not(.kanban-board) {
 .roam-block-container,
 .rm-block-text {
   max-width: 100%;
@@ -28,6 +37,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 .kanban-board {
   max-width: none;
   overflow: scroll;
+}
+
+.rm-full-width {
+  margin-right: 0%;
 }
 
 /*------------------------------------

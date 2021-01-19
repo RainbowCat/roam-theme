@@ -179,14 +179,19 @@ $codemirror_qualifier: #d19a66;
 # sections
 ------------------------------------*/
 /* linked/unlinked references */
-$ref-header-color: $palette_white;
-$ref-header-underline-color: $palette_accent;
+$ref_bg: $palette_theme;
+$ref_text: setContrast($ref_bg);
+$ref_border: 1px solid $ref_text;
 
-$ref-item-page-color: $palette_white;
-$ref-item-parent-color: $palette_white;
-$ref-item-bg: $palette_theme;
-$ref-item-border-radius: $roundness;
-$ref-item-border: 1px solid $palette_white;
+$ref_header-color: $ref_text;
+$ref_header-underline: 1px solid $ref_text;
+
+$ref_item-bg: $ref_bg;
+
+$ref_item-border-radius: $roundness;
+
+$ref_item-page-color: $ref_text;
+$ref_item-parent-color: $ref_text;
 
 /* all pages */
 $allpages_row-divider: 1px solid #2d3133;

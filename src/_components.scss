@@ -244,16 +244,19 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 /*------------------------------------
 # Linked/Unlinked References
 ------------------------------------*/
-
 .rm-reference-main {
+  color: $ref_text;
+  background: $ref_bg;
+  border: $ref_border;
   padding: 5px 10px 5px 18px;
-  border: 1px solid $palette_white;
 
   button.bp3-button.bp3-minimal {
-    color: white !important; //TODO
+    color: $ref_text !important;
   }
 
+  // linked references
   > .rm-reference-container,
+  // unlinked references
   > div {
     margin-top: 10px;
 
@@ -261,30 +264,28 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
       > div[style*="color: rgb(206, 217, 224;"]:nth-child(3)
       strong {
       /* "Linked/Unlinked References" reference block header */
-      color: $ref-header-color;
-      border-bottom: 1px solid $ref-header-underline-color;
+      color: $ref_header-color;
+      border-bottom: $ref_header-underline;
     }
     .rm-ref-page-view {
       /* linked page */
       .rm-page__title {
-        color: $ref-item-page-color;
+        color: $ref_item-page-color;
       }
       .rm-zoom .rm-zoom-item {
         .parent-path-wrapper,
         .rm-mention-icon:before {
-          color: $ref-item-parent-color;
+          color: $ref_item-parent-color;
         }
       }
     }
 
     .rm-reference-item {
-      background: $palette_accent-darker;
-      color: setContrast($palette_accent-darker);
       /* footer reference box apperance */
-
-      background-color: $ref-item-bg;
-      border-radius: $ref-item-border-radius;
-      border: $ref-item-border;
+      background: $ref_item-bg;
+      color: setContrast($ref_item-bg);
+      border-radius: $roundness;
+      border: $ref_border;
     }
   }
 }
@@ -379,8 +380,12 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   }
   .bp3-menu .bp3-menu-item {
     color: $popover_text;
+    &:hover {
+      background: setContrast($popover_text);
+    }
   }
   .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
+    opacity: 1;
     // graph menu
     .menu-title {
       color: setContrast($popover_bg);
@@ -404,9 +409,6 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   // code-area language menu
   background-color: $popover_bg !important;
   color: $popover_text;
-  .bp3-menu-item {
-    color: $palette_white;
-  }
 }
 
 .bp3-elevation-3 {
@@ -463,6 +465,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
       background: $kanban_col-drag-bg;
     }
     .kanban-title {
+      color: setContrast($kanban_col-bg);
       text-align: center;
       border-bottom: $kanban_title-div;
       padding: 2px 8px;
@@ -478,6 +481,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
     }
     .kanban-card {
       background: $kanban_card-bg;
+      color: setContrast($kanban_card-bg);
       box-shadow: 0px 4px 7px -1px $kanban_card-shadow;
       border-radius: $roundness;
       border: $kanban_card-border;
