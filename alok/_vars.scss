@@ -91,9 +91,9 @@ $tagHover-border: 1px solid #44464887;
 ------------------------------------*/
 
 /* icons */
-$icons-bg-regular: $palette_accent;
+$icons-bg-regular: $palette_theme-lighter;
 $icons-bg-hover: $palette_accent-lighter;
-$icon-color: setContrast($palette_accent);
+$icon-color: setContrast($palette_theme);
 $icons-size: 24px;
 
 /* todos */
@@ -129,9 +129,9 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 $table_border: 1px solid setContrast($palette_theme);
 
 /* general popups */
-$popover_bg: $palette_accent;
+$popover_bg: $palette_theme-lighter;
 $popover_bg-hover: $palette_accent-lighter;
-$popover_text: setContrast($palette_accent);
+$popover_text: setContrast($palette_theme-lighter);
 
 /* page filter popup */
 $page-filter-btns-text: $popover_text;

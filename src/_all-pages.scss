@@ -73,9 +73,16 @@
     margin: 0px 2px;
     border-radius: 3px;
     transition: none;
+
     background: $icons-bg-regular !important;
+    &:before {
+      color: setContrast($icons-bg-regular) !important;
+    }
     &:hover {
       background: $icons-bg-hover !important;
+      &:before {
+        color: setContrast($icons-bg-hover) !important;
+      }
     }
   }
 }
