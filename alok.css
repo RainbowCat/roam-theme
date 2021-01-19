@@ -877,8 +877,6 @@ span.cm-qualifier {
   transform: none !important;
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper input#find-or-create-input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
   background: #0f243e;
   color: #eaeef0;
@@ -887,6 +885,8 @@ span.cm-qualifier {
   color: #eaeef0;
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-popover {
+  border: 1px solid white;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-popover .bp3-menu,
@@ -903,10 +903,14 @@ span.cm-qualifier {
   border-radius: 0px 0px 10px 10px !important;
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-popover-target input#find-or-create-input:focus {
+  border: 1px solid white !important;
+  border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 10px;
 }
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
   border-radius: 10px 10px 0px 0px;
+  border: 1px solid white;
+  border-bottom: 1px solid grey;
 }
 
 /* make all elements look like a button */
