@@ -75,8 +75,26 @@ $checkbox_symbol-color: setContrast($palette_theme);
 $checkbox_symbol: "✔";
 
 /*------------------------------------
-# tags
+# bidirectional linking
 ------------------------------------*/
+$link-internal_text: $palette_accent;
+$link-internal_text-hover: $palette_accent;
+$link-external_text: $palette_accent-lighter;
+$link-external_text-hover: $palette_accent-lighter;
+
+/* page links */
+$page-link_text: $link-internal_text;
+$page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
+
+/* alias & external links */
+$add-glyph: false;
+
+/* block refs */
+
+/* attributes */
+$attribute_color: $main_text-color;
+
+/* tags */
 $tag_font-color: $palette_grey;
 $tag_bg-color: transparent;
 $tag_border-radius: 10px;
@@ -89,7 +107,6 @@ $tagHover_border: 1px solid $palette_grey;
 /*------------------------------------
 # components
 ------------------------------------*/
-
 /* icons */
 $icons-bg-regular: $palette_theme-lighter;
 $icons-bg-hover: $palette_accent-lighter;

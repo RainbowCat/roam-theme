@@ -28,8 +28,13 @@
 # checkboxes
 ------------------------------------*/
 /*------------------------------------
-# tags
+# bidirectional linking
 ------------------------------------*/
+/* page links */
+/* alias & external links */
+/* block refs */
+/* attributes */
+/* tags */
 /*------------------------------------
 # components
 ------------------------------------*/
@@ -68,6 +73,12 @@ body,
 
 .roam-body .roam-app h1 {
   color: unset;
+}
+
+div,
+span {
+  color: inherit;
+  background: transparent;
 }
 
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
@@ -218,9 +229,13 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 /* highlighted text */
 .rm-highlight {
   margin: 0px;
-  background: #9dcee7;
+  background: #9dcee7 !important;
   color: #00000f !important;
   padding: 2px 3px;
+}
+
+.rm-highlight span {
+  color: #00000f !important;
 }
 
 h1.rm-title-display,
@@ -371,16 +386,31 @@ blockquote.rm-bq {
 /*------------------------------------
 # ATTRIBUTE
 ------------------------------------*/
+.rm-attr-ref {
+  font-family: "Ubuntu", Verdana, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: #a6b7bf;
+}
+
+.rm-attr-ref:hover {
+  cursor: pointer;
+}
+
+.rm-block-ref span .rm-attr-ref {
+  pointer-events: pointer;
+}
+
 /*------------------------------------
 # Page Links
 ------------------------------------*/
 .rm-page-ref--link {
   /* linked page name text */
-  color: #a6b7bf;
+  color: #9dcee7;
 }
 .rm-page-ref__brackets {
   /* linked page brackes */
-  color: #a6b7bf;
+  color: rgba(157, 206, 231, 0.7);
 }
 
 /*------------------------------------

@@ -15,9 +15,13 @@
 /* highlighted text */
 .rm-highlight {
   margin: 0px;
-  background: $highlight-bg;
+  background: $highlight-bg !important;
   color: $highlight-text !important;
   padding: 2px 3px;
+}
+
+.rm-highlight span {
+  color: $highlight-text !important;
 }
 
 // headings
@@ -182,6 +186,14 @@ blockquote.rm-bq {
 # ATTRIBUTE
 ------------------------------------*/
 .rm-attr-ref {
+  @include font_bold;
+  color: $attribute_color;
+}
+.rm-attr-ref:hover {
+  cursor: pointer;
+}
+.rm-block-ref span .rm-attr-ref {
+  pointer-events: pointer;
 }
 
 /*------------------------------------
@@ -190,11 +202,11 @@ blockquote.rm-bq {
 .rm-page-ref {
   &--link {
     /* linked page name text */
-    color: setContrast($palette_theme);
+    color: $page-link_text;
   }
   &__brackets {
     /* linked page brackes */
-    color: opacify(setContrast($palette_theme), 0.3);
+    color: $page-link_brackets;
   }
 }
 

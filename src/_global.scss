@@ -18,11 +18,11 @@ body,
   color: unset;
 }
 
-// div,
-// span {
-//   color: inherit;
-//   background: inherit;
-// }
+div,
+span {
+  color: inherit;
+  background: transparent;
+}
 
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
   //code block button
