@@ -4,7 +4,7 @@
 $roundness: 5px;
 
 $main_subtle-color: color.change($palette_theme, $alpha: 0.5);
-$main_bg: $palette_theme;
+$main_bg: $palette_theme-darker;
 $main_text-color: setContrast($palette_theme);
 
 /*------------------------------------
@@ -66,7 +66,7 @@ $checkbox_width: 14px;
 $checkbox_border-radius: 4px;
 
 $checkbox_border-notdone: 1px solid $palette_black;
-$checkbox_bg-notdone: opacify($palette_white, 0.5);
+$checkbox_bg-notdone: color.adjust($palette_white, $alpha: -0.5);
 
 $checkbox_border-done: 1px solid $palette_white;
 $checkbox_bg-done: $palette_accent;
@@ -77,14 +77,14 @@ $checkbox_symbol: "✔";
 /*------------------------------------
 # tags
 ------------------------------------*/
-$tag-font-color: #515355;
-$tag-bg-color: #24272a;
-$tag-border-radius: 10px;
-$tag-border: 1px solid #35373996;
-$tag-padding: 1px 5px 2px;
-$tagHover-font-color: #484a4c;
-$tagHover-bg-color: #2d3033;
-$tagHover-border: 1px solid #44464887;
+$tag_font-color: $palette_grey;
+$tag_bg-color: transparent;
+$tag_border-radius: 10px;
+$tag_border: none;
+$tag_padding: none;
+$tagHover_font-color: $palette_grey;
+$tagHover_bg-color: transparent;
+$tagHover_border: 1px solid $palette_grey;
 
 /*------------------------------------
 # components
@@ -179,15 +179,21 @@ $codemirror_qualifier: #d19a66;
 # sections
 ------------------------------------*/
 /* linked/unlinked references */
-$ref_bg: $palette_theme;
+$ref_bg: transparent;
 $ref_text: setContrast($ref_bg);
-$ref_border: 1px solid $ref_text;
+$ref_border: none;
 
-$ref_header-color: $ref_text;
-$ref_header-underline: 1px solid $ref_text;
+$ref_linked-header-color: $ref_text;
+@debug $ref_linked-header-color;
+$ref_unlinked-header-color: color.adjust($ref_text, $alpha: -0.5);
+@debug $ref_unlinked-header-color;
 
-$ref_item-bg: $ref_bg;
+$ref_linked-border: 1px solid $ref_linked-header-color;
+$ref_unlinked-border: 1px solid $ref_unlinked-header-color;
+// $ref_header-underline: 1px solid $ref_text;
 
+$ref_item-bg: transparent;
+$ref_item-border: none;
 $ref_item-border-radius: $roundness;
 
 $ref_item-page-color: $ref_text;

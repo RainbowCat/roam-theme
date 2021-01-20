@@ -35,7 +35,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 }
 
 // block spacing
-.roam-block-container {
+.roam-article > div:first-child .roam-block-container {
   margin-top: 7px;
   margin-bottom: 7px;
 }
@@ -61,11 +61,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 [style^="margin-left: -27px"] {
   margin-left: 0px !important;
 }
-
-// .CodeMirror pre.CodeMirror-line,
-// .CodeMirror pre.CodeMirror-line-like {
-//   margin-left: 50px !important;
-// }
 
 /*------------------------------------
 # Workspace Layout

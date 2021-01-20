@@ -4,7 +4,7 @@
 $roundness: 5px;
 
 $main_subtle-color: color.change($palette_theme, $alpha: 0.5);
-$main_bg-color: $palette_theme-darker;
+$main_bg: $palette_theme;
 $main_text-color: setContrast($palette_theme);
 
 /*------------------------------------
@@ -91,9 +91,9 @@ $tagHover-border: 1px solid #44464887;
 ------------------------------------*/
 
 /* icons */
-$icons-bg-regular: $palette_accent;
+$icons-bg-regular: $palette_theme-lighter;
 $icons-bg-hover: $palette_accent-lighter;
-$icon-color: setContrast($palette_accent);
+$icon-color: setContrast($palette_theme);
 $icons-size: 24px;
 
 /* todos */
@@ -113,10 +113,25 @@ $block_highlight-embed: $palette_accent-lighter;
 /*------------------------------------
 # features
 ------------------------------------*/
+/* kanban */
+$kanban_board-bg: transparent;
+$kanban_board-border: setContrast($palette_theme);
+
+$kanban_title-div: 1px solid setContrast($palette_theme);
+$kanban_col-bg: transparent;
+$kanban_col-drag-bg: $palette_theme-lighter;
+
+$kanban_card-bg: $palette_theme;
+$kanban_card-shadow: $palette_theme-darker;
+$kanban_card-border: 1px solid setContrast($palette_theme);
+
+/* table */
+$table_border: 1px solid setContrast($palette_theme);
+
 /* general popups */
-$popover_bg: $palette_accent;
+$popover_bg: $palette_theme-lighter;
 $popover_bg-hover: $palette_accent-lighter;
-$popover_text: setContrast($palette_accent);
+$popover_text: setContrast($palette_theme-lighter);
 
 /* page filter popup */
 $page-filter-btns-text: $popover_text;
@@ -125,66 +140,64 @@ $page-filter-btns-text-hover: $palette_theme;
 $page-filter-btns-bg-hover: radial-gradient($popover_bg, black);
 
 /* datepicker */
-$datepicker-bg: pink;
-$datepicker-day-wrapper: #36393c;
-$datepicker-altfont-color: #545d63;
-$datepicker-hover-bg: #0073f9;
-$datepicker-hover-text: white;
-
-/* kanban */
-$bg-kanban-card: $palette_theme;
-$bg-kanban-card-shadow: $palette_theme-darker;
-$bg-kanban-col-drag: $palette_theme-lighter;
-$bg-kanban: transparent;
-$kanban-div: setContrast($palette_theme);
-$kanban-border: setContrast($palette_theme);
+$datepicker_bg: $palette_theme;
+$datepicker_text-day: $palette_theme-lighter;
+$datepicker_bg-today: $palette_accent;
+$datepicker_altfont-color: $palette_theme-darker;
+$datepicker_hover-bg: $palette_accent;
 
 /* code */
-$code-bg: #222629;
-$code-font: "Source Code Pro", "Courier New", Courier, monospace;
-$code-font-color: #dcdedd;
-$code-font-size: 1em;
-$code-border: 1px solid #34373b;
+$code-inline_bg: #222629;
+$code-inline_font: "Source Code Pro", "Courier New", Courier, monospace;
+$code-inline_font-color: #dcdedd;
+$code-inline_font-size: 1em;
+$code-inline_border: 1px solid #34373b;
 
-$codemirror-bg: #222629;
-$codemirror-border-color: #323438;
-$codemirror-border-radius: 3px;
-$codemirror-linenumber: #515355;
-$code-matchingbracket-color: #ead64c;
+$codemirror_bg: #222629;
+$codemirror_border-color: #323438;
+$codemirror_border-radius: 3px;
+$codemirror_linenumber: #515355;
+$code-inline_matchingbracket-color: #ead64c;
 
-$cm-comment: #7f848e;
-$cm-def: #d19a66;
-$cm-keyword: #c678dd;
-$cm-callee: #56b6c2;
-$cm-operator: #56b6c2;
-$cm-builtin: #56b6c2;
-$cm-string: #98c379;
-$cm-variable-3: #56b6c2;
-$cm-variable-2: #e06c75;
-$cm-variable: #e5c07b;
-$cm-tag: #e06c75;
-$cm-property: #61afef;
-$cm-number: #d19a66;
-$cm-atom: #d19a66;
-$cm-qualifier: #d19a66;
+$codemirror_comment: #7f848e;
+$codemirror_def: #d19a66;
+$codemirror_keyword: #c678dd;
+$codemirror_callee: #56b6c2;
+$codemirror_operator: #56b6c2;
+$codemirror_builtin: #56b6c2;
+$codemirror_string: #98c379;
+$codemirror_variable-3: #56b6c2;
+$codemirror_variable-2: #e06c75;
+$codemirror_variable: #e5c07b;
+$codemirror_tag: #e06c75;
+$codemirror_property: #61afef;
+$codemirror_number: #d19a66;
+$codemirror_atom: #d19a66;
+$codemirror_qualifier: #d19a66;
 
 /*------------------------------------
 # sections
 ------------------------------------*/
 /* linked/unlinked references */
-$ref-header-color: $palette_white;
-$ref-header-underline-color: $palette_accent;
+$ref_bg: $palette_theme;
+$ref_text: setContrast($ref_bg);
+$ref_border: 1px solid $ref_text;
 
-$ref-item-page-color: $palette_white;
-$ref-item-parent-color: $palette_white;
-$ref-item-bg: $palette_theme;
-$ref-item-border-radius: $roundness;
-$ref-item-border: 1px solid $palette_white;
+$ref_header-color: $ref_text;
+$ref_header-underline: 1px solid $ref_text;
+
+$ref_item-bg: $ref_bg;
+
+$ref_item-border-radius: $roundness;
+
+$ref_item-page-color: $ref_text;
+$ref_item-parent-color: $ref_text;
 
 /* all pages */
-$allpage-bottom-border-color: #2d3133;
-$pages-header-row: $palette_white;
-$allpages_mentions-level-bg: #3c96ff;
-$allpages_mentions-level1-bg: #3d71ff;
-$allpages_mentions-level2-bg: #3c50ff;
-$allpages_mentions-font-color: grey;
+$allpages_row-divider: 1px solid #2d3133;
+
+$allpages_title-bg: $palette_accent-lighter;
+$allpages_title-text: setContrast($palette_accent-lighter);
+
+$allpages_mentions_bg: $palette_accent;
+$allpages_mentions-text: setContrast($palette_accent);

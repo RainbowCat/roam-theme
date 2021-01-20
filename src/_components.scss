@@ -160,21 +160,21 @@ blockquote.rm-bq {
 # TAGS
 ------------------------------------*/
 .rm-page-ref-tag {
-  color: $tag-font-color !important;
-  font-weight: 400;
-  background-color: $tag-bg-color;
-  border-radius: $tag-border-radius;
-  border: $tag-border;
-  padding: $tag-padding;
+  color: $tag_font-color !important;
+  // font-weight: 400;
+  background-color: $tag_bg-color;
+  border-radius: $tag_border-radius;
+  border: $tag_border;
+  padding: $tag_padding;
   text-decoration: none;
 }
 .rm-page-ref-tag:hover {
-  color: $tagHover-font-color !important;
-  font-weight: 400;
-  background-color: $tagHover-bg-color;
-  border-radius: $tag-border-radius;
-  border: $tagHover-border;
-  padding: $tag-padding;
+  color: $tagHover_font-color !important;
+  // font-weight: 400;
+  background-color: $tagHover_bg-color;
+  border-radius: $tag_border-radius;
+  border: $tagHover_border;
+  padding: $tag_padding;
   text-decoration: none;
 }
 
@@ -273,39 +273,47 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
     color: $ref_text !important;
   }
 
-  // linked references
-  > .rm-reference-container,
-  // unlinked references
-  > div {
+  > div > div.rm-reference-container {
+    // linked references
     margin-top: 10px;
+    border: $ref_linked-border;
 
-    > .flex-h-box
-      > div[style*="color: rgb(206, 217, 224;"]:nth-child(3)
-      strong {
-      /* "Linked/Unlinked References" reference block header */
-      color: $ref_header-color;
-      border-bottom: $ref_header-underline;
+    div[style*="color: rgb(206, 217, 224);"] > strong {
+      /* "Linked References" reference block header */
+      color: $ref_linked-header-color !important;
+      // border-bottom: $ref_header-underline;
     }
-    .rm-ref-page-view {
-      /* linked page */
-      .rm-page__title {
-        color: $ref_item-page-color;
-      }
-      .rm-zoom .rm-zoom-item {
-        .parent-path-wrapper,
-        .rm-mention-icon:before {
-          color: $ref_item-parent-color;
-        }
-      }
-    }
+  }
+  > div > div {
+    // unlinked references
+    margin-top: 10px;
+    border: $ref_unlinked-border;
 
-    .rm-reference-item {
-      /* footer reference box apperance */
-      background: $ref_item-bg;
-      color: setContrast($ref_item-bg);
-      border-radius: $roundness;
-      border: $ref_border;
+    strong[style*="color: rgb(206, 217, 224);"] {
+      /* "Unlinked References" reference block header */
+      color: $ref_unlinked-header-color !important;
+      // border-bottom: $ref_unlinked-header-underline;
     }
+  }
+
+  .rm-ref-page-view {
+    /* linked page */
+    .rm-page__title {
+      color: $ref_item-page-color;
+    }
+    .rm-zoom .rm-zoom-item {
+      .parent-path-wrapper,
+      .rm-mention-icon:before {
+        color: $ref_item-parent-color;
+      }
+    }
+  }
+  .rm-reference-item {
+    /* footer reference box apperance */
+    background: $ref_item-bg;
+    color: setContrast($ref_item-bg);
+    border-radius: $roundness;
+    border: $ref_item-border;
   }
 }
 
