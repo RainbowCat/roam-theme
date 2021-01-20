@@ -414,11 +414,15 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
       margin-top: 2px;
     }
     .setting {
+      background: transparent;
       a {
         color: setContrast($popover_bg);
+        background: $popover_bg;
       }
       &:hover {
         color: lighten(setContrast($popover_bg), 0.2);
+        background: $popover_bg;
+        border: 1px solid lighten(setContrast($popover_bg), 0.2);
       }
     }
     .signout {

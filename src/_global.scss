@@ -34,6 +34,17 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   max-width: 100%;
 }
 
+// block spacing
+.roam-block-container {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+// indent size
+.roam-block-container > .rm-block-children {
+  margin-left: 10px;
+}
+
 .kanban-board {
   max-width: none;
   overflow: scroll;
@@ -43,9 +54,18 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-right: 0%;
 }
 
-[style^="margin-left"] {
+.rm-zoom.zoom-path-view {
+  margin-top: 0px !important;
+}
+
+[style^="margin-left: -27px"] {
   margin-left: 0px !important;
 }
+
+// .CodeMirror pre.CodeMirror-line,
+// .CodeMirror pre.CodeMirror-line-like {
+//   margin-left: 50px !important;
+// }
 
 /*------------------------------------
 # Workspace Layout
@@ -89,7 +109,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       }
       // level 5
       > .roam-body-main {
-        overflow: hidden scroll;
+        overflow: scroll;
         padding: $editor-margin; // add space surrounding editor
 
         > div:first-child {

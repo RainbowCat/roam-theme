@@ -79,6 +79,15 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   max-width: 100%;
 }
 
+.roam-block-container {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.roam-block-container > .rm-block-children {
+  margin-left: 10px;
+}
+
 .kanban-board {
   max-width: none;
   overflow: scroll;
@@ -88,7 +97,11 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-right: 0%;
 }
 
-[style^=margin-left] {
+.rm-zoom.zoom-path-view {
+  margin-top: 0px !important;
+}
+
+[style^="margin-left: -27px"] {
   margin-left: 0px !important;
 }
 
@@ -121,7 +134,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   height: 45px;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
-  overflow: hidden scroll;
+  overflow: scroll;
   padding: 20px 30px;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
@@ -575,11 +588,17 @@ blockquote.rm-bq {
   color: #eaeef0;
   margin-top: 2px;
 }
+.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting {
+  background: transparent;
+}
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting a {
   color: #eaeef0;
+  background: #1e487b;
 }
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting:hover {
   color: #ebeff0;
+  background: #1e487b;
+  border: 1px solid #ebeff0;
 }
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .signout {
   color: #eaeef0;
