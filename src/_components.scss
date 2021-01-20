@@ -149,14 +149,26 @@ blockquote.rm-bq {
     $palette_theme-lighter,
     $palette_theme-darker
   ) !important;
+  color: setContrast($palette_theme-darker) !important;
   &:hover {
     background: linear-gradient(
       $palette_theme-darker,
       $palette_theme-lighter
     ) !important;
   }
+  color: setContrast($palette_theme-darker) !important;
   &:before {
     color: setContrast($palette_theme);
+  }
+}
+
+.bp3-button.bp3-minimal.block-ref-count-button {
+  background: $palette_theme-lighter !important;
+  color: setContrast($palette_theme-lighter) !important;
+  border-radius: 50% !important; // make circle
+  &:hover {
+    background: $palette_accent-lighter !important;
+    color: setContrast($palette_accent-lighter) !important;
   }
 }
 
@@ -221,9 +233,7 @@ blockquote.rm-bq {
 .rm-block-ref:hover {
   background-color: $palette_theme;
 }
-.block-ref-count-button {
-  
-}
+
 /*------------------------------------
 # Alias
 ------------------------------------*/

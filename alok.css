@@ -100,6 +100,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-left: 10px;
 }
 
+.roam-block-container.rm-block.rm-block--open.rm-not-focused.block-bullet-view.block-border-left {
+  padding-right: 5px;
+}
+
 .kanban-board {
   max-width: none;
   overflow: scroll;
@@ -355,12 +359,24 @@ blockquote.rm-bq {
 ------------------------------------*/
 .rm-block-main .bp3-button {
   background: linear-gradient(#1e487b, #050c15) !important;
+  color: #a6b7bf !important;
+  color: #a6b7bf !important;
 }
 .rm-block-main .bp3-button:hover {
   background: linear-gradient(#050c15, #1e487b) !important;
 }
 .rm-block-main .bp3-button:before {
   color: #a6b7bf;
+}
+
+.bp3-button.bp3-minimal.block-ref-count-button {
+  background: #1e487b !important;
+  color: #a6b7bf !important;
+  border-radius: 50% !important;
+}
+.bp3-button.bp3-minimal.block-ref-count-button:hover {
+  background: #cbebfb !important;
+  color: #00000f !important;
 }
 
 /*------------------------------------

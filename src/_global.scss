@@ -50,6 +50,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-left: 10px;
 }
 
+.roam-block-container.rm-block.rm-block--open.rm-not-focused.block-bullet-view.block-border-left {
+  padding-right: 5px; // make space for ref count button
+}
+
 .kanban-board {
   max-width: none;
   overflow: scroll;
