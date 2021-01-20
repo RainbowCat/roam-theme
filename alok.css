@@ -669,6 +669,10 @@ blockquote.rm-bq {
 /*------------------------------------
 # KANBAN
 ------------------------------------*/
+.kanban-board .kanban-hint {
+  margin-top: 10px;
+}
+
 .kanban-board {
   padding: 2px;
   border: 1px solid #a6b7bf;

@@ -523,6 +523,10 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 /*------------------------------------
 # KANBAN
 ------------------------------------*/
+.kanban-board .kanban-hint {
+  margin-top: 10px;
+}
+
 .kanban-board {
   // max-width: 100%;
   // overflow: scroll;
