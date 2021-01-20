@@ -63,13 +63,13 @@ $checkbox_top: -1px;
 $checkbox_left: -2px;
 $checkbox_height: 14px;
 $checkbox_width: 14px;
+
 $checkbox_border-radius: 4px;
-
 $checkbox_border-notdone: 1px solid $palette_black;
-$checkbox_bg-notdone: opacify($palette_white, 0.5);
-
 $checkbox_border-done: 1px solid $palette_white;
+
 $checkbox_bg-done: $palette_accent;
+$checkbox_bg-notdone: color.adjust($palette_white, $alpha: -0.5);
 
 $checkbox_symbol-color: setContrast($palette_theme);
 $checkbox_symbol: "✔";

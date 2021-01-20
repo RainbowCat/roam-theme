@@ -38,12 +38,12 @@
 
   .bp3-control.bp3-checkbox .bp3-control-indicator {
     /* unchecked checkbox bg color */
-    background: $checkbox_color-notdone;
+    background: $checkbox_bg-notdone;
     border: none;
   }
   .bp3-control input:checked ~ .bp3-control-indicator {
     /* checked appearance */
-    background: $checkbox_color-done;
+    background: $checkbox_bg-done;
   }
 
   .rm-clickable-pill {

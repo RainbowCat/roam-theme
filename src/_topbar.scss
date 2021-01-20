@@ -56,7 +56,7 @@
     background: $palette_theme;
     color: setContrast($palette_theme);
     &::placeholder {
-      color: opacify(setContrast($palette_theme), 0.5);
+      color: color.adjust(setContrast($palette_theme), $alpha: -0.5);
     }
   }
   .bp3-overlay .bp3-popover {

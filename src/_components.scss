@@ -134,8 +134,8 @@ blockquote.rm-bq {
     /* done check symbol */
     content: $checkbox_symbol;
     color: $checkbox_symbol-color;
-    left: 0px;
-    top: -1px;
+    left: 0px; // override site settings
+    top: 0px; // override site settings
     border: none;
     transform: rotate(-10deg) scale(0.5);
   }
@@ -268,7 +268,9 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 #{$rm-block-selector} {
   a:not(.rm-alias--page) {
     /* only include external direct url and external alias */
-    @include glyph(before);
+    @if $add-glyph {
+      @include glyph(before);
+    }
   }
 }
 
@@ -489,6 +491,20 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 //     color: $c1 !important;
 //   }
 // }
+
+/*------------------------------------
+# QUERY
+------------------------------------*/
+.rm-query {
+  border: $query_border;
+  border-radius: $roundness;
+  padding-bottom: $query_padding-bottom;
+  .rm-query-title {
+    display: none;
+    background-color: $query-title_bg;
+    color: $query-title_text;
+  }
+}
 
 /*------------------------------------
 # KANBAN
