@@ -50,59 +50,34 @@ $highlight-bg: $palette_accent;
 $highlight-text: setContrast($palette_accent);
 
 /*------------------------------------
-# bullets
+# components
 ------------------------------------*/
+/* bullets */
 $bullet_color: $palette_accent;
 $bullet_border-closed: 4px solid $palette_accent-darker;
 $treeline: 1px solid setContrast($palette_theme);
 
-/*------------------------------------
-# checkboxes
-------------------------------------*/
+/* checkboxses & todos */
 $checkbox_top: -1px;
 $checkbox_left: -2px;
 $checkbox_height: 14px;
 $checkbox_width: 14px;
 
-$checkbox_border-radius: 4px;
-$checkbox_border-notdone: 1px solid $palette_black;
-$checkbox_border-done: 1px solid $palette_white;
+$checkbox_border-radius: $roundness;
+$checkbox_border-notdone: 1px solid red;
+$checkbox_border-done: 1px solid $palette_accent-darker;
 
-$checkbox_bg-done: $palette_accent;
-$checkbox_bg-notdone: color.adjust($palette_white, $alpha: -0.5);
+$checkbox_bg-notdone: transparent;
+$checkbox_bg-done: green;
 
-$checkbox_symbol-color: setContrast($palette_theme);
-$checkbox_symbol: "✔";
-
-/*------------------------------------
-# tags
-------------------------------------*/
-$tag-font-color: #515355;
-$tag-bg-color: #24272a;
-$tag-border-radius: 10px;
-$tag-border: 1px solid #35373996;
-$tag-padding: 1px 5px 2px;
-$tagHover-font-color: #484a4c;
-$tagHover-bg-color: #2d3033;
-$tagHover-border: 1px solid #44464887;
-
-/*------------------------------------
-# components
-------------------------------------*/
+$checkbox_symbol-color: setContrast($checkbox_bg-done);
+$checkbox_symbol: "✓";
 
 /* icons */
 $icons-bg-regular: $palette_theme-lighter;
 $icons-bg-hover: $palette_accent-lighter;
 $icon-color: setContrast($palette_theme);
 $icons-size: 24px;
-
-/* todos */
-$checkbox_color-notdone: $palette_accent;
-$checkbox_color-done: $palette_accent-darker;
-$checkbox_border-notdone: $palette_accent;
-$checkbox_border-done: $palette_accent-darker;
-$checkbox_bg-notdone: $palette_accent;
-$checkbox_bg-done: $palette_accent-darker;
 
 /* block highlights */
 $block_highlight-main: $palette_accent;
@@ -111,8 +86,44 @@ $block_highlight-linked-text: setContrast($palette_accent);
 $block_highlight-embed: $palette_accent-lighter;
 
 /*------------------------------------
+# bidirectional linking
+------------------------------------*/
+$link-internal_text: $palette_accent;
+$link-internal_text-hover: $palette_accent;
+$link-external_text: $palette_accent-lighter;
+$link-external_text-hover: $palette_accent-lighter;
+
+/* page links */
+$page-link_text: $link-internal_text;
+$page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
+
+/* alias & external links */
+$add-glyph: false;
+
+/* block refs */
+
+/* attributes */
+$attribute_color: $main_text-color;
+
+/* tags */
+$tag_font-color: $palette_grey;
+$tag_bg-color: transparent;
+$tag_border-radius: 10px;
+$tag_border: none;
+$tag_padding: none;
+$tagHover_font-color: $palette_grey;
+$tagHover_bg-color: transparent;
+$tagHover_border: 1px solid $palette_grey;
+
+/*------------------------------------
 # features
 ------------------------------------*/
+/* query */
+$query_border: $palette_theme;
+$query_padding-bottom: 5px;
+$query-title_bg: $palette_theme;
+$query-title_text: setContrast($query-title_bg);
+
 /* kanban */
 $kanban_board-bg: transparent;
 $kanban_board-border: setContrast($palette_theme);
@@ -129,15 +140,16 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 $table_border: 1px solid setContrast($palette_theme);
 
 /* general popups */
-$popover_bg: $palette_theme-lighter;
-$popover_bg-hover: $palette_accent-lighter;
-$popover_text: setContrast($palette_theme-lighter);
+$popover_bg: $palette_theme;
+$popover_bg-hover: $palette_accent;
+$popover_text: setContrast($popover_bg);
 
 /* page filter popup */
+$page-filter-btns-bg: $popover_bg;
 $page-filter-btns-text: $popover_text;
-$page-filter-btns-bg: radial-gradient($popover_bg), white;
-$page-filter-btns-text-hover: $palette_theme;
-$page-filter-btns-bg-hover: radial-gradient($popover_bg, black);
+
+$page-filter-btns-bg-hover: color.adjust($popover_bg, $lightness: 15%);
+$page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
 
 /* datepicker */
 $datepicker_bg: $palette_theme;
@@ -179,15 +191,19 @@ $codemirror_qualifier: #d19a66;
 # sections
 ------------------------------------*/
 /* linked/unlinked references */
-$ref_bg: $palette_theme;
+$ref_bg: transparent;
 $ref_text: setContrast($ref_bg);
-$ref_border: 1px solid $ref_text;
+$ref_border: none;
 
-$ref_header-color: $ref_text;
-$ref_header-underline: 1px solid $ref_text;
+$ref_linked-header-color: $ref_text;
+$ref_unlinked-header-color: color.adjust($ref_text, $alpha: -0.5);
 
-$ref_item-bg: $ref_bg;
+$ref_linked-border: 1px solid $ref_linked-header-color;
+$ref_unlinked-border: 1px solid $ref_unlinked-header-color;
+// $ref_header-underline: 1px solid $ref_text;
 
+$ref_item-bg: transparent;
+$ref_item-border: none;
 $ref_item-border-radius: $roundness;
 
 $ref_item-page-color: $ref_text;

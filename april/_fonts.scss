@@ -1,32 +1,44 @@
 /*-------------------------
 # FONTS
 -------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 $font-fallback: Verdana, sans-serif;
+$font-small: 10px;
+$font-regular: 15px;
+$font-large: 30px;
 
-@mixin font_title {
-  font_family: "Ubuntu", $font-fallback;
-  font_weight: 700;
+@mixin font_family {
+  font-family: "Ubuntu", $font-fallback;
 }
 
-@mixin font_heading {
-  font_family: "Ubuntu", $font-fallback;
-  font_weight: 700;
+@mixin font_title {
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+  font-size: $font-large !important;
+}
+
+@mixin font_heading($num) {
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+  font-size: $font-regular + (3-$num) * 2.2 !important;
 }
 
 @mixin font_body {
-  font_family: "Ubuntu", $font-fallback;
-  font_weight: 300;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 300 !important;
+  font-size: $font-regular !important;
 }
 
 @mixin font_italics {
-  font_family: "Ubuntu", $font-fallback;
-  font_weight: 400;
-  font_style: italic;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-size: $font-regular !important;
 }
 
 @mixin font_bold {
-  font_family: "Ubuntu", $font-fallback;
-  font_weight: 700;
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+  font-size: $font-regular !important;
 }
