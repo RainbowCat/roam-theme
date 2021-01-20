@@ -144,9 +144,17 @@
   //icon color
   [class~="bp3-icon"],
   .bp3-button.bp3-minimal {
+    //filter icon
     &:before {
       color: $icon-color;
       background: transparent;
+    }
+    &:hover:before {
+      .bp3-icon-filter,
+      .bp3-icon-search {
+        color: setContrast($icons-bg-hover) !important;
+      }
+      color: setContrast($icons-bg-hover) !important;
     }
   }
   .bp3-icon-filter,
@@ -161,6 +169,9 @@
     background: $icons-bg-regular !important;
     &:hover {
       background: $icons-bg-hover !important;
+      &:before {
+        color: setContrast($icons-bg-hover) !important;
+      }
     }
   }
 }

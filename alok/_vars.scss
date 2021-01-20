@@ -140,15 +140,16 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 $table_border: 1px solid setContrast($palette_theme);
 
 /* general popups */
-$popover_bg: $palette_theme-lighter;
-$popover_bg-hover: $palette_accent-lighter;
-$popover_text: setContrast($palette_theme-lighter);
+$popover_bg: $palette_theme;
+$popover_bg-hover: $palette_accent;
+$popover_text: setContrast($popover_bg);
 
 /* page filter popup */
+$page-filter-btns-bg: $popover_bg;
 $page-filter-btns-text: $popover_text;
-$page-filter-btns-bg: radial-gradient($popover_bg), white;
-$page-filter-btns-text-hover: $palette_theme;
-$page-filter-btns-bg-hover: radial-gradient($popover_bg, black);
+
+$page-filter-btns-bg-hover: color.adjust($popover_bg, $lightness: 15%);
+$page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
 
 /* datepicker */
 $datepicker_bg: $palette_theme;
