@@ -221,7 +221,9 @@ blockquote.rm-bq {
 .rm-block-ref:hover {
   background-color: $palette_theme;
 }
-
+.block-ref-count-button {
+  
+}
 /*------------------------------------
 # Alias
 ------------------------------------*/
@@ -290,7 +292,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 
   > div > div.rm-reference-container {
     // linked references
-    margin-top: 10px;
+    padding: 10px 5px;
+    margin: 5px 0px;
     border-radius: $roundness;
     border: $ref_linked-border;
 
@@ -302,7 +305,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   }
   > div > div {
     // unlinked references
-    margin-top: 10px;
+    padding: 10px 5px;
+    margin: 5px 0px;
     border-radius: $roundness;
     border: $ref_unlinked-border;
 

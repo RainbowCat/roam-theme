@@ -14,6 +14,11 @@ body,
   // color: $main_text-color;
 }
 
+ol,
+ul {
+  margin-top: initial;
+}
+
 .roam-body .roam-app h1 {
   color: unset;
 }
