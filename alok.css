@@ -439,6 +439,7 @@ blockquote.rm-bq {
   color: #a6b7bf;
   background: transparent;
   border: none;
+  border-radius: 5px;
   padding: 5px 10px 5px 18px;
 }
 .rm-reference-main button.bp3-button.bp3-minimal {
@@ -446,6 +447,7 @@ blockquote.rm-bq {
 }
 .rm-reference-main > div > div.rm-reference-container {
   margin-top: 10px;
+  border-radius: 5px;
   border: 1px solid #a6b7bf;
 }
 .rm-reference-main > div > div.rm-reference-container div[style*="color: rgb(206, 217, 224);"] > strong {
@@ -454,6 +456,7 @@ blockquote.rm-bq {
 }
 .rm-reference-main > div > div {
   margin-top: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(166, 183, 191, 0.5);
 }
 .rm-reference-main > div > div strong[style*="color: rgb(206, 217, 224);"] {

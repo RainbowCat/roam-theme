@@ -267,6 +267,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   color: $ref_text;
   background: $ref_bg;
   border: $ref_border;
+  border-radius: $roundness;
   padding: 5px 10px 5px 18px;
 
   button.bp3-button.bp3-minimal {
@@ -276,6 +277,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   > div > div.rm-reference-container {
     // linked references
     margin-top: 10px;
+    border-radius: $roundness;
     border: $ref_linked-border;
 
     div[style*="color: rgb(206, 217, 224);"] > strong {
@@ -287,6 +289,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   > div > div {
     // unlinked references
     margin-top: 10px;
+    border-radius: $roundness;
     border: $ref_unlinked-border;
 
     strong[style*="color: rgb(206, 217, 224);"] {
