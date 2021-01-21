@@ -382,20 +382,19 @@ blockquote.rm-bq {
 /*------------------------------------
 # TAGS
 ------------------------------------*/
-.rm-page-ref-tag {
+.rm-page-ref--tag {
   color: #626d6f !important;
   background-color: transparent;
-  border-radius: 10px;
   border: none;
+  border-radius: 5px;
   padding: none;
   text-decoration: none;
 }
-
-.rm-page-ref-tag:hover {
+.rm-page-ref--tag:hover {
   color: #626d6f !important;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 1px solid #626d6f;
+  background-color: #626d6f;
+  border: none;
+  border-radius: 5px;
   padding: none;
   text-decoration: none;
 }
@@ -467,10 +466,10 @@ blockquote.rm-bq {
 /*------------------------------------
 # GLYPH
 ------------------------------------*/
-.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), .roam-block-container :not(.rm-ref-page-view) a:not(.rm-alias--page) {
+.rm-block a:empty:not(.rm-alias--page), .roam-block a:empty:not(.rm-alias--page), .roam-block-container a:empty:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
-.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, .roam-block-container :not(.rm-ref-page-view) a:not(.rm-alias--page):before {
+.rm-block a:empty:not(.rm-alias--page):before, .roam-block a:empty:not(.rm-alias--page):before, .roam-block-container a:empty:not(.rm-alias--page):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";

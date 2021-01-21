@@ -7,6 +7,10 @@ $main_subtle-color: color.change($palette_theme, $alpha: 0.5);
 $main_bg: $palette_theme;
 $main_text-color: setContrast($main_bg);
 
+$font-size_small: 10px;
+$font-size_regular: 15px;
+$font-size_large: 30px;
+
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
@@ -52,10 +56,10 @@ $heading2_text-color: $main_text-color;
 $heading3_text-color: $main_text-color;
 
 $heading_size-factor: 2.2;
-$page-title_size: $font_large;
-$heading1_size: $font-regular + 3 * $heading_size-factor;
-$heading2_size: $font-regular + 2 * $heading_size-factor;
-$heading3_size: $font-regular + 1 * $heading_size-factor;
+$page-title_size: $font-size_large;
+$heading1_size: $font-size_regular + 3 * $heading_size-factor;
+$heading2_size: $font-size_regular + 2 * $heading_size-factor;
+$heading3_size: $font-size_regular + 1 * $heading_size-factor;
 
 $blockquote_bg: $palette_accent-darker;
 $blockquote_text-color: setContrast($blockquote_bg);
@@ -125,14 +129,20 @@ $block-ref_bg-hover: $palette_theme;
 $attribute_color: $main_text-color;
 
 /* tags */
-$tag_font-color: $palette_grey;
-$tag_bg-color: transparent;
-$tag_border-radius: 10px;
+$tag_border-radius: 5px;
 $tag_border: none;
+$tag_border-hover: none;
+
 $tag_padding: none;
-$tagHover_font-color: $palette_grey;
-$tagHover_bg-color: transparent;
-$tagHover_border: 1px solid $palette_grey;
+
+$tag_bg: transparent;
+$tag_bg-hover: $palette_grey;
+
+$tag_text-color: $palette_grey;
+$tag_text-color-hover: $palette_grey;
+
+$tag_text-decoration: none;
+$tag_text-decoration-hover: none;
 
 /*------------------------------------
 # features

@@ -3,55 +3,8 @@
 /*-------------------------
 # FONTS
 -------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 /*------------------------------------ STYLE ------------------------------------*/
-/*------------------------------------
-# general
-------------------------------------*/
-/*------------------------------------
-# left sidebar
-------------------------------------*/
-/*------------------------------------
-# topbar
-------------------------------------*/
-/*------------------------------------
-# main editor
-------------------------------------*/
-/*------------------------------------
-# right sidebar
-------------------------------------*/
-/*------------------------------------
-# text
-------------------------------------*/
-/*------------------------------------
-# components
-------------------------------------*/
-/* bullets */
-/* checkboxses & todos */
-/* icons */
-/* block highlights */
-/*------------------------------------
-# bidirectional linking
-------------------------------------*/
-/* page links */
-/* alias & external links */
-/* block refs */
-/* attributes */
-/* tags */
-/*------------------------------------
-# features
-------------------------------------*/
-/* query */
-/* kanban */
-/* table */
-/* general popups */
-/* page filter popup */
-/* datepicker */
-/* code */
-/*------------------------------------
-# sections
-------------------------------------*/
-/* linked/unlinked references */
-/* all pages */
 /*------------------------------------
 # general
 ------------------------------------*/
@@ -316,7 +269,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 .rm-bold {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
 }
 
 /* italics text */
@@ -324,7 +276,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 400 !important;
   font-style: italic !important;
-  font-size: 15px !important;
 }
 
 /* highlighted text */
@@ -344,7 +295,6 @@ h1.rm-title-display,
 .roam-log-page h1.level2 {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf !important;
   font-size: 30px;
 }
@@ -354,7 +304,6 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-1 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
   font-size: 21.6px;
 }
@@ -364,7 +313,6 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-2 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
   font-size: 19.4px;
 }
@@ -374,7 +322,6 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-3 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
   font-size: 17.2px;
 }
@@ -480,21 +427,20 @@ blockquote.rm-bq {
 /*------------------------------------
 # TAGS
 ------------------------------------*/
-.rm-page-ref-tag {
+.rm-page-ref--tag {
   color: #626d6f !important;
   background-color: transparent;
+  border: 1px solid rgba(98, 109, 111, 0.7);
   border-radius: 10px;
-  border: none;
-  padding: none;
+  padding: 2px 3px;
   text-decoration: none;
 }
-
-.rm-page-ref-tag:hover {
-  color: #626d6f !important;
-  background-color: transparent;
+.rm-page-ref--tag:hover {
+  color: #a6b7bf !important;
+  background-color: #626d6f;
+  border: 1px solid rgba(98, 109, 110, 0.7);
   border-radius: 10px;
-  border: 1px solid #626d6f;
-  padding: none;
+  padding: 2px 3px;
   text-decoration: none;
 }
 
@@ -504,7 +450,6 @@ blockquote.rm-bq {
 .rm-attr-ref {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
 }
 
@@ -566,7 +511,7 @@ blockquote.rm-bq {
 /*------------------------------------
 # GLYPH
 ------------------------------------*/
-.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), .roam-block-container :not(.rm-ref-page-view) a:not(.rm-alias--page) {
+.rm-block a:empty:not(.rm-alias--page), .roam-block a:empty:not(.rm-alias--page), .roam-block-container a:empty:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
 

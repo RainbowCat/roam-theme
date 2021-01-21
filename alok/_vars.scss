@@ -1,5 +1,3 @@
-@import "../preset/vars";
-
 /*------------------------------------
 # general
 ------------------------------------*/
@@ -108,14 +106,21 @@ $add-glyph: false;
 $attribute_color: $main_text-color;
 
 /* tags */
-$tag_font-color: $palette_grey;
-$tag_bg-color: transparent;
+$tag_bg: transparent;
+$tag_text-color: $palette_grey;
+
+$tag_bg-hover: $palette_grey;
+$tag_text-color-hover: setContrast($tag_bg-hover);
+
+$tag_text-decoration: none;
+$tag_text-decoration-hover: none;
+
+$tag_border: 1px solid color.adjust($palette_grey, $alpha: -0.3);
+$tag_border-hover: 1px solid
+  color.adjust(color.adjust($palette_grey, $alpha: -0.3), $lightness: -0.3);
+
 $tag_border-radius: 10px;
-$tag_border: none;
-$tag_padding: none;
-$tagHover_font-color: $palette_grey;
-$tagHover_bg-color: transparent;
-$tagHover_border: 1px solid $palette_grey;
+$tag_padding: 2px 3px;
 
 /*------------------------------------
 # features

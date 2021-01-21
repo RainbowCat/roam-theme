@@ -175,23 +175,26 @@ blockquote.rm-bq {
 /*------------------------------------
 # TAGS
 ------------------------------------*/
-.rm-page-ref-tag {
-  color: $tag_font-color !important;
-  // font-weight: 400;
-  background-color: $tag_bg-color;
-  border-radius: $tag_border-radius;
+.rm-page-ref--tag {
+  color: $tag_text-color !important;
+  background-color: $tag_bg;
+
   border: $tag_border;
-  padding: $tag_padding;
-  text-decoration: none;
-}
-.rm-page-ref-tag:hover {
-  color: $tagHover_font-color !important;
-  // font-weight: 400;
-  background-color: $tagHover_bg-color;
   border-radius: $tag_border-radius;
-  border: $tagHover_border;
   padding: $tag_padding;
+
   text-decoration: none;
+
+  &:hover {
+    color: $tag_text-color-hover !important;
+    background-color: $tag_bg-hover;
+
+    border: $tag_border-hover;
+    border-radius: $tag_border-radius;
+    padding: $tag_padding;
+
+    text-decoration: $tag_text-decoration-hover;
+  }
 }
 
 /*------------------------------------
@@ -282,8 +285,8 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   }
 }
 
-#{$rm-block-selector} :not(.rm-ref-page-view) {
-  a:not(.rm-alias--page) {
+#{$rm-block-selector} {
+  a:empty:not(.rm-alias--page) {
     /* only include external direct url and external alias */
     @if $add-glyph {
       @include glyph(before);
