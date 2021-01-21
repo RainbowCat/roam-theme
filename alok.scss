@@ -1,12 +1,15 @@
-/*------------------------------------ UTILS & VARIABLES ------------------------------------*/
+/*------------------------------------ SETUP ------------------------------------*/
 @use "sass:color";
 
 @import "alok/palette";
+@import "alok/fonts";
 
 @import "utils";
 
-@import "alok/fonts";
-@import "alok/vars";
-
 /*------------------------------------ STYLE ------------------------------------*/
+@import "preset/vars";
+@import "alok/vars";
 @import "style";
+
+/*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+// @import "alok/extra";

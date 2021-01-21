@@ -15,47 +15,51 @@
 /* highlighted text */
 .rm-highlight {
   margin: 0px;
-  background: $highlight-bg !important;
-  color: $highlight-text !important;
-  padding: 2px 3px;
+  background: $highlight_bg !important;
+  color: $highlight_text-color !important;
+  padding: $highlight_padding;
 }
 
 .rm-highlight span {
-  color: $highlight-text !important;
+  color: $highlight_text-color !important;
 }
 
 // headings
 h1.rm-title-display,
 .rm-title-textarea,
 .roam-log-page h1.level2 {
-  color: $main_text-color !important;
-  @include font_title;
+  @include font_bold;
+  color: $page-title_text-color !important;
+  font-size: $page-title_size;
 }
 
 .rm-heading-level-1 > .rm-block-main,
 .rm-heading-level-1 > .rm-block__self .rm-block__input,
 #right-sidebar .rm-heading-level-1 .rm-block-text {
-  @include font_heading(1);
-  color: $main_text-color;
+  @include font_bold;
+  color: $heading1_text-color;
+  font-size: $heading1_size;
 }
 .rm-heading-level-2 > .rm-block-main,
 .rm-heading-level-2 > .rm-block__self .rm-block__input,
 #right-sidebar .rm-heading-level-2 .rm-block-text {
-  @include font_heading(2);
-  color: $main_text-color;
+  @include font_bold;
+  color: $heading2_text-color;
+  font-size: $heading2_size;
 }
 .rm-heading-level-3 > .rm-block-main,
 .rm-heading-level-3 > .rm-block__self .rm-block__input,
 #right-sidebar .rm-heading-level-3 .rm-block-text {
-  @include font_heading(3);
-  color: $main_text-color;
+  @include font_bold;
+  color: $heading3_text-color;
+  font-size: $heading3_size;
 }
 
 // blockquotes
 blockquote.rm-bq {
-  background: $palette_accent;
-  color: setContrast($palette_accent);
-  border-left: 5px solid setContrast($main_bg);
+  background: $blockquote_bg;
+  color: $blockquote_text-color;
+  border-left: $blockquote_border;
 }
 
 /*---------------------------------- 
@@ -70,10 +74,6 @@ blockquote.rm-bq {
   opacity: 0.3;
 }
 
-// .rm-bullet .bp3-popover-wrapper .bp3-popover-target {
-//   place-self: center;
-// }
-
 .rm-bullet__inner {
   /* bullet */
   border-radius: 50%;
@@ -83,11 +83,11 @@ blockquote.rm-bq {
 }
 .rm-bullet.rm-bullet--closed .rm-bullet__inner,
 #right-sidebar .rm-bullet.rm-bullet--closed .rm-bullet__inner {
-  /* collapsed bullet */
+  // collapsed bullet
   border: $bullet_border-closed;
 }
 
-/* nest diagram line */
+// nest diagram line
 .block-border-left {
   border-left: $treeline;
 }
@@ -215,6 +215,9 @@ blockquote.rm-bq {
   &--link {
     /* linked page name text */
     color: $page-link_text;
+    &:hover {
+      color: $page-link_hover;
+    }
   }
   &__brackets {
     /* linked page brackes */
@@ -228,10 +231,12 @@ blockquote.rm-bq {
 .rm-block-ref {
   /* linked refs */
   cursor: alias;
-  border-bottom: 1px solid $palette_accent;
-}
-.rm-block-ref:hover {
-  background-color: $palette_theme;
+  border-bottom: 1px solid $block-ref_text;
+  color: $block-ref_text;
+  &:hover {
+    background-color: $palette_theme;
+    color: setContrast($palette_theme);
+  }
 }
 
 /*------------------------------------
@@ -277,7 +282,7 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
   }
 }
 
-#{$rm-block-selector} {
+#{$rm-block-selector} :not(.rm-ref-page-view) {
   a:not(.rm-alias--page) {
     /* only include external direct url and external alias */
     @if $add-glyph {

@@ -1,8 +1,13 @@
 @charset "UTF-8";
-/*------------------------------------ UTILS & VARIABLES ------------------------------------*/
+/*------------------------------------ SETUP ------------------------------------*/
+/*------------------------------------
+# PALETTE
+------------------------------------*/
 /*-------------------------
 # FONTS
 -------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/*------------------------------------ STYLE ------------------------------------*/
 /*------------------------------------
 # general
 ------------------------------------*/
@@ -51,7 +56,6 @@
 ------------------------------------*/
 /* linked/unlinked references */
 /* all pages */
-/*------------------------------------ STYLE ------------------------------------*/
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
@@ -220,7 +224,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 .rm-bold {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
 }
 
 /* italics text */
@@ -228,7 +231,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 400 !important;
   font-style: italic !important;
-  font-size: 15px !important;
 }
 
 /* highlighted text */
@@ -246,10 +248,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 h1.rm-title-display,
 .rm-title-textarea,
 .roam-log-page h1.level2 {
-  color: #a6b7bf !important;
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 30px !important;
+  color: #a6b7bf !important;
+  font-size: 30px;
 }
 
 .rm-heading-level-1 > .rm-block-main,
@@ -257,8 +259,8 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-1 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 19.4px !important;
   color: #a6b7bf;
+  font-size: 21.6px;
 }
 
 .rm-heading-level-2 > .rm-block-main,
@@ -266,8 +268,8 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-2 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 17.2px !important;
   color: #a6b7bf;
+  font-size: 19.4px;
 }
 
 .rm-heading-level-3 > .rm-block-main,
@@ -275,12 +277,12 @@ h1.rm-title-display,
 #right-sidebar .rm-heading-level-3 .rm-block-text {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
+  font-size: 17.2px;
 }
 
 blockquote.rm-bq {
-  background: #9dcee7;
+  background: #6ba5c2;
   color: #00000f;
   border-left: 5px solid #a6b7bf;
 }
@@ -307,11 +309,9 @@ blockquote.rm-bq {
 
 .rm-bullet.rm-bullet--closed .rm-bullet__inner,
 #right-sidebar .rm-bullet.rm-bullet--closed .rm-bullet__inner {
-  /* collapsed bullet */
   border: 4px solid #6ba5c2;
 }
 
-/* nest diagram line */
 .block-border-left {
   border-left: 1px solid #a6b7bf;
 }
@@ -406,7 +406,6 @@ blockquote.rm-bq {
 .rm-attr-ref {
   font-family: "Ubuntu", Verdana, sans-serif !important;
   font-weight: 700 !important;
-  font-size: 15px !important;
   color: #a6b7bf;
 }
 
@@ -425,6 +424,9 @@ blockquote.rm-bq {
   /* linked page name text */
   color: #9dcee7;
 }
+.rm-page-ref--link:hover {
+  color: #9ecee7;
+}
 .rm-page-ref__brackets {
   /* linked page brackes */
   color: rgba(157, 206, 231, 0.7);
@@ -437,10 +439,11 @@ blockquote.rm-bq {
   /* linked refs */
   cursor: alias;
   border-bottom: 1px solid #9dcee7;
+  color: #9dcee7;
 }
-
 .rm-block-ref:hover {
   background-color: #122b4a;
+  color: #a6b7bf;
 }
 
 /*------------------------------------
@@ -464,10 +467,10 @@ blockquote.rm-bq {
 /*------------------------------------
 # GLYPH
 ------------------------------------*/
-.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), .roam-block-container a:not(.rm-alias--page) {
+.rm-block a:not(.rm-alias--page), .roam-block a:not(.rm-alias--page), .roam-block-container :not(.rm-ref-page-view) a:not(.rm-alias--page) {
   /* only include external direct url and external alias */
 }
-.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, .roam-block-container a:not(.rm-alias--page):before {
+.rm-block a:not(.rm-alias--page):before, .roam-block a:not(.rm-alias--page):before, .roam-block-container :not(.rm-ref-page-view) a:not(.rm-alias--page):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";
@@ -1266,7 +1269,7 @@ span.cm-qualifier {
 }
 #all-pages-search.rm-all-pages .table .rm-pages-row {
   /* row dividers */
-  border-bottom: 1px solid #2d3133;
+  border-bottom: 1px solid #050c15;
 }
 #all-pages-search.rm-all-pages .bp3-control.bp3-checkbox .bp3-control-indicator {
   /* unchecked checkbox bg color */
@@ -1309,4 +1312,66 @@ span.cm-qualifier {
 }
 #all-pages-search.rm-all-pages .bp3-button.bp3-minimal:hover:before {
   color: #00000f !important;
+}
+
+/*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+/*------------------------------------
+# Custom Block Display Tags
+------------------------------------*/
+.roam-block-container[data-page-links*="display-col-1:2"] > .rm-block-children {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.roam-block-container[data-page-links*="display-col-2:1"] > .rm-block-children {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.roam-block-container[data-page-links*=display-col-2] > .rm-block-children {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto auto;
+}
+
+.roam-block-container[data-page-links*=display-col-3] > .rm-block-children {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.roam-block-container[data-page-links*=display-col-5] > .rm-block-children {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.roam-block-container[data-page-links*=display-col-6] > .rm-block-children {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.roam-block-container[data-page-links*=display-col-7] > .rm-block-children {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.roam-block-container[data-page-links*=display-col-7] > .rm-block-children > .rm-block-children .rm-bullet {
+  opacity: 0.1;
+}
+
+.roam-block-container[data-page-links*=display-] .roam-block-container {
+  margin: 0px;
+  border-left: none !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span.rm-page-ref[data-tag|=display-col] {
+  display: none;
+}
+
+/*------------------------------------
+# Custom Text Display
+------------------------------------*/
+.roam-block-container[data-page-links*=DONE] {
+  text-decoration: line-through;
 }

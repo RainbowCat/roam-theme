@@ -1,14 +1,14 @@
-/*------------------------------------ UTILS & VARIABLES ------------------------------------*/
+/*------------------------------------ SETUP ------------------------------------*/
 @use "sass:color";
 
 @import "april/palette";
+@import "april/fonts";
 
 @import "utils";
 
-@import "april/fonts";
-@import "april/vars";
-
 /*------------------------------------ STYLE ------------------------------------*/
+@import "preset/vars";
+@import "april/vars";
 @import "style";
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/

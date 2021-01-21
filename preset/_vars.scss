@@ -5,7 +5,7 @@ $roundness: 5px;
 
 $main_subtle-color: color.change($palette_theme, $alpha: 0.5);
 $main_bg: $palette_theme;
-$main_text-color: setContrast($palette_theme);
+$main_text-color: setContrast($main_bg);
 
 /*------------------------------------
 # left sidebar
@@ -46,8 +46,24 @@ $rightbar_title-color: setContrast($palette_theme-lighter);
 /*------------------------------------
 # text
 ------------------------------------*/
-$highlight-bg: $palette_accent;
-$highlight-text: setContrast($palette_accent);
+$page-title_text-color: $main_text-color;
+$heading1_text-color: $main_text-color;
+$heading2_text-color: $main_text-color;
+$heading3_text-color: $main_text-color;
+
+$heading_size-factor: 2.2;
+$page-title_size: $font_large;
+$heading1_size: $font-regular + 3 * $heading_size-factor;
+$heading2_size: $font-regular + 2 * $heading_size-factor;
+$heading3_size: $font-regular + 1 * $heading_size-factor;
+
+$blockquote_bg: $palette_accent-darker;
+$blockquote_text-color: setContrast($blockquote_bg);
+$blockquote_border: 5px solid setContrast($main_bg);
+
+$highlight_bg: $palette_accent;
+$highlight_text-color: setContrast($palette_accent);
+$highlight_padding: 2px 3px;
 
 /*------------------------------------
 # components
@@ -95,12 +111,15 @@ $link-external_text-hover: $palette_accent-lighter;
 
 /* page links */
 $page-link_text: $link-internal_text;
+$page-link_hover: color.adjust($page-link_text, $lightness: +0.2);
 $page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
 
 /* alias & external links */
 $add-glyph: true;
 
 /* block refs */
+$block-ref_text: $palette_accent;
+$block-ref_bg-hover: $palette_theme;
 
 /* attributes */
 $attribute_color: $main_text-color;
@@ -214,10 +233,10 @@ $ref_item-page-color: $ref_text;
 $ref_item-parent-color: $ref_text;
 
 /* all pages */
-$allpages_row-divider: 1px solid #2d3133;
+$allpages_row-divider: 1px solid $palette_theme-darker;
 
 $allpages_title-bg: $palette_accent-lighter;
-$allpages_title-text: setContrast($palette_accent-lighter);
+$allpages_title-text: setContrast($allpages_title-bg);
 
 $allpages_mentions_bg: $palette_accent;
-$allpages_mentions-text: setContrast($palette_accent);
+$allpages_mentions-text: setContrast($allpages_mentions_bg);

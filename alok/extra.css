@@ -1,0 +1,3 @@
+.roam-block-container[data-page-links*="DONE"] {
+  text-decoration: line-through;
+}
