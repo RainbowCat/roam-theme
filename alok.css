@@ -482,37 +482,41 @@ blockquote.rm-bq {
 .rm-block-ref {
   /* linked refs */
   cursor: alias;
-  border-bottom: 1px solid #9dcee7;
-  color: #9dcee7;
+  border-bottom: 1px solid #00000f;
+  background: #9dcee7;
+  color: #00000f;
 }
 .rm-block-ref:hover {
-  background-color: #0a1829;
-  color: #a6b7bf;
+  background-color: #9dcee7;
+  color: #00000f;
 }
 
 /*------------------------------------
-# Alias
+# Alias, External Links, Glyph
 ------------------------------------*/
-.rm-alias .rm-alias--page {
+/* glyph */
+.rm-alias.rm-alias--page {
   /* internally linked alias */
   color: #a6b7bf;
 }
-.rm-alias .rm-alias--page:hover {
-  color: #0a1829;
+.rm-alias.rm-alias--page:hover {
+  color: #a6b7bf;
 }
-.rm-alias .rm-alias--external {
+
+.rm-alias.rm-alias--external {
   /* externally linked alias */
   color: pink;
 }
-.rm-alias .rm-alias--external:hover {
+.rm-alias.rm-alias--external:hover {
   color: #9dcee7;
 }
 
-/*------------------------------------
-# GLYPH
-------------------------------------*/
-.rm-block a:empty:not(.rm-alias--page), .roam-block a:empty:not(.rm-alias--page), .roam-block-container a:empty:not(.rm-alias--page) {
-  /* only include external direct url and external alias */
+.roam-block span > a:not(.rm-alias):only-child {
+  /* only include external direct url */
+  color: #cbebfb;
+}
+.roam-block span > a:not(.rm-alias):only-child:hover {
+  color: #cbebfb;
 }
 
 /*------------------------------------

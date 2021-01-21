@@ -235,38 +235,19 @@ blockquote.rm-bq {
   /* linked refs */
   cursor: alias;
   border-bottom: 1px solid $block-ref_text;
+  background: $block-ref_bg;
   color: $block-ref_text;
   &:hover {
-    background-color: $palette_theme;
-    color: setContrast($palette_theme);
+    background-color: $block-ref_bg-hover;
+    color: $block-ref_text-hover;
   }
 }
 
 /*------------------------------------
-# Alias
+# Alias, External Links, Glyph
 ------------------------------------*/
-.rm-alias {
-  & &--page {
-    /* internally linked alias */
-    color: setContrast($palette_theme);
-    &:hover {
-      color: $palette_theme;
-    }
-  }
-  & &--external {
-    /* externally linked alias */
-    color: pink;
-    &:hover {
-      color: $palette_accent;
-    }
-  }
-}
 
-/*------------------------------------
-# GLYPH
-------------------------------------*/
-$rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
-
+/* glyph */
 @mixin glyph($location) {
   &:#{$location} {
     /* from "Better Roam Research" */
@@ -284,13 +265,33 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
     // left: -1px;
   }
 }
+.rm-alias.rm-alias--page {
+  /* internally linked alias */
+  color: $alias-internal_text;
+  &:hover {
+    color: $alias-internal_text-hover;
+  }
+}
 
-#{$rm-block-selector} {
-  a:empty:not(.rm-alias--page) {
-    /* only include external direct url and external alias */
-    @if $add-glyph {
-      @include glyph(before);
-    }
+.rm-alias.rm-alias--external {
+  /* externally linked alias */
+  @if $add-glyph {
+    @include glyph(before);
+  }
+  color: $alias-external_text;
+  &:hover {
+    color: $alias-external_text-hover;
+  }
+}
+
+.roam-block span > a:not(.rm-alias):only-child {
+  /* only include external direct url */
+  @if $add-glyph {
+    @include glyph(before);
+  }
+  color: $link-external_text;
+  &:hover {
+    color: $link-external_text-hover;
   }
 }
 

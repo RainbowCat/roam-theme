@@ -3,9 +3,9 @@
 ------------------------------------*/
 $roundness: 5px;
 
-$main_subtle-color: color.change($palette_theme, $alpha: 0.5);
-$main_bg: $palette_theme;
-$main_text-color: setContrast($main_bg);
+$main_subtle-color: color.adjust($palette_theme, $alpha: -0.5);
+$main_bg: $palette_theme; // unused, for ref
+$main_text-color: setContrast($main_bg); // unused, for ref
 
 $font-size_small: 10px;
 $font-size_regular: 15px;
@@ -17,7 +17,7 @@ $font-size_large: 30px;
 $leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
 $leftbar_bg: $palette_theme-darker;
 // $bg--shortcuts: linear-gradient(green, black);
-$leftbar_divline-color: setContrast($palette_theme);
+$leftbar_divline-color: $palette_accent-darker;
 $leftbar_text-color: $palette_accent-darker;
 $leftbar_text-color-hover: $palette_accent-lighter;
 
@@ -25,8 +25,8 @@ $leftbar_text-color-hover: $palette_accent-lighter;
 # topbar
 ------------------------------------*/
 $topbar_height: 45px; // default
-$topbar_bg: $palette_theme-darker;
-$topbar_icons-placement: flex-end;
+$topbar_bg: $palette_theme;
+$topbar_icons-placement: center;
 
 $searchbar-height: 45px;
 $searchbar-width: 500px;
@@ -50,10 +50,10 @@ $rightbar_title-color: setContrast($palette_theme-lighter);
 /*------------------------------------
 # text
 ------------------------------------*/
-$page-title_text-color: $main_text-color;
-$heading1_text-color: $main_text-color;
-$heading2_text-color: $main_text-color;
-$heading3_text-color: $main_text-color;
+$page-title_text-color: setContrast($palette_theme);
+$heading1_text-color: setContrast($palette_theme);
+$heading2_text-color: setContrast($palette_theme);
+$heading3_text-color: setContrast($palette_theme);
 
 $heading_size-factor: 2.2;
 $page-title_size: $font-size_large;
@@ -74,7 +74,8 @@ $highlight_padding: 2px 3px;
 ------------------------------------*/
 /* bullets */
 $bullet_color: $palette_accent;
-$bullet_border-closed: 4px solid $palette_accent-darker;
+$bullet_border-closed: 4px solid
+  color.adjust($palette_accent-darker, $alpha: -0.3);
 $treeline: 1px solid setContrast($palette_theme);
 
 /* checkboxses & todos */
@@ -109,24 +110,31 @@ $block_highlight-embed: $palette_accent-lighter;
 # bidirectional linking
 ------------------------------------*/
 $link-internal_text: $palette_accent;
-$link-internal_text-hover: $palette_accent;
+$link-internal_text-hover: color.adjust($link-internal_text, $lightness: +0.2);
 $link-external_text: $palette_accent-lighter;
-$link-external_text-hover: $palette_accent-lighter;
+$link-external_text-hover: color.adjust($link-external_text, $lightness: +0.2);
 
 /* page links */
 $page-link_text: $link-internal_text;
-$page-link_hover: color.adjust($page-link_text, $lightness: +0.2);
+$page-link_hover: $link-internal_text-hover;
 $page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
 
 /* alias & external links */
 $add-glyph: true;
+$alias-internal_text: setContrast($palette_theme);
+$alias-external_text: pink;
+$alias-internal_text-hover: setContrast($palette_theme);
+$alias-external_text-hover: $palette_accent;
 
 /* block refs */
-$block-ref_text: $palette_accent;
-$block-ref_bg-hover: $palette_theme;
+$block-ref_bg: $palette_accent;
+$block-ref_text: setContrast($block-ref_bg);
+
+$block-ref_bg-hover: $palette_accent;
+$block-ref_text-hover: setContrast($block-ref_bg-hover);
 
 /* attributes */
-$attribute_color: $main_text-color;
+$attribute_color: setContrast($palette_theme);
 
 /* tags */
 $tag_border-radius: 5px;
