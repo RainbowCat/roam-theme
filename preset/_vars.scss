@@ -98,7 +98,7 @@ $page-link_text: $link-internal_text;
 $page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
 
 /* alias & external links */
-$add-glyph: false;
+$add-glyph: true;
 
 /* block refs */
 
