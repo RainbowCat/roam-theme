@@ -1,0 +1,12 @@
+/*------------------------------------ UTILS & VARIABLES ------------------------------------*/
+@use "sass:color";
+
+@import "preset/palette";
+
+@import "utils";
+
+@import "preset/fonts";
+@import "preset/vars";
+
+/*------------------------------------ STYLE ------------------------------------*/
+@import "style";

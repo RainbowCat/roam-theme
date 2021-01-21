@@ -140,9 +140,13 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 $table_border: 1px solid setContrast($palette_theme);
 
 /* general popups */
-$popover_bg: $palette_theme;
-$popover_bg-hover: $palette_accent;
+$popover_bg: $palette_theme-lighter;
 $popover_text: setContrast($popover_bg);
+
+$popover_bg-hover: $palette_accent;
+$popover_text-hover: setContrast($popover_bg-hover);
+
+$popover_border: 1px solid setContrast($popover_bg-hover);
 
 /* page filter popup */
 $page-filter-btns-bg: $popover_bg;

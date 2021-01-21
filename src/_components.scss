@@ -476,9 +476,12 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 .bp3-elevation-3 {
   // slash menu
   background-color: $popover_bg !important;
-  color: $popover_text;
+  color: $popover_text !important;
+  border: $popover_border;
+  border-radius: $roundness;
   .dont-unfocus-block[style*="background"] {
     background-color: $popover_bg-hover !important;
+    color: $popover_text-hover !important;
   }
 }
 
