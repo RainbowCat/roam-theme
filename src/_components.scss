@@ -233,13 +233,16 @@ blockquote.rm-bq {
 ------------------------------------*/
 .rm-block-ref {
   /* linked refs */
-  cursor: alias;
-  border-bottom: 1px solid $block-ref_text;
   background: $block-ref_bg;
   color: $block-ref_text;
+  border-bottom: none; // override site settings
+  text-decoration: $block-ref_text-decoration;
+  // cursor: alias;
+
   &:hover {
     background-color: $block-ref_bg-hover;
     color: $block-ref_text-hover;
+    text-decoration: $block-ref_text-decoration-hover;
   }
 }
 

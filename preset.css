@@ -29,33 +29,15 @@
 /*------------------------------------
 # components
 ------------------------------------*/
-/* bullets */
-/* checkboxses & todos */
-/* icons */
-/* block highlights */
 /*------------------------------------
 # bidirectional linking
 ------------------------------------*/
-/* page links */
-/* alias & external links */
-/* block refs */
-/* attributes */
-/* tags */
 /*------------------------------------
 # features
 ------------------------------------*/
-/* query */
-/* kanban */
-/* table */
-/* general popups */
-/* page filter popup */
-/* datepicker */
-/* code */
 /*------------------------------------
 # sections
 ------------------------------------*/
-/* linked/unlinked references */
-/* all pages */
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
@@ -84,6 +66,7 @@ div,
 span {
   color: inherit;
   background: transparent;
+  text-decoration: inherit;
 }
 
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
@@ -436,14 +419,15 @@ blockquote.rm-bq {
 ------------------------------------*/
 .rm-block-ref {
   /* linked refs */
-  cursor: alias;
-  border-bottom: 1px solid #00000f;
-  background: #9dcee7;
-  color: #00000f;
+  background: rgba(157, 206, 231, 0.07);
+  color: #a6b7bf;
+  border-bottom: none;
+  text-decoration: none;
 }
 .rm-block-ref:hover {
-  background-color: #9dcee7;
-  color: #00000f;
+  background-color: rgba(157, 206, 231, 0.3);
+  color: #a6b7bf;
+  text-decoration: dotted underline #a6b7bf 1px;
 }
 
 /*------------------------------------
@@ -452,10 +436,10 @@ blockquote.rm-bq {
 /* glyph */
 .rm-alias.rm-alias--page {
   /* internally linked alias */
-  color: #a6b7bf;
+  color: #9dcee7;
 }
 .rm-alias.rm-alias--page:hover {
-  color: #a6b7bf;
+  color: #9ecee7;
 }
 
 .rm-alias.rm-alias--external {
@@ -474,12 +458,12 @@ blockquote.rm-bq {
   height: 15px;
 }
 .rm-alias.rm-alias--external:hover {
-  color: #9dcee7;
+  color: #ffc1cc;
 }
 
 .roam-block span > a:not(.rm-alias):only-child {
   /* only include external direct url */
-  color: #cbebfb;
+  color: pink;
 }
 .roam-block span > a:not(.rm-alias):only-child:before {
   /* from "Better Roam Research" */
@@ -493,7 +477,7 @@ blockquote.rm-bq {
   height: 15px;
 }
 .roam-block span > a:not(.rm-alias):only-child:hover {
-  color: #ccebfb;
+  color: #ffc1cc;
 }
 
 /*------------------------------------
