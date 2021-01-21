@@ -329,7 +329,7 @@ h1.rm-title-display,
 blockquote.rm-bq {
   background: #6ba5c2;
   color: #00000f;
-  border-left: 5px solid #a6b7bf;
+  border-left: 8px solid #00000f;
 }
 
 /*---------------------------------- 
@@ -650,45 +650,38 @@ blockquote.rm-bq {
   background: #193c67;
 }
 
-.roam-body .roam-app {
-  background-color: #0a1829 !important;
-  color: #a6b7bf;
+.bp3-menu {
+  background: #0a1829 !important;
+  color: #a6b7bf !important;
 }
-.roam-body .roam-app .bp3-menu,
-.roam-body .roam-app .roam-sidebar-container .bp3-menu {
+.bp3-menu .bp3-menu-item {
+  background: #0a1829 !important;
+  color: #a6b7bf !important;
+}
+.bp3-menu .bp3-menu-item:hover {
+  background: #a6b7bf !important;
+  color: #0a1829 !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
   background: #0a1829;
   color: #a6b7bf;
-}
-.roam-body .roam-app .bp3-menu .bp3-menu-item {
-  color: #a6b7bf;
-}
-.roam-body .roam-app .bp3-menu .bp3-menu-item:hover {
-  background: #00000f;
-}
-.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
   opacity: 1;
 }
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .menu-title {
   color: #a6b7bf;
 }
-.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .menu-item {
-  color: #a6b7bf;
-  margin-top: 2px;
-}
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting {
   background: transparent;
-}
-.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting a {
   color: #a6b7bf;
-  background: #0a1829;
 }
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting:hover {
   color: #a7b7bf;
-  background: #0a1829;
-  border: 1px solid #a7b7bf;
+  background: transparent;
 }
-.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .signout {
-  color: #a6b7bf;
+.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting a {
+  background: inherit;
+  color: inherit;
 }
 
 .bp3-elevation-3 {

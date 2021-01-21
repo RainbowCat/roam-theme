@@ -63,7 +63,7 @@ $heading3_size: $font-size_regular + 1 * $heading_size-factor;
 
 $blockquote_bg: $palette_accent-darker;
 $blockquote_text-color: setContrast($blockquote_bg);
-$blockquote_border: 5px solid setContrast($main_bg);
+$blockquote_border: 8px solid $blockquote_text-color;
 
 $highlight_bg: $palette_accent;
 $highlight_text-color: setContrast($palette_accent);
@@ -136,13 +136,13 @@ $tag_border-hover: none;
 $tag_padding: none;
 
 $tag_bg: transparent;
-$tag_bg-hover: $palette_grey;
+$tag_bg-hover: transparent;
 
 $tag_text-color: $palette_grey;
 $tag_text-color-hover: $palette_grey;
 
 $tag_text-decoration: none;
-$tag_text-decoration-hover: none;
+$tag_text-decoration-hover: underline;
 
 /*------------------------------------
 # features

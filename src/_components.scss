@@ -404,6 +404,9 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 /*------------------------------------
 # POPUPS
 ------------------------------------*/
+//todo style code language dropdown: .bp3-menu-item
+//todo style page-filter search: .bp3-popover-content input (bg and placeholder)
+
 // all popoevers
 .bp3-popover {
   color: $popover_text;
@@ -438,47 +441,58 @@ $rm-block-selector: ".rm-block, .roam-block, .roam-block-container";
 }
 
 // menus //TODO add variables
-.roam-body .roam-app {
-  .bp3-menu,
-  .roam-sidebar-container .bp3-menu {
-    background: $popover_bg;
-    color: $popover_text;
-  }
-  .bp3-menu .bp3-menu-item {
-    color: $popover_text;
-    &:hover {
-      background: setContrast($popover_text);
-    }
-  }
-  .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
-    opacity: 1;
-    // graph menu
-    .menu-title {
-      color: setContrast($popover_bg);
-    }
-    .menu-item {
-      color: setContrast($popover_bg);
-      margin-top: 2px;
-    }
-    .setting {
-      background: transparent;
-      a {
-        color: setContrast($popover_bg);
-        background: $popover_bg;
-      }
-      &:hover {
-        color: lighten(setContrast($popover_bg), 0.2);
-        background: $popover_bg;
-        border: 1px solid lighten(setContrast($popover_bg), 0.2);
-      }
-    }
-    .signout {
-      color: setContrast($popover_bg);
-    }
-  }
+.bp3-menu {
   // code-area language menu
-  background-color: $popover_bg !important;
+  background: $popover_bg !important;
+  color: $popover_text !important;
+  .bp3-menu-item {
+    background: $popover_bg !important;
+    color: $popover_text !important;
+    &:hover {
+      // switch background and text color
+      background: $popover_text !important;
+      color: $popover_bg !important;
+    }
+  }
+}
+
+.roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
+  // graph menu
+  background: $popover_bg;
   color: $popover_text;
+  opacity: 1;
+  .menu-title {
+    color: setContrast($popover_bg);
+  }
+  // .bp3-menu-item.menu-item {
+  //   color: setContrast($popover_bg);
+  //   margin-top: 2px;
+  //   &:hover {
+  //     // switch background and text color
+  //     background: $popover_text;
+  //     color: $popover_bg;
+  //   }
+  // }
+  .setting {
+    background: transparent;
+    color: setContrast($popover_bg);
+    &:hover {
+      color: color.adjust($popover_text, $lightness: 0.2);
+      background: transparent;
+    }
+    a {
+      background: inherit;
+      color: inherit;
+    }
+  }
+  // div.signout {
+  //   background: transparent;
+  //   color: setContrast($popover_bg);
+  //   &:hover {
+  //     color: color.adjust($popover_text, $lightness: 0.2);
+  //     background: transparent;
+  //   }
+  // }
 }
 
 .bp3-elevation-3 {
