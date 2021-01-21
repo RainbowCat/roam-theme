@@ -232,6 +232,7 @@ $codemirror_number: #d19a66;
 $codemirror_atom: #d19a66;
 $codemirror_qualifier: #d19a66;
 
+$code-activeline_bg: color.change($palette_grey, $alpha: 0.3); //todo
 /*------------------------------------
 # sections
 ------------------------------------*/

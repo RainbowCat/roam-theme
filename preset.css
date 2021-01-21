@@ -847,9 +847,14 @@ div.CodeMirror-selected {
 }
 
 .CodeMirror-gutters {
-  background: #122b4a;
+  background: #222629;
   padding-right: 12px;
   border-right: 1px solid #122b4a;
+}
+
+.CodeMirror-activeline-gutter,
+.CodeMirror-activeline {
+  background: rgba(98, 109, 111, 0.3) !important;
 }
 
 .CodeMirror-cursor {

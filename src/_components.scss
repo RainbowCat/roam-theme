@@ -700,6 +700,7 @@ span.bp3-icon.bp3-icon-chevron-right,
 /*---------------------------------- 
     #CODE
 ------------------------------------*/
+//TODO make variables
 code {
   /* inline code */
   background: $code-inline_bg;
@@ -722,10 +723,17 @@ div.CodeMirror-selected {
   background: $block_highlight-main !important;
 }
 .CodeMirror-gutters {
-  background: $main_bg;
+  background: $codemirror_bg;
   padding-right: 12px;
   border-right: 1px solid $main_bg;
 }
+
+// active code line
+.CodeMirror-activeline-gutter,
+.CodeMirror-activeline {
+  background: $code-activeline_bg !important;
+}
+
 .CodeMirror-cursor {
   border-left: 2px solid $bullet_color !important;
 }
@@ -747,6 +755,7 @@ div.CodeMirror-selected {
   font-family: monospace !important;
   left: 0px !important;
 }
+
 span.cm-comment {
   color: $codemirror_comment !important;
 }
