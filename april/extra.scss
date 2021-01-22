@@ -1,7 +1,7 @@
 /*------------------------------------
 # Custom Block Display Tags
 ------------------------------------*/
-@mixin Grid($align: start, $justify: start) {
+@mixin Grid($align: start, $justify: space-evenly) {
   display: grid;
   align-items: $align;
   justify-content: $justify;
@@ -10,11 +10,11 @@
 // flexible grid displays (parent blocks)
 .roam-block-container[data-page-links~='["display_col"]'] > .rm-block-children {
   // auto col
-  @include Grid(center, space-around);
+  @include Grid;
   grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));
 }
 .roam-block-container[data-page-links*="display_col-2"] > .rm-block-children {
-  @include Grid(center, start);
+  @include Grid;
   grid-template-columns: auto auto;
 }
 
@@ -41,7 +41,7 @@
 }
 .roam-block-container[data-page-links*="display_col-7"] > .rm-block-children {
   // mainly used for weekly display
-  @include Grid;
+  @include Grid(center);
   grid-template-columns: repeat(7, 1fr);
   > .rm-block-children .rm-bullet {
     //make bullets lighter
