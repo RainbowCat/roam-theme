@@ -1,3 +1,9 @@
-.roam-block-container[data-page-links*="DONE"] {
+/*------------------------------------
+# Custom Block Display Tags
+------------------------------------*/
+/*------------------------------------
+# Custom Text Display
+------------------------------------*/
+.roam-block-container[data-page-links*=DONE] {
   text-decoration: line-through;
 }
