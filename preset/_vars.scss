@@ -48,7 +48,7 @@ $rightbar_bg: $palette_theme;
 $rightbar_title-color: setContrast($palette_theme-lighter);
 
 /*------------------------------------
-# text
+# basic text
 ------------------------------------*/
 $page-title_text-color: setContrast($palette_theme);
 $heading1_text-color: setContrast($palette_theme);
@@ -68,6 +68,8 @@ $blockquote_border: 8px solid $blockquote_text-color;
 $highlight_bg: $palette_accent;
 $highlight_text-color: setContrast($palette_accent);
 $highlight_padding: 2px 3px;
+
+$hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
 
 /*------------------------------------
 # components

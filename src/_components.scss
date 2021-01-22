@@ -1,5 +1,5 @@
 /*------------------------------------
-# TEXT
+# BASIC TEXT
 ------------------------------------*/
 
 /* bold text */
@@ -62,6 +62,11 @@ blockquote.rm-bq {
   border-left: $blockquote_border;
 }
 
+// horizontal division line
+.rm-hr {
+  margin-top: 20px; // override side settings
+  border: $hr-line; //todo
+}
 /*---------------------------------- 
     #BULLETS & NEST LINE
 ------------------------------------*/

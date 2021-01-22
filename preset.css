@@ -24,7 +24,7 @@
 # right sidebar
 ------------------------------------*/
 /*------------------------------------
-# text
+# basic text
 ------------------------------------*/
 /*------------------------------------
 # components
@@ -201,7 +201,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 }
 
 /*------------------------------------
-# TEXT
+# BASIC TEXT
 ------------------------------------*/
 /* bold text */
 .rm-bold {
@@ -268,6 +268,11 @@ blockquote.rm-bq {
   background: #6ba5c2;
   color: #00000f;
   border-left: 8px solid #00000f;
+}
+
+.rm-hr {
+  margin-top: 20px;
+  border: 0.8px dashed rgba(107, 165, 194, 0.7);
 }
 
 /*---------------------------------- 

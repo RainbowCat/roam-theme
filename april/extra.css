@@ -4,41 +4,62 @@
 ------------------------------------*/
 .roam-block-container[data-page-links*="display-col-1:2"] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: 1fr 2fr;
 }
 
 .roam-block-container[data-page-links*="display-col-2:1"] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: 2fr 1fr;
 }
 
 .roam-block-container[data-page-links*=display-col-2] > .rm-block-children {
   display: grid;
-  gap: 5px;
+  align-items: center;
+  justify-content: start;
   grid-template-columns: auto auto;
 }
 
 .roam-block-container[data-page-links*=display-col-3] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .roam-block-container[data-page-links*=display-col-5] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: repeat(5, 1fr);
 }
 
 .roam-block-container[data-page-links*=display-col-6] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: repeat(6, 1fr);
 }
 
 .roam-block-container[data-page-links*=display-col-7] > .rm-block-children {
   display: grid;
+  align-items: start;
+  justify-content: start;
   grid-template-columns: repeat(7, 1fr);
 }
 .roam-block-container[data-page-links*=display-col-7] > .rm-block-children > .rm-block-children .rm-bullet {
   opacity: 0.1;
+}
+
+.roam-block-container[data-page-links*=display-span-col2] {
+  grid-column: span 2;
+}
+
+.roam-block-container[data-page-links*=display-span-row2] {
+  grid-row: span 2;
 }
 
 .roam-block-container[data-page-links*=display-] .roam-block-container {
@@ -48,8 +69,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.roam-block-container[data-page-links*=display-] .roam-block-container .block-border-left {
+  border-left: none !important;
+}
 
-span.rm-page-ref[data-tag|=display-col] {
+span.rm-page-ref[data-tag*=display-] {
   display: none;
 }
 
