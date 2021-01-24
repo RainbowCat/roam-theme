@@ -68,7 +68,7 @@ blockquote.rm-bq {
   border: $hr-line; //todo
 }
 /*---------------------------------- 
-    #BULLETS & NEST LINE
+# BULLETS & NEST LINE
 ------------------------------------*/
 .rm-caret:before {
   color: $main_text-color;
@@ -107,7 +107,7 @@ blockquote.rm-bq {
 }
 
 /*---------------------------------- 
-  #TODO 
+# TODO 
 ------------------------------------*/
 .check-container {
   .checkmark {
@@ -147,7 +147,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Icons & Buttons
+# GENERAL ICONS & BUTTONS
 ------------------------------------*/
 .rm-block-main .bp3-button {
   background: linear-gradient(
@@ -217,7 +217,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Page Links
+# PAGE LINKS
 ------------------------------------*/
 .rm-page-ref {
   &--link {
@@ -234,7 +234,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Block References
+# BLOCK REFERENCES
 ------------------------------------*/
 .rm-block-ref {
   /* linked refs */
@@ -252,7 +252,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Alias, External Links, Glyph
+# ALIAS, EXTERNAL LINKS, GLYPH
 ------------------------------------*/
 
 /* glyph */
@@ -304,7 +304,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Linked/Unlinked References
+# LINKED/UNLINKED REFERENCES
 ------------------------------------*/
 .rm-reference-main {
   color: $ref_text;
@@ -624,7 +624,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Datepicker
+# DATEPICKER
 ------------------------------------*/
 
 .bp3-icon-calendar {
@@ -720,7 +720,7 @@ blockquote.rm-bq {
 }
 
 /*---------------------------------- 
-    #CODE
+# CODE
 ------------------------------------*/
 //TODO make variables
 code {

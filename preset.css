@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*------------------------------------ SETUP ------------------------------------*/
+/*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
 /*------------------------------------
 # PALETTE
 ------------------------------------*/
@@ -7,7 +7,6 @@
 # FONTS
 -------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-/*------------------------------------ STYLE ------------------------------------*/
 /*------------------------------------
 # general
 ------------------------------------*/
@@ -38,6 +37,7 @@
 /*------------------------------------
 # sections
 ------------------------------------*/
+/*---------------------------------------- STYLE -----------------------------------------*/
 /*------------------------------------
 # RESET SITE SETTINGS
 ------------------------------------*/
@@ -107,7 +107,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 }
 
 /*------------------------------------
-# Workspace Layout
+# WORKSPACE (Layout)
 ------------------------------------*/
 #app .roam-body .roam-app {
   box-sizing: border-box;
@@ -150,7 +150,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   visibility: hidden;
 }
 /*------------------------------------
-# Workspace Text
+# WORKSPACE (Text)
 ------------------------------------*/
 #app .roam-body .roam-app {
   font-family: "Ubuntu", Verdana, sans-serif;
@@ -179,7 +179,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 }
 
 /*------------------------------------
-# Workspace Appearance
+# WORKSPACE (Appearance)
 ------------------------------------*/
 #app .roam-body .roam-app {
   background: #122b4a;
@@ -274,7 +274,7 @@ blockquote.rm-bq {
 }
 
 /*---------------------------------- 
-    #BULLETS & NEST LINE
+# BULLETS & NEST LINE
 ------------------------------------*/
 .rm-caret:before {
   color: #a6b7bf;
@@ -312,7 +312,7 @@ blockquote.rm-bq {
 }
 
 /*---------------------------------- 
-  #TODO 
+# TODO 
 ------------------------------------*/
 .check-container .checkmark {
   /* todo */
@@ -341,7 +341,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Icons & Buttons
+# GENERAL ICONS & BUTTONS
 ------------------------------------*/
 .rm-block-main .bp3-button {
   background: linear-gradient(#193c67, #050c15) !important;
@@ -403,7 +403,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Page Links
+# PAGE LINKS
 ------------------------------------*/
 .rm-page-ref--link {
   /* linked page name text */
@@ -418,7 +418,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Block References
+# BLOCK REFERENCES
 ------------------------------------*/
 .rm-block-ref {
   /* linked refs */
@@ -434,7 +434,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Alias, External Links, Glyph
+# ALIAS, EXTERNAL LINKS, GLYPH
 ------------------------------------*/
 /* glyph */
 .rm-alias.rm-alias--page {
@@ -484,7 +484,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Linked/Unlinked References
+# LINKED/UNLINKED REFERENCES
 ------------------------------------*/
 .rm-reference-main {
   color: #a6b7bf;
@@ -741,7 +741,7 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# Datepicker
+# DATEPICKER
 ------------------------------------*/
 .bp3-icon-calendar {
   border: none;
@@ -818,7 +818,7 @@ blockquote.rm-bq {
 }
 
 /*---------------------------------- 
-    #CODE
+# CODE
 ------------------------------------*/
 code {
   /* inline code */
@@ -1154,6 +1154,9 @@ span.cm-qualifier {
 }
 
 /*** ANIMATIONS ***/
+/*------------------------------------
+# RIGHT SIDEBAR
+------------------------------------*/
 #right-sidebar {
   border: none !important;
   transition: none !important;
@@ -1213,13 +1216,13 @@ span.cm-qualifier {
   color: #00000f !important;
 }
 
+/*---------------------------------- 
+# ALL PAGES
+------------------------------------*/
 .rm-all-pages .table .rm-pages-row.rm-pages-row-header {
   background: #122b4a !important;
 }
 
-/*---------------------------------- 
-    #ALL PAGES
-------------------------------------*/
 #all-pages-search.rm-all-pages {
   /* table header */
 }
