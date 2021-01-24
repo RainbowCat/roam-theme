@@ -6,101 +6,105 @@
   align-items: $align;
   justify-content: $justify;
 }
-
-// flexible grid displays (parent blocks)
-.roam-block-container[data-page-links~='["display_col"]'] > .rm-block-children {
-  // auto col
-  @include Grid;
-  grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));
-}
-.roam-block-container[data-page-links*="display_col-2"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: auto auto;
-}
-
-// fixed fraction grid displays (parent blocks)
-.roam-block-container[data-page-links*="display_col-1:2"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: 1fr 2fr;
-}
-.roam-block-container[data-page-links*="display_col-2:1"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: 2fr 1fr;
-}
-.roam-block-container[data-page-links*="display_col-3"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.roam-block-container[data-page-links*="display_col-5"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-.roam-block-container[data-page-links*="display_col-6"] > .rm-block-children {
-  @include Grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-.roam-block-container[data-page-links*="display_col-7"] > .rm-block-children {
-  // mainly used for weekly display
-  @include Grid(center);
-  grid-template-columns: repeat(7, 1fr);
-  > .rm-block-children .rm-bullet {
-    //make bullets lighter
-    opacity: 0.1;
+.roam-article {
+  // flexible grid displays (parent blocks)
+  .roam-block-container[data-page-links~='["display_col"]']
+    > .rm-block-children {
+    // auto col
+    @include Grid;
+    grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));
   }
-}
+  .roam-block-container[data-page-links*="display_col-2"] > .rm-block-children {
+    @include Grid;
+    grid-template-columns: auto auto;
+  }
 
-// grid vertical alignments (align)
-.roam-block-container[data-page-links*="display_align-start"]
-  > .rm-block-children {
-  align-items: start;
-}
-.roam-block-container[data-page-links*="display_align-center"]
-  > .rm-block-children {
-  align-items: center;
-}
-.roam-block-container[data-page-links*="display_align-end"]
-  > .rm-block-children {
-  align-items: end;
-}
-//grid horizontal alignments (justify)
-.roam-block-container[data-page-links*="display_justify-start"]
-  > .rm-block-children {
-  justify-content: start;
-}
-.roam-block-container[data-page-links*="display_justify-center"]
-  > .rm-block-children {
-  justify-content: center;
-}
-.roam-block-container[data-page-links*="display_justify-end"]
-  > .rm-block-children {
-  justify-content: end;
-}
-.roam-block-container[data-page-links*="display_justify-between"]
-  > .rm-block-children {
-  justify-content: space-between;
-}
-.roam-block-container[data-page-links*="display_justify-around"]
-  > .rm-block-children {
-  justify-content: space-around;
-}
+  // fixed fraction grid displays (parent blocks)
+  .roam-block-container[data-page-links*="display_col-1:2"]
+    > .rm-block-children {
+    @include Grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .roam-block-container[data-page-links*="display_col-2:1"]
+    > .rm-block-children {
+    @include Grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .roam-block-container[data-page-links*="display_col-3"] > .rm-block-children {
+    @include Grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .roam-block-container[data-page-links*="display_col-5"] > .rm-block-children {
+    @include Grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .roam-block-container[data-page-links*="display_col-6"] > .rm-block-children {
+    @include Grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .roam-block-container[data-page-links*="display_col-7"] > .rm-block-children {
+    // mainly used for weekly display
+    @include Grid(center);
+    grid-template-columns: repeat(7, 1fr);
+    > .rm-block-children .rm-bullet {
+      //make bullets lighter
+      opacity: 0.1;
+    }
+  }
 
-// spans (child blocks)
-.roam-block-container[data-page-links*="display_span-col2"] {
-  grid-column: span 2;
-}
-.roam-block-container[data-page-links*="display_span-row2"] {
-  grid-row: span 2;
-}
+  // grid vertical alignments (align)
+  .roam-block-container[data-page-links*="display_align-start"]
+    > .rm-block-children {
+    align-items: start;
+  }
+  .roam-block-container[data-page-links*="display_align-center"]
+    > .rm-block-children {
+    align-items: center;
+  }
+  .roam-block-container[data-page-links*="display_align-end"]
+    > .rm-block-children {
+    align-items: end;
+  }
+  //grid horizontal alignments (justify)
+  .roam-block-container[data-page-links*="display_justify-start"]
+    > .rm-block-children {
+    justify-content: start;
+  }
+  .roam-block-container[data-page-links*="display_justify-center"]
+    > .rm-block-children {
+    justify-content: center;
+  }
+  .roam-block-container[data-page-links*="display_justify-end"]
+    > .rm-block-children {
+    justify-content: end;
+  }
+  .roam-block-container[data-page-links*="display_justify-between"]
+    > .rm-block-children {
+    justify-content: space-between;
+  }
+  .roam-block-container[data-page-links*="display_justify-around"]
+    > .rm-block-children {
+    justify-content: space-around;
+  }
 
-// remove margin and nestline for child blocks
-.roam-block-container[data-page-links*="display_"] .roam-block-container {
-  margin: 0px;
-  border-left: none !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  .block-border-left {
+  // spans (child blocks)
+  .roam-block-container[data-page-links*="display_span-col2"] {
+    grid-column: span 2;
+  }
+  .roam-block-container[data-page-links*="display_span-row2"] {
+    grid-row: span 2;
+  }
+
+  // remove margin and nestline for child blocks
+  .roam-block-container[data-page-links*="display_"] .roam-block-container {
+    margin: 0px;
     border-left: none !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .block-border-left {
+      border-left: none !important;
+    }
   }
 }
 
