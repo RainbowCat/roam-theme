@@ -299,7 +299,10 @@ blockquote.rm-bq {
 }
 
 .block-border-left {
-  border-left: 1px solid #a6b7bf;
+  border-left: 1px solid transparent !important;
+}
+.block-border-left:hover {
+  border-left: 1px solid rgba(166, 183, 191, 0.2) !important;
 }
 
 .roam-block-container .rm-block-main {
@@ -563,6 +566,18 @@ blockquote.rm-bq {
   /* selected block in main edit area */
   background-color: #9dcee7;
 }
+.rm-block .block-highlight-blue span,
+.roam-block .block-highlight-blue span,
+.rm-block-children .block-highlight-blue span,
+.roam-block-container .block-highlight-blue span {
+  color: #00000f !important;
+}
+.rm-block .block-highlight-blue .rm-bullet__inner,
+.roam-block .block-highlight-blue .rm-bullet__inner,
+.rm-block-children .block-highlight-blue .rm-bullet__inner,
+.roam-block-container .block-highlight-blue .rm-bullet__inner {
+  background-color: #00000f !important;
+}
 .rm-block .block-highlight-yellow,
 .roam-block .block-highlight-yellow,
 .rm-block-children .block-highlight-yellow,
@@ -583,10 +598,6 @@ blockquote.rm-bq {
   /* embed block highlight */
   background-color: #cbebfb;
   color: #00000f;
-}
-
-.rm-level-1 > .block-border-left {
-  border-left: none !important;
 }
 
 /*------------------------------------
@@ -1315,57 +1326,6 @@ span.cm-qualifier {
 /*------------------------------------
 # Custom Block Display Tags
 ------------------------------------*/
-.roam-block-container[data-page-links*="display-col-1:2"] > .rm-block-children {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-.roam-block-container[data-page-links*="display-col-2:1"] > .rm-block-children {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.roam-block-container[data-page-links*=display-col-2] > .rm-block-children {
-  display: grid;
-  gap: 5px;
-  grid-template-columns: auto auto;
-}
-
-.roam-block-container[data-page-links*=display-col-3] > .rm-block-children {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.roam-block-container[data-page-links*=display-col-5] > .rm-block-children {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.roam-block-container[data-page-links*=display-col-6] > .rm-block-children {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.roam-block-container[data-page-links*=display-col-7] > .rm-block-children {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-.roam-block-container[data-page-links*=display-col-7] > .rm-block-children > .rm-block-children .rm-bullet {
-  opacity: 0.1;
-}
-
-.roam-block-container[data-page-links*=display-] .roam-block-container {
-  margin: 0px;
-  border-left: none !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-span.rm-page-ref[data-tag|=display-col] {
-  display: none;
-}
-
 /*------------------------------------
 # Custom Text Display
 ------------------------------------*/

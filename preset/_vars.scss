@@ -81,7 +81,11 @@ $hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
 $bullet_color: $palette_accent;
 $bullet_border-closed: 4px solid
   color.adjust($palette_accent-darker, $alpha: -0.3);
-$treeline: 1px solid setContrast($palette_theme);
+
+// nesting line
+$treeline-width: 1px;
+$treeline-style: solid;
+$treeline-color: color.change(setContrast($palette_theme), $alpha: 0.2);
 
 // checkboxses & todos
 $checkbox_top: -1px;

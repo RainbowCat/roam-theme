@@ -94,8 +94,19 @@ blockquote.rm-bq {
 
 // nest diagram line
 .block-border-left {
-  border-left: $treeline;
+  border-left: $treeline-width $treeline-style transparent !important;
+  &:hover {
+    border-left: $treeline-width $treeline-style $treeline-color !important;
+  }
 }
+// .rm-level-1 > .block-border-left {
+//   // remove first level line completely
+//   border-left: $treeline-width $treeline-style transparent !important;
+// }
+// .rm-level-2 > .block-border-left {
+//   // remove second level line completely
+//   border-left: $treeline-width $treeline-style transparent !important;
+// }
 
 // vertically center bullets
 .roam-block-container .rm-block-main {
@@ -390,6 +401,15 @@ blockquote.rm-bq {
   .block-highlight-blue {
     /* selected block in main edit area */
     background-color: $block_highlight-main;
+    span {
+      color: setContrast($block_highlight-main) !important;
+    }
+    .rm-bullet__inner {
+      background-color: setContrast($block_highlight-main) !important;
+    }
+    .rm-caret {
+      
+    }
   }
   .block-highlight-yellow {
     /* selected block in linked referenced */
@@ -403,11 +423,6 @@ blockquote.rm-bq {
     background-color: $block_highlight-embed;
     color: setContrast($block_highlight-embed);
   }
-}
-
-// remove first level line
-.rm-level-1 > .block-border-left {
-  border-left: none !important;
 }
 
 /*------------------------------------
