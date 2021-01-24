@@ -7,14 +7,15 @@
   // color: $palette_white;
 }
 
-// HACK
 // remove useless divs
 // TODO keep the one between left sidebar icon and other icons
 .roam-topbar .flex-h-box > div[style^="flex"]:not([class]) {
   display: none;
 }
 
+// XXX HACK
 /* make search popover */
+// layout
 //TODO add border / shadow to make search popup standout
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper {
   // match size and positions
@@ -30,6 +31,7 @@
     /* center */
     transform: translate(-50%, 0);
   }
+  // size input
   input#find-or-create-input:focus {
     box-sizing: content-box;
     top: $searchbar-top;
@@ -38,6 +40,7 @@
     font-size: $searchbar-font;
     padding: $searchbar-padding-tb $searchbar-padding-lr; // padding around placeholder text
   }
+  // size dropdown menu
   .bp3-overlay {
     top: calc(
       #{$searchbar-top} + #{$searchbar-height} + 2 * #{$searchbar-padding-tb}
@@ -49,51 +52,63 @@
       transform: none !important; // turn off animation
     }
   }
-
-  // style
+}
+// appearance
+.roam-topbar > .flex-h-box .rm-find-or-create-wrapper {
+  // style input
   input#find-or-create-input:focus {
-    box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
     background: $palette_theme;
     color: setContrast($palette_theme);
     &::placeholder {
       color: color.adjust(setContrast($palette_theme), $alpha: -0.5);
     }
   }
-  .bp3-overlay .bp3-popover {
-    border: 1px solid white;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.07);
-
-    .bp3-menu,
+  // style dropdown menu
+  .bp3-overlay .bp3-menu {
+    > div:first-child {
+      // recent
+      background: $palette_theme !important;
+      color: setContrast($palette_theme) !important;
+    }
     .rm-menu-item {
       background: $palette_theme;
       color: setContrast($palette_theme);
-      &[style*="background-color: rgb(213, 218, 223);"] {
+      &[style*="background-color"] {
+        // selected menu item
         background: $palette_accent !important;
         color: setContrast($palette_accent) !important;
       }
     }
+  }
+
+  // style borders
+  .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
+    // only round top corners to match dropdown (if dropdown menu is showing)
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .bp3-overlay.bp3-overlay-open .bp3-popover {
+    border: 1px solid white;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     &,
     & > .bp3-popover-content,
     & > .bp3-popover-content > .bp3-menu,
     & > .bp3-popover-content > .bp3-menu > .rm-menu-item:last-child {
+      // make bottom round
       border-radius: 0px 0px 10px 10px !important;
     }
   }
-  // borders
-  .bp3-popover-target input#find-or-create-input:focus {
-    border: 1px solid white !important;
-    // if no menu, then make all corners rounded
-    border: 1px solid rgba(0, 0, 0, 0.07); //todo
-    border-radius: 10px;
-  }
-  .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
-    // only round top corners to account for dropdown if menu is showing
-    border-radius: 10px 10px 0px 0px;
-    border: 1px solid white;
-    border-bottom: 1px solid grey;
+
+  // style shadows
+  .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus
+  // .bp3-overlay.bp3-overlay-open .bp3-popover (no need)
+  {
+    // darken every thing else
+    box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.384);
   }
 }
+// XXX HACK
 
 /* make all elements look like a button */
 .roam-topbar .flex-h-box {
@@ -101,77 +116,75 @@
 
   > div,
   > span {
-    height: $icons-size;
-    width: $icons-size;
+    height: $icons_size;
+    width: $icons_size;
     margin: 5px; //icons margin
   }
+
+  // roam sync icon
   .rm-saving-icon {
-    height: $icons-size;
-    width: $icons-size;
+    height: $icons_size;
+    width: $icons_size;
     margin: 0px;
     padding: 0px;
-    border-radius: 3px;
+    border-radius: $icons_border-radius;
   }
   .rm-saving-inner-icon {
     height: 10px !important;
     width: 10px !important;
   }
-  // search
+
+  // search button hack
   .rm-find-or-create-wrapper {
     flex: unset !important;
-    input#find-or-create-input {
-      opacity: 0;
-      z-index: 10000; /* bring in front of icon to keep clickable */
-      width: $icons-size !important;
-      height: $icons-size !important;
-      padding: 0px;
-      margin: 0px;
-      cursor: pointer;
-    }
-    .bp3-icon-search.search-icon {
+    transition: none;
+    border-radius: $icons_border-radius;
+    background: $icons_bg;
+    .bp3-icon-search {
+      // place icon in center
       padding: 4px;
       margin: 0px !important;
+      color: $icons_color;
     }
-  }
-
-  // other buttons
-  .bp3-button.bp3-minimal {
-    height: $icons-size;
-    width: $icons-size;
-    margin: 0px !important;
-  }
-
-  //icon color
-  [class~="bp3-icon"],
-  .bp3-button.bp3-minimal {
-    //filter icon
-    &:before {
-      color: $icon-color;
-      background: transparent;
-    }
-    &:hover:before {
-      .bp3-icon-filter,
-      .bp3-icon-search {
-        color: setContrast($icons-bg-hover) !important;
-      }
-      color: setContrast($icons-bg-hover) !important;
-    }
-  }
-  .bp3-icon-filter,
-  .bp3-icon-search {
-    color: $icon-color !important;
-  }
-  .rm-find-or-create-wrapper,
-  [class~="bp3-icon"]:not(.bp3-icon-filter):not(.bp3-icon-search),
-  .bp3-button.bp3-minimal {
-    border-radius: 3px;
-    transition: none;
-    background: $icons-bg-regular !important;
     &:hover {
-      background: $icons-bg-hover !important;
-      &:before {
-        color: setContrast($icons-bg-hover) !important;
+      .bp3-icon-search {
+        color: $icons_color-hover;
       }
+      background: $icons_bg-hover;
+    }
+
+    // make input clickable
+    input#find-or-create-input {
+      height: $icons_size !important;
+      width: $icons_size !important;
+      padding: 0px;
+      margin: 0px;
+
+      opacity: 0; // hide
+      z-index: 10000; // bring in front of icon to keep clickable
+
+      cursor: pointer;
+    }
+  }
+
+  // buttons
+  .bp3-button.bp3-minimal {
+    background: $icons_bg;
+    .bp3-icon-filter:before, // filter icon
+    &:before // other icons
+    {
+      background: transparent;
+      color: $icons_color;
+    }
+  }
+  .bp3-button.bp3-minimal:hover {
+    background: $icons_bg-hover;
+    .bp3-icon-filter:before, // filter icon
+      &:before // other icons
+    {
+      // filter icon
+      background: transparent;
+      color: setContrast($icons_bg-hover) !important;
     }
   }
 }

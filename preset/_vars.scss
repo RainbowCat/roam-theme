@@ -97,10 +97,12 @@ $checkbox_symbol-color: setContrast($checkbox_bg-done);
 $checkbox_symbol: "✓";
 
 // icons
-$icons-bg-regular: $palette_theme-lighter;
-$icons-bg-hover: $palette_accent-lighter;
-$icon-color: setContrast($palette_theme);
-$icons-size: 24px;
+$icons_bg: $palette_theme-lighter;
+$icons_bg-hover: $palette_accent-lighter;
+$icons_color: setContrast($icons_bg);
+$icons_color-hover: setContrast($icons_bg-hover);
+$icons_border-radius: 3px;
+$icons_size: 24px;
 
 // block highlights
 $block_highlight-main: $palette_accent;

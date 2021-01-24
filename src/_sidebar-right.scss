@@ -36,26 +36,26 @@
   [class~="bp3-icon"],
   .bp3-button.bp3-minimal {
     &:before {
-      color: $icon-color;
+      color: $icons_color;
       background: transparent;
     }
   }
   .bp3-icon-filter,
   .bp3-icon-search {
-    color: $icon-color !important;
+    color: $icons_color !important;
   }
   [class~="bp3-icon"]:not(.bp3-icon-filter):not(.bp3-icon-search),
   .bp3-button.bp3-minimal {
     border-radius: 3px;
     transition: none;
-    background: $icons-bg-regular !important;
+    background: $icons_bg !important;
     &:before {
-      color: setContrast($icons-bg-regular) !important;
+      color: setContrast($icons_bg) !important;
     }
     &:hover {
-      background: $icons-bg-hover !important;
+      background: $icons_bg-hover !important;
       &:before {
-        color: setContrast($icons-bg-hover) !important;
+        color: setContrast($icons_bg-hover) !important;
       }
     }
   }

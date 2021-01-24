@@ -56,7 +56,7 @@
   // buttons & icons
   .bp3-button.bp3-minimal {
     &:before {
-      color: $icon-color;
+      color: $icons_color;
       background: transparent;
     }
   }
@@ -74,14 +74,14 @@
     border-radius: 3px;
     transition: none;
 
-    background: $icons-bg-regular !important;
+    background: $icons_bg !important;
     &:before {
-      color: setContrast($icons-bg-regular) !important;
+      color: setContrast($icons_bg) !important;
     }
     &:hover {
-      background: $icons-bg-hover !important;
+      background: $icons_bg-hover !important;
       &:before {
-        color: setContrast($icons-bg-hover) !important;
+        color: setContrast($icons_bg-hover) !important;
       }
     }
   }
