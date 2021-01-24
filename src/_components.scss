@@ -435,6 +435,7 @@ blockquote.rm-bq {
     }
     &-border {
       fill: $popover_text; //tiny border
+      fill-opacity: 0.3;
     }
   }
   .bp3-button {

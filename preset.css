@@ -42,15 +42,12 @@
 # RESET SITE SETTINGS
 ------------------------------------*/
 html,
-body,
-.roam-sidebar-container div,
-[id^=block-input-],
-[class|=bp3] {
+body {
   font-family: "Ubuntu", Verdana, sans-serif;
-}
-
-[class|=bp3-icon] {
-  font-family: "Icons16", sans-serif;
+  font-size: 15px;
+  line-height: 1.2em;
+  background: #122b4a;
+  color: #a6b7bf;
 }
 
 ol,
@@ -64,6 +61,7 @@ ul {
 
 div,
 span {
+  font: inherit;
   color: inherit;
   background: transparent;
   text-decoration: inherit;
@@ -610,6 +608,7 @@ blockquote.rm-bq {
 }
 .bp3-popover .bp3-popover-arrow-border {
   fill: #a6b7bf;
+  fill-opacity: 0.3;
 }
 .bp3-popover .bp3-button {
   color: #a6b7bf;
