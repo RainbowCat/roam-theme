@@ -571,17 +571,6 @@ blockquote.rm-bq {
     color: $query-title_text;
   }
 }
-.rm-query .kanban-board {
-  border: none;
-  padding: 0px;
-  overflow: initial;
-}
-.rm-query .kanban-board:after {
-  content: "kanban";
-}
-.rm-query .kanban-board .kanban-column-container {
-  display: none;
-}
 
 /*------------------------------------
 # KANBAN
@@ -637,7 +626,18 @@ blockquote.rm-bq {
     }
   }
 }
-
+// hide kanban in queries & linked/unlinked references
+.rm-reference-item .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+.rm-reference-item .kanban-board:after {
+  content: "kanban";
+}
+.rm-reference-item .kanban-board .kanban-column-container {
+  display: none;
+}
 /*------------------------------------
 # TABLES
 ------------------------------------*/

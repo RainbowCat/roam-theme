@@ -693,20 +693,6 @@ blockquote.rm-bq {
   color: #a6b7bf;
 }
 
-.rm-query .kanban-board {
-  border: none;
-  padding: 0px;
-  overflow: initial;
-}
-
-.rm-query .kanban-board:after {
-  content: "kanban";
-}
-
-.rm-query .kanban-board .kanban-column-container {
-  display: none;
-}
-
 /*------------------------------------
 # KANBAN
 ------------------------------------*/
@@ -755,6 +741,20 @@ blockquote.rm-bq {
 }
 .kanban-board .kanban-column .kanban-card .check-container {
   margin-bottom: 8px;
+}
+
+.rm-reference-item .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+
+.rm-reference-item .kanban-board:after {
+  content: "kanban";
+}
+
+.rm-reference-item .kanban-board .kanban-column-container {
+  display: none;
 }
 
 /*------------------------------------
