@@ -750,17 +750,29 @@ blockquote.rm-bq {
   margin-bottom: 8px;
 }
 
-.rm-reference-item .kanban-board {
+.rm-reference-item .rm-zoom .kanban-board {
   border: none;
   padding: 0px;
   overflow: initial;
 }
 
-.rm-reference-item .kanban-board:after {
+.rm-reference-item .rm-zoom .kanban-board:after {
   content: "kanban";
 }
 
-.rm-reference-item .kanban-board .kanban-column-container {
+.rm-reference-item .rm-zoom .kanban-board .kanban-column-container {
+  display: none;
+}
+
+.rm-query .rm-reference-item .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+.rm-query .rm-reference-item .kanban-board:after {
+  content: "kanban";
+}
+.rm-query .rm-reference-item .kanban-board .kanban-column-container {
   display: none;
 }
 

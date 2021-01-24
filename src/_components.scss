@@ -627,17 +627,32 @@ blockquote.rm-bq {
   }
 }
 // hide kanban in queries & linked/unlinked references
-.rm-reference-item .kanban-board {
+.rm-reference-item .rm-zoom .kanban-board {
   border: none;
   padding: 0px;
   overflow: initial;
 }
-.rm-reference-item .kanban-board:after {
+.rm-reference-item .rm-zoom .kanban-board:after {
   content: "kanban";
 }
-.rm-reference-item .kanban-board .kanban-column-container {
+.rm-reference-item .rm-zoom .kanban-board .kanban-column-container {
   display: none;
 }
+// hide completely in queries
+.rm-query {
+  .rm-reference-item .kanban-board {
+    border: none;
+    padding: 0px;
+    overflow: initial;
+  }
+  .rm-reference-item .kanban-board:after {
+    content: "kanban";
+  }
+  .rm-reference-item .kanban-board .kanban-column-container {
+    display: none;
+  }
+}
+
 /*------------------------------------
 # TABLES
 ------------------------------------*/
