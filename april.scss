@@ -1,16 +1,6 @@
-/*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
-@use "sass:color";
-
-@import "april/palette";
-@import "april/fonts";
-
-@import "utils";
-
-@import "preset/vars";
-@import "april/vars";
-
-/*---------------------------------------- STYLE -----------------------------------------*/
-@import "style";
-
-/*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-@import "april/extra";
+@media (prefers-color-scheme: light) {
+  @import "april_light.scss";
+}
+@media (prefers-color-scheme: dark) {
+  @import "april_dark.scss";
+}
