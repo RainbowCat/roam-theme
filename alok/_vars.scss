@@ -10,53 +10,26 @@ $main_text-color: setContrast($palette_theme);
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
-$leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
-$leftbar_bg: $palette_theme-darker;
-// $bg--shortcuts: linear-gradient(green, black);
-$leftbar_divline-color: setContrast($palette_theme);
-$leftbar_text-color: $palette_accent-darker;
-$leftbar_text-color-hover: $palette_accent-lighter;
 
 /*------------------------------------
 # topbar
 ------------------------------------*/
-$topbar_height: 45px; // default
-$topbar_bg: $palette_theme-darker;
-$topbar_icons-placement: flex-end;
-
-$searchbar-height: 45px;
-$searchbar-width: 500px;
-$searchbar-left: 55vw;
-$searchbar-top: 27vh;
-$searchbar-padding-tb: 10px;
-$searchbar-padding-lr: 20px;
-$searchbar-font: 20px;
 
 /*------------------------------------
 # main editor
 ------------------------------------*/
-$editor_margin: 20px 30px;
 
 /*------------------------------------
 # right sidebar
 ------------------------------------*/
-$rightbar_bg: $palette_theme;
-$rightbar_title-color: setContrast($palette_theme-lighter);
 
 /*------------------------------------
 # text
 ------------------------------------*/
-$highlight-bg: $palette_accent;
-$highlight-text: setContrast($palette_accent);
 
 /*------------------------------------
 # components
 ------------------------------------*/
-/* bullets */
-$bullet_color: $palette_accent;
-$bullet_border-closed: 4px solid $palette_accent-darker;
-$treeline: 1px solid setContrast($palette_theme);
-
 /* checkboxses & todos */
 $checkbox_top: -1px;
 $checkbox_left: -2px;
@@ -73,37 +46,10 @@ $checkbox_bg-done: green;
 $checkbox_symbol-color: setContrast($checkbox_bg-done);
 $checkbox_symbol: "✓";
 
-/* icons */
-$icons_bg: $palette_theme-lighter;
-$icons_bg-hover: $palette_accent-lighter;
-$icon-color: setContrast($palette_theme);
-$icons_size: 24px;
-
-/* block highlights */
-$block_highlight-main: $palette_accent;
-$block_highlight-linked: $palette_accent;
-$block_highlight-linked-text: setContrast($palette_accent);
-$block_highlight-embed: $palette_accent-lighter;
-
 /*------------------------------------
 # bidirectional linking
 ------------------------------------*/
-$link-internal_text: $palette_accent;
-$link-internal_text-hover: $palette_accent;
-$link-external_text: $palette_accent-lighter;
-$link-external_text-hover: $palette_accent-lighter;
-
-/* page links */
-$page-link_text: $link-internal_text;
-$page-link_brackets: color.adjust($page-link_text, $alpha: -0.3);
-
-/* alias & external links */
 $add-glyph: false;
-
-/* block refs */
-
-/* attributes */
-$attribute_color: $main_text-color;
 
 /* tags */
 $tag_bg: transparent;
@@ -125,102 +71,7 @@ $tag_padding: 2px 3px;
 /*------------------------------------
 # features
 ------------------------------------*/
-/* query */
-$query_border: $palette_theme;
-$query_padding-bottom: 5px;
-$query-title_bg: $palette_theme;
-$query-title_text: setContrast($query-title_bg);
-
-/* kanban */
-$kanban_board-bg: transparent;
-$kanban_board-border: setContrast($palette_theme);
-
-$kanban_title-div: 1px solid setContrast($palette_theme);
-$kanban_col-bg: transparent;
-$kanban_col-drag-bg: $palette_theme-lighter;
-
-$kanban_card-bg: $palette_theme;
-$kanban_card-shadow: $palette_theme-darker;
-$kanban_card-border: 1px solid setContrast($palette_theme);
-
-/* table */
-$table_border: 1px solid setContrast($palette_theme);
-
-/* general popups */
-$popover_bg: $palette_theme;
-$popover_bg-hover: $palette_accent;
-$popover_text: setContrast($popover_bg);
-
-/* page filter popup */
-$page-filter-btns-bg: $popover_bg;
-$page-filter-btns-text: $popover_text;
-
-$page-filter-btns-bg-hover: color.adjust($popover_bg, $lightness: 15%);
-$page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
-
-/* datepicker */
-$datepicker_bg: $palette_theme;
-$datepicker_text-day: $palette_theme-lighter;
-$datepicker_bg-today: $palette_accent;
-$datepicker_altfont-color: $palette_theme-darker;
-$datepicker_hover-bg: $palette_accent;
-
-/* code */
-$code-inline_bg: #222629;
-$code-inline_font: "Source Code Pro", "Courier New", Courier, monospace;
-$code-inline_font-color: #dcdedd;
-$code-inline_font-size: 1em;
-$code-inline_border: 1px solid #34373b;
-
-$codemirror_bg: #222629;
-$codemirror_border-color: #323438;
-$codemirror_border-radius: 3px;
-$codemirror_linenumber: #515355;
-$code-inline_matchingbracket-color: #ead64c;
-
-$codemirror_comment: #7f848e;
-$codemirror_def: #d19a66;
-$codemirror_keyword: #c678dd;
-$codemirror_callee: #56b6c2;
-$codemirror_operator: #56b6c2;
-$codemirror_builtin: #56b6c2;
-$codemirror_string: #98c379;
-$codemirror_variable-3: #56b6c2;
-$codemirror_variable-2: #e06c75;
-$codemirror_variable: #e5c07b;
-$codemirror_tag: #e06c75;
-$codemirror_property: #61afef;
-$codemirror_number: #d19a66;
-$codemirror_atom: #d19a66;
-$codemirror_qualifier: #d19a66;
 
 /*------------------------------------
 # sections
 ------------------------------------*/
-/* linked/unlinked references */
-$ref_bg: transparent;
-$ref_text: setContrast($ref_bg);
-$ref_border: none;
-
-$ref_linked-header-color: $ref_text;
-$ref_unlinked-header-color: color.adjust($ref_text, $alpha: -0.5);
-
-$ref_linked-border: 1px solid $ref_linked-header-color;
-$ref_unlinked-border: 1px solid $ref_unlinked-header-color;
-// $ref_header-underline: 1px solid $ref_text;
-
-$ref_item-bg: transparent;
-$ref_item-border: none;
-$ref_item-border-radius: $roundness;
-
-$ref_item-page-color: $ref_text;
-$ref_item-parent-color: $ref_text;
-
-/* all pages */
-$allpages_row-divider: 1px solid #2d3133;
-
-$allpages_title-bg: $palette_accent-lighter;
-$allpages_title-text: setContrast($palette_accent-lighter);
-
-$allpages_mentions_bg: $palette_accent;
-$allpages_mentions-text: setContrast($palette_accent);

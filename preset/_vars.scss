@@ -113,8 +113,10 @@ $block_highlight-embed: $palette_accent-lighter;
 /*------------------------------------
 # bidirectional linking
 ------------------------------------*/
+// glyph
 $add-glyph: true;
 
+// general links
 $link-internal_text: $palette_accent;
 $link-internal_text-hover: color.adjust($link-internal_text, $lightness: +0.2);
 

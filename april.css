@@ -778,18 +778,23 @@ blockquote.rm-bq {
   background: #122b4a;
   padding: 6px;
 }
+.bp3-datepicker .bp3-html-select {
+  background: transparent;
+}
 .bp3-datepicker .bp3-html-select select {
   color: #a6b7bf;
 }
 .bp3-datepicker .bp3-html-select .bp3-icon {
-  color: rgba(166, 183, 191, 0.7);
+  color: rgba(166, 183, 191, 0.8);
+}
+.bp3-datepicker .bp3-html-select:hover {
+  background: rgba(157, 206, 231, 0.3);
 }
 .bp3-datepicker .bp3-html-select:hover select {
-  background: rgba(157, 206, 231, 0.3);
   color: #cbebfb;
 }
 .bp3-datepicker .bp3-html-select:hover .bp3-icon {
-  color: rgba(203, 235, 251, 0.7);
+  color: rgba(203, 235, 251, 0.8);
 }
 .bp3-datepicker button.DayPicker-NavButton {
   background: transparent;
@@ -817,6 +822,11 @@ blockquote.rm-bq {
 .bp3-datepicker .DayPicker-Day:hover {
   background: rgba(157, 206, 231, 0.3);
   color: #cbebfb;
+}
+.bp3-datepicker .DayPicker-Day > div:first-child {
+  line-height: 1.15em;
+  font-size: 14px;
+  font-weight: 600;
 }
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
   color: rgba(157, 206, 231, 0.5);

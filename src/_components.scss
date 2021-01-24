@@ -638,19 +638,20 @@ blockquote.rm-bq {
 
   // month, year selector
   .bp3-html-select {
+    background: transparent;
     select {
       color: setContrast($datepicker_bg);
     }
     .bp3-icon {
-      color: color.change(setContrast($datepicker_bg), $alpha: 0.7);
+      color: color.adjust($datepicker_text, $alpha: -0.2);
     }
     &:hover {
+      background: $datepicker_hover-bg;
       select {
-        background: $datepicker_hover-bg;
         color: $datepicker_hover-text;
       }
       .bp3-icon {
-        color: color.change($datepicker_hover-text, $alpha: 0.7);
+        color: color.adjust($datepicker_hover-text, $alpha: -0.2);
       }
     }
   }
@@ -691,12 +692,12 @@ blockquote.rm-bq {
       color: $datepicker_hover-text;
     }
   }
-  // .DayPicker-Day > div:first-child {
-  //   // date appearances
-  //   line-height: 1.15em;
-  //   font-size: 14px;
-  //   font-weight: 600;
-  // }
+  .DayPicker-Day > div:first-child {
+    // date appearances, make consistent with everything else
+    line-height: 1.15em;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
   // outside month days
   .DayPicker-Day.DayPicker-Day--outside {
