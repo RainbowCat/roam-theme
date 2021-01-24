@@ -222,7 +222,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   background: #122b4a;
 }
 #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
-  background: #122b4a;
+  background: #050c15;
 }
 
 /*------------------------------------
@@ -1184,6 +1184,27 @@ span.cm-qualifier {
 /*------------------------------------
 # RIGHT SIDEBAR
 ------------------------------------*/
+#right-sidebar .rm-resize-handle {
+  background: rgba(157, 206, 231, 0.3);
+  min-width: 1px;
+  width: 1px;
+}
+
+#right-sidebar > .flex-h-box > button,
+#right-sidebar #roam-right-sidebar-content {
+  margin-left: 5px;
+}
+
+#right-sidebar > .flex-h-box > div[style*="flex:"] {
+  display: none;
+}
+
+#right-sidebar #roam-right-sidebar-content .bp3-button {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px !important;
+}
+
 #right-sidebar {
   border: none !important;
   transition: none !important;
@@ -1202,9 +1223,6 @@ span.cm-qualifier {
 }
 #right-sidebar h1 {
   font-size: 18px !important;
-}
-#right-sidebar #roam-right-sidebar-content {
-  margin-left: -6px !important;
 }
 #right-sidebar #roam-right-sidebar-content > div[style] {
   border-bottom: 1px solid rgba(18, 43, 74, 0.5) !important;

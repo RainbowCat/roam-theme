@@ -44,8 +44,11 @@ $editor_margin: 20px 30px;
 /*------------------------------------
 # right sidebar
 ------------------------------------*/
-$rightbar_bg: $palette_theme;
-$rightbar_title-color: setContrast($palette_theme-lighter);
+$rightbar_bg: $palette_theme-darker;
+$rightbar_title-color: setContrast($rightbar_bg);
+
+$resize-handle_size: 1px;
+$resize-handle_color: color.adjust($palette_accent, $alpha: -0.7);
 
 /*------------------------------------
 # basic text

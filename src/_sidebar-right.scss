@@ -1,6 +1,31 @@
 /*------------------------------------
 # RIGHT SIDEBAR
 ------------------------------------*/
+// resize handle
+#right-sidebar .rm-resize-handle {
+  background: $resize-handle_color;
+  min-width: 1px;
+  width: $resize-handle_size;
+}
+// shift content for resize handle
+#right-sidebar {
+  > .flex-h-box > button,
+  #roam-right-sidebar-content {
+    margin-left: $resize-handle_size + 4px; // width of resize handle
+  }
+}
+
+// remove div before close sidebar button
+#right-sidebar > .flex-h-box > div[style*="flex:"] {
+  display: none;
+}
+
+#right-sidebar #roam-right-sidebar-content .bp3-button {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px !important;
+}
+
 #right-sidebar {
   border: none !important;
   transition: none !important;
@@ -21,7 +46,7 @@
     font-size: 18px !important;
   }
   #roam-right-sidebar-content {
-    margin-left: -6px !important;
+    // margin-left: -6px !important;
     > div[style] {
       border-bottom: 1px solid $main_subtle-color !important;
     }
