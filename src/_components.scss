@@ -189,6 +189,9 @@ blockquote.rm-bq {
   transition: none;
 }
 
+.roam-topbar button.bp3-icon-calendar[style*="margin-left: 8px;"] {
+  margin-left: 0px !important; // fix daily log calendar icon placement
+}
 /*------------------------------------
 # TAGS
 ------------------------------------*/
@@ -304,7 +307,7 @@ blockquote.rm-bq {
   }
 }
 
-.roam-block span > a:not(.rm-alias):only-child {
+.roam-block span > a:not(.rm-alias) {
   /* only include external direct url */
   @if $add-glyph {
     @include glyph(before);

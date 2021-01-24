@@ -111,12 +111,6 @@ $icons_color-hover: setContrast($icons_bg-hover);
 $icons_border-radius: 3px;
 $icons_size: 24px;
 
-// block highlights
-$block_highlight-main: $palette_accent;
-$block_highlight-linked: $palette_accent;
-$block_highlight-linked-text: setContrast($palette_accent);
-$block_highlight-embed: $palette_accent-lighter;
-
 /*------------------------------------
 # bidirectional linking
 ------------------------------------*/
@@ -168,6 +162,15 @@ $tag_text-color-hover: $palette_grey;
 
 $tag_text-decoration: none;
 $tag_text-decoration-hover: underline;
+
+/*------------------------------------
+# blocks
+------------------------------------*/
+// block highlights
+$block_highlight-main: $palette_accent;
+$block_highlight-linked: $palette_accent;
+$block_highlight-linked-text: setContrast($palette_accent);
+$block_highlight-embed: $block-ref_bg;
 
 /*------------------------------------
 # features

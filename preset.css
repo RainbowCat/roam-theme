@@ -32,6 +32,9 @@
 # bidirectional linking
 ------------------------------------*/
 /*------------------------------------
+# blocks
+------------------------------------*/
+/*------------------------------------
 # features
 ------------------------------------*/
 /*------------------------------------
@@ -369,6 +372,10 @@ blockquote.rm-bq {
   color: #00000f !important;
 }
 
+.roam-topbar button.bp3-icon-calendar[style*="margin-left: 8px;"] {
+  margin-left: 0px !important;
+}
+
 /*------------------------------------
 # TAGS
 ------------------------------------*/
@@ -468,11 +475,11 @@ blockquote.rm-bq {
   color: #ffc1cc;
 }
 
-.roam-block span > a:not(.rm-alias):only-child {
+.roam-block span > a:not(.rm-alias) {
   /* only include external direct url */
   color: pink;
 }
-.roam-block span > a:not(.rm-alias):only-child:before {
+.roam-block span > a:not(.rm-alias):before {
   /* from "Better Roam Research" */
   /* Show glyph next to external links */
   content: "";
@@ -483,7 +490,7 @@ blockquote.rm-bq {
   width: 15px;
   height: 15px;
 }
-.roam-block span > a:not(.rm-alias):only-child:hover {
+.roam-block span > a:not(.rm-alias):hover {
   color: #ffc1cc;
 }
 
@@ -597,8 +604,8 @@ blockquote.rm-bq {
 .rm-block-children .rm-embed-container,
 .roam-block-container .rm-embed-container {
   /* embed block highlight */
-  background-color: #cbebfb;
-  color: #00000f;
+  background-color: rgba(157, 206, 231, 0.07);
+  color: #a6b7bf;
 }
 
 /*------------------------------------

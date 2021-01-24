@@ -34,6 +34,10 @@
     @include Grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .roam-block-container[data-page-links*="display_col-4"] > .rm-block-children {
+    @include Grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
   .roam-block-container[data-page-links*="display_col-5"] > .rm-block-children {
     @include Grid;
     grid-template-columns: repeat(5, 1fr);
