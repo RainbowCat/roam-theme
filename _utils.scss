@@ -138,7 +138,7 @@ $linear-channel-values: 0 0.0003035269835488375 0.000607053967097675
 // Determine whether to use dark or light text on top of given color.
 // Returns black for dark text and white for light text.
 @function setContrast($color) {
-  @if (alpha($color) == 0) {
+  @if (alpha($color) < 0.5) {
     $color: $palette_theme;
   }
   $lightContrast: contrast($color, white);

@@ -686,6 +686,9 @@ blockquote.rm-bq {
   background-color: #9dcee7 !important;
   color: #00000f !important;
 }
+.bp3-elevation-3 .dont-unfocus-block[style*=background] span[style*="color:"] {
+  color: #00000f !important;
+}
 
 /*------------------------------------
 # QUERY
@@ -768,81 +771,63 @@ blockquote.rm-bq {
 }
 
 .bp3-datepicker {
-  /* modal padding */
   background: #0a1829;
   padding: 6px;
 }
-
-.bp3-html-select select,
-.bp3-select select {
-  /* month, year text */
+.bp3-datepicker .bp3-html-select select {
   color: #a6b7bf;
 }
-
-.bp3-html-select .bp3-icon {
-  /* month and year select */
-  color: #a6b7bf;
+.bp3-datepicker .bp3-html-select .bp3-icon {
+  color: rgba(166, 183, 191, 0.7);
 }
-
-/* month back and forth carret bg color */
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
-  background: transparent !important;
-}
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next svg,
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev svg {
-  color: #a6b7bf !important;
-}
-
-/* month back and forth carret color / outside month date color */
-span.bp3-icon.bp3-icon-chevron-left,
-span.bp3-icon.bp3-icon-chevron-right,
-.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
-  color: #050c15;
-}
-
-/* month and year hover state */
-.bp3-html-select.bp3-minimal select:hover,
-.bp3-select.bp3-minimal select:hover {
+.bp3-datepicker .bp3-html-select:hover select {
   background: #9dcee7;
-  color: #00000f;
+  color: #cbebfb;
 }
-
+.bp3-datepicker .bp3-html-select:hover .bp3-icon {
+  color: rgba(203, 235, 251, 0.7);
+}
+.bp3-datepicker button.DayPicker-NavButton {
+  background: transparent;
+}
+.bp3-datepicker button.DayPicker-NavButton svg {
+  color: #a6b7bf;
+}
+.bp3-datepicker button.DayPicker-NavButton:hover {
+  background: #9dcee7;
+}
+.bp3-datepicker button.DayPicker-NavButton:hover svg {
+  color: #cbebfb;
+}
+.bp3-datepicker .bp3-datepicker-caption + .bp3-divider {
+  border-bottom: 1px solid #a6b7bf;
+}
 .bp3-datepicker .DayPicker-Weekday abbr[title] {
-  /* abbreviated day titles */
   border-bottom: none;
-  font-size: 13px;
-  color: #9dcee7;
+  color: #6ba5c2;
   cursor: default;
 }
-
-.bp3-datepicker-caption + .bp3-divider {
-  /* divider */
-  border-bottom: none;
-}
-
 .bp3-datepicker .DayPicker-Day {
-  background: transparent;
-  color: #0f243e;
+  color: #cbebfb;
 }
-
-.bp3-datepicker .DayPicker-Day > div:first-child {
-  /* date appearances */
-  line-height: 1.15em;
-  font-size: 14px;
-  font-weight: 600;
-}
-
 .bp3-datepicker .DayPicker-Day:hover {
-  /* hover background color */
   background: #9dcee7;
-  color: #00000f;
+  color: #cbebfb;
 }
-
-/* today bg color */
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
+  color: rgba(157, 206, 231, 0.5);
+}
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside:hover {
+  background: #9dcee7;
+  color: #cbebfb;
+}
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--isToday .bp3-datepicker-day-wrapper {
   background: #9dcee7;
   color: #00000f;
+}
+.bp3-datepicker .DayPicker-Day.DayPicker-Day--isToday .bp3-datepicker-day-wrapper:hover {
+  background: #9dcee7;
+  color: #cbebfb;
 }
 
 /*---------------------------------- 

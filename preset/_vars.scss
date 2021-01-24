@@ -202,10 +202,17 @@ $page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
 
 // datepicker
 $datepicker_bg: $palette_theme;
-$datepicker_text-day: $palette_theme-lighter;
-$datepicker_bg-today: $palette_accent;
-$datepicker_altfont-color: $palette_theme-darker;
-$datepicker_hover-bg: $palette_accent;
+$datepicker_text: setContrast($datepicker_bg);
+
+// for things inside
+$datepicker_hover-bg: color.change($palette_accent, $alpha: 0.3);
+$datepicker_hover-text: $palette_accent-lighter;
+
+// days
+$datepicker_today-bg: $palette_accent; // today
+$datepicker_weekday: $palette_accent-darker;
+$datepicker_month-day: $palette_accent-lighter;
+$datepicker_nonmonth-day: color.change($palette_accent, $alpha: 0.5);
 
 // code
 $code-inline_bg: #222629;

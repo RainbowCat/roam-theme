@@ -512,8 +512,12 @@ blockquote.rm-bq {
   border: $popover_border;
   border-radius: $roundness;
   .dont-unfocus-block[style*="background"] {
+    // selected item
     background-color: $popover_bg-hover !important;
     color: $popover_text-hover !important;
+    span[style*="color:"] {
+      color: $popover_text-hover !important;
+    }
   }
 }
 
@@ -623,84 +627,95 @@ blockquote.rm-bq {
 # Datepicker
 ------------------------------------*/
 
-//TODO
 .bp3-icon-calendar {
+  //todo
   border: none;
 }
+
 .bp3-datepicker {
-  /* modal padding */
   background: $datepicker_bg;
   padding: 6px;
-}
-.bp3-html-select select,
-.bp3-select select {
-  /* month, year text */
-  color: setContrast($datepicker_bg);
-}
 
-// .bp3-datepicker-month-select select {
-//   // use margin instead of padding
-//   padding-right: 0px !important;
-//   margin-right: 16px;
-// }
-
-.bp3-html-select .bp3-icon {
-  /* month and year select */
-  color: opacify(setContrast($datepicker_bg), 0.3);
-}
-
-/* month back and forth carret bg color */
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--next,
-button.bp3-button.bp3-minimal.DayPicker-NavButton.DayPicker-NavButton--prev {
-  background: transparent !important;
-  svg {
-    color: setContrast($datepicker_bg) !important;
+  // month, year selector
+  .bp3-html-select {
+    select {
+      color: setContrast($datepicker_bg);
+    }
+    .bp3-icon {
+      color: color.change(setContrast($datepicker_bg), $alpha: 0.7);
+    }
+    &:hover {
+      select {
+        background: $datepicker_hover-bg;
+        color: $datepicker_hover-text;
+      }
+      .bp3-icon {
+        color: color.change($datepicker_hover-text, $alpha: 0.7);
+      }
+    }
   }
-}
-/* month back and forth carret color / outside month date color */
-span.bp3-icon.bp3-icon-chevron-left,
-span.bp3-icon.bp3-icon-chevron-right,
-.bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
-  color: $datepicker_altfont-color;
-}
-/* month and year hover state */
-.bp3-html-select.bp3-minimal select:hover,
-.bp3-select.bp3-minimal select:hover {
-  background: $datepicker_hover-bg;
-  color: setContrast($datepicker_hover-bg);
-}
-.bp3-datepicker .DayPicker-Weekday abbr[title] {
-  /* abbreviated day titles */
-  border-bottom: none;
-  font-size: 13px;
-  color: $datepicker_bg-today; //todo
-  cursor: default;
-}
-.bp3-datepicker-caption + .bp3-divider {
-  /* divider */
-  border-bottom: none;
-}
-.bp3-datepicker .DayPicker-Day {
-  background: transparent;
-  color: $datepicker_text-day;
-}
-.bp3-datepicker .DayPicker-Day > div:first-child {
-  /* date appearances */
-  line-height: 1.15em;
-  font-size: 14px;
-  font-weight: 600;
-}
-.bp3-datepicker .DayPicker-Day:hover {
-  /* hover background color */
-  background: $datepicker_hover-bg;
-  color: setContrast($datepicker_hover-bg);
-}
-/* today bg color */
-.bp3-datepicker
-  .DayPicker-Day.DayPicker-Day--isToday
-  .bp3-datepicker-day-wrapper {
-  background: $datepicker_bg-today;
-  color: setContrast($datepicker_bg-today);
+
+  // month back and forth carret
+  button.DayPicker-NavButton {
+    background: transparent;
+    svg {
+      color: $datepicker_text;
+    }
+    &:hover {
+      background: $datepicker_hover-bg;
+      svg {
+        color: $datepicker_hover-text;
+      }
+    }
+  }
+
+  // divider
+  .bp3-datepicker-caption + .bp3-divider {
+    border-bottom: 1px solid $datepicker_text;
+  }
+
+  // weekday text
+  .DayPicker-Weekday abbr[title] {
+    border-bottom: none; // remove dotted underline
+    // font-size: 13px;
+    color: $datepicker_weekday;
+    cursor: default;
+  }
+
+  // month days
+  .DayPicker-Day {
+    // background: transparent;
+    color: $datepicker_month-day;
+    &:hover {
+      background: $datepicker_hover-bg;
+      color: $datepicker_hover-text;
+    }
+  }
+  // .DayPicker-Day > div:first-child {
+  //   // date appearances
+  //   line-height: 1.15em;
+  //   font-size: 14px;
+  //   font-weight: 600;
+  // }
+
+  // outside month days
+  .DayPicker-Day.DayPicker-Day--outside {
+    color: $datepicker_nonmonth-day;
+    &:hover {
+      background: $datepicker_hover-bg;
+      color: $datepicker_hover-text;
+    }
+  }
+
+  // today
+  .DayPicker-Day.DayPicker-Day--isToday .bp3-datepicker-day-wrapper {
+    background: $datepicker_today-bg;
+    color: setContrast($datepicker_today-bg);
+    &:hover {
+      background: $datepicker_hover-bg;
+      color: $datepicker_hover-text;
+    }
+  }
 }
 
 /*---------------------------------- 
