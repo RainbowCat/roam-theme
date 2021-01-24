@@ -58,6 +58,10 @@
   > .rm-block-children {
   align-items: center;
 }
+.roam-block-container[data-page-links*="display_align-end"]
+  > .rm-block-children {
+  align-items: end;
+}
 //grid horizontal alignments (justify)
 .roam-block-container[data-page-links*="display_justify-start"]
   > .rm-block-children {
@@ -67,11 +71,15 @@
   > .rm-block-children {
   justify-content: center;
 }
-.roam-block-container[data-page-links*="display_justify-spacebetween"]
+.roam-block-container[data-page-links*="display_justify-end"]
+  > .rm-block-children {
+  justify-content: end;
+}
+.roam-block-container[data-page-links*="display_justify-between"]
   > .rm-block-children {
   justify-content: space-between;
 }
-.roam-block-container[data-page-links*="display_justify-spacearound"]
+.roam-block-container[data-page-links*="display_justify-around"]
   > .rm-block-children {
   justify-content: space-around;
 }

@@ -362,6 +362,7 @@ blockquote.rm-bq {
   background: #193c67 !important;
   color: #a6b7bf !important;
   border-radius: 50% !important;
+  transition: none;
 }
 .bp3-button.bp3-minimal.block-ref-count-button:hover {
   background: #cbebfb !important;
@@ -690,6 +691,20 @@ blockquote.rm-bq {
   display: none;
   background-color: #122b4a;
   color: #a6b7bf;
+}
+
+.rm-query .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+
+.rm-query .kanban-board:after {
+  content: "kanban";
+}
+
+.rm-query .kanban-board .kanban-column-container {
+  display: none;
 }
 
 /*------------------------------------

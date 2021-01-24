@@ -186,6 +186,7 @@ blockquote.rm-bq {
     background: $palette_accent-lighter !important;
     color: setContrast($palette_accent-lighter) !important;
   }
+  transition: none;
 }
 
 /*------------------------------------
@@ -569,6 +570,17 @@ blockquote.rm-bq {
     background-color: $query-title_bg;
     color: $query-title_text;
   }
+}
+.rm-query .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+.rm-query .kanban-board:after {
+  content: "kanban";
+}
+.rm-query .kanban-board .kanban-column-container {
+  display: none;
 }
 
 /*------------------------------------

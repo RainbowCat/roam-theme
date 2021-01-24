@@ -389,6 +389,7 @@ blockquote.rm-bq {
   background: #193c67 !important;
   color: #a6b7bf !important;
   border-radius: 50% !important;
+  transition: none;
 }
 .bp3-button.bp3-minimal.block-ref-count-button:hover {
   background: #cbebfb !important;
@@ -717,6 +718,20 @@ blockquote.rm-bq {
   display: none;
   background-color: #122b4a;
   color: #a6b7bf;
+}
+
+.rm-query .kanban-board {
+  border: none;
+  padding: 0px;
+  overflow: initial;
+}
+
+.rm-query .kanban-board:after {
+  content: "kanban";
+}
+
+.rm-query .kanban-board .kanban-column-container {
+  display: none;
 }
 
 /*------------------------------------
@@ -1420,6 +1435,10 @@ span.cm-qualifier {
   align-items: center;
 }
 
+.roam-block-container[data-page-links*=display_align-end] > .rm-block-children {
+  align-items: end;
+}
+
 .roam-block-container[data-page-links*=display_justify-start] > .rm-block-children {
   justify-content: start;
 }
@@ -1428,11 +1447,15 @@ span.cm-qualifier {
   justify-content: center;
 }
 
-.roam-block-container[data-page-links*=display_justify-spacebetween] > .rm-block-children {
+.roam-block-container[data-page-links*=display_justify-end] > .rm-block-children {
+  justify-content: end;
+}
+
+.roam-block-container[data-page-links*=display_justify-between] > .rm-block-children {
   justify-content: space-between;
 }
 
-.roam-block-container[data-page-links*=display_justify-spacearound] > .rm-block-children {
+.roam-block-container[data-page-links*=display_justify-around] > .rm-block-children {
   justify-content: space-around;
 }
 
