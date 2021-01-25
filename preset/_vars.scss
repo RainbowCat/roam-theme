@@ -17,9 +17,9 @@ $font-size_large: 30px;
 $leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
 $leftbar_bg: $palette_theme-darker;
 // $bg--shortcuts: linear-gradient(green, black);
-$leftbar_divline-color: $palette_accent-darker;
-$leftbar_text-color: $palette_accent-darker;
-$leftbar_text-color-hover: $palette_accent-lighter;
+$leftbar_divline-color: setContrast($leftbar_bg);
+$leftbar_text-color: setContrast($leftbar_bg);
+$leftbar_text-color-hover: $palette_grey;
 
 /*------------------------------------
 # topbar
@@ -104,7 +104,7 @@ $checkbox_symbol-color: setContrast($checkbox_bg-done);
 $checkbox_symbol: "✓";
 
 // icons
-$icons_bg: $palette_theme-lighter;
+$icons_bg: color.adjust($palette_theme-darker, $alpha: -0.3);
 $icons_bg-hover: $palette_accent-lighter;
 $icons_color: setContrast($icons_bg);
 $icons_color-hover: setContrast($icons_bg-hover);
@@ -121,8 +121,8 @@ $add-glyph: true;
 $link-internal_text: $palette_accent;
 $link-internal_text-hover: color.adjust($link-internal_text, $lightness: +0.2);
 
-$link-external_text: pink; // includes regular hyperlinks
-$link-external_text-hover: color.adjust(pink, $lightness: +0.2);
+$link-external_text: $palette_accent; // includes regular hyperlinks
+$link-external_text-hover: color.adjust($palette_accent, $lightness: +0.2);
 
 // page links (internal)
 $page-link_text: $link-internal_text;
@@ -197,7 +197,10 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 $table_border: 1px solid setContrast($palette_theme);
 
 // general popups
-$popover_bg: $palette_theme-lighter;
+$popover_bg: color.change(
+  $icons_bg-hover,
+  $alpha: 1
+); // needs to be non-transparent
 $popover_text: setContrast($popover_bg);
 
 $popover_bg-hover: $palette_accent;

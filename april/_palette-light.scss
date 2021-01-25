@@ -1,14 +1,15 @@
 /*------------------------------------
 # PALETTE (LIGHT)
 ------------------------------------*/
-$palette_theme: hsl(213, 61%, 40%);
-$palette_theme-lighter: hsla(213, 61%, 60%);
-$palette_theme-darker: hsl(213, 61%, 28%);
+$palette_theme-lighter: hsl(62, 100%, 87%);
+$palette_theme: hsl(45, 100%, 84%);
+$palette_theme-darker: hsl(30, 90%, 76%);
 
-$palette_accent: hsl(200, 60%, 76%);
-$palette_accent-lighter: hsla(200, 85%, 89%, 1);
-$palette_accent-darker: hsla(200, 52%, 59%, 1);
+$palette_accent-lighter: hsl(9, 100%, 86%);
+$palette_accent: hsl(9, 100%, 78%);
+$palette_accent-darker: hsl(9, 90%, 71%);
 
-$palette_black: #000010;
-$palette_grey: #4b5354;
-$palette_white: #e9edef;
+$palette_black: hsl(25, 35%, 20%);
+$palette_grey: hsl(25, 32%, 43%);
+$palette_white: hsl(9, 100%, 96%);
+// $palette_white: hsl(200, 16%, 93%);

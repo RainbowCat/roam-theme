@@ -1,6 +1,46 @@
+@use "sass:color";
+
+/*------------------------------------
+#
+# LIGHT THEME
+#
+------------------------------------*/
 @media (prefers-color-scheme: light) {
-  @import "april_light.scss";
+  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+
+  @import "april/palette-light";
+  @import "april/fonts";
+
+  @import "utils";
+
+  @import "preset/vars";
+  @import "april/vars";
+
+  /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "style";
+
+  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  @import "april/extra";
 }
+
+/*------------------------------------
+#
+# DARK THEME
+#
+------------------------------------*/
 @media (prefers-color-scheme: dark) {
-  @import "april_dark.scss";
+  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+  @import "april/palette-dark";
+  @import "april/fonts";
+
+  @import "utils";
+
+  @import "preset/vars";
+  @import "april/vars";
+
+  /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "style";
+
+  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  @import "april/extra";
 }

@@ -1,15 +1,44 @@
-/*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
 @use "sass:color";
 
-@import "preset/palette";
-@import "preset/fonts";
+/*------------------------------------
+#
+# LIGHT THEME
+#
+------------------------------------*/
+@media (prefers-color-scheme: light) {
+  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
 
-@import "utils";
+  @import "preset/palette-light";
+  @import "preset/fonts";
 
-@import "preset/vars";
+  @import "utils";
 
-/*---------------------------------------- STYLE -----------------------------------------*/
-@import "style";
+  @import "preset/vars";
 
-/*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-@import "preset/extra";
+  /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "style";
+
+  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  @import "preset/extra";
+}
+
+/*------------------------------------
+#
+# DARK THEME
+#
+------------------------------------*/
+@media (prefers-color-scheme: dark) {
+  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+  @import "preset/palette-dark";
+  @import "preset/fonts";
+
+  @import "utils";
+
+  @import "preset/vars";
+
+  /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "style";
+
+  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  @import "preset/extra";
+}

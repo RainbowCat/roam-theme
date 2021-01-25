@@ -16,7 +16,6 @@
 // XXX HACK
 /* make search popover */
 // layout
-//TODO add border / shadow to make search popup standout
 .roam-topbar > .flex-h-box .rm-find-or-create-wrapper {
   // match size and positions
   input#find-or-create-input:focus,
@@ -65,6 +64,7 @@
   }
   // style dropdown menu
   .bp3-overlay .bp3-menu {
+    background: $palette_theme !important;
     > div:first-child {
       // recent
       background: $palette_theme !important;
