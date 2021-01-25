@@ -437,12 +437,8 @@ blockquote.rm-bq {
   color: $popover_text;
   background: $popover_bg;
 
-  div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
-    color: $popover_text !important;
-  }
-
   & > &-content {
-    background-color: $popover_bg;
+    background-color: $popover_bg; // becomes border of menus
     color: $popover_text;
   }
   & &-arrow {
@@ -453,6 +449,14 @@ blockquote.rm-bq {
       fill: $popover_text; //tiny border
       fill-opacity: 0.3;
     }
+  }
+}
+
+// page filter
+.bp3-popover {
+  div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
+    // page filter div for "only incdlude block paths with these links in them"
+    color: $popover_text !important;
   }
   .bp3-button {
     // tag selection buttons in page filter
@@ -465,6 +469,8 @@ blockquote.rm-bq {
     }
   }
 }
+
+//todo .bp3-portal ?
 
 // menus //TODO add variables
 .bp3-menu {

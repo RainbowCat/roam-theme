@@ -86,7 +86,7 @@ span {
   }
 
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
-    z-index: 1 !important;
+    z-index: 3 !important;
   }
 
   .roam-block-container,
@@ -630,9 +630,6 @@ span {
     color: #453021;
     background: #ffc2b8;
   }
-  .bp3-popover div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
-    color: #453021 !important;
-  }
   .bp3-popover > .bp3-popover-content {
     background-color: #ffc2b8;
     color: #453021;
@@ -643,6 +640,10 @@ span {
   .bp3-popover .bp3-popover-arrow-border {
     fill: #453021;
     fill-opacity: 0.3;
+  }
+
+  .bp3-popover div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
+    color: #453021 !important;
   }
   .bp3-popover .bp3-button {
     color: #453021;
@@ -1594,7 +1595,7 @@ span {
   }
 
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
-    z-index: 1 !important;
+    z-index: 3 !important;
   }
 
   .roam-block-container,
@@ -2138,9 +2139,6 @@ span {
     color: #00000f;
     background: #cbebfb;
   }
-  .bp3-popover div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
-    color: #00000f !important;
-  }
   .bp3-popover > .bp3-popover-content {
     background-color: #cbebfb;
     color: #00000f;
@@ -2151,6 +2149,10 @@ span {
   .bp3-popover .bp3-popover-arrow-border {
     fill: #00000f;
     fill-opacity: 0.3;
+  }
+
+  .bp3-popover div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {
+    color: #00000f !important;
   }
   .bp3-popover .bp3-button {
     color: #00000f;
