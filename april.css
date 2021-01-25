@@ -32,13 +32,22 @@
   # basic text
   ------------------------------------*/
   /*------------------------------------
-  # components
+  # bullets
+  ------------------------------------*/
+  /*------------------------------------
+  # checkboxes
   ------------------------------------*/
   /*------------------------------------
   # bidirectional linking
   ------------------------------------*/
   /*------------------------------------
   # blocks
+  ------------------------------------*/
+  /*------------------------------------
+  # icons
+  ------------------------------------*/
+  /*------------------------------------
+  # popups
   ------------------------------------*/
   /*------------------------------------
   # features
@@ -645,20 +654,20 @@ span {
   }
 
   .bp3-menu {
-    background: #ffc2b8 !important;
+    background: #f9c28b !important;
     color: #453021 !important;
   }
   .bp3-menu .bp3-menu-item {
-    background: #ffc2b8 !important;
+    background: #f9c28b !important;
     color: #453021 !important;
   }
   .bp3-menu .bp3-menu-item:hover {
     background: #453021 !important;
-    color: #ffc2b8 !important;
+    color: #f9c28b !important;
   }
 
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
-    background: #ffc2b8;
+    background: #f9c28b;
     color: #453021;
     opacity: 1;
   }
@@ -679,7 +688,7 @@ span {
   }
 
   .bp3-elevation-3 {
-    background-color: #ffc2b8 !important;
+    background-color: #f9c28b !important;
     color: #453021 !important;
     border: 1px solid #453021;
     border-radius: 5px;
@@ -1058,6 +1067,7 @@ span {
   .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-menu > div:first-child {
     background: #ffebad !important;
     color: #453021 !important;
+    display: none;
   }
   .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-menu .rm-menu-item {
     background: #ffebad;
@@ -1530,13 +1540,22 @@ span {
   # basic text
   ------------------------------------*/
   /*------------------------------------
-  # components
+  # bullets
+  ------------------------------------*/
+  /*------------------------------------
+  # checkboxes
   ------------------------------------*/
   /*------------------------------------
   # bidirectional linking
   ------------------------------------*/
   /*------------------------------------
   # blocks
+  ------------------------------------*/
+  /*------------------------------------
+  # icons
+  ------------------------------------*/
+  /*------------------------------------
+  # popups
   ------------------------------------*/
   /*------------------------------------
   # features
@@ -2143,32 +2162,32 @@ span {
   }
 
   .bp3-menu {
-    background: #cbebfb !important;
-    color: #00000f !important;
+    background: #050c15 !important;
+    color: #a6b7bf !important;
   }
   .bp3-menu .bp3-menu-item {
-    background: #cbebfb !important;
-    color: #00000f !important;
+    background: #050c15 !important;
+    color: #a6b7bf !important;
   }
   .bp3-menu .bp3-menu-item:hover {
-    background: #00000f !important;
-    color: #cbebfb !important;
+    background: #a6b7bf !important;
+    color: #050c15 !important;
   }
 
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
-    background: #cbebfb;
-    color: #00000f;
+    background: #050c15;
+    color: #a6b7bf;
     opacity: 1;
   }
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .menu-title {
-    color: #00000f;
+    color: #a6b7bf;
   }
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting {
     background: transparent;
-    color: #00000f;
+    color: #a6b7bf;
   }
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting:hover {
-    color: #000010;
+    color: #a7b7bf;
     background: transparent;
   }
   .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown .setting a {
@@ -2177,8 +2196,8 @@ span {
   }
 
   .bp3-elevation-3 {
-    background-color: #cbebfb !important;
-    color: #00000f !important;
+    background-color: #050c15 !important;
+    color: #a6b7bf !important;
     border: 1px solid #00000f;
     border-radius: 5px;
   }
@@ -2556,6 +2575,7 @@ span {
   .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-menu > div:first-child {
     background: #122b4a !important;
     color: #a6b7bf !important;
+    display: none;
   }
   .roam-topbar > .flex-h-box .rm-find-or-create-wrapper .bp3-overlay .bp3-menu .rm-menu-item {
     background: #122b4a;

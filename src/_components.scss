@@ -469,41 +469,41 @@ blockquote.rm-bq {
 // menus //TODO add variables
 .bp3-menu {
   // code-area language menu
-  background: $popover_bg !important;
-  color: $popover_text !important;
+  background: $menu_bg !important;
+  color: $menu_text !important;
   .bp3-menu-item {
-    background: $popover_bg !important;
-    color: $popover_text !important;
+    background: $menu_bg !important;
+    color: $menu_text !important;
     &:hover {
       // switch background and text color
-      background: $popover_text !important;
-      color: $popover_bg !important;
+      background: $menu_text !important;
+      color: $menu_bg !important;
     }
   }
 }
 
 .roam-body .roam-app .roam-sidebar-container .bp3-menu.rm-graph-dropdown {
   // graph menu
-  background: $popover_bg;
-  color: $popover_text;
+  background: $menu_bg;
+  color: $menu_text;
   opacity: 1;
   .menu-title {
-    color: setContrast($popover_bg);
+    color: setContrast($menu_bg);
   }
   // .bp3-menu-item.menu-item {
-  //   color: setContrast($popover_bg);
+  //   color: setContrast($menu_bg);
   //   margin-top: 2px;
   //   &:hover {
   //     // switch background and text color
-  //     background: $popover_text;
-  //     color: $popover_bg;
+  //     background: $menu_text;
+  //     color: $menu_bg;
   //   }
   // }
   .setting {
     background: transparent;
-    color: setContrast($popover_bg);
+    color: setContrast($menu_bg);
     &:hover {
-      color: color.adjust($popover_text, $lightness: 0.2);
+      color: color.adjust($menu_text, $lightness: 0.2);
       background: transparent;
     }
     a {
@@ -513,9 +513,9 @@ blockquote.rm-bq {
   }
   // div.signout {
   //   background: transparent;
-  //   color: setContrast($popover_bg);
+  //   color: setContrast($menu_bg);
   //   &:hover {
-  //     color: color.adjust($popover_text, $lightness: 0.2);
+  //     color: color.adjust($menu_text, $lightness: 0.2);
   //     background: transparent;
   //   }
   // }
@@ -523,16 +523,16 @@ blockquote.rm-bq {
 
 .bp3-elevation-3 {
   // slash menu
-  background-color: $popover_bg !important;
-  color: $popover_text !important;
-  border: $popover_border;
+  background-color: $menu_bg !important;
+  color: $menu_text !important;
+  border: $menu_border;
   border-radius: $roundness;
   .dont-unfocus-block[style*="background"] {
     // selected item
-    background-color: $popover_bg-hover !important;
-    color: $popover_text-hover !important;
+    background-color: $menu_bg-hover !important;
+    color: $menu_text-hover !important;
     span[style*="color:"] {
-      color: $popover_text-hover !important;
+      color: $menu_text-hover !important;
     }
   }
 }

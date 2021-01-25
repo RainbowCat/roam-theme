@@ -64,11 +64,13 @@
   }
   // style dropdown menu
   .bp3-overlay .bp3-menu {
+    //todo use vars
     background: $palette_theme !important;
     > div:first-child {
       // recent
       background: $palette_theme !important;
       color: setContrast($palette_theme) !important;
+      display: none;
     }
     .rm-menu-item {
       background: $palette_theme;

@@ -75,7 +75,7 @@ $highlight_padding: 2px 3px;
 $hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
 
 /*------------------------------------
-# components
+# bullets
 ------------------------------------*/
 // bullets
 $bullet_color: $palette_accent;
@@ -87,7 +87,9 @@ $treeline-width: 1px;
 $treeline-style: solid;
 $treeline-color: color.change(setContrast($palette_theme), $alpha: 0.2);
 
-// checkboxses & todos
+/*------------------------------------
+# checkboxes
+------------------------------------*/
 $checkbox_top: -1px;
 $checkbox_left: -2px;
 $checkbox_height: 14px;
@@ -102,14 +104,6 @@ $checkbox_bg-done: green;
 
 $checkbox_symbol-color: setContrast($checkbox_bg-done);
 $checkbox_symbol: "✓";
-
-// icons
-$icons_bg: color.adjust($palette_theme-darker, $alpha: -0.3);
-$icons_bg-hover: $palette_accent-lighter;
-$icons_color: setContrast($icons_bg);
-$icons_color-hover: setContrast($icons_bg-hover);
-$icons_border-radius: 3px;
-$icons_size: 24px;
 
 /*------------------------------------
 # bidirectional linking
@@ -173,6 +167,42 @@ $block_highlight-linked-text: setContrast($palette_accent);
 $block_highlight-embed: $block-ref_bg;
 
 /*------------------------------------
+# icons
+------------------------------------*/
+$icons_bg: color.adjust($palette_theme-darker, $alpha: -0.3);
+$icons_bg-hover: $palette_accent-lighter;
+$icons_color: setContrast($icons_bg);
+$icons_color-hover: setContrast($icons_bg-hover);
+$icons_border-radius: 3px;
+$icons_size: 24px;
+
+/*------------------------------------
+# popups
+------------------------------------*/
+// hover popups
+$popover_bg: color.change(
+  $icons_bg-hover,
+  $alpha: 1
+); // needs to be non-transparent
+$popover_bg-hover: $palette_accent;
+$popover_text: setContrast($popover_bg);
+$popover_text-hover: setContrast($popover_bg-hover);
+$popover_border: 1px solid setContrast($popover_bg-hover);
+
+// menus
+$menu_bg: color.change($icons_bg, $alpha: 1); // needs to be non-transparent
+$menu_bg-hover: $palette_accent;
+$menu_text: setContrast($menu_bg);
+$menu_text-hover: setContrast($menu_bg-hover);
+$menu_border: 1px solid setContrast($menu_bg-hover);
+
+// page filter popup
+$page-filter-btns-bg: $popover_bg;
+$page-filter-btns-bg-hover: color.adjust($popover_bg, $lightness: 15%);
+$page-filter-btns-text: $popover_text;
+$page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
+
+/*------------------------------------
 # features
 ------------------------------------*/
 // query
@@ -195,25 +225,6 @@ $kanban_card-border: 1px solid setContrast($palette_theme);
 
 // table
 $table_border: 1px solid setContrast($palette_theme);
-
-// general popups
-$popover_bg: color.change(
-  $icons_bg-hover,
-  $alpha: 1
-); // needs to be non-transparent
-$popover_text: setContrast($popover_bg);
-
-$popover_bg-hover: $palette_accent;
-$popover_text-hover: setContrast($popover_bg-hover);
-
-$popover_border: 1px solid setContrast($popover_bg-hover);
-
-// page filter popup
-$page-filter-btns-bg: $popover_bg;
-$page-filter-btns-text: $popover_text;
-
-$page-filter-btns-bg-hover: color.adjust($popover_bg, $lightness: 15%);
-$page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
 
 // datepicker
 $datepicker_bg: $palette_theme;
