@@ -316,11 +316,15 @@ span {
     border: 4px solid rgba(248, 134, 114, 0.5);
   }
 
-  .block-border-left {
-    border-left: 1px solid transparent !important;
+  .rm-block-containt + .rm-multibar {
+    border-right: 1px solid transparent !important;
   }
-  .block-border-left:hover {
-    border-left: 1px solid rgba(69, 48, 33, 0.2) !important;
+  .rm-block-containt + .rm-multibar:hover {
+    border-right: 1px solid rgba(69, 48, 33, 0.2) !important;
+  }
+
+  .rm-level-1 > .rm-multibar {
+    border-right: 1px solid transparent !important;
   }
 
   .roam-block-container .rm-block-main {
@@ -364,16 +368,24 @@ span {
   /*------------------------------------
   # GENERAL ICONS & BUTTONS
   ------------------------------------*/
-  .rm-block-main .bp3-button {
+  .bp3-button .bp3-icon {
+    color: #453021;
+  }
+
+  .rm-block-main .bp3-button,
+.rm-reference-main .bp3-button {
     background: linear-gradient(#fdffbd, #f9c28b) !important;
     color: #453021 !important;
-    color: #453021 !important;
   }
-  .rm-block-main .bp3-button:hover {
-    background: linear-gradient(#f9c28b, #fdffbd) !important;
-  }
-  .rm-block-main .bp3-button:before {
+  .rm-block-main .bp3-button:before,
+.rm-block-main .bp3-button .bp3-icon:before,
+.rm-reference-main .bp3-button:before,
+.rm-reference-main .bp3-button .bp3-icon:before {
     color: #453021;
+  }
+  .rm-block-main .bp3-button:hover,
+.rm-reference-main .bp3-button:hover {
+    background: linear-gradient(#f9c28b, #fdffbd) !important;
   }
 
   .bp3-button.bp3-minimal.block-ref-count-button {
@@ -518,9 +530,6 @@ span {
     border: none;
     border-radius: 5px;
     padding: 5px 10px 5px 18px;
-  }
-  .rm-reference-main button.bp3-button.bp3-minimal {
-    color: #453021 !important;
   }
   .rm-reference-main > div > div.rm-reference-container {
     padding: 10px 5px;
@@ -1002,22 +1011,6 @@ span {
   }
 
   /*------------------------------------
-  # CREDITS
-  ------------------------------------*/
-  .rm-topbar > div > div:last-child ul.bp3-menu:after {
-    content: "theme by @RainbowCat";
-    color: #453021;
-    border: 1px solid #453021;
-    border-radius: 10px;
-    text-align: right;
-    font-size: 13px;
-    line-height: 1.4;
-    display: inline-block;
-    padding: 7px;
-    margin-top: 5px;
-  }
-
-  /*------------------------------------
   # TOPBAR
   ------------------------------------*/
   .rm-topbar {
@@ -1299,6 +1292,21 @@ span {
     color: #453021 !important;
   }
 
+  /*------------------------------------
+  # Daily Log
+  ------------------------------------*/
+  #block-input-ghost span {
+    color: rgba(69, 48, 33, 0.7) !important;
+  }
+
+  .roam-log-container .roam-log-page {
+    border-top-color: #453021;
+  }
+
+  .roam-log-container .roam-log-preview {
+    color: rgba(69, 48, 33, 0.7);
+  }
+
   /*---------------------------------- 
   # ALL PAGES
   ------------------------------------*/
@@ -1374,6 +1382,22 @@ span {
   }
   #all-pages-search.rm-all-pages .bp3-button.bp3-minimal:hover:before {
     color: #453021 !important;
+  }
+
+  /*------------------------------------
+  # CREDITS
+  ------------------------------------*/
+  .rm-topbar > div > div:last-child ul.bp3-menu:after {
+    content: "theme by @RainbowCat";
+    color: #453021;
+    border: 1px solid #453021;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.4;
+    display: inline-block;
+    padding: 7px;
+    margin-top: 5px;
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
@@ -1825,11 +1849,15 @@ span {
     border: 4px solid rgba(107, 165, 194, 0.5);
   }
 
-  .block-border-left {
-    border-left: 1px solid transparent !important;
+  .rm-block-containt + .rm-multibar {
+    border-right: 1px solid transparent !important;
   }
-  .block-border-left:hover {
-    border-left: 1px solid rgba(166, 183, 191, 0.2) !important;
+  .rm-block-containt + .rm-multibar:hover {
+    border-right: 1px solid rgba(166, 183, 191, 0.2) !important;
+  }
+
+  .rm-level-1 > .rm-multibar {
+    border-right: 1px solid transparent !important;
   }
 
   .roam-block-container .rm-block-main {
@@ -1873,16 +1901,24 @@ span {
   /*------------------------------------
   # GENERAL ICONS & BUTTONS
   ------------------------------------*/
-  .rm-block-main .bp3-button {
+  .bp3-button .bp3-icon {
+    color: #a6b7bf;
+  }
+
+  .rm-block-main .bp3-button,
+.rm-reference-main .bp3-button {
     background: linear-gradient(#193c67, #050c15) !important;
     color: #a6b7bf !important;
-    color: #a6b7bf !important;
   }
-  .rm-block-main .bp3-button:hover {
-    background: linear-gradient(#050c15, #193c67) !important;
-  }
-  .rm-block-main .bp3-button:before {
+  .rm-block-main .bp3-button:before,
+.rm-block-main .bp3-button .bp3-icon:before,
+.rm-reference-main .bp3-button:before,
+.rm-reference-main .bp3-button .bp3-icon:before {
     color: #a6b7bf;
+  }
+  .rm-block-main .bp3-button:hover,
+.rm-reference-main .bp3-button:hover {
+    background: linear-gradient(#050c15, #193c67) !important;
   }
 
   .bp3-button.bp3-minimal.block-ref-count-button {
@@ -2027,9 +2063,6 @@ span {
     border: none;
     border-radius: 5px;
     padding: 5px 10px 5px 18px;
-  }
-  .rm-reference-main button.bp3-button.bp3-minimal {
-    color: #a6b7bf !important;
   }
   .rm-reference-main > div > div.rm-reference-container {
     padding: 10px 5px;
@@ -2511,22 +2544,6 @@ span {
   }
 
   /*------------------------------------
-  # CREDITS
-  ------------------------------------*/
-  .rm-topbar > div > div:last-child ul.bp3-menu:after {
-    content: "theme by @RainbowCat";
-    color: #00000f;
-    border: 1px solid #00000f;
-    border-radius: 10px;
-    text-align: right;
-    font-size: 13px;
-    line-height: 1.4;
-    display: inline-block;
-    padding: 7px;
-    margin-top: 5px;
-  }
-
-  /*------------------------------------
   # TOPBAR
   ------------------------------------*/
   .rm-topbar {
@@ -2808,6 +2825,21 @@ span {
     color: #00000f !important;
   }
 
+  /*------------------------------------
+  # Daily Log
+  ------------------------------------*/
+  #block-input-ghost span {
+    color: rgba(166, 183, 191, 0.7) !important;
+  }
+
+  .roam-log-container .roam-log-page {
+    border-top-color: #a6b7bf;
+  }
+
+  .roam-log-container .roam-log-preview {
+    color: rgba(166, 183, 191, 0.7);
+  }
+
   /*---------------------------------- 
   # ALL PAGES
   ------------------------------------*/
@@ -2883,6 +2915,22 @@ span {
   }
   #all-pages-search.rm-all-pages .bp3-button.bp3-minimal:hover:before {
     color: #00000f !important;
+  }
+
+  /*------------------------------------
+  # CREDITS
+  ------------------------------------*/
+  .rm-topbar > div > div:last-child ul.bp3-menu:after {
+    content: "theme by @RainbowCat";
+    color: #00000f;
+    border: 1px solid #00000f;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.4;
+    display: inline-block;
+    padding: 7px;
+    margin-top: 5px;
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/

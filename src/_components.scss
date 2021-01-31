@@ -93,16 +93,16 @@ blockquote.rm-bq {
 }
 
 // nest diagram line
-.block-border-left {
-  border-left: $treeline-width $treeline-style transparent !important;
+.rm-block-containt + .rm-multibar {
+  border-right: $treeline-width $treeline-style transparent !important;
   &:hover {
-    border-left: $treeline-width $treeline-style $treeline-color !important;
+    border-right: $treeline-width $treeline-style $treeline-color !important;
   }
 }
-// .rm-level-1 > .block-border-left {
-//   // remove first level line completely
-//   border-left: $treeline-width $treeline-style transparent !important;
-// }
+.rm-level-1 > .rm-multibar {
+  // remove first level line completely
+  border-right: $treeline-width $treeline-style transparent !important;
+}
 // .rm-level-2 > .block-border-left {
 //   // remove second level line completely
 //   border-left: $treeline-width $treeline-style transparent !important;
@@ -160,21 +160,27 @@ blockquote.rm-bq {
 /*------------------------------------
 # GENERAL ICONS & BUTTONS
 ------------------------------------*/
-.rm-block-main .bp3-button {
+.bp3-button .bp3-icon {
+  color: $icons_color;
+}
+
+.rm-block-main .bp3-button,
+.rm-reference-main .bp3-button {
   background: linear-gradient(
     $palette_theme-lighter,
     $palette_theme-darker
   ) !important;
   color: setContrast($palette_theme-darker) !important;
+  &:before,
+  .bp3-icon:before {
+    // color: setContrast($palette_theme);
+    color: $icons_color;
+  }
   &:hover {
     background: linear-gradient(
       $palette_theme-darker,
       $palette_theme-lighter
     ) !important;
-  }
-  color: setContrast($palette_theme-darker) !important;
-  &:before {
-    color: setContrast($palette_theme);
   }
 }
 
@@ -192,6 +198,7 @@ blockquote.rm-bq {
 .rm-topbar button.bp3-icon-calendar[style*="margin-left: 8px;"] {
   margin-left: 0px !important; // fix daily log calendar icon placement
 }
+
 /*------------------------------------
 # TAGS
 ------------------------------------*/
@@ -328,9 +335,12 @@ blockquote.rm-bq {
   border-radius: $roundness;
   padding: 5px 10px 5px 18px;
 
-  button.bp3-button.bp3-minimal {
-    color: $ref_text !important;
-  }
+  // button.bp3-button.bp3-minimal {
+  //   color: $ref_text !important;
+  //   .bp3-icon:before {
+  //     color: $ref_text !important;
+  //   }
+  // }
 
   > div > div.rm-reference-container {
     // linked references
@@ -870,23 +880,4 @@ span.cm-atom {
 }
 span.cm-qualifier {
   color: $codemirror_qualifier !important;
-}
-
-/*------------------------------------
-# CREDITS
-------------------------------------*/
-.rm-topbar > div > div:last-child ul.bp3-menu:after {
-  content: "theme by @RainbowCat";
-
-  color: $popover_text;
-  border: 1px solid $popover_text;
-  border-radius: 10px;
-
-  text-align: right;
-  font-size: 13px;
-  line-height: 1.4;
-
-  display: inline-block;
-  padding: 7px;
-  margin-top: 5px;
 }

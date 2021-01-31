@@ -1,3 +1,18 @@
+/*------------------------------------
+# Daily Log
+------------------------------------*/
+#block-input-ghost span {
+  // placeholder for empty block
+  color: color.adjust($main_text-color, $alpha: -0.3) !important;
+}
+
+.roam-log-container .roam-log-page {
+  border-top-color: $main_text-color;
+}
+
+.roam-log-container .roam-log-preview {
+  color: color.adjust($main_text-color, $alpha: -0.3);
+}
 /*---------------------------------- 
 # ALL PAGES
 ------------------------------------*/
@@ -85,4 +100,23 @@
       }
     }
   }
+}
+
+/*------------------------------------
+# CREDITS
+------------------------------------*/
+.rm-topbar > div > div:last-child ul.bp3-menu:after {
+  content: "theme by @RainbowCat";
+
+  color: $popover_text;
+  border: 1px solid $popover_text;
+  border-radius: 10px;
+
+  text-align: right;
+  font-size: 13px;
+  line-height: 1.4;
+
+  display: inline-block;
+  padding: 7px;
+  margin-top: 5px;
 }
