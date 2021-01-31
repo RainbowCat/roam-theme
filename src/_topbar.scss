@@ -2,38 +2,36 @@
 # TOPBAR
 ------------------------------------*/
 // style topbar
-.roam-topbar {
+.rm-topbar {
   background: $topbar_bg;
-  // color: $palette_white;
 }
 
-// remove useless divs
-// TODO keep the one between left sidebar icon and other icons
-.roam-topbar .flex-h-box > div[style^="flex"]:not([class]) {
+// remove official spacers
+.rm-topbar__spacer-sm {
   display: none;
 }
 
 // XXX HACK
 /* make search popover */
 // layout
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper {
+.rm-topbar .rm-find-or-create-wrapper {
   // match size and positions
   input#find-or-create-input:focus,
   .bp3-overlay {
     opacity: 1 !important;
     position: fixed !important;
-    left: $searchbar-left;
+    left: $searchbar-left !important;
 
     /* place at front of page */
     z-index: 999999;
 
     /* center */
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) !important;
   }
   // size input
   input#find-or-create-input:focus {
     box-sizing: content-box;
-    top: $searchbar-top;
+    top: $searchbar-top !important;
     height: $searchbar-height !important;
     width: $searchbar-width !important;
     font-size: $searchbar-font;
@@ -53,7 +51,7 @@
   }
 }
 // appearance
-.roam-topbar > .flex-h-box .rm-find-or-create-wrapper {
+.rm-topbar .rm-find-or-create-wrapper {
   // style input
   input#find-or-create-input:focus {
     background: $palette_theme;
@@ -113,7 +111,7 @@
 // XXX HACK
 
 /* make all elements look like a button */
-.roam-topbar .flex-h-box {
+.rm-topbar {
   justify-content: $topbar_icons-placement;
 
   > div,

@@ -106,7 +106,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
     // level 3: editor & topbar, rightbar
     > .roam-main {
       // level 4: topbar, roam-body-main
-      > .roam-topbar {
+      > .rm-topbar {
         height: $topbar_height;
       }
       // level 5
@@ -156,7 +156,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       @include font-family;
       color: $main_text-color;
       // level 4: topbar, roam-body-main
-      > .roam-topbar {
+      > .rm-topbar {
         @include font-family;
         color: $main_text-color;
       }
@@ -189,7 +189,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       // level 3: editor & topbar, rightbar
       > .roam-main {
         // level 4: topbar, roam-body-main
-        > .roam-topbar {
+        > .rm-topbar {
           background: $topbar_bg;
         }
         // level 5
@@ -223,7 +223,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       // level 3: editor & topbar, rightbar
       > .roam-main {
         // level 4: topbar, roam-body-main
-        > .roam-topbar {
+        > .rm-topbar {
           background: $main_bg;
         }
         // level 5

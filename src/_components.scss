@@ -189,7 +189,7 @@ blockquote.rm-bq {
   transition: none;
 }
 
-.roam-topbar button.bp3-icon-calendar[style*="margin-left: 8px;"] {
+.rm-topbar button.bp3-icon-calendar[style*="margin-left: 8px;"] {
   margin-left: 0px !important; // fix daily log calendar icon placement
 }
 /*------------------------------------
@@ -875,7 +875,7 @@ span.cm-qualifier {
 /*------------------------------------
 # CREDITS
 ------------------------------------*/
-.roam-topbar > div > div:last-child ul.bp3-menu:after {
+.rm-topbar > div > div:last-child ul.bp3-menu:after {
   content: "theme by @RainbowCat";
 
   color: $popover_text;
