@@ -93,20 +93,22 @@ blockquote.rm-bq {
 }
 
 // nest diagram line
-.rm-block-containt + .rm-multibar {
-  border-right: $treeline-width $treeline-style transparent !important;
-  &:hover {
-    border-right: $treeline-width $treeline-style $treeline-color !important;
-  }
+.rm-multibar {
+  border-right: $treeline-width $treeline-style
+    color.adjust($treeline-color, $alpha: -0.3);
+  left: -1.5px;
 }
-.rm-level-1 > .rm-multibar {
-  // remove first level line completely
+.rm-block-children:hover .rm-multibar {
+  border-right: $treeline-width $treeline-style $treeline-color;
+}
+
+.rm-level-0 > .rm-multibar,
+.rm-level-1 > .rm-multibar,
+.rm-level-0:hover > .rm-multibar,
+.rm-level-1:hover > .rm-multibar {
+  // remove 0th & 1st level line completely
   border-right: $treeline-width $treeline-style transparent !important;
 }
-// .rm-level-2 > .block-border-left {
-//   // remove second level line completely
-//   border-left: $treeline-width $treeline-style transparent !important;
-// }
 
 // vertically center bullets
 .roam-block-container .rm-block-main {

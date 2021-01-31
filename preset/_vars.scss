@@ -85,7 +85,7 @@ $bullet_border-closed: 4px solid
 // nesting line
 $treeline-width: 1px;
 $treeline-style: solid;
-$treeline-color: color.change(setContrast($palette_theme), $alpha: 0.2);
+$treeline-color: color.change(setContrast($palette_theme), $alpha: 0.8);
 
 /*------------------------------------
 # checkboxes
