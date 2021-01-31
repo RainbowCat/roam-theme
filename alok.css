@@ -5,7 +5,7 @@
 -------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 /*------------------------------------
-# general
+# general / global
 ------------------------------------*/
 /*------------------------------------
 # left sidebar
@@ -1022,7 +1022,7 @@ span.cm-qualifier {
 # TOPBAR
 ------------------------------------*/
 .rm-topbar {
-  background: #0a1829;
+  background: #050c15;
 }
 
 .rm-topbar__spacer-sm {

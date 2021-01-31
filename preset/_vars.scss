@@ -1,11 +1,11 @@
 /*------------------------------------
-# general
+# general / global
 ------------------------------------*/
 $roundness: 5px;
 
 $main_subtle-color: color.adjust($palette_theme, $alpha: -0.5);
-$main_bg: $palette_theme; // unused, for ref
-$main_text-color: setContrast($main_bg); // unused, for ref
+$main_bg: $palette_theme;
+$main_text-color: setContrast($main_bg);
 
 $font-size_small: 10px;
 $font-size_regular: 15px;
@@ -25,7 +25,7 @@ $leftbar_text-color-hover: $palette_grey;
 # topbar
 ------------------------------------*/
 $topbar_height: 45px; // default
-$topbar_bg: $palette_theme;
+$topbar_bg: $main_bg;
 $topbar_icons-placement: center;
 
 $searchbar-height: 45px;
