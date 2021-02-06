@@ -68,7 +68,7 @@
       // recent
       background: $palette_theme !important;
       color: setContrast($palette_theme) !important;
-      display: none;
+      // display: none; //todo: show "new page", hide "recent"
     }
     .rm-menu-item {
       background: $palette_theme;

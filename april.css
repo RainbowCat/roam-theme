@@ -217,6 +217,21 @@ span {
   }
 
   /*------------------------------------
+  # HIDE COMPONENTS
+  ------------------------------------*/
+  .intercom-lightweight-app {
+    display: none;
+  }
+
+  .rm-topbar .bp3-icon-help {
+    display: none;
+  }
+
+  #roam-sidebar-logo {
+    display: none;
+  }
+
+  /*------------------------------------
   # BASIC TEXT
   ------------------------------------*/
   /* bold text */
@@ -1066,7 +1081,6 @@ span {
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-menu > div:first-child {
     background: #ffebad !important;
     color: #453021 !important;
-    display: none;
   }
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-menu .rm-menu-item {
     background: #ffebad;
@@ -1160,9 +1174,6 @@ span {
   /*** LAYOUT ***/
   .roam-body .roam-app .roam-sidebar-content {
     padding: 0 !important;
-  }
-  .roam-body .roam-app .roam-sidebar-content #roam-sidebar-logo {
-    display: none;
   }
   .roam-body .roam-app .roam-sidebar-content > div:not(.log-button):not(:first-child) {
     padding: 0 !important;
@@ -1392,7 +1403,7 @@ span {
   /*------------------------------------
   # CREDITS
   ------------------------------------*/
-  .rm-topbar > div > div:last-child ul.bp3-menu:after {
+  .rm-topbar > span:last-child ul.bp3-menu:after {
     content: "theme by @RainbowCat";
     color: #453021;
     border: 1px solid #453021;
@@ -1752,6 +1763,21 @@ span {
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: #050c15;
+  }
+
+  /*------------------------------------
+  # HIDE COMPONENTS
+  ------------------------------------*/
+  .intercom-lightweight-app {
+    display: none;
+  }
+
+  .rm-topbar .bp3-icon-help {
+    display: none;
+  }
+
+  #roam-sidebar-logo {
+    display: none;
   }
 
   /*------------------------------------
@@ -2604,7 +2630,6 @@ span {
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-menu > div:first-child {
     background: #122b4a !important;
     color: #a6b7bf !important;
-    display: none;
   }
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay .bp3-menu .rm-menu-item {
     background: #122b4a;
@@ -2698,9 +2723,6 @@ span {
   /*** LAYOUT ***/
   .roam-body .roam-app .roam-sidebar-content {
     padding: 0 !important;
-  }
-  .roam-body .roam-app .roam-sidebar-content #roam-sidebar-logo {
-    display: none;
   }
   .roam-body .roam-app .roam-sidebar-content > div:not(.log-button):not(:first-child) {
     padding: 0 !important;
@@ -2930,7 +2952,7 @@ span {
   /*------------------------------------
   # CREDITS
   ------------------------------------*/
-  .rm-topbar > div > div:last-child ul.bp3-menu:after {
+  .rm-topbar > span:last-child ul.bp3-menu:after {
     content: "theme by @RainbowCat";
     color: #00000f;
     border: 1px solid #00000f;

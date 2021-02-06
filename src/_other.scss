@@ -105,7 +105,7 @@
 /*------------------------------------
 # CREDITS
 ------------------------------------*/
-.rm-topbar > div > div:last-child ul.bp3-menu:after {
+.rm-topbar > span:last-child ul.bp3-menu:after {
   content: "theme by @RainbowCat";
 
   color: $popover_text;

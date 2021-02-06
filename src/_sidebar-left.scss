@@ -3,10 +3,6 @@
 ------------------------------------*/
 /*** LAYOUT ***/
 .roam-body .roam-app .roam-sidebar-content {
-  // hide logo
-  #roam-sidebar-logo {
-    display: none;
-  }
   // paddings
   padding: 0 !important;
   > div:not(.log-button):not(:first-child) {

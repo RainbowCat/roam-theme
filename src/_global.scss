@@ -240,3 +240,19 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 
 // @include better-roam-layout();
 @include regular-layout();
+
+/*------------------------------------
+# HIDE COMPONENTS
+------------------------------------*/
+.intercom-lightweight-app {
+  display: none;
+}
+
+.rm-topbar .bp3-icon-help {
+  display: none;
+}
+
+// hide logo
+#roam-sidebar-logo {
+  display: none;
+}
