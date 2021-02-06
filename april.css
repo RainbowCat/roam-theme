@@ -217,21 +217,6 @@ span {
   }
 
   /*------------------------------------
-  # HIDE COMPONENTS
-  ------------------------------------*/
-  .intercom-lightweight-app {
-    display: none;
-  }
-
-  .rm-topbar .bp3-icon-help {
-    display: none;
-  }
-
-  #roam-sidebar-logo {
-    display: none;
-  }
-
-  /*------------------------------------
   # BASIC TEXT
   ------------------------------------*/
   /* bold text */
@@ -1309,6 +1294,21 @@ span {
   }
 
   /*------------------------------------
+  # HIDE COMPONENTS
+  ------------------------------------*/
+  .intercom-lightweight-app {
+    display: none;
+  }
+
+  .rm-topbar .bp3-icon-help {
+    display: none;
+  }
+
+  #roam-sidebar-logo {
+    display: none;
+  }
+
+  /*------------------------------------
   # Daily Log
   ------------------------------------*/
   #block-input-ghost span {
@@ -1403,17 +1403,14 @@ span {
   /*------------------------------------
   # CREDITS
   ------------------------------------*/
-  .rm-topbar > span:last-child ul.bp3-menu:after {
+  .rm-topbar > span > .bp3-overlay ul.bp3-menu:after {
     content: "theme by @RainbowCat";
-    color: #453021;
-    border: 1px solid #453021;
-    border-radius: 10px;
+    width: 100%;
+    color: rgba(69, 48, 33, 0.7);
     text-align: right;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 11px;
     display: inline-block;
-    padding: 7px;
-    margin-top: 5px;
+    padding-right: 5px;
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
@@ -1763,21 +1760,6 @@ span {
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: #050c15;
-  }
-
-  /*------------------------------------
-  # HIDE COMPONENTS
-  ------------------------------------*/
-  .intercom-lightweight-app {
-    display: none;
-  }
-
-  .rm-topbar .bp3-icon-help {
-    display: none;
-  }
-
-  #roam-sidebar-logo {
-    display: none;
   }
 
   /*------------------------------------
@@ -2858,6 +2840,21 @@ span {
   }
 
   /*------------------------------------
+  # HIDE COMPONENTS
+  ------------------------------------*/
+  .intercom-lightweight-app {
+    display: none;
+  }
+
+  .rm-topbar .bp3-icon-help {
+    display: none;
+  }
+
+  #roam-sidebar-logo {
+    display: none;
+  }
+
+  /*------------------------------------
   # Daily Log
   ------------------------------------*/
   #block-input-ghost span {
@@ -2952,17 +2949,14 @@ span {
   /*------------------------------------
   # CREDITS
   ------------------------------------*/
-  .rm-topbar > span:last-child ul.bp3-menu:after {
+  .rm-topbar > span > .bp3-overlay ul.bp3-menu:after {
     content: "theme by @RainbowCat";
-    color: #00000f;
-    border: 1px solid #00000f;
-    border-radius: 10px;
+    width: 100%;
+    color: rgba(166, 183, 191, 0.7);
     text-align: right;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 11px;
     display: inline-block;
-    padding: 7px;
-    margin-top: 5px;
+    padding-right: 5px;
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/

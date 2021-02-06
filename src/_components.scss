@@ -464,6 +464,18 @@ blockquote.rm-bq {
   }
 }
 
+// .bp3-popover-open {
+//   & &-arrow {
+//     &-fill {
+//       fill: $menu_bg; // background
+//     }
+//     &-border {
+//       fill: $menu_text; //tiny border
+//       fill-opacity: 0.3;
+//     }
+//   }
+// }
+
 // page filter
 .bp3-popover {
   div[style="padding: 8px 0px; font-size: 0.8em; color: rgb(167, 182, 194);"] {

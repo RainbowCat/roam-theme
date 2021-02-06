@@ -211,21 +211,6 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 }
 
 /*------------------------------------
-# HIDE COMPONENTS
-------------------------------------*/
-.intercom-lightweight-app {
-  display: none;
-}
-
-.rm-topbar .bp3-icon-help {
-  display: none;
-}
-
-#roam-sidebar-logo {
-  display: none;
-}
-
-/*------------------------------------
 # BASIC TEXT
 ------------------------------------*/
 /* bold text */
@@ -1303,6 +1288,21 @@ span.cm-qualifier {
 }
 
 /*------------------------------------
+# HIDE COMPONENTS
+------------------------------------*/
+.intercom-lightweight-app {
+  display: none;
+}
+
+.rm-topbar .bp3-icon-help {
+  display: none;
+}
+
+#roam-sidebar-logo {
+  display: none;
+}
+
+/*------------------------------------
 # Daily Log
 ------------------------------------*/
 #block-input-ghost span {
@@ -1397,17 +1397,14 @@ span.cm-qualifier {
 /*------------------------------------
 # CREDITS
 ------------------------------------*/
-.rm-topbar > span:last-child ul.bp3-menu:after {
+.rm-topbar > span > .bp3-overlay ul.bp3-menu:after {
   content: "theme by @RainbowCat";
-  color: #000010;
-  border: 1px solid #000010;
-  border-radius: 10px;
+  width: 100%;
+  color: rgba(233, 237, 239, 0.7);
   text-align: right;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 11px;
   display: inline-block;
-  padding: 7px;
-  margin-top: 5px;
+  padding-right: 5px;
 }
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
