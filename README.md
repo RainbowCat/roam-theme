@@ -5,4 +5,4 @@
 
 # Run SASS
 
-`sass --watch src:. --no-source-map`
+`sass --watch sass:css --no-source-map`
