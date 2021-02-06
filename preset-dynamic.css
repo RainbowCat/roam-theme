@@ -77,14 +77,6 @@ ul {
     color: unset;
   }
 
-  div,
-span {
-    font: inherit;
-    color: inherit;
-    background: transparent;
-    text-decoration: inherit;
-  }
-
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
     z-index: 3 !important;
   }
@@ -416,15 +408,15 @@ span {
     background-color: transparent;
     border: none;
     border-radius: 5px;
-    padding: none;
-    text-decoration: none;
+    padding: 0px;
+    text-decoration: none !important;
   }
   .rm-page-ref--tag:hover {
     color: #4b5354 !important;
     background-color: transparent;
     border: none;
     border-radius: 5px;
-    padding: none;
+    padding: 0px;
     text-decoration: underline;
   }
 
@@ -1420,9 +1412,6 @@ span {
   /*------------------------------------
   # Custom Text Display
   ------------------------------------*/
-  .roam-block-container[data-page-links*=DONE] {
-    text-decoration: line-through;
-  }
 }
 /*------------------------------------
 #
@@ -1500,14 +1489,6 @@ ul {
 
   .roam-body .roam-app h1 {
     color: unset;
-  }
-
-  div,
-span {
-    font: inherit;
-    color: inherit;
-    background: transparent;
-    text-decoration: inherit;
   }
 
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
@@ -1841,15 +1822,15 @@ span {
     background-color: transparent;
     border: none;
     border-radius: 5px;
-    padding: none;
-    text-decoration: none;
+    padding: 0px;
+    text-decoration: none !important;
   }
   .rm-page-ref--tag:hover {
     color: #626d6f !important;
     background-color: transparent;
     border: none;
     border-radius: 5px;
-    padding: none;
+    padding: 0px;
     text-decoration: underline;
   }
 
@@ -2845,7 +2826,4 @@ span {
   /*------------------------------------
   # Custom Text Display
   ------------------------------------*/
-  .roam-block-container[data-page-links*=DONE] {
-    text-decoration: line-through;
-  }
 }

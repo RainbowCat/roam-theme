@@ -212,7 +212,7 @@ blockquote.rm-bq {
   border-radius: $tag_border-radius;
   padding: $tag_padding;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
   &:hover {
     color: $tag_text-color-hover !important;
