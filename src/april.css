@@ -1515,7 +1515,7 @@ ul {
   # Custom Text Display
   ------------------------------------*/
   .roam-block-container[data-page-links*=due] .rm-block-main div:nth-child(2) span {
-    background: red;
+    background: #ff2222;
     color: white !important;
   }
 
@@ -3056,7 +3056,7 @@ ul {
   # Custom Text Display
   ------------------------------------*/
   .roam-block-container[data-page-links*=due] .rm-block-main div:nth-child(2) span {
-    background: red;
+    background: #ff2222;
     color: white !important;
   }
 
