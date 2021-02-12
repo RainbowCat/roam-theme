@@ -393,52 +393,6 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# BLOCKS
-------------------------------------*/
-.rm-block-children.rm-level-0 {
-  margin-left: 0px;
-}
-
-.rm-block,
-.roam-block,
-.rm-block-children,
-.roam-block-container {
-  .rm-not-focused {
-    /* regular block */
-    background-color: transparent;
-  }
-  .rm-focused {
-    /* focused block */
-    /* i.e. when tyging inside */
-    padding: 0px;
-    // maybe style highlight child blocks too?
-    // & #{$rm-block-selector} {
-  }
-  .block-highlight-blue {
-    /* selected block in main edit area */
-    background-color: $block_highlight-main;
-    span {
-      color: setContrast($block_highlight-main) !important;
-    }
-    .rm-bullet__inner {
-      background-color: setContrast($block_highlight-main) !important;
-    }
-  }
-  .block-highlight-yellow {
-    /* selected block in linked referenced */
-    background-color: $block_highlight-linked;
-    span {
-      color: $block_highlight-linked-text !important;
-    }
-  }
-  .rm-embed-container {
-    /* embed block highlight */
-    background-color: $block_highlight-embed;
-    color: setContrast($block_highlight-embed);
-  }
-}
-
-/*------------------------------------
 # POPUPS
 ------------------------------------*/
 //todo style code language dropdown: .bp3-menu-item
@@ -595,7 +549,7 @@ blockquote.rm-bq {
 # QUERY
 ------------------------------------*/
 .rm-query {
-  border: $query_border;
+  border: 1px solid $query_border-color;
   border-radius: $roundness;
   padding-bottom: $query_padding-bottom;
   .rm-query-title {
@@ -653,9 +607,9 @@ blockquote.rm-bq {
       padding: 6px 10px;
       margin: 0px 6px 12px;
       font-size: 14px;
-      .check-container {
-        margin-bottom: 8px;
-      }
+      // .check-container {
+      // margin-bottom: 8px;
+      // }
     }
   }
 }

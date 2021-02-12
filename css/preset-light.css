@@ -561,69 +561,6 @@ blockquote.rm-bq {
 }
 
 /*------------------------------------
-# BLOCKS
-------------------------------------*/
-.rm-block-children.rm-level-0 {
-  margin-left: 0px;
-}
-
-.rm-block .rm-not-focused,
-.roam-block .rm-not-focused,
-.rm-block-children .rm-not-focused,
-.roam-block-container .rm-not-focused {
-  /* regular block */
-  background-color: transparent;
-}
-.rm-block .rm-focused,
-.roam-block .rm-focused,
-.rm-block-children .rm-focused,
-.roam-block-container .rm-focused {
-  /* focused block */
-  /* i.e. when tyging inside */
-  padding: 0px;
-}
-.rm-block .block-highlight-blue,
-.roam-block .block-highlight-blue,
-.rm-block-children .block-highlight-blue,
-.roam-block-container .block-highlight-blue {
-  /* selected block in main edit area */
-  background-color: #9dcee7;
-}
-.rm-block .block-highlight-blue span,
-.roam-block .block-highlight-blue span,
-.rm-block-children .block-highlight-blue span,
-.roam-block-container .block-highlight-blue span {
-  color: #000010 !important;
-}
-.rm-block .block-highlight-blue .rm-bullet__inner,
-.roam-block .block-highlight-blue .rm-bullet__inner,
-.rm-block-children .block-highlight-blue .rm-bullet__inner,
-.roam-block-container .block-highlight-blue .rm-bullet__inner {
-  background-color: #000010 !important;
-}
-.rm-block .block-highlight-yellow,
-.roam-block .block-highlight-yellow,
-.rm-block-children .block-highlight-yellow,
-.roam-block-container .block-highlight-yellow {
-  /* selected block in linked referenced */
-  background-color: #9dcee7;
-}
-.rm-block .block-highlight-yellow span,
-.roam-block .block-highlight-yellow span,
-.rm-block-children .block-highlight-yellow span,
-.roam-block-container .block-highlight-yellow span {
-  color: #000010 !important;
-}
-.rm-block .rm-embed-container,
-.roam-block .rm-embed-container,
-.rm-block-children .rm-embed-container,
-.roam-block-container .rm-embed-container {
-  /* embed block highlight */
-  background-color: rgba(157, 206, 231, 0.07);
-  color: #e9edef;
-}
-
-/*------------------------------------
 # POPUPS
 ------------------------------------*/
 .bp3-popover {
@@ -706,7 +643,7 @@ blockquote.rm-bq {
 # QUERY
 ------------------------------------*/
 .rm-query {
-  border: #2860a4;
+  border: 1px solid #2860a4;
   border-radius: 5px;
   padding-bottom: 5px;
 }
@@ -761,9 +698,6 @@ blockquote.rm-bq {
   padding: 6px 10px;
   margin: 0px 6px 12px;
   font-size: 14px;
-}
-.kanban-board .kanban-column .kanban-card .check-container {
-  margin-bottom: 8px;
 }
 
 .rm-reference-item .rm-zoom .kanban-board {
@@ -1277,6 +1211,125 @@ span.cm-qualifier {
 #right-sidebar [class~=bp3-icon]:not(.bp3-icon-filter):not(.bp3-icon-search):hover:before,
 #right-sidebar .bp3-button.bp3-minimal:hover:before {
   color: #000010 !important;
+}
+
+/*------------------------------------
+# BLOCKS
+------------------------------------*/
+.rm-block-children.rm-level-0 {
+  margin-left: 0px;
+}
+
+.rm-block .rm-not-focused,
+.roam-block .rm-not-focused,
+.rm-block-children .rm-not-focused,
+.roam-block-container .rm-not-focused {
+  /* regular block */
+  background-color: transparent;
+}
+.rm-block .rm-focused,
+.roam-block .rm-focused,
+.rm-block-children .rm-focused,
+.roam-block-container .rm-focused {
+  /* focused block */
+  /* i.e. when tyging inside */
+  padding: 0px;
+}
+.rm-block .block-highlight-blue,
+.roam-block .block-highlight-blue,
+.rm-block-children .block-highlight-blue,
+.roam-block-container .block-highlight-blue {
+  /* selected block in main edit area */
+  background-color: #9dcee7;
+}
+.rm-block .block-highlight-blue a,
+.rm-block .block-highlight-blue span,
+.roam-block .block-highlight-blue a,
+.roam-block .block-highlight-blue span,
+.rm-block-children .block-highlight-blue a,
+.rm-block-children .block-highlight-blue span,
+.roam-block-container .block-highlight-blue a,
+.roam-block-container .block-highlight-blue span {
+  color: #000010 !important;
+}
+.rm-block .block-highlight-blue .rm-bullet__inner,
+.roam-block .block-highlight-blue .rm-bullet__inner,
+.rm-block-children .block-highlight-blue .rm-bullet__inner,
+.roam-block-container .block-highlight-blue .rm-bullet__inner {
+  background-color: #000010 !important;
+}
+.rm-block .block-highlight-blue .kanban-card,
+.roam-block .block-highlight-blue .kanban-card,
+.rm-block-children .block-highlight-blue .kanban-card,
+.roam-block-container .block-highlight-blue .kanban-card {
+  background: #9ccee6 !important;
+}
+.rm-block .block-highlight-blue .roam-table th,
+.rm-block .block-highlight-blue .roam-table td,
+.rm-block .block-highlight-blue .roam-table tr,
+.roam-block .block-highlight-blue .roam-table th,
+.roam-block .block-highlight-blue .roam-table td,
+.roam-block .block-highlight-blue .roam-table tr,
+.rm-block-children .block-highlight-blue .roam-table th,
+.rm-block-children .block-highlight-blue .roam-table td,
+.rm-block-children .block-highlight-blue .roam-table tr,
+.roam-block-container .block-highlight-blue .roam-table th,
+.roam-block-container .block-highlight-blue .roam-table td,
+.roam-block-container .block-highlight-blue .roam-table tr {
+  border-color: #000010 !important;
+}
+.rm-block .block-highlight-blue .kanban-board,
+.roam-block .block-highlight-blue .kanban-board,
+.rm-block-children .block-highlight-blue .kanban-board,
+.roam-block-container .block-highlight-blue .kanban-board {
+  border-color: #000010 !important;
+}
+.rm-block .block-highlight-blue .kanban-board .kanban-title,
+.roam-block .block-highlight-blue .kanban-board .kanban-title,
+.rm-block-children .block-highlight-blue .kanban-board .kanban-title,
+.roam-block-container .block-highlight-blue .kanban-board .kanban-title {
+  border-bottom-color: #000010 !important;
+}
+.rm-block .block-highlight-blue .rm-query,
+.rm-block .block-highlight-blue .rm-reference-container,
+.rm-block .block-highlight-blue .rm-ref-page-view,
+.roam-block .block-highlight-blue .rm-query,
+.roam-block .block-highlight-blue .rm-reference-container,
+.roam-block .block-highlight-blue .rm-ref-page-view,
+.rm-block-children .block-highlight-blue .rm-query,
+.rm-block-children .block-highlight-blue .rm-reference-container,
+.rm-block-children .block-highlight-blue .rm-ref-page-view,
+.roam-block-container .block-highlight-blue .rm-query,
+.roam-block-container .block-highlight-blue .rm-reference-container,
+.roam-block-container .block-highlight-blue .rm-ref-page-view {
+  border-color: #000010 !important;
+}
+.rm-block .block-highlight-yellow,
+.roam-block .block-highlight-yellow,
+.rm-block-children .block-highlight-yellow,
+.roam-block-container .block-highlight-yellow {
+  /* selected block in linked referenced */
+  background-color: #9dcee7;
+}
+.rm-block .block-highlight-yellow span,
+.roam-block .block-highlight-yellow span,
+.rm-block-children .block-highlight-yellow span,
+.roam-block-container .block-highlight-yellow span {
+  color: #000010 !important;
+}
+.rm-block .rm-embed-container,
+.roam-block .rm-embed-container,
+.rm-block-children .rm-embed-container,
+.roam-block-container .rm-embed-container {
+  /* embed block highlight */
+  background-color: rgba(157, 206, 231, 0.07);
+  color: #e9edef;
+}
+.rm-block .rm-embed-container .rm-bullet__inner,
+.roam-block .rm-embed-container .rm-bullet__inner,
+.rm-block-children .rm-embed-container .rm-bullet__inner,
+.roam-block-container .rm-embed-container .rm-bullet__inner {
+  background-color: #e9edef;
 }
 
 /*------------------------------------

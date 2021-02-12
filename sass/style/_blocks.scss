@@ -1,0 +1,71 @@
+/*------------------------------------
+# BLOCKS
+------------------------------------*/
+.rm-block-children.rm-level-0 {
+  margin-left: 0px;
+}
+
+.rm-block,
+.roam-block,
+.rm-block-children,
+.roam-block-container {
+  .rm-not-focused {
+    /* regular block */
+    background-color: transparent;
+  }
+  .rm-focused {
+    /* focused block */
+    /* i.e. when tyging inside */
+    padding: 0px;
+    // maybe style highlight child blocks too?
+    // & #{$rm-block-selector} {
+  }
+  .block-highlight-blue {
+    /* selected block in main edit area */
+    background-color: $block_highlight-main;
+    a,
+    span {
+      color: setContrast($block_highlight-main) !important;
+    }
+    .rm-bullet__inner {
+      background-color: setContrast($block_highlight-main) !important;
+    }
+    .kanban-card {
+      background: color.adjust(
+        $block_highlight-main,
+        $lightness: -0.2
+      ) !important;
+    }
+    .roam-table th,
+    .roam-table td,
+    .roam-table tr {
+      border-color: setContrast($block_highlight-main) !important;
+    }
+    .kanban-board {
+      border-color: setContrast($block_highlight-main) !important;
+      .kanban-title {
+        border-bottom-color: setContrast($block_highlight-main) !important;
+      }
+    }
+    .rm-query,
+    .rm-reference-container,
+    .rm-ref-page-view {
+      border-color: setContrast($block_highlight-main) !important;
+    }
+  }
+  .block-highlight-yellow {
+    /* selected block in linked referenced */
+    background-color: $block_highlight-linked;
+    span {
+      color: $block_highlight-linked-text !important;
+    }
+  }
+  .rm-embed-container {
+    /* embed block highlight */
+    background-color: $block_highlight-embed;
+    color: setContrast($block_highlight-embed);
+    .rm-bullet__inner {
+      background-color: setContrast($block_highlight-embed);
+    }
+  }
+}

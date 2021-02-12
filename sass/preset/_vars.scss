@@ -206,7 +206,7 @@ $page-filter-btns-text-hover: setContrast($page-filter-btns-bg-hover);
 # features
 ------------------------------------*/
 // query
-$query_border: $palette_theme;
+$query_border-color: $palette_theme;
 $query_padding-bottom: 5px;
 $query-title_bg: $palette_theme;
 $query-title_text: setContrast($query-title_bg);
