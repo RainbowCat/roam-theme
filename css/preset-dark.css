@@ -1304,6 +1304,12 @@ span.cm-qualifier {
 .roam-block-container .block-highlight-blue .rm-ref-page-view {
   border-color: #00000f !important;
 }
+.rm-block .block-highlight-blue .rm-multibar,
+.roam-block .block-highlight-blue .rm-multibar,
+.rm-block-children .block-highlight-blue .rm-multibar,
+.roam-block-container .block-highlight-blue .rm-multibar {
+  border-right-color: #00000f !important;
+}
 .rm-block .block-highlight-yellow,
 .roam-block .block-highlight-yellow,
 .rm-block-children .block-highlight-yellow,

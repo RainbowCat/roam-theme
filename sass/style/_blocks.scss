@@ -52,6 +52,9 @@
     .rm-ref-page-view {
       border-color: setContrast($block_highlight-main) !important;
     }
+    .rm-multibar {
+      border-right-color: setContrast($block_highlight-main) !important;
+    }
   }
   .block-highlight-yellow {
     /* selected block in linked referenced */
