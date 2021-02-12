@@ -300,3 +300,8 @@ $allpages_title-text: setContrast($allpages_title-bg);
 
 $allpages_mentions_bg: $palette_accent;
 $allpages_mentions-text: setContrast($allpages_mentions_bg);
+
+/*------------------------------------
+# extra
+------------------------------------*/
+$roamtoolkit_block-highlight: color.adjust($block_highlight-main, $alpha: -0.3);

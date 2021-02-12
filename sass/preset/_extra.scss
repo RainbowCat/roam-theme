@@ -1,7 +1,10 @@
 /*------------------------------------
 # Custom Block Display Tags
 ------------------------------------*/
-
+.roam-toolkit-block-mode--highlight {
+  background-color: $roamtoolkit_block-highlight !important;
+  color: setContrast($roamtoolkit_block-highlight);
+}
 /*------------------------------------
 # Custom Text Display
 ------------------------------------*/
