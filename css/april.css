@@ -1354,10 +1354,6 @@ ul {
     display: none;
   }
 
-  .rm-topbar .bp3-icon-help {
-    display: none;
-  }
-
   #roam-sidebar-logo {
     display: none;
   }
@@ -2959,10 +2955,6 @@ ul {
   # HIDE COMPONENTS
   ------------------------------------*/
   .intercom-lightweight-app {
-    display: none;
-  }
-
-  .rm-topbar .bp3-icon-help {
     display: none;
   }
 
