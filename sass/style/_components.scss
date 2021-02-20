@@ -74,9 +74,22 @@ blockquote.rm-bq {
   color: $main_text-color;
 }
 
+// .rm-caret.rm-caret-hidden {
+//   opacity: 0.2; //TODO show subtle caret if there are child blocks
+// }
+
 .controls .opacity-none,
 .rm-block__controls .opacity-none {
   opacity: 0.3;
+}
+
+// vertically center bullets
+// .roam-block-container .rm-block-main {
+//   align-items: center !important;
+// }
+.controls {
+  margin: 0px;
+  padding: 0px;
 }
 
 .rm-bullet__inner {
@@ -108,15 +121,6 @@ blockquote.rm-bq {
 .rm-level-1:hover > .rm-multibar {
   // remove 0th & 1st level line completely
   border-right: $treeline-width $treeline-style transparent !important;
-}
-
-// vertically center bullets
-.roam-block-container .rm-block-main {
-  align-items: center !important;
-}
-.controls {
-  margin: 0px;
-  padding: 0px;
 }
 
 /*---------------------------------- 
