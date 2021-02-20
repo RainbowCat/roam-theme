@@ -205,7 +205,15 @@ ul {
     background: #ffebad;
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
-    background: #ffebad;
+    border: 0.2px solid rgba(69, 48, 33, 0.08);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    /* round off corners */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    margin: 0px 8px;
+    /* add space to show shadow */
+    box-shadow: 0px 0px 20px 3px rgba(69, 48, 33, 0.08);
+    background: rgba(255, 255, 255, 0.8);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: #f9c28b;
@@ -358,7 +366,7 @@ ul {
   .check-container .checkmark:after {
     /* done check symbol */
     content: "✓";
-    color: #ffeeeb;
+    color: white;
     left: 0px;
     top: 0px;
     border: none;
@@ -409,18 +417,18 @@ ul {
   .rm-page-ref--tag {
     color: #91684b !important;
     background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 0px;
+    border: 1px solid rgba(145, 104, 75, 0.7);
+    border-radius: 10px;
+    padding: 2px 3px;
     text-decoration: none !important;
   }
   .rm-page-ref--tag:hover {
-    color: #91684b !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 0px;
-    text-decoration: underline;
+    color: white !important;
+    background-color: #91684b;
+    border: 1px solid rgba(144, 103, 74, 0.2);
+    border-radius: 10px;
+    padding: 2px 3px;
+    text-decoration: none;
   }
 
   /*------------------------------------
@@ -1186,10 +1194,10 @@ ul {
     font-size: 18px !important;
   }
   #right-sidebar #roam-right-sidebar-content > div[style] {
-    border-bottom: 1px solid rgba(255, 235, 173, 0.5) !important;
+    border-bottom: 1px solid rgba(69, 48, 33, 0.08) !important;
   }
   #right-sidebar #roam-right-sidebar-content .sidebar-content > div > div[style*=border-bottom] {
-    border-bottom: 1px solid rgba(255, 235, 173, 0.5) !important;
+    border-bottom: 1px solid rgba(69, 48, 33, 0.08) !important;
   }
   #right-sidebar .rm-block-text {
     font-size: 14.5px !important;
@@ -1809,7 +1817,15 @@ ul {
     background: #122b4a;
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
-    background: #122b4a;
+    border: 0.2px solid rgba(166, 183, 191, 0.08);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    /* round off corners */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    margin: 0px 8px;
+    /* add space to show shadow */
+    box-shadow: 0px 0px 20px 3px rgba(166, 183, 191, 0.08);
+    background: rgba(0, 0, 15, 0.8);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: #050c15;
@@ -2013,18 +2029,18 @@ ul {
   .rm-page-ref--tag {
     color: #626d6f !important;
     background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 0px;
+    border: 1px solid rgba(98, 109, 111, 0.7);
+    border-radius: 10px;
+    padding: 2px 3px;
     text-decoration: none !important;
   }
   .rm-page-ref--tag:hover {
-    color: #626d6f !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    padding: 0px;
-    text-decoration: underline;
+    color: #a6b7bf !important;
+    background-color: #626d6f;
+    border: 1px solid rgba(98, 109, 110, 0.2);
+    border-radius: 10px;
+    padding: 2px 3px;
+    text-decoration: none;
   }
 
   /*------------------------------------
@@ -2790,10 +2806,10 @@ ul {
     font-size: 18px !important;
   }
   #right-sidebar #roam-right-sidebar-content > div[style] {
-    border-bottom: 1px solid rgba(18, 43, 74, 0.5) !important;
+    border-bottom: 1px solid rgba(166, 183, 191, 0.08) !important;
   }
   #right-sidebar #roam-right-sidebar-content .sidebar-content > div > div[style*=border-bottom] {
-    border-bottom: 1px solid rgba(18, 43, 74, 0.5) !important;
+    border-bottom: 1px solid rgba(166, 183, 191, 0.08) !important;
   }
   #right-sidebar .rm-block-text {
     font-size: 14.5px !important;

@@ -194,13 +194,13 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
         }
         // level 5
         > .roam-body-main {
-          border: 1px solid $main_subtle-color;
+          border: 0.2px solid $main_subtle-color;
           border-bottom: none;
           border-radius: 12px 12px 0 0; /* round off corners */
           /* offset-x | offset-y | blur-radius | spread-radius | color */
           margin: 0px 8px; /* add space to show shadow */
-          box-shadow: 0px 0px 20px 3px grey;
-          background: $main_bg;
+          box-shadow: 0px 0px 20px 3px $main_subtle-color;
+          background: color.adjust(setContrast(setContrast($main_bg)), $alpha: -0.2);
         }
       }
       > #right-sidebar {
@@ -238,5 +238,8 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   }
 }
 
-// @include better-roam-layout();
-@include regular-layout();
+@if ($better-roam) {
+  @include better-roam-layout();
+} @else {
+  @include regular-layout();
+}

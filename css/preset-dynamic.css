@@ -1186,10 +1186,10 @@ ul {
     font-size: 18px !important;
   }
   #right-sidebar #roam-right-sidebar-content > div[style] {
-    border-bottom: 1px solid rgba(40, 96, 164, 0.5) !important;
+    border-bottom: 1px solid rgba(40, 96, 164, 0.08) !important;
   }
   #right-sidebar #roam-right-sidebar-content .sidebar-content > div > div[style*=border-bottom] {
-    border-bottom: 1px solid rgba(40, 96, 164, 0.5) !important;
+    border-bottom: 1px solid rgba(40, 96, 164, 0.08) !important;
   }
   #right-sidebar .rm-block-text {
     font-size: 14.5px !important;
@@ -2663,10 +2663,10 @@ ul {
     font-size: 18px !important;
   }
   #right-sidebar #roam-right-sidebar-content > div[style] {
-    border-bottom: 1px solid rgba(18, 43, 74, 0.5) !important;
+    border-bottom: 1px solid rgba(18, 43, 74, 0.08) !important;
   }
   #right-sidebar #roam-right-sidebar-content .sidebar-content > div > div[style*=border-bottom] {
-    border-bottom: 1px solid rgba(18, 43, 74, 0.5) !important;
+    border-bottom: 1px solid rgba(18, 43, 74, 0.08) !important;
   }
   #right-sidebar .rm-block-text {
     font-size: 14.5px !important;

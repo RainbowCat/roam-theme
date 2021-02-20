@@ -3,7 +3,7 @@
 ------------------------------------*/
 $roundness: 5px;
 
-$main_subtle-color: color.adjust($palette_theme, $alpha: -0.5);
+$main_subtle-color: color.change($palette_theme, $alpha: 0.08);
 $main_bg: $palette_theme;
 $main_text-color: setContrast($main_bg);
 
@@ -11,6 +11,7 @@ $font-size_small: 10px;
 $font-size_regular: 15px;
 $font-size_large: 30px;
 
+$better-roam: false;
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
