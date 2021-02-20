@@ -1590,8 +1590,8 @@ ul {
     font-size: 20px;
   }
 
-  .roam-block-container[data-page-links*=checkbox-checked] .rm-block-main .roam-block:before {
-    content: "☑";
+  .roam-block-container[data-page-links*=fixme] .rm-block-main .roam-block:before {
+    content: "☐";
     font-size: 20px;
   }
 
@@ -3202,8 +3202,8 @@ ul {
     font-size: 20px;
   }
 
-  .roam-block-container[data-page-links*=checkbox-checked] .rm-block-main .roam-block:before {
-    content: "☑";
+  .roam-block-container[data-page-links*=fixme] .rm-block-main .roam-block:before {
+    content: "☐";
     font-size: 20px;
   }
 
