@@ -113,7 +113,7 @@ $checkbox_symbol: "✓";
 $add-glyph: true;
 
 // general links
-$link-internal_text: $palette_accent;
+$link-internal_text: $palette_accent-darker;
 $link-internal_text-hover: color.adjust($link-internal_text, $lightness: +0.2);
 
 $link-external_text: $palette_accent; // includes regular hyperlinks

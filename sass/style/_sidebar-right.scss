@@ -67,6 +67,9 @@
       color: $icons_color;
       background: transparent;
     }
+    &.pinned:before {
+      color: red !important;
+    }
   }
   .bp3-icon-filter,
   .bp3-icon-search {

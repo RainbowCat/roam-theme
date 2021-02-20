@@ -18,10 +18,10 @@
   background: $highlight_bg !important;
   color: $highlight_text-color !important;
   padding: $highlight_padding;
-}
-
-.rm-highlight span {
-  color: $highlight_text-color !important;
+  span,
+  a {
+    color: $highlight_text-color !important;
+  }
 }
 
 // headings

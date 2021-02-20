@@ -234,8 +234,8 @@ ul {
     color: #000010 !important;
     padding: 2px 3px;
   }
-
-  .rm-highlight span {
+  .rm-highlight span,
+.rm-highlight a {
     color: #000010 !important;
   }
 
@@ -1199,6 +1199,10 @@ ul {
     color: #e9edef;
     background: transparent;
   }
+  #right-sidebar [class~=bp3-icon].pinned:before,
+#right-sidebar .bp3-button.bp3-minimal.pinned:before {
+    color: red !important;
+  }
   #right-sidebar .bp3-icon-filter,
 #right-sidebar .bp3-icon-search {
     color: #e9edef !important;
@@ -1711,8 +1715,8 @@ ul {
     color: #00000f !important;
     padding: 2px 3px;
   }
-
-  .rm-highlight span {
+  .rm-highlight span,
+.rm-highlight a {
     color: #00000f !important;
   }
 
@@ -2675,6 +2679,10 @@ ul {
 #right-sidebar .bp3-button.bp3-minimal:before {
     color: #a6b7bf;
     background: transparent;
+  }
+  #right-sidebar [class~=bp3-icon].pinned:before,
+#right-sidebar .bp3-button.bp3-minimal.pinned:before {
+    color: red !important;
   }
   #right-sidebar .bp3-icon-filter,
 #right-sidebar .bp3-icon-search {

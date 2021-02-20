@@ -242,8 +242,8 @@ ul {
     color: #453021 !important;
     padding: 2px 3px;
   }
-
-  .rm-highlight span {
+  .rm-highlight span,
+.rm-highlight a {
     color: #453021 !important;
   }
 
@@ -453,14 +453,14 @@ ul {
   ------------------------------------*/
   .rm-page-ref--link {
     /* linked page name text */
-    color: #ffa08f;
+    color: #f88672;
   }
   .rm-page-ref--link:hover {
-    color: #ffa090;
+    color: #f88773;
   }
   .rm-page-ref__brackets {
     /* linked page brackes */
-    color: rgba(255, 160, 143, 0.7);
+    color: rgba(248, 134, 114, 0.7);
   }
 
   /*------------------------------------
@@ -485,10 +485,10 @@ ul {
   /* glyph */
   .rm-alias.rm-alias--page {
     /* internally linked alias */
-    color: #ffa08f;
+    color: #f88672;
   }
   .rm-alias.rm-alias--page:hover {
-    color: #ffa090;
+    color: #f88773;
   }
 
   .rm-alias.rm-alias--external {
@@ -1207,6 +1207,10 @@ ul {
     color: #453021;
     background: transparent;
   }
+  #right-sidebar [class~=bp3-icon].pinned:before,
+#right-sidebar .bp3-button.bp3-minimal.pinned:before {
+    color: red !important;
+  }
   #right-sidebar .bp3-icon-filter,
 #right-sidebar .bp3-icon-search {
     color: #453021 !important;
@@ -1854,8 +1858,8 @@ ul {
     color: #00000f !important;
     padding: 2px 3px;
   }
-
-  .rm-highlight span {
+  .rm-highlight span,
+.rm-highlight a {
     color: #00000f !important;
   }
 
@@ -2065,14 +2069,14 @@ ul {
   ------------------------------------*/
   .rm-page-ref--link {
     /* linked page name text */
-    color: #9dcee7;
+    color: #6ba5c2;
   }
   .rm-page-ref--link:hover {
-    color: #9ecee7;
+    color: #6ba6c3;
   }
   .rm-page-ref__brackets {
     /* linked page brackes */
-    color: rgba(157, 206, 231, 0.7);
+    color: rgba(107, 165, 194, 0.7);
   }
 
   /*------------------------------------
@@ -2097,10 +2101,10 @@ ul {
   /* glyph */
   .rm-alias.rm-alias--page {
     /* internally linked alias */
-    color: #9dcee7;
+    color: #6ba5c2;
   }
   .rm-alias.rm-alias--page:hover {
-    color: #9ecee7;
+    color: #6ba6c3;
   }
 
   .rm-alias.rm-alias--external {
@@ -2818,6 +2822,10 @@ ul {
 #right-sidebar .bp3-button.bp3-minimal:before {
     color: #a6b7bf;
     background: transparent;
+  }
+  #right-sidebar [class~=bp3-icon].pinned:before,
+#right-sidebar .bp3-button.bp3-minimal.pinned:before {
+    color: red !important;
   }
   #right-sidebar .bp3-icon-filter,
 #right-sidebar .bp3-icon-search {
