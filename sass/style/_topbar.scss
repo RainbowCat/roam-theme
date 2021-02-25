@@ -43,7 +43,7 @@
       #{$searchbar-top} + #{$searchbar-height} + 2 * #{$searchbar-padding-tb}
     );
     width: calc(
-      #{$searchbar-width} + 2 * #{$searchbar-padding-lr} + 2px - 2px
+      #{$searchbar-width} + 2 * #{$searchbar-padding-lr} + 2px
     ); // 2px for border
     > .bp3-transition-container {
       transform: none !important; // turn off animation
@@ -54,6 +54,7 @@
 .rm-topbar .rm-find-or-create-wrapper {
   // style input
   input#find-or-create-input:focus {
+    border: 1px solid $palette_white; // for dark theme
     background: $palette_theme;
     color: setContrast($palette_theme);
     &::placeholder {
@@ -83,26 +84,26 @@
 
   // style borders
   .bp3-popover-target input#find-or-create-input:focus {
-    // border-radius: 10px 10px 10px 10px;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: $roundness;
+    // border-radius: 0px 0px 0px 0px;
   }
   .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
     // round top corners only to match dropdown (if dropdown menu is showing)
-    // border-radius: 10px 10px 0px 0px;
-    // border: 1px solid white;
+    border-radius: $roundness $roundness 0px 0px;
+    border: 1px solid $palette_white; // for dark theme
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
   .bp3-overlay.bp3-overlay-open .bp3-popover {
     border-radius: 0px;
     box-shadow: none;
-    // border: 1px solid white;
+    border: 1px solid $palette_white; // for dark theme
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     &,
     & > .bp3-popover-content,
     & > .bp3-popover-content > .bp3-menu,
     & > .bp3-popover-content > .bp3-menu > .rm-menu-item:last-child {
       // make bottom round
-      // border-radius: 0px 0px 10px 10px !important;
+      border-radius: 0px 0px $roundness $roundness !important;
     }
   }
 
