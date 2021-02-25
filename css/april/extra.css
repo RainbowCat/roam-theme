@@ -159,19 +159,27 @@ span.rm-page-ref[data-tag*="display_"] {
 }
 
 .roam-block-container[data-page-links*="checkbox"]
-  .rm-block-main
-  .roam-block:before {
+  > .rm-block-main
+  > .roam-block:before {
   content: "☐";
   font-size: 20px;
 }
 
 .roam-block-container[data-page-links*="fixme"]
-  .rm-block-main
-  .roam-block:before {
+  > .rm-block-main
+  > .roam-block:before {
   content: "☐";
   font-size: 20px;
 }
 
+.roam-block-container[data-page-links*="TODONT"]
+  > .rm-block-main
+  > .roam-block:before {
+  content: "☒";
+  font-size: 20px;
+}
+
+span.rm-page-ref[data-tag|="TODONT"],
 span.rm-page-ref[data-tag|="checkbox"],
 span.rm-page-ref[data-tag|="fixme"] {
   display: none;
