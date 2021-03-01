@@ -1351,6 +1351,64 @@ ul {
     background-color: #e9edef;
   }
 
+  /*
+  Author:: @CatoMinor3
+  Version:: 2.0
+  Date:: December 28th, 2020
+  Changes log
+  - 2.0 - support for the latest version of Roam
+  Support: 
+  - Paypal: https://www.paypal.me/catominor3
+  - Patreon: https://www.patreon.com/catominor
+  */
+  :root {
+    --custom-background-color: rgba(176, 196, 222, 0.07);
+    --custom-background-color-hover: rgba(176, 196, 222, 0.8);
+  }
+
+  .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 20px;
+    padding-bottom: 3px;
+  }
+
+  .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    text-decoration: none;
+    line-height: 20px;
+    padding-bottom: 3px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 26px;
+    padding-bottom: 6px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 26px;
+    padding-bottom: 6px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 32px;
+    padding-bottom: 9px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 32px;
+    padding-bottom: 9px;
+  }
+
   /*------------------------------------
   # HIDE COMPONENTS
   ------------------------------------*/
@@ -2830,6 +2888,64 @@ ul {
 .rm-block-children .rm-embed-container .rm-bullet__inner,
 .roam-block-container .rm-embed-container .rm-bullet__inner {
     background-color: #a6b7bf;
+  }
+
+  /*
+  Author:: @CatoMinor3
+  Version:: 2.0
+  Date:: December 28th, 2020
+  Changes log
+  - 2.0 - support for the latest version of Roam
+  Support: 
+  - Paypal: https://www.paypal.me/catominor3
+  - Patreon: https://www.patreon.com/catominor
+  */
+  :root {
+    --custom-background-color: rgba(176, 196, 222, 0.07);
+    --custom-background-color-hover: rgba(176, 196, 222, 0.8);
+  }
+
+  .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 20px;
+    padding-bottom: 3px;
+  }
+
+  .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    text-decoration: none;
+    line-height: 20px;
+    padding-bottom: 3px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 26px;
+    padding-bottom: 6px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 26px;
+    padding-bottom: 6px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link .rm-page-ref--link {
+    background: linear-gradient(0deg, var(--custom-background-color) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 32px;
+    padding-bottom: 9px;
+  }
+
+  .rm-page-ref--link .rm-page-ref--link .rm-page-ref--link:hover {
+    background: linear-gradient(0deg, var(--custom-background-color-hover) 2px, white 1px, transparent 1px);
+    background-position: 0 100%;
+    line-height: 32px;
+    padding-bottom: 9px;
   }
 
   /*------------------------------------

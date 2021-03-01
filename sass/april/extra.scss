@@ -16,7 +16,7 @@
   }
   .roam-block-container[data-page-links*="display_col-2"] > .rm-block-children {
     @include Grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   // fixed fraction grid displays (parent blocks)
@@ -94,6 +94,9 @@
   // spans (child blocks)
   .roam-block-container[data-page-links*="display_span-col2"] {
     grid-column: span 2;
+  }
+  .roam-block-container[data-page-links*="display_span-col3"] {
+    grid-column: span 3;
   }
   .roam-block-container[data-page-links*="display_span-row2"] {
     grid-row: span 2;

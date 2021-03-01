@@ -85,7 +85,6 @@
   // style borders
   .bp3-popover-target input#find-or-create-input:focus {
     border-radius: $roundness;
-    // border-radius: 0px 0px 0px 0px;
   }
   .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
     // round top corners only to match dropdown (if dropdown menu is showing)
