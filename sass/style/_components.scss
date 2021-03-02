@@ -360,7 +360,7 @@ blockquote.rm-bq {
     padding: 10px 5px;
     margin: 5px 0px;
     border-radius: $roundness;
-    border: $ref_linked-border;
+    border-top: $ref_linked-border;
 
     div[style*="color: rgb(206, 217, 224);"] > strong {
       /* "Linked References" reference block header */

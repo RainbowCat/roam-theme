@@ -496,7 +496,7 @@ blockquote.rm-bq {
   padding: 10px 5px;
   margin: 5px 0px;
   border-radius: 5px;
-  border: 1px solid #8f9ca3;
+  border-top: 1px solid #8f9ca3;
 }
 .rm-reference-main > div > div.rm-reference-container div[style*="color: rgb(206, 217, 224);"] > strong {
   /* "Linked References" reference block header */
@@ -1504,3 +1504,14 @@ Support:
 /*------------------------------------
 # Custom Text Display
 ------------------------------------*/
+.roam-article > div > .rm-reference-main > div > div.rm-reference-container {
+  border-radius: 0px;
+  border: none;
+  border-top: 1px solid #8f9ca3;
+}
+.roam-article > div > .rm-reference-main > div > div {
+  border-radius: 0px;
+  border: none;
+  border-top: 1px solid rgba(143, 156, 163, 0.5);
+  border-top-style: dashed;
+}

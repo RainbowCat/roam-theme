@@ -520,7 +520,7 @@ blockquote.rm-bq {
   padding: 10px 5px;
   margin: 5px 0px;
   border-radius: 5px;
-  border: 1px solid #a6b7bf;
+  border-top: 1px solid #a6b7bf;
 }
 .rm-reference-main > div > div.rm-reference-container div[style*="color: rgb(206, 217, 224);"] > strong {
   /* "Linked References" reference block header */
