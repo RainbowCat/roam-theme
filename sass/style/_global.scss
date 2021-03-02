@@ -112,11 +112,13 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       // level 5
       > .roam-body-main {
         overflow: scroll;
-        padding: $editor-margin; // add space surrounding editor
 
         > div:first-child {
-          // useless div
-          padding: 0px !important;
+          // not useless div afterall
+          // add space surrounding editor
+          // padding-left: $editor-margin-left !important; // override element style
+          // padding-right: $editor-margin-right !important; // override element style
+          // padding: 0px !important;
 
           // level 6
           > .roam-log-container,
@@ -200,7 +202,10 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
           /* offset-x | offset-y | blur-radius | spread-radius | color */
           margin: 0px 8px; /* add space to show shadow */
           box-shadow: 0px 0px 20px 3px $main_subtle-color;
-          background: color.adjust(setContrast(setContrast($main_bg)), $alpha: -0.2);
+          background: color.adjust(
+            setContrast(setContrast($main_bg)),
+            $alpha: -0.2
+          );
         }
       }
       > #right-sidebar {

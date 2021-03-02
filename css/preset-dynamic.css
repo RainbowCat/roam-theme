@@ -149,10 +149,6 @@ ul {
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
     overflow: scroll;
-    padding: 20px 30px;
-  }
-  #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
-    padding: 0px !important;
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-log-container,
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-article {
@@ -1688,10 +1684,6 @@ ul {
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
     overflow: scroll;
-    padding: 20px 30px;
-  }
-  #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
-    padding: 0px !important;
   }
   #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-log-container,
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-article {

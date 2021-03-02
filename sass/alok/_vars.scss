@@ -40,7 +40,11 @@ $searchbar-font: 20px;
 /*------------------------------------
 # main editor
 ------------------------------------*/
-$editor_margin: 20px 30px;
+// $editor_margin: 20px 30px;
+$editor-margin-left: calc((100% - 1032px) / 2);
+$editor-margin-right: calc((100% - 568) / 2);
+// preset - padding-right: calc((100% - 568) / 2);
+// preset - padding-left: calc((100% - 1032px) / 2);
 
 /*------------------------------------
 # right sidebar
