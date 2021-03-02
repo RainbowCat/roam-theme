@@ -1496,6 +1496,11 @@ Support:
 /*------------------------------------
 # Custom Block Display Tags
 ------------------------------------*/
+.roam-toolkit-block-mode--highlight {
+  background-color: rgba(129, 198, 243, 0.7) !important;
+  color: #00000f;
+}
+
 /*------------------------------------
 # Custom Text Display
 ------------------------------------*/
