@@ -16,11 +16,11 @@ $better-roam: false;
 # left sidebar
 ------------------------------------*/
 $leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
-$leftbar_bg: $palette_theme-darker;
+$leftbar_bg: $palette_theme;
 // $bg--shortcuts: linear-gradient(green, black);
 $leftbar_divline-color: setContrast($leftbar_bg);
-$leftbar_text-color: setContrast($leftbar_bg);
-$leftbar_text-color-hover: $palette_grey;
+$leftbar_text-color: $palette_grey;
+$leftbar_text-color-hover: $palette_white;
 
 /*------------------------------------
 # topbar
@@ -40,9 +40,9 @@ $searchbar-font: 20px;
 /*------------------------------------
 # main editor
 ------------------------------------*/
-// $editor_margin: 20px 30px;
-$editor-margin-left: calc((100% - 1032px) / 2);
-$editor-margin-right: calc((100% - 568) / 2);
+$editor_margin: 20px 30px;
+// $editor-margin-left: calc((100% - 1032px) / 2);
+// $editor-margin-right: calc((100% - 568) / 2);
 // preset - padding-right: calc((100% - 568) / 2);
 // preset - padding-left: calc((100% - 1032px) / 2);
 
@@ -73,8 +73,8 @@ $blockquote_bg: $palette_accent-darker;
 $blockquote_text-color: setContrast($blockquote_bg);
 $blockquote_border: 8px solid $blockquote_text-color;
 
-$highlight_bg: $palette_accent;
-$highlight_text-color: setContrast($palette_accent);
+$highlight_bg: #a57e00;
+$highlight_text-color: setContrast(#a57e00);
 $highlight_padding: 2px 3px;
 
 $hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
@@ -176,7 +176,7 @@ $block_highlight-embed: $block-ref_bg;
 # icons
 ------------------------------------*/
 $icons_bg: color.adjust($palette_theme-darker, $alpha: -0.3);
-$icons_bg-hover: $palette_accent-lighter;
+$icons_bg-hover: $palette_theme-lighter;
 $icons_color: setContrast($icons_bg);
 $icons_color-hover: setContrast($icons_bg-hover);
 $icons_border-radius: 3px;
@@ -225,7 +225,7 @@ $kanban_title-div: 1px solid setContrast($palette_theme);
 $kanban_col-bg: transparent;
 $kanban_col-drag-bg: $palette_theme-lighter;
 
-$kanban_card-bg: $palette_theme;
+$kanban_card-bg: color.adjust($palette_theme, $alpha: -0.3);
 $kanban_card-shadow: $palette_theme-darker;
 $kanban_card-border: 1px solid setContrast($palette_theme);
 

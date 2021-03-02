@@ -142,6 +142,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   height: 45px;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main {
+  padding: 20px 30px;
   overflow: scroll;
 }
 #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child > .roam-log-container,

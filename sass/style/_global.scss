@@ -111,6 +111,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
       }
       // level 5
       > .roam-body-main {
+        padding: $editor_margin;
         overflow: scroll;
 
         > div:first-child {
