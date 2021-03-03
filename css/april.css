@@ -52,6 +52,7 @@
   /*------------------------------------
   # features
   ------------------------------------*/
+  /* offset-x | offset-y | blur-radius | color */
   /*------------------------------------
   # sections
   ------------------------------------*/
@@ -281,12 +282,11 @@ ul {
   }
 
   blockquote.rm-bq {
-    background: #fdffbd;
+    background: #ffebad;
     color: #453021;
     border-left: 6px solid rgba(69, 48, 33, 0.7);
-    border-radius: 2px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(255, 194, 184, 0.3);
   }
 
   .rm-hr {
@@ -672,14 +672,14 @@ ul {
   }
 
   .kanban-board {
-    padding: 2px;
+    padding: 2px 4px;
     border: 1px solid #453021;
     border-radius: 5px;
     background: transparent;
   }
   .kanban-board .kanban-column {
     border-radius: 5px;
-    padding: 2px;
+    padding: 2px 4px;
     margin: 2px;
   }
   .kanban-board .kanban-column:not([style*=background]) {
@@ -693,9 +693,9 @@ ul {
     text-align: center;
     border-bottom: 1px solid #453021;
     padding: 2px 8px;
-    min-height: 31px;
-    max-height: 31px;
-    font-size: 14px;
+    min-height: 30.9px;
+    max-height: 30.9px;
+    font-size: 16.2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -703,7 +703,7 @@ ul {
   .kanban-board .kanban-column .kanban-card {
     background: #ffebad;
     color: #453021;
-    box-shadow: 0px 4px 7px -1px #f9c28b;
+    box-shadow: 5px 5px 10px rgba(255, 194, 184, 0.3);
     border-radius: 5px;
     border: 1px solid #453021;
     padding: 6px 10px;
@@ -1588,6 +1588,7 @@ ul {
   /*------------------------------------
   # features
   ------------------------------------*/
+  /* offset-x | offset-y | blur-radius | color */
   /*------------------------------------
   # sections
   ------------------------------------*/
@@ -1817,12 +1818,11 @@ ul {
   }
 
   blockquote.rm-bq {
-    background: #193c67;
+    background: #122b4a;
     color: #a6b7bf;
     border-left: 6px solid rgba(166, 183, 191, 0.7);
-    border-radius: 2px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(203, 235, 251, 0.3);
   }
 
   .rm-hr {
@@ -2208,14 +2208,14 @@ ul {
   }
 
   .kanban-board {
-    padding: 2px;
+    padding: 2px 4px;
     border: 1px solid #a6b7bf;
     border-radius: 5px;
     background: transparent;
   }
   .kanban-board .kanban-column {
     border-radius: 5px;
-    padding: 2px;
+    padding: 2px 4px;
     margin: 2px;
   }
   .kanban-board .kanban-column:not([style*=background]) {
@@ -2229,9 +2229,9 @@ ul {
     text-align: center;
     border-bottom: 1px solid #a6b7bf;
     padding: 2px 8px;
-    min-height: 31px;
-    max-height: 31px;
-    font-size: 14px;
+    min-height: 30.9px;
+    max-height: 30.9px;
+    font-size: 16.2px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2239,7 +2239,7 @@ ul {
   .kanban-board .kanban-column .kanban-card {
     background: #122b4a;
     color: #a6b7bf;
-    box-shadow: 0px 4px 7px -1px #050c15;
+    box-shadow: 5px 5px 10px rgba(203, 235, 251, 0.3);
     border-radius: 5px;
     border: 1px solid #a6b7bf;
     padding: 6px 10px;

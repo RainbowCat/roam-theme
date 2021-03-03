@@ -65,7 +65,7 @@ $heading1_size: $font-size_regular + 3 * $heading_size-factor;
 $heading2_size: $font-size_regular + 2 * $heading_size-factor;
 $heading3_size: $font-size_regular + 1 * $heading_size-factor;
 
-$blockquote_bg: $palette_theme-lighter;
+$blockquote_bg: $palette_theme;
 $blockquote_text-color: setContrast($blockquote_bg);
 $blockquote_border: 6px solid color.adjust($blockquote_text-color, $alpha: -0.3);
 
@@ -222,7 +222,8 @@ $kanban_col-bg: transparent;
 $kanban_col-drag-bg: $palette_theme-lighter;
 
 $kanban_card-bg: $palette_theme;
-$kanban_card-shadow: $palette_theme-darker;
+$kanban_card-shadow: 5px 5px 10px
+  color.change($palette_accent-lighter, $alpha: 0.3); /* offset-x | offset-y | blur-radius | color */
 $kanban_card-border: 1px solid setContrast($palette_theme);
 
 // table
