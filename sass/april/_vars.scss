@@ -15,7 +15,8 @@ $better-roam: true;
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
-$leftbar_width: 195px; // perfect size to fit "graph overview" horizontally
+$leftbar_width: 195px;
+// perfect size to fit "graph overview" horizontally = 195px
 $leftbar_bg: $palette_theme-darker;
 // $bg--shortcuts: linear-gradient(green, black);
 $leftbar_divline-color: setContrast($leftbar_bg);

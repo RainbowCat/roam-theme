@@ -1534,6 +1534,9 @@ ul {
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
+    padding: 0px 30px !important;
+  }
 }
 /*------------------------------------
 #
@@ -3070,4 +3073,7 @@ ul {
   }
 
   /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+  #app .roam-body .roam-app > div.flex-h-box > .roam-main > .roam-body-main > div:first-child {
+    padding: 0px 30px !important;
+  }
 }
