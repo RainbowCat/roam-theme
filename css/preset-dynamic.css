@@ -276,6 +276,9 @@ ul {
     background: #5cadd6;
     color: #000010;
     border-left: 8px solid #000010;
+    border-radius: 2px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .rm-hr {
@@ -1812,6 +1815,9 @@ ul {
     background: #6ba5c2;
     color: #00000f;
     border-left: 8px solid #00000f;
+    border-radius: 2px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .rm-hr {

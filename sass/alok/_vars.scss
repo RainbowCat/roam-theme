@@ -69,7 +69,7 @@ $heading1_size: $font-size_regular + 3 * $heading_size-factor;
 $heading2_size: $font-size_regular + 2 * $heading_size-factor;
 $heading3_size: $font-size_regular + 1 * $heading_size-factor;
 
-$blockquote_bg: $palette_accent-darker;
+$blockquote_bg: $palette_theme-lighter;
 $blockquote_text-color: setContrast($blockquote_bg);
 $blockquote_border: 8px solid $blockquote_text-color;
 

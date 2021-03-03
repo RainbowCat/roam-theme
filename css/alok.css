@@ -265,9 +265,12 @@ h1.rm-title-display,
 }
 
 blockquote.rm-bq {
-  background: #1177bb;
+  background: #242629;
   color: #8f9ca3;
   border-left: 8px solid #8f9ca3;
+  border-radius: 2px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .rm-hr {

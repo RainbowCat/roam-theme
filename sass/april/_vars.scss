@@ -65,13 +65,13 @@ $heading1_size: $font-size_regular + 3 * $heading_size-factor;
 $heading2_size: $font-size_regular + 2 * $heading_size-factor;
 $heading3_size: $font-size_regular + 1 * $heading_size-factor;
 
-$blockquote_bg: $palette_accent-darker;
+$blockquote_bg: $palette_theme-lighter;
 $blockquote_text-color: setContrast($blockquote_bg);
-$blockquote_border: 8px solid $blockquote_text-color;
+$blockquote_border: 6px solid color.adjust($blockquote_text-color, $alpha: -0.3);
 
-$highlight_bg: $palette_accent;
+$highlight_bg: color.adjust($palette_accent, $alpha: -0.2);
 $highlight_text-color: setContrast($palette_accent);
-$highlight_padding: 2px 3px;
+$highlight_padding: 0.5px 3px;
 
 $hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
 

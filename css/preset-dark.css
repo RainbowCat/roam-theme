@@ -270,6 +270,9 @@ blockquote.rm-bq {
   background: #6ba5c2;
   color: #00000f;
   border-left: 8px solid #00000f;
+  border-radius: 2px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .rm-hr {
