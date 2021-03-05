@@ -317,11 +317,6 @@ blockquote.rm-bq {
   border-right: 1px solid rgba(143, 156, 163, 0.8);
 }
 
-.rm-level-0 > .rm-multibar,
-.rm-level-1 > .rm-multibar {
-  display: none;
-}
-
 /*---------------------------------- 
 # TODO 
 ------------------------------------*/

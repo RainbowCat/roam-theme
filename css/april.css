@@ -333,11 +333,6 @@ ul {
     border-right: 1px solid rgba(69, 48, 33, 0.8);
   }
 
-  .rm-level-0 > .rm-multibar,
-.rm-level-1 > .rm-multibar {
-    display: none;
-  }
-
   /*---------------------------------- 
   # TODO 
   ------------------------------------*/
@@ -1870,11 +1865,6 @@ ul {
 
   .rm-block-children:hover .rm-multibar {
     border-right: 1px solid rgba(166, 183, 191, 0.8);
-  }
-
-  .rm-level-0 > .rm-multibar,
-.rm-level-1 > .rm-multibar {
-    display: none;
   }
 
   /*---------------------------------- 
