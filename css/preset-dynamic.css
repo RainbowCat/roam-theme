@@ -395,15 +395,15 @@ ul {
   # TAGS
   ------------------------------------*/
   .rm-page-ref--tag {
-    color: #4b5354 !important;
+    color: #4b5354;
     background-color: transparent;
     border: none;
     border-radius: 5px;
     padding: 0px;
-    text-decoration: none !important;
+    text-decoration: none;
   }
   .rm-page-ref--tag:hover {
-    color: #4b5354 !important;
+    color: #4b5354;
     background-color: transparent;
     border: none;
     border-radius: 5px;
@@ -1928,15 +1928,15 @@ ul {
   # TAGS
   ------------------------------------*/
   .rm-page-ref--tag {
-    color: #626d6f !important;
+    color: #626d6f;
     background-color: transparent;
     border: none;
     border-radius: 5px;
     padding: 0px;
-    text-decoration: none !important;
+    text-decoration: none;
   }
   .rm-page-ref--tag:hover {
-    color: #626d6f !important;
+    color: #626d6f;
     background-color: transparent;
     border: none;
     border-radius: 5px;

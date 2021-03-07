@@ -404,15 +404,15 @@ ul {
   # TAGS
   ------------------------------------*/
   .rm-page-ref--tag {
-    color: #91684b !important;
+    color: #91684b;
     background-color: transparent;
     border: 1px solid rgba(145, 104, 75, 0.7);
     border-radius: 10px;
     padding: 2px 3px;
-    text-decoration: none !important;
+    text-decoration: none;
   }
   .rm-page-ref--tag:hover {
-    color: white !important;
+    color: white;
     background-color: #91684b;
     border: 1px solid rgba(144, 103, 74, 0.2);
     border-radius: 10px;
@@ -1938,15 +1938,15 @@ ul {
   # TAGS
   ------------------------------------*/
   .rm-page-ref--tag {
-    color: #626d6f !important;
+    color: #626d6f;
     background-color: transparent;
     border: 1px solid rgba(98, 109, 111, 0.7);
     border-radius: 10px;
     padding: 2px 3px;
-    text-decoration: none !important;
+    text-decoration: none;
   }
   .rm-page-ref--tag:hover {
-    color: #a6b7bf !important;
+    color: #a6b7bf;
     background-color: #626d6f;
     border: 1px solid rgba(98, 109, 110, 0.2);
     border-radius: 10px;
