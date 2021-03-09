@@ -19,13 +19,15 @@ ul {
   color: unset;
 }
 
-// div,
-// span {
-//   font: inherit;
-//   color: inherit;
-//   background: transparent;
-//   text-decoration: inherit;
-// }
+div
+// span
+{
+  //   font: inherit;
+  //   color: inherit;
+  //   background: transparent;
+  //   text-decoration: inherit;
+  max-width: 100%;
+}
 
 div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
   //code block button
