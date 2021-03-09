@@ -43,7 +43,8 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-bottom: 7px;
 }
 .roam-block-container .rm-block-main .rm-block-separator {
-  min-width: 55px;
+  min-width: 10px;
+  // display:none;
 }
 // .roam-block {
 // }
