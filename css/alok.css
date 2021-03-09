@@ -87,8 +87,12 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
   margin-bottom: 7px;
 }
 
+.roam-block-container .rm-block-main .rm-block-separator {
+  width: 55px;
+}
+
 .roam-block-container > .rm-block-children {
-  margin-left: 17.5px;
+  margin-left: 22px;
 }
 
 .roam-block-container.rm-block.rm-block--open.rm-not-focused.block-bullet-view.block-border-left {

@@ -94,8 +94,12 @@ ul {
     margin-bottom: 7px;
   }
 
+  .roam-block-container .rm-block-main .rm-block-separator {
+    width: 55px;
+  }
+
   .roam-block-container > .rm-block-children {
-    margin-left: 17.5px;
+    margin-left: 22px;
   }
 
   .roam-block-container.rm-block.rm-block--open.rm-not-focused.block-bullet-view.block-border-left {
@@ -1627,8 +1631,12 @@ ul {
     margin-bottom: 7px;
   }
 
+  .roam-block-container .rm-block-main .rm-block-separator {
+    width: 55px;
+  }
+
   .roam-block-container > .rm-block-children {
-    margin-left: 17.5px;
+    margin-left: 22px;
   }
 
   .roam-block-container.rm-block.rm-block--open.rm-not-focused.block-bullet-view.block-border-left {
