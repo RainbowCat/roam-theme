@@ -224,17 +224,17 @@ blockquote.rm-bq {
 # TAGS
 ------------------------------------*/
 .rm-page-ref--tag {
-  color: $tag_text-color !important;
+  color: $tag_text-color;
   background-color: $tag_bg;
 
   border: $tag_border;
   border-radius: $tag_border-radius;
   padding: $tag_padding;
 
-  text-decoration: none !important;
+  text-decoration: none;
 
   &:hover {
-    color: $tag_text-color-hover !important;
+    color: $tag_text-color-hover;
     background-color: $tag_bg-hover;
 
     border: $tag_border-hover;
