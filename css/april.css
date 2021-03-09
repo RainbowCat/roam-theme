@@ -96,7 +96,7 @@ ul {
   }
 
   .roam-block-container .rm-block-main .rm-block-separator {
-    width: 55px;
+    min-width: 55px;
   }
 
   .roam-block-container > .rm-block-children {
@@ -1634,7 +1634,7 @@ ul {
   }
 
   .roam-block-container .rm-block-main .rm-block-separator {
-    width: 55px;
+    min-width: 55px;
   }
 
   .roam-block-container > .rm-block-children {
