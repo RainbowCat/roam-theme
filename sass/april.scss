@@ -7,29 +7,14 @@
 ------------------------------------*/
 @media (prefers-color-scheme: light) {
   /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
-
   @import "april/palette-light";
   @import "april/fonts";
 
   @import "utils";
 
-  // @import "preset/vars";
   @import "april/vars";
-
   /*---------------------------------------- STYLE -----------------------------------------*/
   @import "style";
-  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-  // @import "preset/extra";
-  // @import "april/extra";
-  #app
-    .roam-body
-    .roam-app
-    > div.flex-h-box
-    > .roam-main
-    > .roam-body-main
-    > div:first-child {
-    padding: 0px 30px !important;
-  }
 }
 
 /*------------------------------------
@@ -44,22 +29,11 @@
 
   @import "utils";
 
-  // @import "preset/vars";
   @import "april/vars";
-
   /*---------------------------------------- STYLE -----------------------------------------*/
   @import "style";
-
-  /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-  // @import "preset/extra";
-  // @import "april/extra";
-  #app
-    .roam-body
-    .roam-app
-    > div.flex-h-box
-    > .roam-main
-    > .roam-body-main
-    > div:first-child {
-    padding: 0px 30px !important;
-  }
 }
+
+/*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
+// @import "april/extra";
+// @import "april/tags";
