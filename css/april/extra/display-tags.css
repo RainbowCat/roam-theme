@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*------------------------------------
 # Custom Block Display Tags
 ------------------------------------*/
@@ -104,30 +103,5 @@
 }
 
 span.rm-page-ref[data-tag*=display_] {
-  display: none;
-}
-
-/*------------------------------------
-# Custom Text Display
-------------------------------------*/
-.roam-block-container[data-page-links*=due] .rm-block-main div:nth-child(2) > span {
-  background: orangered;
-}
-
-.roam-block-container[data-page-links*=due] .rm-block-main div:nth-child(2) span {
-  color: white !important;
-}
-
-.roam-block-container[data-page-links*=checkbox] .rm-block-main .roam-block:before {
-  content: "☐";
-  font-size: 20px;
-}
-
-.roam-block-container[data-page-links*=fixme] .rm-block-main .roam-block:before {
-  content: "☐";
-  font-size: 20px;
-}
-
-span.rm-page-ref[data-tag|=checkbox] {
   display: none;
 }

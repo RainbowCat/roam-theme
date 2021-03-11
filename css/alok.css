@@ -228,7 +228,7 @@ div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5
 /* highlighted text */
 .rm-highlight {
   margin: 0px;
-  background: #a57e00 !important;
+  background: rgba(255, 252, 56, 0.849) !important;
   color: #00000f !important;
   padding: 2px 3px;
 }

@@ -75,8 +75,8 @@ $blockquote_bg: $palette_theme-lighter;
 $blockquote_text-color: setContrast($blockquote_bg);
 $blockquote_border: 8px solid $blockquote_text-color;
 
-$highlight_bg: #a57e00;
-$highlight_text-color: setContrast(#a57e00);
+$highlight_bg: hsla(59, 100%, 61%, 0.849);
+$highlight_text-color: setContrast($highlight_bg);
 $highlight_padding: 2px 3px;
 
 $hr-line: 0.8px dashed color.change($palette_accent-darker, $alpha: 0.7);
