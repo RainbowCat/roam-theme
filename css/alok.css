@@ -1521,3 +1521,7 @@ Support:
   border-top: 1px solid rgba(143, 156, 163, 0.5);
   border-top-style: dashed;
 }
+
+.rm-topbar .rm-find-or-create-wrapper .bp3-icon-search {
+  color: transparent;
+}
