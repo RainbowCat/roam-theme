@@ -1525,3 +1525,8 @@ Support:
 .rm-topbar .rm-find-or-create-wrapper .bp3-icon-search {
   color: transparent;
 }
+
+.roam-toolkit-block-mode--highlight {
+  background-color: rgba(129, 198, 243, 0.7) !important;
+  color: black;
+}
