@@ -80,10 +80,6 @@ ul {
     color: unset;
   }
 
-  div {
-    max-width: 100%;
-  }
-
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
     z-index: 3 !important;
   }
@@ -1619,10 +1615,6 @@ ul {
 
   .roam-body .roam-app h1 {
     color: unset;
-  }
-
-  div {
-    max-width: 100%;
   }
 
   div[style="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
