@@ -188,7 +188,7 @@
     {
       // filter icon
       background: transparent;
-      color: setContrast($icons_bg-hover) !important;
+      color: setContrast($icons_bg-hover);
     }
   }
 }

@@ -338,7 +338,7 @@ ul {
   }
 
   /*---------------------------------- 
-  # TODO 
+  # TODO
   ------------------------------------*/
   .check-container .checkmark {
     /* todo */
@@ -1086,7 +1086,7 @@ ul {
   }
   .rm-topbar .bp3-button.bp3-minimal:hover .bp3-icon-filter:before, .rm-topbar .bp3-button.bp3-minimal:hover:before {
     background: transparent;
-    color: #453021 !important;
+    color: #453021;
   }
 
   /*------------------------------------
@@ -1165,6 +1165,10 @@ ul {
 
   #right-sidebar > .flex-h-box > div[style*="flex:"] {
     display: none;
+  }
+
+  #right-sidebar div {
+    max-width: 100%;
   }
 
   #right-sidebar #roam-right-sidebar-content .bp3-button {
@@ -1425,6 +1429,15 @@ ul {
 
   #roam-sidebar-logo {
     display: none;
+  }
+
+  /*------------------------------------
+  # make filter icon red when filter in use
+  ------------------------------------*/
+  .rm-topbar .bp3-button.bp3-minimal .bp3-icon-filter[style="color: rgb(168, 42, 42);"]:before,
+.rm-reference-main .bp3-button:before, .rm-reference-main .bp3-button .bp3-icon[style="color: rgb(168, 42, 42);"]:before,
+.bp3-icon .bp3-icon-filter[style="color: rgb(168, 42, 42);"]:before {
+    color: red !important;
   }
 
   /*------------------------------------
@@ -1871,7 +1884,7 @@ ul {
   }
 
   /*---------------------------------- 
-  # TODO 
+  # TODO
   ------------------------------------*/
   .check-container .checkmark {
     /* todo */
@@ -2619,7 +2632,7 @@ ul {
   }
   .rm-topbar .bp3-button.bp3-minimal:hover .bp3-icon-filter:before, .rm-topbar .bp3-button.bp3-minimal:hover:before {
     background: transparent;
-    color: #00000f !important;
+    color: #00000f;
   }
 
   /*------------------------------------
@@ -2698,6 +2711,10 @@ ul {
 
   #right-sidebar > .flex-h-box > div[style*="flex:"] {
     display: none;
+  }
+
+  #right-sidebar div {
+    max-width: 100%;
   }
 
   #right-sidebar #roam-right-sidebar-content .bp3-button {
@@ -2958,6 +2975,15 @@ ul {
 
   #roam-sidebar-logo {
     display: none;
+  }
+
+  /*------------------------------------
+  # make filter icon red when filter in use
+  ------------------------------------*/
+  .rm-topbar .bp3-button.bp3-minimal .bp3-icon-filter[style="color: rgb(168, 42, 42);"]:before,
+.rm-reference-main .bp3-button:before, .rm-reference-main .bp3-button .bp3-icon[style="color: rgb(168, 42, 42);"]:before,
+.bp3-icon .bp3-icon-filter[style="color: rgb(168, 42, 42);"]:before {
+    color: red !important;
   }
 
   /*------------------------------------

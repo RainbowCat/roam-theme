@@ -20,6 +20,11 @@
   display: none;
 }
 
+// so that block emdeds do not overflow
+#right-sidebar div {
+  max-width: 100%;
+}
+
 #right-sidebar #roam-right-sidebar-content .bp3-button {
   min-width: 20px;
   min-height: 20px;
