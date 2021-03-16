@@ -16,21 +16,8 @@
 // @import "preset/extra";
 @import "alok/extra";
 
-.roam-article > div > .rm-reference-main {
-  > div > div.rm-reference-container {
-    // linked references
-    border-radius: 0px;
-    border: none;
-    border-top: $ref_linked-border;
-  }
-  > div > div {
-    // unlinked references
-    border-radius: 0px;
-    border: none;
-    border-top: $ref_unlinked-border;
-    border-top-style: dashed;
-  }
-}
+
+
 .rm-topbar .rm-find-or-create-wrapper .bp3-icon-search {
   color: transparent;
 }

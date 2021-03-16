@@ -643,7 +643,6 @@ blockquote.rm-bq {
   padding-bottom: 5px;
 }
 .rm-query .rm-query-title {
-  display: none;
   background-color: #2860a4;
   color: #e9edef;
 }

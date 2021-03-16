@@ -572,7 +572,7 @@ blockquote.rm-bq {
   border-radius: $roundness;
   padding-bottom: $query_padding-bottom;
   .rm-query-title {
-    display: none;
+    // display: none;
     background-color: $query-title_bg;
     color: $query-title_text;
   }
