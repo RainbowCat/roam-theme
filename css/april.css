@@ -218,7 +218,7 @@ ul {
     background: rgba(255, 255, 255, 0.8);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
-    background: #f9c28b;
+    background: #ffebad;
   }
 
   /*------------------------------------
@@ -1152,9 +1152,10 @@ ul {
   # RIGHT SIDEBAR
   ------------------------------------*/
   #right-sidebar .rm-resize-handle {
-    background: rgba(255, 160, 143, 0.3);
+    background: rgba(249, 194, 139, 0.8);
     min-width: 1px;
     width: 1px;
+    box-shadow: 0px 0px 5px #453021;
   }
 
   #right-sidebar > .flex-h-box > button,
@@ -1763,7 +1764,7 @@ ul {
     background: rgba(0, 0, 15, 0.8);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
-    background: #050c15;
+    background: #122b4a;
   }
 
   /*------------------------------------
@@ -2697,9 +2698,10 @@ ul {
   # RIGHT SIDEBAR
   ------------------------------------*/
   #right-sidebar .rm-resize-handle {
-    background: rgba(157, 206, 231, 0.3);
+    background: rgba(5, 12, 21, 0.8);
     min-width: 1px;
     width: 1px;
+    box-shadow: 0px 0px 5px #a6b7bf;
   }
 
   #right-sidebar > .flex-h-box > button,

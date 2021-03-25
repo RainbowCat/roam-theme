@@ -1140,6 +1140,7 @@ span.cm-qualifier {
   background: rgba(157, 206, 231, 0.3);
   min-width: 1px;
   width: 1px;
+  box-shadow: 0px 0px 5px #e9edef;
 }
 
 #right-sidebar > .flex-h-box > button,
