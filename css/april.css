@@ -212,7 +212,7 @@ ul {
     margin: 0px 8px;
     /* add space to show shadow */
     box-shadow: 0px 0px 20px 3px rgba(69, 48, 33, 0.08);
-    background: rgba(255, 238, 235, 0.5);
+    background: rgba(255, 255, 255, 0.65);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: transparent;
@@ -257,7 +257,7 @@ ul {
   }
 
   .rm-topbar .rm-find-or-create-wrapper input#find-or-create-input:focus {
-    border: 1px solid #ffeeeb;
+    border: 1px solid white;
     background: #ffe7b8;
     color: #453021;
   }
@@ -284,13 +284,13 @@ ul {
   }
   .rm-topbar .rm-find-or-create-wrapper .bp3-popover-target.bp3-popover-open input#find-or-create-input:focus {
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid #ffeeeb;
+    border: 1px solid white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay.bp3-overlay-open .bp3-popover {
     border-radius: 0px;
     box-shadow: none;
-    border: 1px solid #ffeeeb;
+    border: 1px solid white;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
   .rm-topbar .rm-find-or-create-wrapper .bp3-overlay.bp3-overlay-open .bp3-popover, .rm-topbar .rm-find-or-create-wrapper .bp3-overlay.bp3-overlay-open .bp3-popover > .bp3-popover-content, .rm-topbar .rm-find-or-create-wrapper .bp3-overlay.bp3-overlay-open .bp3-popover > .bp3-popover-content > .bp3-menu, .rm-topbar .rm-find-or-create-wrapper .bp3-overlay.bp3-overlay-open .bp3-popover > .bp3-popover-content > .bp3-menu > .rm-menu-item:last-child {
@@ -774,7 +774,7 @@ ul {
   .check-container .checkmark:after {
     /* done check symbol */
     content: "✓";
-    color: #ffeeeb;
+    color: white;
     left: 0px;
     top: 0px;
     border: none;
@@ -824,18 +824,18 @@ ul {
   ------------------------------------*/
   .rm-page-ref--tag {
     color: #91684b;
-    background-color: transparent;
-    border: 1px solid rgba(145, 104, 75, 0.7);
-    border-radius: 10px;
-    padding: 2px 3px;
+    background-color: rgba(145, 104, 75, 0.05);
+    border: 0px solid rgba(145, 104, 75, 0.7);
+    border-radius: 0px;
+    padding: 2px 2px;
     text-decoration: none;
   }
   .rm-page-ref--tag:hover {
-    color: #ffeeeb;
-    background-color: #91684b;
-    border: 1px solid rgba(144, 103, 74, 0.2);
-    border-radius: 10px;
-    padding: 2px 3px;
+    color: white;
+    background-color: rgba(145, 104, 75, 0.5);
+    border: 0px solid rgba(144, 103, 74, 0.2);
+    border-radius: 0px;
+    padding: 2px 2px;
     text-decoration: none;
   }
 
@@ -1689,7 +1689,7 @@ ul {
     margin: 0px 8px;
     /* add space to show shadow */
     box-shadow: 0px 0px 20px 3px rgba(166, 183, 191, 0.08);
-    background: rgba(0, 0, 15, 0.5);
+    background: rgba(0, 0, 15, 0.65);
   }
   #app .roam-body .roam-app > div.flex-h-box > #right-sidebar {
     background: transparent;
@@ -2301,18 +2301,18 @@ ul {
   ------------------------------------*/
   .rm-page-ref--tag {
     color: #626d6f;
-    background-color: transparent;
-    border: 1px solid rgba(98, 109, 111, 0.7);
-    border-radius: 10px;
-    padding: 2px 3px;
+    background-color: rgba(98, 109, 111, 0.05);
+    border: 0px solid rgba(98, 109, 111, 0.7);
+    border-radius: 0px;
+    padding: 2px 2px;
     text-decoration: none;
   }
   .rm-page-ref--tag:hover {
     color: #a6b7bf;
-    background-color: #626d6f;
-    border: 1px solid rgba(98, 109, 110, 0.2);
-    border-radius: 10px;
-    padding: 2px 3px;
+    background-color: rgba(98, 109, 111, 0.5);
+    border: 0px solid rgba(98, 109, 110, 0.2);
+    border-radius: 0px;
+    padding: 2px 2px;
     text-decoration: none;
   }
 

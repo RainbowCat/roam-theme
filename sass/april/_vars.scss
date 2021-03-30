@@ -37,7 +37,7 @@ $roundness: 5px;
 ------------------------------------*/
 $better-roam: true;
 
-$editor-bg: color.change(setContrast(setContrast($palette_theme)), $alpha: 0.7);
+$editor-bg: color.change(setContrast(setContrast($palette_theme)), $alpha: 0.85);
 $editor_margin: 20px 30px;
 
 /*------------------------------------
@@ -169,21 +169,21 @@ $block-ref_text-decoration-hover: dotted underline $block-ref_text-hover 1px; //
 $attribute_color: setContrast($palette_theme);
 
 // tags
-$tag_bg: transparent;
+$tag_bg: color.change($palette_grey, $alpha: 0.05);
 $tag_text-color: $palette_grey;
 
-$tag_bg-hover: $palette_grey;
+$tag_bg-hover: color.change($palette_grey, $alpha: 0.5);
 $tag_text-color-hover: setContrast($tag_bg-hover);
 
 $tag_text-decoration: none;
 $tag_text-decoration-hover: none;
 
-$tag_border: 1px solid color.adjust($palette_grey, $alpha: -0.3);
-$tag_border-hover: 1px solid
+$tag_border: 0px solid color.adjust($palette_grey, $alpha: -0.3);
+$tag_border-hover: 0px solid
   color.adjust(color.change($palette_grey, $alpha: 0.2), $lightness: -0.3);
 
-$tag_border-radius: 10px;
-$tag_padding: 2px 3px;
+$tag_border-radius: 0px;
+$tag_padding: 2px 2px;
 
 /*------------------------------------
 # blocks
