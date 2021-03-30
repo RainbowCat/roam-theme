@@ -132,10 +132,7 @@
           /* offset-x | offset-y | blur-radius | spread-radius | color */
           margin: 0px 8px; /* add space to show shadow */
           box-shadow: 0px 0px 20px 3px $main_subtle-color;
-          background: color.adjust(
-            setContrast(setContrast($main_bg)),
-            $alpha: -0.2
-          );
+          background: color.adjust($editor_bg, $alpha: -0.2);
         }
       }
       > #right-sidebar {

@@ -35,7 +35,16 @@ $font-size_large: 30px;
 
 $block-indent: 22px;
 
+/*------------------------------------
+# main editor
+------------------------------------*/
 $better-roam: false;
+$editor_margin: 20px 30px;
+// $editor-margin-left: calc((100% - 1032px) / 2);
+// $editor-margin-right: calc((100% - 568) / 2);
+// preset - padding-right: calc((100% - 568) / 2);
+// preset - padding-left: calc((100% - 1032px) / 2);
+
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
@@ -62,15 +71,6 @@ $searchbar-padding-lr: 20px;
 $searchbar-font: 20px;
 
 /*------------------------------------
-# main editor
-------------------------------------*/
-$editor_margin: 20px 30px;
-// $editor-margin-left: calc((100% - 1032px) / 2);
-// $editor-margin-right: calc((100% - 568) / 2);
-// preset - padding-right: calc((100% - 568) / 2);
-// preset - padding-left: calc((100% - 1032px) / 2);
-
-/*------------------------------------
 # right sidebar
 ------------------------------------*/
 $rightbar_bg: $palette_theme-darker;
@@ -78,6 +78,8 @@ $rightbar_title-color: setContrast($rightbar_bg);
 
 $resize-handle_size: 1px;
 $resize-handle_color: color.adjust($palette_accent, $alpha: -0.7);
+
+$rightbar_shadow: 0px 0px 0px setContrast($resize-handle_color);
 
 /*------------------------------------
 # basic text
@@ -310,11 +312,13 @@ $ref_bg: transparent;
 $ref_text: setContrast($ref_bg);
 $ref_border: none;
 
-$ref_linked-header-color: color.change($ref_text, $alpha: .45);
-$ref_unlinked-header-color: color.change($ref_text, $alpha: .3);
+$ref_linked-header-color: color.change($ref_text, $alpha: 0.45);
+$ref_unlinked-header-color: color.change($ref_text, $alpha: 0.3);
 
-$ref_linked-border: 1px solid color.change($ref_linked-header-color,$alpha: .07);
-$ref_unlinked-border: 1px solid color.change($ref_unlinked-header-color,$alpha: .02);
+$ref_linked-border: 1px solid
+  color.change($ref_linked-header-color, $alpha: 0.07);
+$ref_unlinked-border: 1px solid
+  color.change($ref_unlinked-header-color, $alpha: 0.02);
 // $ref_header-underline: 1px solid $ref_text;
 
 $ref_item-bg: transparent;

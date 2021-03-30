@@ -1,9 +1,7 @@
 /*------------------------------------
 # general / global
 ------------------------------------*/
-$roundness: 5px;
-
-$main_bg: $palette_theme;
+$main_bg: $palette_theme-darker;
 $main_text-color: setContrast($main_bg);
 $main_subtle-color: color.change(setContrast($main_bg), $alpha: 0.08);
 
@@ -32,15 +30,22 @@ $font-size_large: 30px;
 }
 
 $block-indent: 22px;
+$roundness: 5px;
 
+/*------------------------------------
+# main editor
+------------------------------------*/
 $better-roam: true;
+
+$editor-bg: color.change(setContrast(setContrast($palette_theme)), $alpha: 0.7);
+$editor_margin: 20px 30px;
 
 /*------------------------------------
 # left sidebar
 ------------------------------------*/
 $leftbar_width: 195px;
 // perfect size to fit "graph overview" horizontally = 195px
-$leftbar_bg: $palette_theme-darker;
+$leftbar_bg: transparent;
 // $bg--shortcuts: linear-gradient(green, black);
 $leftbar_divline-color: setContrast($leftbar_bg);
 $leftbar_text-color: setContrast($leftbar_bg);
@@ -62,18 +67,15 @@ $searchbar-padding-lr: 20px;
 $searchbar-font: 20px;
 
 /*------------------------------------
-# main editor
-------------------------------------*/
-$editor_margin: 20px 30px;
-
-/*------------------------------------
 # right sidebar
 ------------------------------------*/
-$rightbar_bg: $palette_theme;
+$rightbar_bg: transparent;
 $rightbar_title-color: setContrast($rightbar_bg);
 
 $resize-handle_size: 1px;
 $resize-handle_color: color.change($palette_theme-darker, $alpha: 0.8);
+
+$rightbar_shadow: 0px 0px 0px setContrast($resize-handle_color);
 
 /*------------------------------------
 # basic text
@@ -141,7 +143,7 @@ $link-internal_text: $palette_accent-darker;
 $link-internal_text-hover: color.adjust($link-internal_text, $lightness: +0.2);
 
 $link-external_text: $palette_accent; // includes regular hyperlinks
-$link-external_text-hover: color.adjust($palette_accent, $lightness: +0.2);
+$link-external_text-hover: color.adjust($palette_accent, $lightness: -0.1);
 
 // page links (internal)
 $page-link_text: $link-internal_text;

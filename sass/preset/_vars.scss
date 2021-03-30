@@ -75,6 +75,7 @@ $rightbar_title-color: setContrast($rightbar_bg);
 $resize-handle_size: 1px;
 $resize-handle_color: color.adjust($palette_accent, $alpha: -0.7);
 
+$rightbar_shadow: 0px 0px 0px setContrast($resize-handle_color);
 /*------------------------------------
 # basic text
 ------------------------------------*/
