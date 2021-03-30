@@ -1,0 +1,180 @@
+/*------------------------------------
+# WORKSPACE (Layout)
+------------------------------------*/
+// level 1
+#app .roam-body .roam-app {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  opacity: 1;
+
+  // Remove main area left margin when there's no sidebar (public pages)
+  > div:only-child:not(.roam-sidebar-container) {
+    margin-left: 0 !important;
+  }
+
+  // level 2: leftbar, right-area
+  > .roam-sidebar-container,
+  > .roam-sidebar-container > .roam-sidebar-content {
+    width: $leftbar_width;
+  }
+  > div.flex-h-box {
+    & {
+      // when left sidebar is showing
+    }
+    &[style*="margin-left"] {
+      // when left sidebar is hidden
+      margin-left: $leftbar_width !important;
+    }
+    // level 3: editor & topbar, rightbar
+    > .roam-main {
+      // level 4: topbar, roam-body-main
+      > .rm-topbar {
+        height: $topbar_height;
+      }
+      // level 5
+      > .roam-body-main {
+        padding: $editor_margin;
+        overflow: scroll;
+
+        > div:first-child {
+          // not useless div afterall
+          // add space surrounding editor
+          // padding-left: $editor-margin-left !important; // override element style
+          // padding-right: $editor-margin-right !important; // override element style
+          // padding: 0px 30px !important;
+
+          // level 6
+          > .roam-log-container,
+          > .roam-article {
+            margin: 0px;
+            padding: 0px;
+            // padding-left: 20px;
+          }
+        }
+
+        > #buffer {
+          visibility: hidden;
+        }
+      }
+    }
+    > #right-sidebar {
+    }
+  }
+}
+
+/*------------------------------------
+# WORKSPACE (Text)
+------------------------------------*/
+#app .roam-body .roam-app {
+  @include font-family;
+  color: $main_text-color;
+
+  // level 2: leftbar, right-area
+  > .roam-sidebar-container,
+  > .roam-sidebar-container > .roam-sidebar-content {
+    @include font-family;
+    color: $main_text-color;
+  }
+  > div.flex-h-box {
+    // level 3: editor & topbar, rightbar
+    > .roam-main {
+      @include font-family;
+      color: $main_text-color;
+      // level 4: topbar, roam-body-main
+      > .rm-topbar {
+        @include font-family;
+        color: $main_text-color;
+      }
+      // level 5
+      > .roam-body-main {
+        @include font-family;
+        color: $main_text-color;
+      }
+    }
+    > #right-sidebar {
+      @include font-family;
+      color: $main_text-color;
+    }
+  }
+}
+
+/*------------------------------------
+# WORKSPACE (Appearance)
+------------------------------------*/
+@mixin better-roam-layout {
+  #app .roam-body .roam-app {
+    background: $main_bg;
+
+    // level 2: leftbar, right-area
+    > .roam-sidebar-container,
+    > .roam-sidebar-container > .roam-sidebar-content {
+      background: $leftbar_bg !important;
+    }
+    > div.flex-h-box {
+      // level 3: editor & topbar, rightbar
+      > .roam-main {
+        // level 4: topbar, roam-body-main
+        > .rm-topbar {
+          background: $topbar_bg;
+        }
+        // level 5
+        > .roam-body-main {
+          border: 0.2px solid $main_subtle-color;
+          border-bottom: none;
+          border-radius: 12px 12px 0 0; /* round off corners */
+          /* offset-x | offset-y | blur-radius | spread-radius | color */
+          margin: 0px 8px; /* add space to show shadow */
+          box-shadow: 0px 0px 20px 3px $main_subtle-color;
+          background: color.adjust(
+            setContrast(setContrast($main_bg)),
+            $alpha: -0.2
+          );
+        }
+      }
+      > #right-sidebar {
+        background: $rightbar_bg;
+      }
+    }
+  }
+}
+
+@mixin regular-layout {
+  #app .roam-body .roam-app {
+    background: $main_bg;
+
+    // level 2: leftbar, right-area
+    > .roam-sidebar-container,
+    > .roam-sidebar-container > .roam-sidebar-content {
+      background: $leftbar_bg !important;
+    }
+    > div.flex-h-box {
+      // level 3: editor & topbar, rightbar
+      > .roam-main {
+        // level 4: topbar, roam-body-main
+        > .rm-topbar {
+          background: $topbar_bg;
+        }
+        // level 5
+        > .roam-body-main {
+          background: $main_bg;
+        }
+      }
+      > #right-sidebar {
+        background: $rightbar_bg;
+      }
+    }
+  }
+}
+
+@if ($better-roam) {
+  @include better-roam-layout();
+} @else {
+  @include regular-layout();
+}

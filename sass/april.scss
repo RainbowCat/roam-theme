@@ -6,14 +6,11 @@
 #
 ------------------------------------*/
 @media (prefers-color-scheme: light) {
-  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+  /*---------------------------------------- SETUP -----------------------------------------*/
   @import "april/palette-light";
-  @import "april/fonts";
-
   @import "utils";
-
-  @import "april/vars";
   /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "april/vars";
   @import "style";
 }
 
@@ -23,22 +20,13 @@
 #
 ------------------------------------*/
 @media (prefers-color-scheme: dark) {
-  /*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+  /*---------------------------------------- SETUP -----------------------------------------*/
   @import "april/palette-dark";
-  @import "april/fonts";
-
   @import "utils";
-
-  @import "april/vars";
   /*---------------------------------------- STYLE -----------------------------------------*/
+  @import "april/vars";
   @import "style";
 }
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-// @import "april/extra";
-// @import "april/tags";
-.rm-query {
-  .rm-query-title {
-    display: none;
-  }
-}
+@import "april/extra";

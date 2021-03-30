@@ -1,28 +1,11 @@
-/*---------------------------------- SETUP & PREFERENCES ----------------------------------*/
+/*---------------------------------------- SETUP -----------------------------------------*/
 @use "sass:color";
 
 @import "alok/palette";
-@import "alok/fonts";
-
 @import "utils";
-
-// @import "preset/vars";
-@import "alok/vars";
-
 /*---------------------------------------- STYLE -----------------------------------------*/
+@import "alok/vars";
 @import "style";
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
-// @import "preset/extra";
 @import "alok/extra";
-
-
-
-.rm-topbar .rm-find-or-create-wrapper .bp3-icon-search {
-  color: transparent;
-}
-
-.roam-toolkit-block-mode--highlight {
-  background-color: rgba(129, 198, 243, 0.7) !important;
-  color: black;
-}

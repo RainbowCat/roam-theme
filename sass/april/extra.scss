@@ -1,0 +1,10 @@
+@import "extra/display-tags.scss";
+@import "extra/nested-links.scss";
+@import "extra/styled-tags.scss";
+@import "extra/styled-text.scss";
+
+.rm-query {
+  .rm-query-title {
+    display: none;
+  }
+}

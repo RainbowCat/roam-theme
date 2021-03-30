@@ -7,9 +7,31 @@ $main_subtle-color: color.change($palette_theme, $alpha: 0.08);
 $main_bg: $palette_theme;
 $main_text-color: setContrast($main_bg);
 
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+$font-fallback: Verdana, sans-serif;
 $font-size_small: 10px;
 $font-size_regular: 15px;
 $font-size_large: 30px;
+
+@mixin font_family {
+  font-family: "Ubuntu", $font-fallback;
+}
+
+@mixin font_main {
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 300 !important;
+}
+@mixin font_italics {
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+@mixin font_bold {
+  font-family: "Ubuntu", $font-fallback !important;
+  font-weight: 700 !important;
+}
 
 $block-indent: 22px;
 
