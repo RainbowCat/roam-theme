@@ -8,10 +8,10 @@
 @media (prefers-color-scheme: light) {
   /*---------------------------------------- SETUP -----------------------------------------*/
   @import "april/palette-light";
-  @import "utils";
+  @import "main/utils";
   /*---------------------------------------- STYLE -----------------------------------------*/
   @import "april/vars";
-  @import "style";
+  @import "main/style";
 }
 
 /*------------------------------------
@@ -22,10 +22,10 @@
 @media (prefers-color-scheme: dark) {
   /*---------------------------------------- SETUP -----------------------------------------*/
   @import "april/palette-dark";
-  @import "utils";
+  @import "main/utils";
   /*---------------------------------------- STYLE -----------------------------------------*/
   @import "april/vars";
-  @import "style";
+  @import "main/style";
 }
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/

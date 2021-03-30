@@ -2,10 +2,10 @@
 @use "sass:color";
 
 @import "alok/palette";
-@import "utils";
+@import "main/utils";
 /*---------------------------------------- STYLE -----------------------------------------*/
 @import "alok/vars";
-@import "style";
+@import "main/style";
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
 @import "alok/extra";

@@ -2,10 +2,10 @@
 @use "sass:color";
 
 @import "preset/palette-dark";
-@import "utils";
+@import "main/utils";
 /*---------------------------------------- STYLE -----------------------------------------*/
 @import "preset/vars";
-@import "style";
+@import "main/style";
 
 /*------------------------------------ CUSTOMIZATIONS ------------------------------------*/
 @import "preset/extra";
